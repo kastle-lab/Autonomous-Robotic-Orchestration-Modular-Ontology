@@ -96,15 +96,6 @@
 
 ---
 
-- **Environment**
-  - <u><b>Rationale</b></u>: Specifications to differentiate what is present/constitutes the environment in which a task is set/in which a robot(s) operates.
-  - <u>**Connected Pattern**</u>:
-    - Because an environment at its core consists of objects/things (zero, one, or many), all potentially related to one another, the [Part-whole (contextualized or not)](https://github.com/kastle-lab/modular-ontology-design-library/tree/master/modl/part-whole) may be the most appropriate.
-    - Additionally, because an environment can consist of a list of objects, each with their descriptions, and a particular State, a highly modified integration of the _state transition_ and _sequence_ patterns may be appropriate. [State transition](https://github.com/kastle-lab/modular-ontology-design-library/tree/master/modl/state-transition), [Sequence](https://github.com/kastle-lab/modular-ontology-design-library/tree/master/modl/sequence).
-  - <u>**Source Dataset(s)**</u>: [Droid](https://droid-dataset.github.io/)
-
----
-
 - **Object**
   - <u><b>Rationale</b></u>: Specifications to define a non-autonomous Spatial Thing (not functional by itself).
 
