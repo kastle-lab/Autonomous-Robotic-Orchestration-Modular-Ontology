@@ -1,0 +1,543 @@
+@prefix : <https://www.cs7820-robo-orchestration.org/ontology/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix robo-ont: <https://www.cs7820-robo-orchestration.org/ontology/> .
+@base <https://www.cs7820-robo-orchestration.org/ontology/> .
+
+<https://www.cs7820-robo-orchestration.org/ontology/> rdf:type owl:Ontology .
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  https://www.cs7820-robo-orchestration.org/ontology/assimilatesArchetype
+robo-ont:assimilatesArchetype rdf:type owl:ObjectProperty ;
+                              rdfs:subPropertyOf owl:topObjectProperty .
+
+
+###  https://www.cs7820-robo-orchestration.org/ontology/assimilatesRoleCategory
+robo-ont:assimilatesRoleCategory rdf:type owl:ObjectProperty ;
+                                 rdfs:subPropertyOf owl:topObjectProperty .
+
+
+###  https://www.cs7820-robo-orchestration.org/ontology/belongsToCategory
+robo-ont:belongsToCategory rdf:type owl:ObjectProperty ;
+                           rdfs:subPropertyOf owl:topObjectProperty .
+
+
+###  https://www.cs7820-robo-orchestration.org/ontology/dependsOnTask
+robo-ont:dependsOnTask rdf:type owl:ObjectProperty ;
+                       rdfs:subPropertyOf owl:topObjectProperty .
+
+
+###  https://www.cs7820-robo-orchestration.org/ontology/enabledBySpatialThing
+robo-ont:enabledBySpatialThing rdf:type owl:ObjectProperty ;
+                               rdfs:subPropertyOf owl:topObjectProperty .
+
+
+###  https://www.cs7820-robo-orchestration.org/ontology/enablesAction
+robo-ont:enablesAction rdf:type owl:ObjectProperty ;
+                       rdfs:subPropertyOf owl:topObjectProperty .
+
+
+###  https://www.cs7820-robo-orchestration.org/ontology/hasCategorizationType
+robo-ont:hasCategorizationType rdf:type owl:ObjectProperty ;
+                               rdfs:subPropertyOf owl:topObjectProperty .
+
+
+###  https://www.cs7820-robo-orchestration.org/ontology/hasDeadline
+robo-ont:hasDeadline rdf:type owl:ObjectProperty ;
+                     rdfs:subPropertyOf owl:topObjectProperty .
+
+
+###  https://www.cs7820-robo-orchestration.org/ontology/hasIdentifier
+robo-ont:hasIdentifier rdf:type owl:ObjectProperty ;
+                       rdfs:subPropertyOf owl:topObjectProperty ;
+                       rdfs:range robo-ont:Identifier .
+
+
+###  https://www.cs7820-robo-orchestration.org/ontology/hasNextTask
+robo-ont:hasNextTask rdf:type owl:ObjectProperty ;
+                     rdfs:subPropertyOf owl:topObjectProperty .
+
+
+###  https://www.cs7820-robo-orchestration.org/ontology/hasOperationalExtent
+robo-ont:hasOperationalExtent rdf:type owl:ObjectProperty ;
+                              rdfs:subPropertyOf owl:topObjectProperty .
+
+
+###  https://www.cs7820-robo-orchestration.org/ontology/hasSpatioTemporalExtent
+robo-ont:hasSpatioTemporalExtent rdf:type owl:ObjectProperty ;
+                                 rdfs:subPropertyOf owl:topObjectProperty .
+
+
+###  https://www.cs7820-robo-orchestration.org/ontology/hasState
+robo-ont:hasState rdf:type owl:ObjectProperty ;
+                  rdfs:subPropertyOf owl:topObjectProperty .
+
+
+###  https://www.cs7820-robo-orchestration.org/ontology/hasSubGoal
+robo-ont:hasSubGoal rdf:type owl:ObjectProperty ;
+                    rdfs:subPropertyOf owl:topObjectProperty .
+
+
+###  https://www.cs7820-robo-orchestration.org/ontology/hasSuccessState
+robo-ont:hasSuccessState rdf:type owl:ObjectProperty ;
+                         rdfs:subPropertyOf owl:topObjectProperty .
+
+
+###  https://www.cs7820-robo-orchestration.org/ontology/hasTask
+robo-ont:hasTask rdf:type owl:ObjectProperty ;
+                 rdfs:subPropertyOf owl:topObjectProperty .
+
+
+###  https://www.cs7820-robo-orchestration.org/ontology/hasTemporalExtent
+robo-ont:hasTemporalExtent rdf:type owl:ObjectProperty ;
+                           rdfs:subPropertyOf owl:topObjectProperty .
+
+
+###  https://www.cs7820-robo-orchestration.org/ontology/isPartOf
+robo-ont:isPartOf rdf:type owl:ObjectProperty ;
+                  rdfs:subPropertyOf owl:topObjectProperty .
+
+
+###  https://www.cs7820-robo-orchestration.org/ontology/isWithinBounds
+robo-ont:isWithinBounds rdf:type owl:ObjectProperty ;
+                        rdfs:subPropertyOf owl:topObjectProperty ;
+                        rdfs:range robo-ont:SpatialExtent .
+
+
+###  https://www.cs7820-robo-orchestration.org/ontology/providesRole
+robo-ont:providesRole rdf:type owl:ObjectProperty ;
+                      rdfs:subPropertyOf owl:topObjectProperty .
+
+
+###  https://www.cs7820-robo-orchestration.org/ontology/requiresArchetype
+robo-ont:requiresArchetype rdf:type owl:ObjectProperty ;
+                           rdfs:subPropertyOf owl:topObjectProperty .
+
+
+###  https://www.cs7820-robo-orchestration.org/ontology/requiresCapability
+robo-ont:requiresCapability rdf:type owl:ObjectProperty ;
+                            rdfs:subPropertyOf owl:topObjectProperty .
+
+
+###  https://www.cs7820-robo-orchestration.org/ontology/requiresSpatialThing
+robo-ont:requiresSpatialThing rdf:type owl:ObjectProperty ;
+                              rdfs:subPropertyOf owl:topObjectProperty .
+
+
+###  https://www.cs7820-robo-orchestration.org/ontology/subclassOf
+robo-ont:subclassOf rdf:type owl:ObjectProperty ;
+                    rdfs:subPropertyOf owl:topObjectProperty .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  https://www.cs7820-robo-orchestration.org/ontology/asString
+robo-ont:asString rdf:type owl:DatatypeProperty .
+
+
+###  https://www.cs7820-robo-orchestration.org/ontology/hasInstructionalText
+robo-ont:hasInstructionalText rdf:type owl:DatatypeProperty .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://www.w3.org/2002/07/owl#Thing
+owl:Thing rdfs:subClassOf [ rdf:type owl:Restriction ;
+                            owl:onProperty robo-ont:hasIdentifier ;
+                            owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                            owl:onClass robo-ont:Identifier
+                          ] .
+
+
+###  https://www.cs7820-robo-orchestration.org/ontology/Action
+robo-ont:Action rdf:type owl:Class .
+
+
+###  https://www.cs7820-robo-orchestration.org/ontology/Agent
+robo-ont:Agent rdf:type owl:Class ;
+               rdfs:subClassOf robo-ont:SpatialThing .
+
+
+###  https://www.cs7820-robo-orchestration.org/ontology/AgentCategory
+robo-ont:AgentCategory rdf:type owl:Class ;
+                       rdfs:subClassOf robo-ont:Category .
+
+
+###  https://www.cs7820-robo-orchestration.org/ontology/Archetype
+robo-ont:Archetype rdf:type owl:Class .
+
+
+###  https://www.cs7820-robo-orchestration.org/ontology/Audition
+robo-ont:Audition rdf:type owl:Class ;
+                  rdfs:subClassOf robo-ont:Sensor-Based .
+
+
+###  https://www.cs7820-robo-orchestration.org/ontology/Capability
+robo-ont:Capability rdf:type owl:Class .
+
+
+###  https://www.cs7820-robo-orchestration.org/ontology/CategorizationType
+robo-ont:CategorizationType rdf:type owl:Class .
+
+
+###  https://www.cs7820-robo-orchestration.org/ontology/Category
+robo-ont:Category rdf:type owl:Class ;
+                  rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                    owl:onProperty robo-ont:hasCategorizationType ;
+                                    owl:someValuesFrom robo-ont:CategorizationType
+                                  ] ,
+                                  [ rdf:type owl:Restriction ;
+                                    owl:onProperty robo-ont:hasCategorizationType ;
+                                    owl:allValuesFrom robo-ont:CategorizationType
+                                  ] .
+
+
+###  https://www.cs7820-robo-orchestration.org/ontology/Close
+robo-ont:Close rdf:type owl:Class ;
+               rdfs:subClassOf robo-ont:Gripper-Based ;
+               owl:disjointWith robo-ont:Open .
+
+
+###  https://www.cs7820-robo-orchestration.org/ontology/Constructor
+robo-ont:Constructor rdf:type owl:Class ;
+                     rdfs:subClassOf robo-ont:Archetype .
+
+
+###  https://www.cs7820-robo-orchestration.org/ontology/Digger
+robo-ont:Digger rdf:type owl:Class ;
+                rdfs:subClassOf robo-ont:Archetype .
+
+
+###  https://www.cs7820-robo-orchestration.org/ontology/Distance
+robo-ont:Distance rdf:type owl:Class ;
+                  rdfs:subClassOf robo-ont:Sensor-Based .
+
+
+###  https://www.cs7820-robo-orchestration.org/ontology/Environment
+robo-ont:Environment rdf:type owl:Class ;
+                     rdfs:subClassOf robo-ont:SpatialThing .
+
+
+###  https://www.cs7820-robo-orchestration.org/ontology/EnvironmentCategory
+robo-ont:EnvironmentCategory rdf:type owl:Class ;
+                             rdfs:subClassOf robo-ont:Category .
+
+
+###  https://www.cs7820-robo-orchestration.org/ontology/Explorer
+robo-ont:Explorer rdf:type owl:Class ;
+                  rdfs:subClassOf robo-ont:Archetype .
+
+
+###  https://www.cs7820-robo-orchestration.org/ontology/Feature
+robo-ont:Feature rdf:type owl:Class ;
+                 rdfs:subClassOf robo-ont:SpatialThing .
+
+
+###  https://www.cs7820-robo-orchestration.org/ontology/Geometry
+robo-ont:Geometry rdf:type owl:Class ;
+                  rdfs:subClassOf robo-ont:SpatialThing .
+
+
+###  https://www.cs7820-robo-orchestration.org/ontology/Goal
+robo-ont:Goal rdf:type owl:Class ;
+              rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                owl:onProperty robo-ont:hasDeadline ;
+                                owl:someValuesFrom robo-ont:TemporalExtent
+                              ] ,
+                              [ rdf:type owl:Restriction ;
+                                owl:onProperty robo-ont:hasSubGoal ;
+                                owl:allValuesFrom robo-ont:Goal
+                              ] ,
+                              [ rdf:type owl:Restriction ;
+                                owl:onProperty robo-ont:hasTask ;
+                                owl:allValuesFrom robo-ont:Task
+                              ] ,
+                              [ rdf:type owl:Restriction ;
+                                owl:onProperty robo-ont:hasDeadline ;
+                                owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                owl:onClass robo-ont:TemporalExtent
+                              ] ,
+                              [ rdf:type owl:Restriction ;
+                                owl:onProperty robo-ont:hasTask ;
+                                owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                owl:onClass robo-ont:Task
+                              ] .
+
+
+###  https://www.cs7820-robo-orchestration.org/ontology/Gripper-Based
+robo-ont:Gripper-Based rdf:type owl:Class ;
+                       rdfs:subClassOf robo-ont:Capability .
+
+
+###  https://www.cs7820-robo-orchestration.org/ontology/Harvestor
+robo-ont:Harvestor rdf:type owl:Class ;
+                   rdfs:subClassOf robo-ont:Archetype .
+
+
+###  https://www.cs7820-robo-orchestration.org/ontology/Hauler
+robo-ont:Hauler rdf:type owl:Class ;
+                rdfs:subClassOf robo-ont:Archetype .
+
+
+###  https://www.cs7820-robo-orchestration.org/ontology/Identifier
+robo-ont:Identifier rdf:type owl:Class .
+
+
+###  https://www.cs7820-robo-orchestration.org/ontology/Inspector
+robo-ont:Inspector rdf:type owl:Class ;
+                   rdfs:subClassOf robo-ont:Archetype .
+
+
+###  https://www.cs7820-robo-orchestration.org/ontology/Motion-Based
+robo-ont:Motion-Based rdf:type owl:Class ;
+                      rdfs:subClassOf robo-ont:Capability .
+
+
+###  https://www.cs7820-robo-orchestration.org/ontology/Move
+robo-ont:Move rdf:type owl:Class ;
+              rdfs:subClassOf robo-ont:Motion-Based .
+
+
+###  https://www.cs7820-robo-orchestration.org/ontology/Object
+robo-ont:Object rdf:type owl:Class ;
+                rdfs:subClassOf robo-ont:SpatialThing .
+
+
+###  https://www.cs7820-robo-orchestration.org/ontology/ObjectCategory
+robo-ont:ObjectCategory rdf:type owl:Class ;
+                        rdfs:subClassOf robo-ont:Category .
+
+
+###  https://www.cs7820-robo-orchestration.org/ontology/Open
+robo-ont:Open rdf:type owl:Class ;
+              rdfs:subClassOf robo-ont:Gripper-Based .
+
+
+###  https://www.cs7820-robo-orchestration.org/ontology/Painter
+robo-ont:Painter rdf:type owl:Class ;
+                 rdfs:subClassOf robo-ont:Archetype .
+
+
+###  https://www.cs7820-robo-orchestration.org/ontology/Pick
+robo-ont:Pick rdf:type owl:Class ;
+              rdfs:subClassOf robo-ont:Gripper-Based ;
+              owl:disjointWith robo-ont:Place .
+
+
+###  https://www.cs7820-robo-orchestration.org/ontology/Place
+robo-ont:Place rdf:type owl:Class ;
+               rdfs:subClassOf robo-ont:Gripper-Based .
+
+
+###  https://www.cs7820-robo-orchestration.org/ontology/Press
+robo-ont:Press rdf:type owl:Class ;
+               rdfs:subClassOf robo-ont:Motion-Based .
+
+
+###  https://www.cs7820-robo-orchestration.org/ontology/Pull
+robo-ont:Pull rdf:type owl:Class ;
+              rdfs:subClassOf robo-ont:Motion-Based ;
+              owl:disjointWith robo-ont:Push .
+
+
+###  https://www.cs7820-robo-orchestration.org/ontology/Push
+robo-ont:Push rdf:type owl:Class ;
+              rdfs:subClassOf robo-ont:Motion-Based .
+
+
+###  https://www.cs7820-robo-orchestration.org/ontology/RelationInstance
+robo-ont:RelationInstance rdf:type owl:Class .
+
+
+###  https://www.cs7820-robo-orchestration.org/ontology/Role
+robo-ont:Role rdf:type owl:Class ;
+              rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                owl:onProperty robo-ont:hasTemporalExtent ;
+                                owl:someValuesFrom robo-ont:TemporalExtent
+                              ] ,
+                              [ rdf:type owl:Restriction ;
+                                owl:onProperty robo-ont:hasTemporalExtent ;
+                                owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                owl:onClass robo-ont:TemporalExtent
+                              ] ,
+                              [ rdf:type owl:Restriction ;
+                                owl:onProperty robo-ont:asString ;
+                                owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                owl:onDataRange xsd:string
+                              ] .
+
+
+###  https://www.cs7820-robo-orchestration.org/ontology/RoleCategory
+robo-ont:RoleCategory rdf:type owl:Class ;
+                      rdfs:subClassOf robo-ont:Category .
+
+
+###  https://www.cs7820-robo-orchestration.org/ontology/Rotate
+robo-ont:Rotate rdf:type owl:Class ;
+                rdfs:subClassOf robo-ont:Motion-Based .
+
+
+###  https://www.cs7820-robo-orchestration.org/ontology/Sensor-Based
+robo-ont:Sensor-Based rdf:type owl:Class ;
+                      rdfs:subClassOf robo-ont:Capability .
+
+
+###  https://www.cs7820-robo-orchestration.org/ontology/Sentinel
+robo-ont:Sentinel rdf:type owl:Class ;
+                  rdfs:subClassOf robo-ont:Archetype .
+
+
+###  https://www.cs7820-robo-orchestration.org/ontology/SpatialExtent
+robo-ont:SpatialExtent rdf:type owl:Class .
+
+
+###  https://www.cs7820-robo-orchestration.org/ontology/SpatialTemporalExtent
+robo-ont:SpatialTemporalExtent rdf:type owl:Class .
+
+
+###  https://www.cs7820-robo-orchestration.org/ontology/SpatialThing
+robo-ont:SpatialThing rdf:type owl:Class ;
+                      rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                        owl:onProperty robo-ont:belongsToCategory ;
+                                        owl:someValuesFrom robo-ont:Category
+                                      ] .
+
+
+###  https://www.cs7820-robo-orchestration.org/ontology/State
+robo-ont:State rdf:type owl:Class .
+
+
+###  https://www.cs7820-robo-orchestration.org/ontology/Task
+robo-ont:Task rdf:type owl:Class ;
+              rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                owl:onProperty robo-ont:dependsOnTask ;
+                                owl:allValuesFrom robo-ont:Task
+                              ] ,
+                              [ rdf:type owl:Restriction ;
+                                owl:onProperty robo-ont:hasNextTask ;
+                                owl:allValuesFrom robo-ont:Task
+                              ] .
+
+
+###  https://www.cs7820-robo-orchestration.org/ontology/TemporalExtent
+robo-ont:TemporalExtent rdf:type owl:Class .
+
+
+###  https://www.cs7820-robo-orchestration.org/ontology/Touch
+robo-ont:Touch rdf:type owl:Class ;
+               rdfs:subClassOf robo-ont:Sensor-Based .
+
+
+###  https://www.cs7820-robo-orchestration.org/ontology/Vision
+robo-ont:Vision rdf:type owl:Class ;
+                rdfs:subClassOf robo-ont:Sensor-Based .
+
+
+#################################################################
+#    General axioms
+#################################################################
+
+[ rdf:type owl:Restriction ;
+  owl:onProperty robo-ont:dependsOnTask ;
+  owl:someValuesFrom robo-ont:Task ;
+  rdfs:subClassOf robo-ont:Task
+] .
+
+
+[ rdf:type owl:Restriction ;
+  owl:onProperty robo-ont:hasCategorizationType ;
+  owl:someValuesFrom robo-ont:CategorizationType ;
+  rdfs:subClassOf robo-ont:Category
+] .
+
+
+[ rdf:type owl:Restriction ;
+  owl:onProperty robo-ont:hasNextTask ;
+  owl:someValuesFrom robo-ont:Task ;
+  rdfs:subClassOf robo-ont:Task
+] .
+
+
+[ rdf:type owl:Restriction ;
+  owl:onProperty robo-ont:hasSubGoal ;
+  owl:someValuesFrom robo-ont:Goal ;
+  rdfs:subClassOf robo-ont:Goal
+] .
+
+
+[ rdf:type owl:Restriction ;
+  owl:onProperty robo-ont:hasTask ;
+  owl:someValuesFrom robo-ont:Task ;
+  rdfs:subClassOf robo-ont:Goal
+] .
+
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( robo-ont:AgentCategory
+                robo-ont:EnvironmentCategory
+                robo-ont:ObjectCategory
+                robo-ont:RoleCategory
+              )
+] .
+
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( robo-ont:Audition
+                robo-ont:Distance
+                robo-ont:Touch
+                robo-ont:Vision
+              )
+] .
+
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( robo-ont:Close
+                robo-ont:Open
+                robo-ont:Pick
+                robo-ont:Place
+              )
+] .
+
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( robo-ont:Constructor
+                robo-ont:Digger
+                robo-ont:Explorer
+                robo-ont:Harvestor
+                robo-ont:Hauler
+                robo-ont:Inspector
+                robo-ont:Painter
+                robo-ont:Sentinel
+              )
+] .
+
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( robo-ont:Gripper-Based
+                robo-ont:Motion-Based
+                robo-ont:Sensor-Based
+              )
+] .
+
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( robo-ont:Move
+                robo-ont:Press
+                robo-ont:Pull
+                robo-ont:Push
+                robo-ont:Rotate
+              )
+] .
+
+
+###  Generated by the OWL API (version 4.5.29.2024-05-13T12:11:03Z) https://github.com/owlcs/owlapi
