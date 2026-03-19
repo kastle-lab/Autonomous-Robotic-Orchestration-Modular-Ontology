@@ -131,6 +131,15 @@
 
 ---
 
+- **Metadata**
+  - <u><b>Rationale</b></u>: Data that defines and describes the characteristics of other data (usually large data not fit for KGs. I.e., PointCloud data) for retrieval and processing.
+
+  - <u>**Connected Pattern**</u>: [Dublin Core™ Metadata](https://www.dublincore.org/specifications/dublin-core/dces/)
+
+  - <u>**Source Dataset(s)**</u>: All
+
+---
+
 - **RelationInstance**
   - <u><b>Rationale</b></u>: Through reification, typecasting properties into subproperties of a spatial thing (i.e., component, member, place, and feature types).
 
