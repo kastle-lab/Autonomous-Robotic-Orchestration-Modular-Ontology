@@ -53,6 +53,16 @@ robo-ont:hasDeadline rdf:type owl:ObjectProperty ;
                      rdfs:subPropertyOf owl:topObjectProperty .
 
 
+###  https://www.cs7820-robo-orchestration.org/ontology/hasDescription
+robo-ont:hasDescription rdf:type owl:ObjectProperty ;
+                        rdfs:subPropertyOf owl:topObjectProperty .
+
+
+###  https://www.cs7820-robo-orchestration.org/ontology/hasFileLocation
+robo-ont:hasFileLocation rdf:type owl:ObjectProperty ;
+                         rdfs:subPropertyOf owl:topObjectProperty .
+
+
 ###  https://www.cs7820-robo-orchestration.org/ontology/hasIdentifier
 robo-ont:hasIdentifier rdf:type owl:ObjectProperty ;
                        rdfs:subPropertyOf owl:topObjectProperty ;
@@ -110,6 +120,11 @@ robo-ont:isWithinBounds rdf:type owl:ObjectProperty ;
                         rdfs:range robo-ont:SpatialExtent .
 
 
+###  https://www.cs7820-robo-orchestration.org/ontology/metadataFormat
+robo-ont:metadataFormat rdf:type owl:ObjectProperty ;
+                        rdfs:subPropertyOf owl:topObjectProperty .
+
+
 ###  https://www.cs7820-robo-orchestration.org/ontology/providesRole
 robo-ont:providesRole rdf:type owl:ObjectProperty ;
                       rdfs:subPropertyOf owl:topObjectProperty .
@@ -143,21 +158,25 @@ robo-ont:subclassOf rdf:type owl:ObjectProperty ;
 robo-ont:asString rdf:type owl:DatatypeProperty .
 
 
+###  https://www.cs7820-robo-orchestration.org/ontology/fileLocationAsString
+robo-ont:fileLocationAsString rdf:type owl:DatatypeProperty .
+
+
+###  https://www.cs7820-robo-orchestration.org/ontology/hasDescription
+robo-ont:hasDescription rdf:type owl:DatatypeProperty .
+
+
 ###  https://www.cs7820-robo-orchestration.org/ontology/hasInstructionalText
 robo-ont:hasInstructionalText rdf:type owl:DatatypeProperty .
+
+
+###  https://www.cs7820-robo-orchestration.org/ontology/metadataFormatAsString
+robo-ont:metadataFormatAsString rdf:type owl:DatatypeProperty .
 
 
 #################################################################
 #    Classes
 #################################################################
-
-###  http://www.w3.org/2002/07/owl#Thing
-owl:Thing rdfs:subClassOf [ rdf:type owl:Restriction ;
-                            owl:onProperty robo-ont:hasIdentifier ;
-                            owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-                            owl:onClass robo-ont:Identifier
-                          ] .
-
 
 ###  https://www.cs7820-robo-orchestration.org/ontology/Action
 robo-ont:Action rdf:type owl:Class .
@@ -243,6 +262,15 @@ robo-ont:Feature rdf:type owl:Class ;
                  rdfs:subClassOf robo-ont:SpatialThing .
 
 
+###  https://www.cs7820-robo-orchestration.org/ontology/Format
+robo-ont:Format rdf:type owl:Class ;
+                rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                  owl:onProperty robo-ont:metadataFormatAsString ;
+                                  owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                  owl:onDataRange xsd:string
+                                ] .
+
+
 ###  https://www.cs7820-robo-orchestration.org/ontology/Geometry
 robo-ont:Geometry rdf:type owl:Class ;
                   rdfs:subClassOf robo-ont:SpatialThing .
@@ -296,6 +324,34 @@ robo-ont:Identifier rdf:type owl:Class .
 ###  https://www.cs7820-robo-orchestration.org/ontology/Inspector
 robo-ont:Inspector rdf:type owl:Class ;
                    rdfs:subClassOf robo-ont:Archetype .
+
+
+###  https://www.cs7820-robo-orchestration.org/ontology/Location
+robo-ont:Location rdf:type owl:Class ;
+                  rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                    owl:onProperty robo-ont:fileLocationAsString ;
+                                    owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                    owl:onDataRange xsd:string
+                                  ] .
+
+
+###  https://www.cs7820-robo-orchestration.org/ontology/Metadata
+robo-ont:Metadata rdf:type owl:Class ;
+                  rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                    owl:onProperty robo-ont:hasFileLocation ;
+                                    owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                    owl:onClass robo-ont:Location
+                                  ] ,
+                                  [ rdf:type owl:Restriction ;
+                                    owl:onProperty robo-ont:metadataFormat ;
+                                    owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                    owl:onClass robo-ont:Format
+                                  ] ,
+                                  [ rdf:type owl:Restriction ;
+                                    owl:onProperty robo-ont:hasDescription ;
+                                    owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                    owl:onDataRange xsd:string
+                                  ] .
 
 
 ###  https://www.cs7820-robo-orchestration.org/ontology/Motion-Based
@@ -540,4 +596,4 @@ robo-ont:Vision rdf:type owl:Class ;
 ] .
 
 
-###  Generated by the OWL API (version 4.5.29.2024-05-13T12:11:03Z) https://github.com/owlcs/owlapi
+###  Generated by the OWL API (version 4.5.26.2023-07-17T20:34:13Z) https://github.com/owlcs/owlapi
