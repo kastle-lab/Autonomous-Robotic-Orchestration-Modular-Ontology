@@ -159,7 +159,7 @@
 ---
 
 - **Specification**
-  - <u><b>Rationale</b></u>: The specifications given for some thing (e.g., A Capability).
+  - <u><b>Rationale</b></u>: A quantified boundary or measurable limit that defines the extent of a capability. Example: a robotic gripper's specification might state it can grasp objects up to 5 kg.
 
   - <u>**Connected Pattern**</u>: [quantity-pattern](https://github.com/kastle-lab/modular-ontology-design-library/blob/master/modl/quantity/quantity-pattern.pdf)
 
