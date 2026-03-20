@@ -338,6 +338,35 @@ Note: Role pattern and Axioms are a work in progress!
 #### Remarks
 
 - Role pattern and Axioms are a work in progress!
+
+### Metadata
+
+**Source Pattern:** Dublin Core™ Metadata
+**Source Data:** Associated geometric data files (i.e. shapefiles)
+
+#### Description
+
+Data that defines and describes the characteristics of other data (usually large data not fit for KGs. I.e., PointCloud data) for retrieval and processing.
+
+![schema-diagram](./patterns/metadata-pattern/metadata-pattern.png)
+
+#### Axioms
+
+- `Metadata SubClassOf metadataFormat some Format` <br />
+  Metadata has at least one Format.
+- `Metadata SubClassOf metadataFormat max 1 Format` <br />
+  Metadata has at most 1 Format.
+- `Metadata SubClassOf hasFileLocation some Location` <br />
+  Metadata has at least one file location.
+- `Metadata SubClassOf hasFileLocation max 1 Location` <br />
+  Metadata has at most 1 Location.
+- `Metadata SubClassOf hasDescription max 1 xsd:string` <br />
+  Metadata can have at most 1 string.
+- `Format SubClassOf metadataFormatAsString max 1 xsd:string` <br />
+  Format can have at most 1 string.
+- `Location SubClassOf fileLocationAsString max 1 xsd:string` <br />
+  Location can have at most 1 string.
+
 <!--
 
 ### Module X
