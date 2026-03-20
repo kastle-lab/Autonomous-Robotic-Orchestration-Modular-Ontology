@@ -23,6 +23,11 @@ robo-ont:assimilatesRoleCategory rdf:type owl:ObjectProperty ;
                                  rdfs:subPropertyOf owl:topObjectProperty .
 
 
+###  https://www.cs7820-robo-orchestration.org/ontology/assumesRole
+robo-ont:assumesRole rdf:type owl:ObjectProperty ;
+                     rdfs:subPropertyOf owl:topObjectProperty .
+
+
 ###  https://www.cs7820-robo-orchestration.org/ontology/belongsToCategory
 robo-ont:belongsToCategory rdf:type owl:ObjectProperty ;
                            rdfs:subPropertyOf owl:topObjectProperty .
@@ -52,6 +57,21 @@ robo-ont:enablesAction rdf:type owl:ObjectProperty ;
                        rdfs:subPropertyOf owl:topObjectProperty .
 
 
+###  https://www.cs7820-robo-orchestration.org/ontology/enablesCapability
+robo-ont:enablesCapability rdf:type owl:ObjectProperty ;
+                           rdfs:subPropertyOf owl:topObjectProperty .
+
+
+###  https://www.cs7820-robo-orchestration.org/ontology/fulfillsArchetype
+robo-ont:fulfillsArchetype rdf:type owl:ObjectProperty ;
+                           rdfs:subPropertyOf owl:topObjectProperty .
+
+
+###  https://www.cs7820-robo-orchestration.org/ontology/hasCapability
+robo-ont:hasCapability rdf:type owl:ObjectProperty ;
+                       rdfs:subPropertyOf owl:topObjectProperty .
+
+
 ###  https://www.cs7820-robo-orchestration.org/ontology/hasCategorizationType
 robo-ont:hasCategorizationType rdf:type owl:ObjectProperty ;
                                rdfs:subPropertyOf owl:topObjectProperty .
@@ -70,6 +90,11 @@ robo-ont:hasDescription rdf:type owl:ObjectProperty ;
 ###  https://www.cs7820-robo-orchestration.org/ontology/hasFileLocation
 robo-ont:hasFileLocation rdf:type owl:ObjectProperty ;
                          rdfs:subPropertyOf owl:topObjectProperty .
+
+
+###  https://www.cs7820-robo-orchestration.org/ontology/hasGeometry
+robo-ont:hasGeometry rdf:type owl:ObjectProperty ;
+                     rdfs:subPropertyOf owl:topObjectProperty .
 
 
 ###  https://www.cs7820-robo-orchestration.org/ontology/hasIdentifier
@@ -93,9 +118,19 @@ robo-ont:hasSpatioTemporalExtent rdf:type owl:ObjectProperty ;
                                  rdfs:subPropertyOf owl:topObjectProperty .
 
 
+###  https://www.cs7820-robo-orchestration.org/ontology/hasSpatiotemporalExtent
+robo-ont:hasSpatiotemporalExtent rdf:type owl:ObjectProperty ;
+                                 rdfs:subPropertyOf owl:topObjectProperty .
+
+
 ###  https://www.cs7820-robo-orchestration.org/ontology/hasSpec
 robo-ont:hasSpec rdf:type owl:ObjectProperty ;
                  rdfs:subPropertyOf owl:topObjectProperty .
+
+
+###  https://www.cs7820-robo-orchestration.org/ontology/hasSpecKind
+robo-ont:hasSpecKind rdf:type owl:ObjectProperty ;
+                     rdfs:subPropertyOf owl:topObjectProperty .
 
 
 ###  https://www.cs7820-robo-orchestration.org/ontology/hasState
@@ -121,6 +156,21 @@ robo-ont:hasTask rdf:type owl:ObjectProperty ;
 ###  https://www.cs7820-robo-orchestration.org/ontology/hasTemporalExtent
 robo-ont:hasTemporalExtent rdf:type owl:ObjectProperty ;
                            rdfs:subPropertyOf owl:topObjectProperty .
+
+
+###  https://www.cs7820-robo-orchestration.org/ontology/hasThreshold
+robo-ont:hasThreshold rdf:type owl:ObjectProperty ;
+                      rdfs:subPropertyOf owl:topObjectProperty .
+
+
+###  https://www.cs7820-robo-orchestration.org/ontology/hasUnit
+robo-ont:hasUnit rdf:type owl:ObjectProperty ;
+                 rdfs:subPropertyOf owl:topObjectProperty .
+
+
+###  https://www.cs7820-robo-orchestration.org/ontology/hasValue
+robo-ont:hasValue rdf:type owl:ObjectProperty ;
+                  rdfs:subPropertyOf owl:topObjectProperty .
 
 
 ###  https://www.cs7820-robo-orchestration.org/ontology/isPartOf
@@ -164,6 +214,11 @@ robo-ont:subclassOf rdf:type owl:ObjectProperty ;
                     rdfs:subPropertyOf owl:topObjectProperty .
 
 
+###  https://www.cs7820-robo-orchestration.org/ontology/unitAsString
+robo-ont:unitAsString rdf:type owl:ObjectProperty ;
+                      rdfs:subPropertyOf owl:topObjectProperty .
+
+
 #################################################################
 #    Data properties
 #################################################################
@@ -184,8 +239,25 @@ robo-ont:hasDescription rdf:type owl:DatatypeProperty .
 robo-ont:hasInstructionalText rdf:type owl:DatatypeProperty .
 
 
+###  https://www.cs7820-robo-orchestration.org/ontology/hasValue
+robo-ont:hasValue rdf:type owl:DatatypeProperty .
+
+
+###  https://www.cs7820-robo-orchestration.org/ontology/identifierAsText
+robo-ont:identifierAsText rdf:type owl:DatatypeProperty ;
+                          rdfs:subPropertyOf owl:topDataProperty .
+
+
 ###  https://www.cs7820-robo-orchestration.org/ontology/metadataFormatAsString
 robo-ont:metadataFormatAsString rdf:type owl:DatatypeProperty .
+
+
+###  https://www.cs7820-robo-orchestration.org/ontology/specificationKindAsString
+robo-ont:specificationKindAsString rdf:type owl:DatatypeProperty .
+
+
+###  https://www.cs7820-robo-orchestration.org/ontology/unitAsString
+robo-ont:unitAsString rdf:type owl:DatatypeProperty .
 
 
 #################################################################
@@ -203,7 +275,15 @@ robo-ont:Action rdf:type owl:Class ;
 
 ###  https://www.cs7820-robo-orchestration.org/ontology/Agent
 robo-ont:Agent rdf:type owl:Class ;
-               rdfs:subClassOf robo-ont:SpatialThing .
+               rdfs:subClassOf robo-ont:SpatialThing ,
+                               [ rdf:type owl:Restriction ;
+                                 owl:onProperty robo-ont:fulfillsArchetype ;
+                                 owl:allValuesFrom robo-ont:Archetype
+                               ] ,
+                               [ rdf:type owl:Restriction ;
+                                 owl:onProperty robo-ont:hasCapability ;
+                                 owl:allValuesFrom robo-ont:Capability
+                               ] .
 
 
 ###  https://www.cs7820-robo-orchestration.org/ontology/AgentCategory
@@ -212,7 +292,15 @@ robo-ont:AgentCategory rdf:type owl:Class ;
 
 
 ###  https://www.cs7820-robo-orchestration.org/ontology/Archetype
-robo-ont:Archetype rdf:type owl:Class .
+robo-ont:Archetype rdf:type owl:Class ;
+                   rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                     owl:onProperty robo-ont:requiresCapability ;
+                                     owl:someValuesFrom robo-ont:Capability
+                                   ] ,
+                                   [ rdf:type owl:Restriction ;
+                                     owl:onProperty robo-ont:requiresCapability ;
+                                     owl:allValuesFrom robo-ont:Capability
+                                   ] .
 
 
 ###  https://www.cs7820-robo-orchestration.org/ontology/Audition
@@ -223,16 +311,24 @@ robo-ont:Audition rdf:type owl:Class ;
 ###  https://www.cs7820-robo-orchestration.org/ontology/Capability
 robo-ont:Capability rdf:type owl:Class ;
                     rdfs:subClassOf [ rdf:type owl:Restriction ;
-                                      owl:onProperty robo-ont:enabledBy ;
-                                      owl:someValuesFrom robo-ont:SpatialThing
-                                    ] ,
-                                    [ rdf:type owl:Restriction ;
                                       owl:onProperty robo-ont:hasSpec ;
                                       owl:someValuesFrom robo-ont:Specification
                                     ] ,
                                     [ rdf:type owl:Restriction ;
+                                      owl:onProperty robo-ont:enabledBySpatialThing ;
+                                      owl:allValuesFrom robo-ont:SpatialThing
+                                    ] ,
+                                    [ rdf:type owl:Restriction ;
+                                      owl:onProperty robo-ont:enablesAction ;
+                                      owl:allValuesFrom robo-ont:Action
+                                    ] ,
+                                    [ rdf:type owl:Restriction ;
+                                      owl:onProperty robo-ont:hasSpec ;
+                                      owl:allValuesFrom robo-ont:Specification
+                                    ] ,
+                                    [ rdf:type owl:Restriction ;
                                       owl:onProperty robo-ont:enabledBy ;
-                                      owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                      owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
                                       owl:onClass robo-ont:SpatialThing
                                     ] .
 
@@ -306,12 +402,20 @@ robo-ont:Explorer rdf:type owl:Class ;
 
 ###  https://www.cs7820-robo-orchestration.org/ontology/Feature
 robo-ont:Feature rdf:type owl:Class ;
-                 rdfs:subClassOf robo-ont:SpatialThing .
+                 rdfs:subClassOf robo-ont:SpatialThing ,
+                                 [ rdf:type owl:Restriction ;
+                                   owl:onProperty robo-ont:hasGeometry ;
+                                   owl:allValuesFrom robo-ont:Geometry
+                                 ] .
 
 
 ###  https://www.cs7820-robo-orchestration.org/ontology/Format
 robo-ont:Format rdf:type owl:Class ;
                 rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                  owl:onProperty robo-ont:metadataFormatAsString ;
+                                  owl:allValuesFrom xsd:string
+                                ] ,
+                                [ rdf:type owl:Restriction ;
                                   owl:onProperty robo-ont:metadataFormatAsString ;
                                   owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
                                   owl:onDataRange xsd:string
@@ -330,6 +434,10 @@ robo-ont:Goal rdf:type owl:Class ;
                                 owl:someValuesFrom robo-ont:TemporalExtent
                               ] ,
                               [ rdf:type owl:Restriction ;
+                                owl:onProperty robo-ont:hasTask ;
+                                owl:someValuesFrom robo-ont:Task
+                              ] ,
+                              [ rdf:type owl:Restriction ;
                                 owl:onProperty robo-ont:hasSubGoal ;
                                 owl:allValuesFrom robo-ont:Goal
                               ] ,
@@ -346,6 +454,11 @@ robo-ont:Goal rdf:type owl:Class ;
                                 owl:onProperty robo-ont:hasTask ;
                                 owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
                                 owl:onClass robo-ont:Task
+                              ] ,
+                              [ rdf:type owl:Restriction ;
+                                owl:onProperty robo-ont:hasInstructionalText ;
+                                owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                owl:onDataRange xsd:string
                               ] .
 
 
@@ -365,7 +478,15 @@ robo-ont:Hauler rdf:type owl:Class ;
 
 
 ###  https://www.cs7820-robo-orchestration.org/ontology/Identifier
-robo-ont:Identifier rdf:type owl:Class .
+robo-ont:Identifier rdf:type owl:Class ;
+                    rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                      owl:onProperty robo-ont:identifierAsText ;
+                                      owl:someValuesFrom xsd:string
+                                    ] ,
+                                    [ rdf:type owl:Restriction ;
+                                      owl:onProperty robo-ont:identifierAsText ;
+                                      owl:allValuesFrom xsd:string
+                                    ] .
 
 
 ###  https://www.cs7820-robo-orchestration.org/ontology/Inspector
@@ -376,6 +497,10 @@ robo-ont:Inspector rdf:type owl:Class ;
 ###  https://www.cs7820-robo-orchestration.org/ontology/Location
 robo-ont:Location rdf:type owl:Class ;
                   rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                    owl:onProperty robo-ont:fileLocationAsString ;
+                                    owl:allValuesFrom xsd:string
+                                  ] ,
+                                  [ rdf:type owl:Restriction ;
                                     owl:onProperty robo-ont:fileLocationAsString ;
                                     owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
                                     owl:onDataRange xsd:string
@@ -391,12 +516,20 @@ robo-ont:LowerThreshold rdf:type owl:Class ;
 robo-ont:Metadata rdf:type owl:Class ;
                   rdfs:subClassOf [ rdf:type owl:Restriction ;
                                     owl:onProperty robo-ont:hasFileLocation ;
-                                    owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                    owl:allValuesFrom robo-ont:Location
+                                  ] ,
+                                  [ rdf:type owl:Restriction ;
+                                    owl:onProperty robo-ont:metadataFormat ;
+                                    owl:allValuesFrom robo-ont:Format
+                                  ] ,
+                                  [ rdf:type owl:Restriction ;
+                                    owl:onProperty robo-ont:hasFileLocation ;
+                                    owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
                                     owl:onClass robo-ont:Location
                                   ] ,
                                   [ rdf:type owl:Restriction ;
                                     owl:onProperty robo-ont:metadataFormat ;
-                                    owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                    owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
                                     owl:onClass robo-ont:Format
                                   ] ,
                                   [ rdf:type owl:Restriction ;
@@ -485,12 +618,30 @@ robo-ont:ResistanceBased rdf:type owl:Class ;
 ###  https://www.cs7820-robo-orchestration.org/ontology/Role
 robo-ont:Role rdf:type owl:Class ;
               rdfs:subClassOf [ rdf:type owl:Restriction ;
-                                owl:onProperty robo-ont:hasTemporalExtent ;
-                                owl:someValuesFrom robo-ont:TemporalExtent
+                                owl:onProperty robo-ont:assimilatesRoleCategory ;
+                                owl:someValuesFrom robo-ont:RoleCategory
+                              ] ,
+                              [ rdf:type owl:Restriction ;
+                                owl:onProperty [ owl:inverseOf robo-ont:providesRole
+                                               ] ;
+                                owl:someValuesFrom robo-ont:Task
+                              ] ,
+                              [ rdf:type owl:Restriction ;
+                                owl:onProperty robo-ont:assimilatesArchetype ;
+                                owl:allValuesFrom robo-ont:Archetype
+                              ] ,
+                              [ rdf:type owl:Restriction ;
+                                owl:onProperty robo-ont:assimilatesRoleCategory ;
+                                owl:allValuesFrom robo-ont:RoleCategory
+                              ] ,
+                              [ rdf:type owl:Restriction ;
+                                owl:onProperty robo-ont:assimilatesArchetype ;
+                                owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                owl:onClass robo-ont:Archetype
                               ] ,
                               [ rdf:type owl:Restriction ;
                                 owl:onProperty robo-ont:hasTemporalExtent ;
-                                owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
                                 owl:onClass robo-ont:TemporalExtent
                               ] ,
                               [ rdf:type owl:Restriction ;
@@ -526,11 +677,12 @@ robo-ont:Shockproof rdf:type owl:Class ;
 
 
 ###  https://www.cs7820-robo-orchestration.org/ontology/SpatialExtent
-robo-ont:SpatialExtent rdf:type owl:Class .
-
-
-###  https://www.cs7820-robo-orchestration.org/ontology/SpatialTemporalExtent
-robo-ont:SpatialTemporalExtent rdf:type owl:Class .
+robo-ont:SpatialExtent rdf:type owl:Class ;
+                       rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                         owl:onProperty robo-ont:isWithinBounds ;
+                                         owl:minQualifiedCardinality "0"^^xsd:nonNegativeInteger ;
+                                         owl:onClass robo-ont:Goal
+                                       ] .
 
 
 ###  https://www.cs7820-robo-orchestration.org/ontology/SpatialThing
@@ -538,15 +690,74 @@ robo-ont:SpatialThing rdf:type owl:Class ;
                       rdfs:subClassOf [ rdf:type owl:Restriction ;
                                         owl:onProperty robo-ont:belongsToCategory ;
                                         owl:someValuesFrom robo-ont:Category
+                                      ] ,
+                                      [ rdf:type owl:Restriction ;
+                                        owl:onProperty robo-ont:hasSpatiotemporalExtent ;
+                                        owl:someValuesFrom robo-ont:SpatiotemporalExtent
+                                      ] ,
+                                      [ rdf:type owl:Restriction ;
+                                        owl:onProperty robo-ont:hasState ;
+                                        owl:someValuesFrom robo-ont:State
+                                      ] ,
+                                      [ rdf:type owl:Restriction ;
+                                        owl:onProperty robo-ont:assumesRole ;
+                                        owl:allValuesFrom robo-ont:Role
+                                      ] ,
+                                      [ rdf:type owl:Restriction ;
+                                        owl:onProperty robo-ont:enablesCapability ;
+                                        owl:allValuesFrom robo-ont:Capability
+                                      ] ,
+                                      [ rdf:type owl:Restriction ;
+                                        owl:onProperty robo-ont:hasSpatiotemporalExtent ;
+                                        owl:allValuesFrom robo-ont:SpatiotemporalExtent
+                                      ] ,
+                                      [ rdf:type owl:Restriction ;
+                                        owl:onProperty robo-ont:assumesRole ;
+                                        owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                        owl:onClass robo-ont:Role
+                                      ] ,
+                                      [ rdf:type owl:Restriction ;
+                                        owl:onProperty robo-ont:hasIdentifier ;
+                                        owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                        owl:onClass robo-ont:Identifier
                                       ] .
 
 
+###  https://www.cs7820-robo-orchestration.org/ontology/SpatiotemporalExtent
+robo-ont:SpatiotemporalExtent rdf:type owl:Class .
+
+
 ###  https://www.cs7820-robo-orchestration.org/ontology/Specification
-robo-ont:Specification rdf:type owl:Class .
+robo-ont:Specification rdf:type owl:Class ;
+                       rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                         owl:onProperty robo-ont:hasThreshold ;
+                                         owl:someValuesFrom robo-ont:Threshold
+                                       ] ,
+                                       [ rdf:type owl:Restriction ;
+                                         owl:onProperty robo-ont:hasSpecKind ;
+                                         owl:allValuesFrom robo-ont:SpecificationKind
+                                       ] ,
+                                       [ rdf:type owl:Restriction ;
+                                         owl:onProperty robo-ont:hasThreshold ;
+                                         owl:allValuesFrom robo-ont:Threshold
+                                       ] ,
+                                       [ rdf:type owl:Restriction ;
+                                         owl:onProperty robo-ont:hasSpecKind ;
+                                         owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                         owl:onClass robo-ont:SpecificationKind
+                                       ] .
 
 
 ###  https://www.cs7820-robo-orchestration.org/ontology/SpecificationKind
-robo-ont:SpecificationKind rdf:type owl:Class .
+robo-ont:SpecificationKind rdf:type owl:Class ;
+                           rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                             owl:onProperty robo-ont:specificationKindAsString ;
+                                             owl:someValuesFrom xsd:string
+                                           ] ,
+                                           [ rdf:type owl:Restriction ;
+                                             owl:onProperty robo-ont:unitAsString ;
+                                             owl:allValuesFrom xsd:string
+                                           ] .
 
 
 ###  https://www.cs7820-robo-orchestration.org/ontology/State
@@ -557,11 +768,46 @@ robo-ont:State rdf:type owl:Class .
 robo-ont:Task rdf:type owl:Class ;
               rdfs:subClassOf [ rdf:type owl:Restriction ;
                                 owl:onProperty robo-ont:dependsOnTask ;
+                                owl:someValuesFrom robo-ont:Task
+                              ] ,
+                              [ rdf:type owl:Restriction ;
+                                owl:onProperty robo-ont:hasNextTask ;
+                                owl:someValuesFrom robo-ont:Task
+                              ] ,
+                              [ rdf:type owl:Restriction ;
+                                owl:onProperty robo-ont:providesRole ;
+                                owl:someValuesFrom robo-ont:Role
+                              ] ,
+                              [ rdf:type owl:Restriction ;
+                                owl:onProperty robo-ont:requiresSpatialThing ;
+                                owl:someValuesFrom robo-ont:SpatialThing
+                              ] ,
+                              [ rdf:type owl:Restriction ;
+                                owl:onProperty robo-ont:dependsOnTask ;
                                 owl:allValuesFrom robo-ont:Task
                               ] ,
                               [ rdf:type owl:Restriction ;
                                 owl:onProperty robo-ont:hasNextTask ;
                                 owl:allValuesFrom robo-ont:Task
+                              ] ,
+                              [ rdf:type owl:Restriction ;
+                                owl:onProperty robo-ont:providesRole ;
+                                owl:allValuesFrom robo-ont:Role
+                              ] ,
+                              [ rdf:type owl:Restriction ;
+                                owl:onProperty robo-ont:dependsOnTask ;
+                                owl:minQualifiedCardinality "0"^^xsd:nonNegativeInteger ;
+                                owl:onClass robo-ont:Task
+                              ] ,
+                              [ rdf:type owl:Restriction ;
+                                owl:onProperty robo-ont:hasNextTask ;
+                                owl:minQualifiedCardinality "0"^^xsd:nonNegativeInteger ;
+                                owl:onClass robo-ont:Task
+                              ] ,
+                              [ rdf:type owl:Restriction ;
+                                owl:onProperty robo-ont:providesRole ;
+                                owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                owl:onClass robo-ont:Role
                               ] .
 
 
@@ -575,7 +821,25 @@ robo-ont:ThermalResistant rdf:type owl:Class ;
 
 
 ###  https://www.cs7820-robo-orchestration.org/ontology/Threshold
-robo-ont:Threshold rdf:type owl:Class .
+robo-ont:Threshold rdf:type owl:Class ;
+                   rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                     owl:onProperty robo-ont:hasUnit ;
+                                     owl:allValuesFrom robo-ont:Unit
+                                   ] ,
+                                   [ rdf:type owl:Restriction ;
+                                     owl:onProperty robo-ont:hasUnit ;
+                                     owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                     owl:onClass robo-ont:Unit
+                                   ] ,
+                                   [ rdf:type owl:Restriction ;
+                                     owl:onProperty robo-ont:unitAsString ;
+                                     owl:allValuesFrom xsd:string
+                                   ] ,
+                                   [ rdf:type owl:Restriction ;
+                                     owl:onProperty robo-ont:hasValue ;
+                                     owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                     owl:onDataRange xsd:double
+                                   ] .
 
 
 ###  https://www.cs7820-robo-orchestration.org/ontology/Touch
@@ -584,7 +848,12 @@ robo-ont:Touch rdf:type owl:Class ;
 
 
 ###  https://www.cs7820-robo-orchestration.org/ontology/Unit
-robo-ont:Unit rdf:type owl:Class .
+robo-ont:Unit rdf:type owl:Class ;
+              rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                owl:onProperty robo-ont:unitAsString ;
+                                owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                owl:onDataRange xsd:string
+                              ] .
 
 
 ###  https://www.cs7820-robo-orchestration.org/ontology/UpperThreshold
@@ -600,6 +869,11 @@ robo-ont:Vision rdf:type owl:Class ;
 ###  https://www.cs7820-robo-orchestration.org/ontology/WaterResistant
 robo-ont:WaterResistant rdf:type owl:Class ;
                         rdfs:subClassOf robo-ont:ResistanceBased .
+
+
+###  https://www.cs7820-robo-orchestration.org/ontology/Welder
+robo-ont:Welder rdf:type owl:Class ;
+                rdfs:subClassOf robo-ont:Archetype .
 
 
 #################################################################
@@ -652,6 +926,15 @@ robo-ont:WaterResistant rdf:type owl:Class ;
   owl:onProperty robo-ont:hasTask ;
   owl:someValuesFrom robo-ont:Task ;
   rdfs:subClassOf robo-ont:Goal
+] .
+
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( owl:Thing
+                robo-ont:LowerThreshold
+                robo-ont:NominalThreshold
+                robo-ont:UpperThreshold
+              )
 ] .
 
 
@@ -711,6 +994,7 @@ robo-ont:WaterResistant rdf:type owl:Class ;
                 robo-ont:Inspector
                 robo-ont:Painter
                 robo-ont:Sentinel
+                robo-ont:Welder
               )
 ] .
 
