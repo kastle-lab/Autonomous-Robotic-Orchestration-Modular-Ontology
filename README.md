@@ -8,6 +8,7 @@
 - Event
 - Feature
 - Goal-Task
+- Metadata
 - Role
 - SpatialThing
 - Specification
@@ -23,7 +24,7 @@ The deliverables are structured as follows.
 3. **Patterns** \
    This directory includes the schema diagrams for each constructed pattern along with the final schema.
 4. **Documentation.md** \
-   The final document summarizing the entire class project.
+   The final document summarizing the entire project.
 5. **Protege** \
    Contains OWL file with the axioms applied using the Protege software. \
-   - *Note*: Constraints are a WIP
+   - _Note_: Constraints are a WIP
