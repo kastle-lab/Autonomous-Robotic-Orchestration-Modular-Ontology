@@ -85,41 +85,57 @@ Specifications to differentiate and define what actions an agent can perform.
   Every Capability belongs to some (min1) SpatialThing.
 - `Capability SubClassOf enabledBySpatialThing max 1 SpatialThing` <br />
   Every Capability is enabled by at most 1 SpatialThing.
-- `Gripper-Based SubClassOf Capability` <br />
-  Every Gripper-Based Capability is an Capability.
-- `Open/Close SubClassOf Gripper-Based` <br />
-  Every Open/Close Gripper-Based Capability is a Gripper-Based Capability.
-- `Place/Pick SubClassOf Gripper-Based
+- `GripperBased SubClassOf Capability` <br />
+  Every GripperBased Capability is a Capability.
+- `Open/Close SubClassOf GripperBased` <br />
+  Every Open/Close GripperBased Capability is a GripperBased Capability.
+- `Place/Pick SubClassOf GripperBased
 ` <br />
-  Every Place/Pick Gripper-Based Capability is a Gripper-Based Capability.
+  Every Place/Pick GripperBased Capability is a GripperBased Capability.
 - `Place/Pick DisjointWith Open/Close` <br />
-  Place and Pick Gripper-Based Capabilities are exclusive from Open and Close GBC.
-- `Sensor-Based SubClassOf Capability` <br />
-  Every Sensor-Based Capability is an Capability.
-- `Distance SubClassOf Sensor-Based` <br />
-  Every Distance Sensor-Based Capability is a Sensor-Based Capability.
-- `Audition SubClassOf Sensor-Based` <br />
-  Every Audition Sensor-Based Capability is a Sensor-Based Capability.
-- `Touch SubClassOf Sensor-Based
-` <br />
-  Every Touch Sensor-Based Capability is a Sensor-Based Capability.
-- `Vision SubClassOf Sensor-Based` <br />
-  Every Vision Sensor-Based Capability is a Sensor-Based Capability.
-- `“Sensor-Based Subclass” DisjointWith “Sensor-Based Subclass”` <br />
-  All Sensor-Based Subclasses are exclusive from each other.
-- `Motion-Based SubClassOf Capability` <br />
-  Every Motion-Based Capability is an Capability.
-- `Move SubClassOf Motion-Based` <br />
-  Every Move Motion-Based Capability is a Motion-Based Capability.
-- `Rotate SubClassOf Motion-Based` <br />
-  Every Rotate Motion-Based Capability is a Motion-Based Capability.
-- `Press SubClassOf Motion-Based` <br />
-  Every Press Motion-Based Capability is a Motion-Based Capability.
-- `Push/Pull SubClassOf Motion-Based` <br />
-  Every Push/Pull Motion-Based Capability is a Motion-Based Capability.
-- `“Motion-Based Subclass” DisjointWith “Motion-Based Subclass”
-` <br />
-  All Motion-Based Subclasses are exclusive from each other.
+  Place and Pick GripperBased Capabilities are exclusive from Open and Close GBC.
+- `SensorBased SubClassOf Capability` <br />
+  Every SensorBased Capability is a Capability.
+- `Distance SubClassOf SensorBased` <br />
+  Every Distance SensorBased Capability is a SensorBased Capability.
+- `Audition SubClassOf SensorBased` <br />
+  Every Audition SensorBased Capability is a SensorBased Capability.
+- `Touch SubClassOf SensorBased` <br />
+  Every Touch SensorBased Capability is a SensorBased Capability.
+- `Vision SubClassOf SensorBased` <br />
+  Every Vision SensorBased Capability is a SensorBased Capability.
+- `“SensorBased Subclass” DisjointWith “SensorBased Subclass”` <br />
+  All SensorBased Subclasses are exclusive from each other.
+- `MotionBased SubClassOf Capability` <br />
+  Every MotionBased Capability is a Capability.
+- `Move SubClassOf MotionBased` <br />
+  Every Move MotionBased Capability is a MotionBased Capability.
+- `Rotate SubClassOf MotionBased` <br />
+  Every Rotate MotionBased Capability is a MotionBased Capability.
+- `Press SubClassOf MotionBased` <br />
+  Every Press MotionBased Capability is a MotionBased Capability.
+- `Push/Pull SubClassOf MotionBased` <br />
+  Every Push/Pull MotionBased Capability is a MotionBased Capability.
+- `“MotionBased Subclass” DisjointWith “MotionBased Subclass”` <br />
+  All MotionBased Subclasses are exclusive from each other.
+- `ResistanceBased SubClassOf Capability` <br />
+  Every ResistanceBased Capability is a Capability.
+- `ColdResistant SubClassOf ResistanceBased` <br />
+  Every ColdResistant ResistanceBased Capability is a ResistanceBased Capability.
+- `CorrosionResistant SubClassOf ResistanceBased` <br />
+  Every CorrosionResistant ResistanceBased Capability is a ResistanceBased Capability.
+- `Shockproof SubClassOf ResistanceBased` <br />
+  Every Shockproof ResistanceBased Capability is a ResistanceBased Capability.
+- `ThermalResistant SubClassOf ResistanceBased` <br />
+  Every ThermalResistant ResistanceBased Capability is a ResistanceBased Capability.
+- `WaterResistant SubClassOf ResistanceBased` <br />
+  Every WaterResistant ResistanceBased Capability is a ResistanceBased Capability.
+- `PowerBased SubClassOf Capability` <br />
+  Every PowerBased ResistanceBased Capability is a ResistanceBased Capability.
+- `CargoBased SubClassOf Capability` <br />
+  Every CargoBased ResistanceBased Capability is a ResistanceBased Capability.
+  <br />
+  All but Thermal/ColdResistance Subclasses are exclusive from each other.
 
 #### Remarks
 
