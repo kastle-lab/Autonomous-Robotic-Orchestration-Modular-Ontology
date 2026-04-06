@@ -424,16 +424,7 @@ robo-ont:Feature rdf:type owl:Class ;
 
 
 ###  https://www.cs7820-robo-orchestration.org/ontology/Format
-robo-ont:Format rdf:type owl:Class ;
-                rdfs:subClassOf [ rdf:type owl:Restriction ;
-                                  owl:onProperty robo-ont:metadataFormatAsString ;
-                                  owl:allValuesFrom xsd:string
-                                ] ,
-                                [ rdf:type owl:Restriction ;
-                                  owl:onProperty robo-ont:metadataFormatAsString ;
-                                  owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-                                  owl:onDataRange xsd:string
-                                ] .
+robo-ont:Format rdf:type owl:Class .
 
 
 ###  https://www.cs7820-robo-orchestration.org/ontology/Geometry
@@ -563,6 +554,12 @@ robo-ont:Move rdf:type owl:Class ;
               rdfs:subClassOf robo-ont:MotionBased .
 
 
+###  https://www.cs7820-robo-orchestration.org/ontology/Name
+robo-ont:Name rdf:type owl:Class ;
+              rdfs:subClassOf robo-ont:Identifier ;
+              owl:disjointWith robo-ont:Serial .
+
+
 ###  https://www.cs7820-robo-orchestration.org/ontology/NominalThreshold
 robo-ont:NominalThreshold rdf:type owl:Class ;
                           rdfs:subClassOf robo-ont:Threshold .
@@ -618,6 +615,11 @@ robo-ont:Pull rdf:type owl:Class ;
 ###  https://www.cs7820-robo-orchestration.org/ontology/Push
 robo-ont:Push rdf:type owl:Class ;
               rdfs:subClassOf robo-ont:MotionBased .
+
+
+###  https://www.cs7820-robo-orchestration.org/ontology/Reach
+robo-ont:Reach rdf:type owl:Class ;
+               rdfs:subClassOf robo-ont:MotionBased .
 
 
 ###  https://www.cs7820-robo-orchestration.org/ontology/ResistanceBased
@@ -679,6 +681,11 @@ robo-ont:SensorBased rdf:type owl:Class ;
 ###  https://www.cs7820-robo-orchestration.org/ontology/Sentinel
 robo-ont:Sentinel rdf:type owl:Class ;
                   rdfs:subClassOf robo-ont:Archetype .
+
+
+###  https://www.cs7820-robo-orchestration.org/ontology/Serial
+robo-ont:Serial rdf:type owl:Class ;
+                rdfs:subClassOf robo-ont:Identifier .
 
 
 ###  https://www.cs7820-robo-orchestration.org/ontology/Shockproof
@@ -759,15 +766,7 @@ robo-ont:Specification rdf:type owl:Class ;
 
 
 ###  https://www.cs7820-robo-orchestration.org/ontology/SpecificationKind
-robo-ont:SpecificationKind rdf:type owl:Class ;
-                           rdfs:subClassOf [ rdf:type owl:Restriction ;
-                                             owl:onProperty robo-ont:specificationKindAsString ;
-                                             owl:someValuesFrom xsd:string
-                                           ] ,
-                                           [ rdf:type owl:Restriction ;
-                                             owl:onProperty robo-ont:unitAsString ;
-                                             owl:allValuesFrom xsd:string
-                                           ] .
+robo-ont:SpecificationKind rdf:type owl:Class .
 
 
 ###  https://www.cs7820-robo-orchestration.org/ontology/State
@@ -858,12 +857,7 @@ robo-ont:Touch rdf:type owl:Class ;
 
 
 ###  https://www.cs7820-robo-orchestration.org/ontology/Unit
-robo-ont:Unit rdf:type owl:Class ;
-              rdfs:subClassOf [ rdf:type owl:Restriction ;
-                                owl:onProperty robo-ont:unitAsString ;
-                                owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-                                owl:onDataRange xsd:string
-                              ] .
+robo-ont:Unit rdf:type owl:Class .
 
 
 ###  https://www.cs7820-robo-orchestration.org/ontology/UpperThreshold
@@ -971,6 +965,17 @@ robo-ont:Welder rdf:type owl:Class ;
                 robo-ont:GripperBased
                 robo-ont:MotionBased
                 robo-ont:PowerBased
+                robo-ont:ResistanceBased
+                robo-ont:SensorBased
+              )
+] .
+
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( robo-ont:CargoBased
+                robo-ont:GripperBased
+                robo-ont:PowerBased
+                robo-ont:Reach
                 robo-ont:ResistanceBased
                 robo-ont:SensorBased
               )
