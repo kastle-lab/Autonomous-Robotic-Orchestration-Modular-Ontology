@@ -2,3 +2,5 @@
 .venv
 /generated-axiom-text
 workflow.md
+deliverables/patterns/abridged-master-schema.png
+deliverables/patterns/abridged-master-schema.graphml
