@@ -1,8 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <catalog prefer="public" xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog">
+    <uri id="Imports Wizard Entry" name="http://daselab.org/ContextualizedWinstonPartWhole" uri="ContextualizedWinstonPartWhole-Full.owl"/>
+    <uri id="Imports Wizard Entry" name="http://daselab.org/ContextualizedWinstonPartWhole" uri="contextualized-winston-part-whole.rdf"/>
     <group id="Folder Repository, directory=, recursive=true, Auto-Update=true, version=2" prefer="public">
-        <uri id="Automatically generated entry, Timestamp=1775501266294" name="http://daselab.org/ContextualizedWinstonPartWhole" uri="ContextualizedWinstonPartWhole-Full.owl"/>
-        <uri id="Automatically generated entry, Timestamp=1775501266294" name="duplicate:https://www.cs7820-robo-orchestration.org/ontology/" uri="robo-ont-clean.rdf"/>
-        <uri id="Automatically generated entry, Timestamp=1775501266294" name="duplicate:https://www.cs7820-robo-orchestration.org/ontology/" uri="robo-ont.rdf"/>
+        <uri id="Automatically generated entry, Timestamp=1776360094217" name="duplicate:http://daselab.org/ContextualizedWinstonPartWhole" uri="contextualized-winston-part-whole.rdf"/>
+        <uri id="Automatically generated entry, Timestamp=1776360094217" name="duplicate:http://daselab.org/ContextualizedWinstonPartWhole" uri="ContextualizedWinstonPartWhole-Full.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1776360094217" name="duplicate:https://www.cs7820-robo-orchestration.org/ontology/" uri="robo-ont-clean.rdf"/>
+        <uri id="Automatically generated entry, Timestamp=1776360094217" name="duplicate:https://www.cs7820-robo-orchestration.org/ontology/" uri="robo-ont.rdf"/>
     </group>
 </catalog>

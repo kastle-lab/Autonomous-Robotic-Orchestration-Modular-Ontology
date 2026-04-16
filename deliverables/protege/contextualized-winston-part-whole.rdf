@@ -1,0 +1,505 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://daselab.org/ContextualizedWinstonPartWhole#"
+     xml:base="http://daselab.org/ContextualizedWinstonPartWhole"
+     xmlns:dc="http://purl.org/dc/elements/1.1/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <owl:Ontology rdf:about="http://daselab.org/ContextualizedWinstonPartWhole">
+        <dc:creator>Based on: Cogan Shimizu, Pascal Hitzler, and Clare Paul</dc:creator>
+        <dc:description>Complete Ontology Design Pattern based on Winston&apos;s Taxonomy of Part-Whole Relations.
+Implements both the basic pattern (Section 3, axioms 1-32) and the contextualized extension 
+(Section 4, axioms 33-44 plus rolification) from Shimizu, Hitzler, and Paul (2018).
+Total: 62 axioms covering property chains, asymmetry, sub-property relationships, 
+spatial location interactions, reification via RelationInstance, and rolification.</dc:description>
+        <dc:title>Contextualized Winston Part-Whole Pattern (Section 3 + Section 4)</dc:title>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/creator -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/creator"/>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/description -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/description"/>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/title -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/title"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://daselab.org/ContextualizedWinstonPartWhole#cPO-Component-Type -->
+
+    <owl:ObjectProperty rdf:about="http://daselab.org/ContextualizedWinstonPartWhole#cPO-Component-Type">
+        <rdfs:comment xml:lang="en">Rolification property for PO-Component-Type. Used in property chain axiom 42.</rdfs:comment>
+        <rdfs:label xml:lang="en">cPO-Component-Type</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://daselab.org/ContextualizedWinstonPartWhole#cPO-Feature-Type -->
+
+    <owl:ObjectProperty rdf:about="http://daselab.org/ContextualizedWinstonPartWhole#cPO-Feature-Type">
+        <rdfs:comment xml:lang="en">Rolification property for PO-Feature-Type. Used in property chain axiom 42.</rdfs:comment>
+        <rdfs:label xml:lang="en">cPO-Feature-Type</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://daselab.org/ContextualizedWinstonPartWhole#cPO-Member-Type -->
+
+    <owl:ObjectProperty rdf:about="http://daselab.org/ContextualizedWinstonPartWhole#cPO-Member-Type">
+        <rdfs:comment xml:lang="en">Rolification property for PO-Member-Type. Used in property chain axiom 42.</rdfs:comment>
+        <rdfs:label xml:lang="en">cPO-Member-Type</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://daselab.org/ContextualizedWinstonPartWhole#cPO-Part-Of-Type -->
+
+    <owl:ObjectProperty rdf:about="http://daselab.org/ContextualizedWinstonPartWhole#cPO-Part-Of-Type">
+        <rdfs:comment xml:lang="en">Rolification property for PO-Part-Of-Type. Used in property chain axiom 42.</rdfs:comment>
+        <rdfs:label xml:lang="en">cPO-Part-Of-Type</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://daselab.org/ContextualizedWinstonPartWhole#cPO-Place-Type -->
+
+    <owl:ObjectProperty rdf:about="http://daselab.org/ContextualizedWinstonPartWhole#cPO-Place-Type">
+        <rdfs:comment xml:lang="en">Rolification property for PO-Place-Type. Used in property chain axiom 42.</rdfs:comment>
+        <rdfs:label xml:lang="en">cPO-Place-Type</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://daselab.org/ContextualizedWinstonPartWhole#cPO-Portion-Type -->
+
+    <owl:ObjectProperty rdf:about="http://daselab.org/ContextualizedWinstonPartWhole#cPO-Portion-Type">
+        <rdfs:comment xml:lang="en">Rolification property for PO-Portion-Type. Used in property chain axiom 42.</rdfs:comment>
+        <rdfs:label xml:lang="en">cPO-Portion-Type</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://daselab.org/ContextualizedWinstonPartWhole#cPO-Stuff-Type -->
+
+    <owl:ObjectProperty rdf:about="http://daselab.org/ContextualizedWinstonPartWhole#cPO-Stuff-Type">
+        <rdfs:comment xml:lang="en">Rolification property for PO-Stuff-Type. Used in property chain axiom 42.</rdfs:comment>
+        <rdfs:label xml:lang="en">cPO-Stuff-Type</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://daselab.org/ContextualizedWinstonPartWhole#cSpatially-Located-In-Type -->
+
+    <owl:ObjectProperty rdf:about="http://daselab.org/ContextualizedWinstonPartWhole#cSpatially-Located-In-Type">
+        <rdfs:comment xml:lang="en">Rolification property for Spatially-Located-In-Type. Used in property chain axiom 42.</rdfs:comment>
+        <rdfs:label xml:lang="en">cSpatially-Located-In-Type</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://daselab.org/ContextualizedWinstonPartWhole#hasWhole -->
+
+    <owl:ObjectProperty rdf:about="http://daselab.org/ContextualizedWinstonPartWhole#hasWhole">
+        <rdfs:domain rdf:resource="http://daselab.org/ContextualizedWinstonPartWhole#RelationInstance"/>
+        <rdfs:comment xml:lang="en">Connects a RelationInstance to the whole entity. Used in the reification pattern.</rdfs:comment>
+        <rdfs:label xml:lang="en">hasWhole</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://daselab.org/ContextualizedWinstonPartWhole#isPartOf -->
+
+    <owl:ObjectProperty rdf:about="http://daselab.org/ContextualizedWinstonPartWhole#isPartOf">
+        <rdfs:range rdf:resource="http://daselab.org/ContextualizedWinstonPartWhole#RelationInstance"/>
+        <rdfs:comment xml:lang="en">Connects the part entity to a RelationInstance. Used in the reification pattern.</rdfs:comment>
+        <rdfs:label xml:lang="en">isPartOf</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://daselab.org/ContextualizedWinstonPartWhole#part-of -->
+
+    <owl:ObjectProperty rdf:about="http://daselab.org/ContextualizedWinstonPartWhole#part-of">
+        <owl:propertyChainAxiom rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://daselab.org/ContextualizedWinstonPartWhole#isPartOf"/>
+            <rdf:Description rdf:about="http://daselab.org/ContextualizedWinstonPartWhole#cPO-Part-Of-Type"/>
+            <rdf:Description rdf:about="http://daselab.org/ContextualizedWinstonPartWhole#hasWhole"/>
+        </owl:propertyChainAxiom>
+        <rdfs:comment xml:lang="en">Generic part-whole relation. The six specific po-relations are subproperties of this.</rdfs:comment>
+        <rdfs:label xml:lang="en">part-of</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://daselab.org/ContextualizedWinstonPartWhole#po-component -->
+
+    <owl:ObjectProperty rdf:about="http://daselab.org/ContextualizedWinstonPartWhole#po-component">
+        <rdfs:subPropertyOf rdf:resource="http://daselab.org/ContextualizedWinstonPartWhole#part-of"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <owl:propertyChainAxiom rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://daselab.org/ContextualizedWinstonPartWhole#isPartOf"/>
+            <rdf:Description rdf:about="http://daselab.org/ContextualizedWinstonPartWhole#cPO-Component-Type"/>
+            <rdf:Description rdf:about="http://daselab.org/ContextualizedWinstonPartWhole#hasWhole"/>
+        </owl:propertyChainAxiom>
+        <owl:propertyChainAxiom rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://daselab.org/ContextualizedWinstonPartWhole#po-component"/>
+            <rdf:Description rdf:about="http://daselab.org/ContextualizedWinstonPartWhole#po-component"/>
+        </owl:propertyChainAxiom>
+        <rdfs:comment xml:lang="en">Component-Integral Object relation (e.g., handle and cup). Functional: yes, Homeomerous: no, Separable: yes.</rdfs:comment>
+        <rdfs:label xml:lang="en">po-component</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://daselab.org/ContextualizedWinstonPartWhole#po-feature -->
+
+    <owl:ObjectProperty rdf:about="http://daselab.org/ContextualizedWinstonPartWhole#po-feature">
+        <rdfs:subPropertyOf rdf:resource="http://daselab.org/ContextualizedWinstonPartWhole#part-of"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <owl:propertyChainAxiom rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://daselab.org/ContextualizedWinstonPartWhole#isPartOf"/>
+            <rdf:Description rdf:about="http://daselab.org/ContextualizedWinstonPartWhole#cPO-Feature-Type"/>
+            <rdf:Description rdf:about="http://daselab.org/ContextualizedWinstonPartWhole#hasWhole"/>
+        </owl:propertyChainAxiom>
+        <owl:propertyChainAxiom rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://daselab.org/ContextualizedWinstonPartWhole#po-feature"/>
+            <rdf:Description rdf:about="http://daselab.org/ContextualizedWinstonPartWhole#po-feature"/>
+        </owl:propertyChainAxiom>
+        <rdfs:comment xml:lang="en">Feature-Activity relation (e.g., paying and shopping). Functional: yes, Homeomerous: no, Separable: no.</rdfs:comment>
+        <rdfs:label xml:lang="en">po-feature</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://daselab.org/ContextualizedWinstonPartWhole#po-member -->
+
+    <owl:ObjectProperty rdf:about="http://daselab.org/ContextualizedWinstonPartWhole#po-member">
+        <rdfs:subPropertyOf rdf:resource="http://daselab.org/ContextualizedWinstonPartWhole#part-of"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <owl:propertyChainAxiom rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://daselab.org/ContextualizedWinstonPartWhole#isPartOf"/>
+            <rdf:Description rdf:about="http://daselab.org/ContextualizedWinstonPartWhole#cPO-Member-Type"/>
+            <rdf:Description rdf:about="http://daselab.org/ContextualizedWinstonPartWhole#hasWhole"/>
+        </owl:propertyChainAxiom>
+        <owl:propertyChainAxiom rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://daselab.org/ContextualizedWinstonPartWhole#po-member"/>
+            <rdf:Description rdf:about="http://daselab.org/ContextualizedWinstonPartWhole#po-member"/>
+        </owl:propertyChainAxiom>
+        <rdfs:comment xml:lang="en">Member-Collection relation (e.g., tree and forest). Functional: no, Homeomerous: no, Separable: yes.</rdfs:comment>
+        <rdfs:label xml:lang="en">po-member</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://daselab.org/ContextualizedWinstonPartWhole#po-place -->
+
+    <owl:ObjectProperty rdf:about="http://daselab.org/ContextualizedWinstonPartWhole#po-place">
+        <rdfs:subPropertyOf rdf:resource="http://daselab.org/ContextualizedWinstonPartWhole#part-of"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <owl:propertyChainAxiom rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://daselab.org/ContextualizedWinstonPartWhole#isPartOf"/>
+            <rdf:Description rdf:about="http://daselab.org/ContextualizedWinstonPartWhole#cPO-Place-Type"/>
+            <rdf:Description rdf:about="http://daselab.org/ContextualizedWinstonPartWhole#hasWhole"/>
+        </owl:propertyChainAxiom>
+        <owl:propertyChainAxiom rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://daselab.org/ContextualizedWinstonPartWhole#po-place"/>
+            <rdf:Description rdf:about="http://daselab.org/ContextualizedWinstonPartWhole#po-place"/>
+        </owl:propertyChainAxiom>
+        <rdfs:comment xml:lang="en">Place-Area relation (e.g., Everglades and Florida). Functional: no, Homeomerous: yes, Separable: no.</rdfs:comment>
+        <rdfs:label xml:lang="en">po-place</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://daselab.org/ContextualizedWinstonPartWhole#po-portion -->
+
+    <owl:ObjectProperty rdf:about="http://daselab.org/ContextualizedWinstonPartWhole#po-portion">
+        <rdfs:subPropertyOf rdf:resource="http://daselab.org/ContextualizedWinstonPartWhole#part-of"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <owl:propertyChainAxiom rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://daselab.org/ContextualizedWinstonPartWhole#isPartOf"/>
+            <rdf:Description rdf:about="http://daselab.org/ContextualizedWinstonPartWhole#cPO-Portion-Type"/>
+            <rdf:Description rdf:about="http://daselab.org/ContextualizedWinstonPartWhole#hasWhole"/>
+        </owl:propertyChainAxiom>
+        <owl:propertyChainAxiom rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://daselab.org/ContextualizedWinstonPartWhole#po-portion"/>
+            <rdf:Description rdf:about="http://daselab.org/ContextualizedWinstonPartWhole#po-portion"/>
+        </owl:propertyChainAxiom>
+        <rdfs:comment xml:lang="en">Portion-Mass relation (e.g., slice and pie). Functional: no, Homeomerous: yes, Separable: yes.</rdfs:comment>
+        <rdfs:label xml:lang="en">po-portion</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://daselab.org/ContextualizedWinstonPartWhole#po-stuff -->
+
+    <owl:ObjectProperty rdf:about="http://daselab.org/ContextualizedWinstonPartWhole#po-stuff">
+        <rdfs:subPropertyOf rdf:resource="http://daselab.org/ContextualizedWinstonPartWhole#part-of"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <owl:propertyChainAxiom rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://daselab.org/ContextualizedWinstonPartWhole#isPartOf"/>
+            <rdf:Description rdf:about="http://daselab.org/ContextualizedWinstonPartWhole#cPO-Stuff-Type"/>
+            <rdf:Description rdf:about="http://daselab.org/ContextualizedWinstonPartWhole#hasWhole"/>
+        </owl:propertyChainAxiom>
+        <owl:propertyChainAxiom rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://daselab.org/ContextualizedWinstonPartWhole#po-stuff"/>
+            <rdf:Description rdf:about="http://daselab.org/ContextualizedWinstonPartWhole#po-stuff"/>
+        </owl:propertyChainAxiom>
+        <rdfs:comment xml:lang="en">Stuff-Object relation (e.g., gin and martini). Functional: no, Homeomerous: no, Separable: no.</rdfs:comment>
+        <rdfs:label xml:lang="en">po-stuff</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://daselab.org/ContextualizedWinstonPartWhole#spatially-located-in -->
+
+    <owl:ObjectProperty rdf:about="http://daselab.org/ContextualizedWinstonPartWhole#spatially-located-in">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ReflexiveProperty"/>
+        <owl:propertyChainAxiom rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://daselab.org/ContextualizedWinstonPartWhole#isPartOf"/>
+            <rdf:Description rdf:about="http://daselab.org/ContextualizedWinstonPartWhole#cSpatially-Located-In-Type"/>
+            <rdf:Description rdf:about="http://daselab.org/ContextualizedWinstonPartWhole#hasWhole"/>
+        </owl:propertyChainAxiom>
+        <owl:propertyChainAxiom rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://daselab.org/ContextualizedWinstonPartWhole#po-component"/>
+            <rdf:Description rdf:about="http://daselab.org/ContextualizedWinstonPartWhole#spatially-located-in"/>
+        </owl:propertyChainAxiom>
+        <owl:propertyChainAxiom rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://daselab.org/ContextualizedWinstonPartWhole#po-feature"/>
+            <rdf:Description rdf:about="http://daselab.org/ContextualizedWinstonPartWhole#spatially-located-in"/>
+        </owl:propertyChainAxiom>
+        <owl:propertyChainAxiom rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://daselab.org/ContextualizedWinstonPartWhole#po-member"/>
+            <rdf:Description rdf:about="http://daselab.org/ContextualizedWinstonPartWhole#spatially-located-in"/>
+        </owl:propertyChainAxiom>
+        <owl:propertyChainAxiom rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://daselab.org/ContextualizedWinstonPartWhole#po-place"/>
+            <rdf:Description rdf:about="http://daselab.org/ContextualizedWinstonPartWhole#spatially-located-in"/>
+        </owl:propertyChainAxiom>
+        <owl:propertyChainAxiom rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://daselab.org/ContextualizedWinstonPartWhole#po-portion"/>
+            <rdf:Description rdf:about="http://daselab.org/ContextualizedWinstonPartWhole#spatially-located-in"/>
+        </owl:propertyChainAxiom>
+        <owl:propertyChainAxiom rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://daselab.org/ContextualizedWinstonPartWhole#po-stuff"/>
+            <rdf:Description rdf:about="http://daselab.org/ContextualizedWinstonPartWhole#spatially-located-in"/>
+        </owl:propertyChainAxiom>
+        <owl:propertyChainAxiom rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://daselab.org/ContextualizedWinstonPartWhole#spatially-located-in"/>
+            <rdf:Description rdf:about="http://daselab.org/ContextualizedWinstonPartWhole#po-component"/>
+        </owl:propertyChainAxiom>
+        <owl:propertyChainAxiom rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://daselab.org/ContextualizedWinstonPartWhole#spatially-located-in"/>
+            <rdf:Description rdf:about="http://daselab.org/ContextualizedWinstonPartWhole#po-feature"/>
+        </owl:propertyChainAxiom>
+        <owl:propertyChainAxiom rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://daselab.org/ContextualizedWinstonPartWhole#spatially-located-in"/>
+            <rdf:Description rdf:about="http://daselab.org/ContextualizedWinstonPartWhole#po-member"/>
+        </owl:propertyChainAxiom>
+        <owl:propertyChainAxiom rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://daselab.org/ContextualizedWinstonPartWhole#spatially-located-in"/>
+            <rdf:Description rdf:about="http://daselab.org/ContextualizedWinstonPartWhole#po-place"/>
+        </owl:propertyChainAxiom>
+        <owl:propertyChainAxiom rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://daselab.org/ContextualizedWinstonPartWhole#spatially-located-in"/>
+            <rdf:Description rdf:about="http://daselab.org/ContextualizedWinstonPartWhole#po-portion"/>
+        </owl:propertyChainAxiom>
+        <owl:propertyChainAxiom rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://daselab.org/ContextualizedWinstonPartWhole#spatially-located-in"/>
+            <rdf:Description rdf:about="http://daselab.org/ContextualizedWinstonPartWhole#po-stuff"/>
+        </owl:propertyChainAxiom>
+        <owl:propertyChainAxiom rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://daselab.org/ContextualizedWinstonPartWhole#spatially-located-in"/>
+            <rdf:Description rdf:about="http://daselab.org/ContextualizedWinstonPartWhole#spatially-located-in"/>
+        </owl:propertyChainAxiom>
+        <rdfs:comment xml:lang="en">Spatial (topological) located-in relation. Reflexive and transitive via property chain.</rdfs:comment>
+        <rdfs:label xml:lang="en">spatially-located-in</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://daselab.org/ContextualizedWinstonPartWhole#PO-Component-Type -->
+
+    <owl:Class rdf:about="http://daselab.org/ContextualizedWinstonPartWhole#PO-Component-Type">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://daselab.org/ContextualizedWinstonPartWhole#cPO-Component-Type"/>
+                <owl:hasSelf rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:hasSelf>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://daselab.org/ContextualizedWinstonPartWhole#RelationInstance"/>
+        <rdfs:comment xml:lang="en">Reified type for component-integral object relations.</rdfs:comment>
+        <rdfs:label xml:lang="en">PO-Component-Type</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://daselab.org/ContextualizedWinstonPartWhole#PO-Feature-Type -->
+
+    <owl:Class rdf:about="http://daselab.org/ContextualizedWinstonPartWhole#PO-Feature-Type">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://daselab.org/ContextualizedWinstonPartWhole#cPO-Feature-Type"/>
+                <owl:hasSelf rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:hasSelf>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://daselab.org/ContextualizedWinstonPartWhole#RelationInstance"/>
+        <rdfs:comment xml:lang="en">Reified type for feature-activity relations.</rdfs:comment>
+        <rdfs:label xml:lang="en">PO-Feature-Type</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://daselab.org/ContextualizedWinstonPartWhole#PO-Member-Type -->
+
+    <owl:Class rdf:about="http://daselab.org/ContextualizedWinstonPartWhole#PO-Member-Type">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://daselab.org/ContextualizedWinstonPartWhole#cPO-Member-Type"/>
+                <owl:hasSelf rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:hasSelf>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://daselab.org/ContextualizedWinstonPartWhole#RelationInstance"/>
+        <rdfs:comment xml:lang="en">Reified type for member-collection relations.</rdfs:comment>
+        <rdfs:label xml:lang="en">PO-Member-Type</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://daselab.org/ContextualizedWinstonPartWhole#PO-Part-Of-Type -->
+
+    <owl:Class rdf:about="http://daselab.org/ContextualizedWinstonPartWhole#PO-Part-Of-Type">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://daselab.org/ContextualizedWinstonPartWhole#cPO-Part-Of-Type"/>
+                <owl:hasSelf rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:hasSelf>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://daselab.org/ContextualizedWinstonPartWhole#RelationInstance"/>
+        <rdfs:comment xml:lang="en">Reified type for generic part-of relations.</rdfs:comment>
+        <rdfs:label xml:lang="en">PO-Part-Of-Type</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://daselab.org/ContextualizedWinstonPartWhole#PO-Place-Type -->
+
+    <owl:Class rdf:about="http://daselab.org/ContextualizedWinstonPartWhole#PO-Place-Type">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://daselab.org/ContextualizedWinstonPartWhole#cPO-Place-Type"/>
+                <owl:hasSelf rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:hasSelf>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://daselab.org/ContextualizedWinstonPartWhole#RelationInstance"/>
+        <rdfs:comment xml:lang="en">Reified type for place-area relations.</rdfs:comment>
+        <rdfs:label xml:lang="en">PO-Place-Type</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://daselab.org/ContextualizedWinstonPartWhole#PO-Portion-Type -->
+
+    <owl:Class rdf:about="http://daselab.org/ContextualizedWinstonPartWhole#PO-Portion-Type">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://daselab.org/ContextualizedWinstonPartWhole#cPO-Portion-Type"/>
+                <owl:hasSelf rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:hasSelf>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://daselab.org/ContextualizedWinstonPartWhole#RelationInstance"/>
+        <rdfs:comment xml:lang="en">Reified type for portion-mass relations.</rdfs:comment>
+        <rdfs:label xml:lang="en">PO-Portion-Type</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://daselab.org/ContextualizedWinstonPartWhole#PO-Stuff-Type -->
+
+    <owl:Class rdf:about="http://daselab.org/ContextualizedWinstonPartWhole#PO-Stuff-Type">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://daselab.org/ContextualizedWinstonPartWhole#cPO-Stuff-Type"/>
+                <owl:hasSelf rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:hasSelf>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://daselab.org/ContextualizedWinstonPartWhole#RelationInstance"/>
+        <rdfs:comment xml:lang="en">Reified type for stuff-object relations.</rdfs:comment>
+        <rdfs:label xml:lang="en">PO-Stuff-Type</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://daselab.org/ContextualizedWinstonPartWhole#RelationInstance -->
+
+    <owl:Class rdf:about="http://daselab.org/ContextualizedWinstonPartWhole#RelationInstance">
+        <rdfs:comment xml:lang="en">Reified relation instance. Subclasses represent specific types of part-whole relationships. Instances connect a part (via isPartOf) and a whole (via hasWhole) and can carry context/provenance.</rdfs:comment>
+        <rdfs:label xml:lang="en">RelationInstance</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://daselab.org/ContextualizedWinstonPartWhole#Spatially-Located-In-Type -->
+
+    <owl:Class rdf:about="http://daselab.org/ContextualizedWinstonPartWhole#Spatially-Located-In-Type">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://daselab.org/ContextualizedWinstonPartWhole#cSpatially-Located-In-Type"/>
+                <owl:hasSelf rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:hasSelf>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://daselab.org/ContextualizedWinstonPartWhole#RelationInstance"/>
+        <rdfs:comment xml:lang="en">Reified type for spatially-located-in relations.</rdfs:comment>
+        <rdfs:label xml:lang="en">Spatially-Located-In-Type</rdfs:label>
+    </owl:Class>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.29.2024-05-13T12:11:03Z) https://github.com/owlcs/owlapi -->
+
