@@ -205,6 +205,7 @@
     <owl:ObjectProperty rdf:about="https://www.cs7820-robo-orchestration.org/ontology/hasName">
         <rdfs:subPropertyOf rdf:resource="https://www.cs7820-robo-orchestration.org/ontology/hasIdentifier"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
+        <rdfs:domain rdf:resource="https://www.cs7820-robo-orchestration.org/ontology/SpatialThing"/>
         <rdfs:range rdf:resource="https://www.cs7820-robo-orchestration.org/ontology/Name"/>
     </owl:ObjectProperty>
     
@@ -238,6 +239,7 @@
     <owl:ObjectProperty rdf:about="https://www.cs7820-robo-orchestration.org/ontology/hasSerial">
         <rdfs:subPropertyOf rdf:resource="https://www.cs7820-robo-orchestration.org/ontology/hasIdentifier"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
+        <rdfs:domain rdf:resource="https://www.cs7820-robo-orchestration.org/ontology/SpatialThing"/>
         <rdfs:range rdf:resource="https://www.cs7820-robo-orchestration.org/ontology/Serial"/>
     </owl:ObjectProperty>
     
@@ -351,7 +353,7 @@
     <owl:ObjectProperty rdf:about="https://www.cs7820-robo-orchestration.org/ontology/isWithinBounds">
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
         <rdfs:domain rdf:resource="https://www.cs7820-robo-orchestration.org/ontology/Goal"/>
-        <rdfs:range rdf:resource="https://www.cs7820-robo-orchestration.org/ontology/Goal"/>
+        <rdfs:range rdf:resource="https://www.cs7820-robo-orchestration.org/ontology/SpatialExtent"/>
     </owl:ObjectProperty>
     
 
