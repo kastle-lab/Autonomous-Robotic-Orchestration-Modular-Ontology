@@ -28,7 +28,9 @@
 
     <!-- http://daselab.org/ContextualizedWinstonPartWhole#isPartOf -->
 
-    <owl:AnnotationProperty rdf:about="http://daselab.org/ContextualizedWinstonPartWhole#isPartOf"/>
+    <owl:AnnotationProperty rdf:about="http://daselab.org/ContextualizedWinstonPartWhole#isPartOf">
+        <rdfs:domain rdf:resource="https://www.cs7820-robo-orchestration.org/ontology/SpatialThing"/>
+    </owl:AnnotationProperty>
     
 
 
@@ -40,14 +42,6 @@
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
-    
-
-
-    <!-- http://daselab.org/ContextualizedWinstonPartWhole#isPartOf -->
-
-    <rdf:Description rdf:about="http://daselab.org/ContextualizedWinstonPartWhole#isPartOf">
-        <rdfs:domain rdf:resource="https://www.cs7820-robo-orchestration.org/ontology/SpatialThing"/>
-    </rdf:Description>
     
 
 
@@ -95,6 +89,10 @@
 
     <owl:ObjectProperty rdf:about="https://www.cs7820-robo-orchestration.org/ontology/dependsOnTask">
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <owl:inverseOf rdf:resource="https://www.cs7820-robo-orchestration.org/ontology/hasNextTask"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
         <rdfs:domain rdf:resource="https://www.cs7820-robo-orchestration.org/ontology/Task"/>
         <rdfs:range rdf:resource="https://www.cs7820-robo-orchestration.org/ontology/Task"/>
     </owl:ObjectProperty>
@@ -195,8 +193,19 @@
 
     <owl:ObjectProperty rdf:about="https://www.cs7820-robo-orchestration.org/ontology/hasIdentifier">
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
         <rdfs:domain rdf:resource="https://www.cs7820-robo-orchestration.org/ontology/SpatialThing"/>
         <rdfs:range rdf:resource="https://www.cs7820-robo-orchestration.org/ontology/Identifier"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://www.cs7820-robo-orchestration.org/ontology/hasName -->
+
+    <owl:ObjectProperty rdf:about="https://www.cs7820-robo-orchestration.org/ontology/hasName">
+        <rdfs:subPropertyOf rdf:resource="https://www.cs7820-robo-orchestration.org/ontology/hasIdentifier"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
+        <rdfs:range rdf:resource="https://www.cs7820-robo-orchestration.org/ontology/Name"/>
     </owl:ObjectProperty>
     
 
@@ -205,6 +214,9 @@
 
     <owl:ObjectProperty rdf:about="https://www.cs7820-robo-orchestration.org/ontology/hasNextTask">
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
         <rdfs:domain rdf:resource="https://www.cs7820-robo-orchestration.org/ontology/Task"/>
         <rdfs:range rdf:resource="https://www.cs7820-robo-orchestration.org/ontology/Task"/>
     </owl:ObjectProperty>
@@ -217,6 +229,16 @@
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
         <rdfs:domain rdf:resource="https://www.cs7820-robo-orchestration.org/ontology/Goal"/>
         <rdfs:range rdf:resource="https://www.cs7820-robo-orchestration.org/ontology/SpatialExtent"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://www.cs7820-robo-orchestration.org/ontology/hasSerial -->
+
+    <owl:ObjectProperty rdf:about="https://www.cs7820-robo-orchestration.org/ontology/hasSerial">
+        <rdfs:subPropertyOf rdf:resource="https://www.cs7820-robo-orchestration.org/ontology/hasIdentifier"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
+        <rdfs:range rdf:resource="https://www.cs7820-robo-orchestration.org/ontology/Serial"/>
     </owl:ObjectProperty>
     
 
@@ -265,6 +287,9 @@
 
     <owl:ObjectProperty rdf:about="https://www.cs7820-robo-orchestration.org/ontology/hasSubGoal">
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
         <rdfs:domain rdf:resource="https://www.cs7820-robo-orchestration.org/ontology/Goal"/>
         <rdfs:range rdf:resource="https://www.cs7820-robo-orchestration.org/ontology/Goal"/>
     </owl:ObjectProperty>
@@ -422,6 +447,7 @@
     <!-- https://www.cs7820-robo-orchestration.org/ontology/hasInstructionalText -->
 
     <owl:DatatypeProperty rdf:about="https://www.cs7820-robo-orchestration.org/ontology/hasInstructionalText">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:domain rdf:resource="https://www.cs7820-robo-orchestration.org/ontology/Goal"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
     </owl:DatatypeProperty>
@@ -728,13 +754,6 @@
                 <owl:onProperty rdf:resource="https://www.cs7820-robo-orchestration.org/ontology/hasDeadline"/>
                 <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
                 <owl:onClass rdf:resource="https://www.cs7820-robo-orchestration.org/ontology/TemporalExtent"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://www.cs7820-robo-orchestration.org/ontology/hasTask"/>
-                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
-                <owl:onClass rdf:resource="https://www.cs7820-robo-orchestration.org/ontology/Task"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -1227,6 +1246,12 @@
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
+                <owl:onProperty rdf:resource="https://www.cs7820-robo-orchestration.org/ontology/requiresArchetype"/>
+                <owl:someValuesFrom rdf:resource="https://www.cs7820-robo-orchestration.org/ontology/Archetype"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
                 <owl:onProperty rdf:resource="https://www.cs7820-robo-orchestration.org/ontology/requiresSpatialThing"/>
                 <owl:someValuesFrom rdf:resource="https://www.cs7820-robo-orchestration.org/ontology/SpatialThing"/>
             </owl:Restriction>
@@ -1482,5 +1507,5 @@
 
 
 
-<!-- Generated by the OWL API (version 4.5.29.2024-05-13T12:11:03Z) https://github.com/owlcs/owlapi -->
+<!-- Generated by the OWL API (version 4.5.26.2023-07-17T20:34:13Z) https://github.com/owlcs/owlapi -->
 
