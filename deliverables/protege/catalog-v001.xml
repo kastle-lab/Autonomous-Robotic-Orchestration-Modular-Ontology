@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <catalog prefer="public" xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog">
+    <uri id="Imports Wizard Entry" name="http://daselab.org/ContextualizedWinstonPartWhole" uri="file:/C:/Autonomous-Robotic-Orchestration-Modular-Ontology/deliverables/protege/ContextualizedWinstonPartWhole-Full.owl"/>
+    <uri id="Imports Wizard Entry" name="http://daselab.org/ContextualizedWinstonPartWhole" uri="file:/C:/Autonomous-Robotic-Orchestration-Modular-Ontology/deliverables/protege/contextualized-winston-part-whole.rdf"/>
     <uri id="Imports Wizard Entry" name="http://daselab.org/ContextualizedWinstonPartWhole" uri="ContextualizedWinstonPartWhole-Full.owl"/>
     <uri id="Imports Wizard Entry" name="http://daselab.org/ContextualizedWinstonPartWhole" uri="contextualized-winston-part-whole.rdf"/>
     <group id="Folder Repository, directory=, recursive=true, Auto-Update=true, version=2" prefer="public">
