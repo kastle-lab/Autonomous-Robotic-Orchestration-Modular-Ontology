@@ -28,9 +28,7 @@
 
     <!-- http://daselab.org/ContextualizedWinstonPartWhole#isPartOf -->
 
-    <owl:AnnotationProperty rdf:about="http://daselab.org/ContextualizedWinstonPartWhole#isPartOf">
-        <rdfs:domain rdf:resource="https://www.cs7820-robo-orchestration.org/ontology/SpatialThing"/>
-    </owl:AnnotationProperty>
+    <owl:AnnotationProperty rdf:about="http://daselab.org/ContextualizedWinstonPartWhole#isPartOf"/>
     
 
 
@@ -42,6 +40,14 @@
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
+    
+
+
+    <!-- http://daselab.org/ContextualizedWinstonPartWhole#isPartOf -->
+
+    <rdf:Description rdf:about="http://daselab.org/ContextualizedWinstonPartWhole#isPartOf">
+        <rdfs:domain rdf:resource="https://www.cs7820-robo-orchestration.org/ontology/SpatialThing"/>
+    </rdf:Description>
     
 
 
@@ -506,7 +512,6 @@
     <!-- https://www.cs7820-robo-orchestration.org/ontology/Agent -->
 
     <owl:Class rdf:about="https://www.cs7820-robo-orchestration.org/ontology/Agent">
-        <rdfs:comment xml:lang="en">A default representation of an entity (robotic) capable of interacting with its environment.</rdfs:comment>
         <rdfs:subClassOf rdf:resource="https://www.cs7820-robo-orchestration.org/ontology/SpatialThing"/>
         <rdfs:subClassOf>
             <owl:Restriction>
@@ -520,6 +525,7 @@
                 <owl:allValuesFrom rdf:resource="https://www.cs7820-robo-orchestration.org/ontology/Capability"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">A default representation of an entity (robotic) capable of interacting with its environment.</rdfs:comment>
     </owl:Class>
     
 
@@ -535,7 +541,6 @@
     <!-- https://www.cs7820-robo-orchestration.org/ontology/Archetype -->
 
     <owl:Class rdf:about="https://www.cs7820-robo-orchestration.org/ontology/Archetype">
-        <rdfs:comment xml:lang="en">Representing the thematic capabilities of a robotic agent (E.g., Explorer, Hauler, Designer, Painter, etc.).</rdfs:comment>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://www.cs7820-robo-orchestration.org/ontology/requiresCapability"/>
@@ -548,6 +553,7 @@
                 <owl:allValuesFrom rdf:resource="https://www.cs7820-robo-orchestration.org/ontology/Capability"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">Representing the thematic capabilities of a robotic agent (E.g., Explorer, Hauler, Designer, Painter, etc.).</rdfs:comment>
     </owl:Class>
     
 
@@ -563,7 +569,6 @@
     <!-- https://www.cs7820-robo-orchestration.org/ontology/Capability -->
 
     <owl:Class rdf:about="https://www.cs7820-robo-orchestration.org/ontology/Capability">
-        <rdfs:comment xml:lang="en">Specifications to differentiate and define what actions an agent can perform (E.g., Grab, Push, Pull, Lift, Travel, Etc.).</rdfs:comment>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://www.cs7820-robo-orchestration.org/ontology/hasSpec"/>
@@ -595,6 +600,7 @@
                 <owl:onClass rdf:resource="https://www.cs7820-robo-orchestration.org/ontology/SpatialThing"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">Specifications to differentiate and define what actions an agent can perform (E.g., Grab, Push, Pull, Lift, Travel, Etc.).</rdfs:comment>
     </owl:Class>
     
 
@@ -616,7 +622,6 @@
     <!-- https://www.cs7820-robo-orchestration.org/ontology/Category -->
 
     <owl:Class rdf:about="https://www.cs7820-robo-orchestration.org/ontology/Category">
-        <rdfs:comment xml:lang="en">Specifications to differentiate Spatial Things. Category has various subclasses, each of which will have an explicit CategorizationType, which is provided by a controlled vocabulary.</rdfs:comment>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://www.cs7820-robo-orchestration.org/ontology/hasCategorizationType"/>
@@ -629,6 +634,7 @@
                 <owl:allValuesFrom rdf:resource="https://www.cs7820-robo-orchestration.org/ontology/CategorizationType"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">Specifications to differentiate Spatial Things. Category has various subclasses, each of which will have an explicit CategorizationType, which is provided by a controlled vocabulary.</rdfs:comment>
     </owl:Class>
     
 
@@ -642,26 +648,10 @@
     
 
 
-    <!-- https://www.cs7820-robo-orchestration.org/ontology/ColdResistant -->
-
-    <owl:Class rdf:about="https://www.cs7820-robo-orchestration.org/ontology/ColdResistant">
-        <rdfs:subClassOf rdf:resource="https://www.cs7820-robo-orchestration.org/ontology/ResistanceBased"/>
-    </owl:Class>
-    
-
-
     <!-- https://www.cs7820-robo-orchestration.org/ontology/Constructor -->
 
     <owl:Class rdf:about="https://www.cs7820-robo-orchestration.org/ontology/Constructor">
         <rdfs:subClassOf rdf:resource="https://www.cs7820-robo-orchestration.org/ontology/Archetype"/>
-    </owl:Class>
-    
-
-
-    <!-- https://www.cs7820-robo-orchestration.org/ontology/CorrosionResistant -->
-
-    <owl:Class rdf:about="https://www.cs7820-robo-orchestration.org/ontology/CorrosionResistant">
-        <rdfs:subClassOf rdf:resource="https://www.cs7820-robo-orchestration.org/ontology/ResistanceBased"/>
     </owl:Class>
     
 
@@ -685,8 +675,8 @@
     <!-- https://www.cs7820-robo-orchestration.org/ontology/Environment -->
 
     <owl:Class rdf:about="https://www.cs7820-robo-orchestration.org/ontology/Environment">
-        <rdfs:comment xml:lang="en">Provide shared situational awareness for all Agents telling the orchestrator where the Agents can go, where Objects are, and what areas are restricted which is essential for planning safe and successful Tasks.</rdfs:comment>
         <rdfs:subClassOf rdf:resource="https://www.cs7820-robo-orchestration.org/ontology/SpatialThing"/>
+        <rdfs:comment xml:lang="en">Provide shared situational awareness for all Agents telling the orchestrator where the Agents can go, where Objects are, and what areas are restricted which is essential for planning safe and successful Tasks.</rdfs:comment>
     </owl:Class>
     
 
@@ -710,7 +700,6 @@
     <!-- https://www.cs7820-robo-orchestration.org/ontology/Feature -->
 
     <owl:Class rdf:about="https://www.cs7820-robo-orchestration.org/ontology/Feature">
-        <rdfs:comment xml:lang="en">A spatial thing that only exists as part of a host object (i.e., holes, color, bumps)</rdfs:comment>
         <rdfs:subClassOf rdf:resource="https://www.cs7820-robo-orchestration.org/ontology/SpatialThing"/>
         <rdfs:subClassOf>
             <owl:Restriction>
@@ -718,6 +707,7 @@
                 <owl:allValuesFrom rdf:resource="https://www.cs7820-robo-orchestration.org/ontology/Geometry"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">A spatial thing that only exists as part of a host object (i.e., holes, color, bumps)</rdfs:comment>
     </owl:Class>
     
 
@@ -731,8 +721,8 @@
     <!-- https://www.cs7820-robo-orchestration.org/ontology/Geometry -->
 
     <owl:Class rdf:about="https://www.cs7820-robo-orchestration.org/ontology/Geometry">
-        <rdfs:comment xml:lang="en">The geometry data of a spatial thing (i.e., mesh data, dimensions)</rdfs:comment>
         <rdfs:subClassOf rdf:resource="https://www.cs7820-robo-orchestration.org/ontology/SpatialThing"/>
+        <rdfs:comment xml:lang="en">The geometry data of a spatial thing (i.e., mesh data, dimensions)</rdfs:comment>
     </owl:Class>
     
 
@@ -740,7 +730,6 @@
     <!-- https://www.cs7820-robo-orchestration.org/ontology/Goal -->
 
     <owl:Class rdf:about="https://www.cs7820-robo-orchestration.org/ontology/Goal">
-        <rdfs:comment xml:lang="en">Represents the desired outcome or terminal state toward which one or more tasks are directed; Anchors decomposition hierarchies and provides semantics for task sequencing order</rdfs:comment>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://www.cs7820-robo-orchestration.org/ontology/hasDeadline"/>
@@ -773,6 +762,7 @@
                 <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">Represents the desired outcome or terminal state toward which one or more tasks are directed; Anchors decomposition hierarchies and provides semantics for task sequencing order</rdfs:comment>
     </owl:Class>
     
 
@@ -859,7 +849,6 @@
     <!-- https://www.cs7820-robo-orchestration.org/ontology/Metadata -->
 
     <owl:Class rdf:about="https://www.cs7820-robo-orchestration.org/ontology/Metadata">
-        <rdfs:comment xml:lang="en">Data that defines and describes the characteristics of other data (usually large data not fit for KGs. I.e., PointCloud data) for retrieval and processing.</rdfs:comment>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://www.cs7820-robo-orchestration.org/ontology/hasFileLocation"/>
@@ -886,6 +875,7 @@
                 <owl:onClass rdf:resource="https://www.cs7820-robo-orchestration.org/ontology/Format"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">Data that defines and describes the characteristics of other data (usually large data not fit for KGs. I.e., PointCloud data) for retrieval and processing.</rdfs:comment>
     </owl:Class>
     
 
@@ -909,9 +899,9 @@
     <!-- https://www.cs7820-robo-orchestration.org/ontology/Name -->
 
     <owl:Class rdf:about="https://www.cs7820-robo-orchestration.org/ontology/Name">
-        <rdfs:comment xml:lang="en">It's basically a nametag pattern. It's a simple, reusable way to give anything (like an Agent, Task, or Object) a human-readable name.</rdfs:comment>
         <rdfs:subClassOf rdf:resource="https://www.cs7820-robo-orchestration.org/ontology/Identifier"/>
         <owl:disjointWith rdf:resource="https://www.cs7820-robo-orchestration.org/ontology/Serial"/>
+        <rdfs:comment xml:lang="en">It&apos;s basically a nametag pattern. It&apos;s a simple, reusable way to give anything (like an Agent, Task, or Object) a human-readable name.</rdfs:comment>
     </owl:Class>
     
 
@@ -927,8 +917,8 @@
     <!-- https://www.cs7820-robo-orchestration.org/ontology/Object -->
 
     <owl:Class rdf:about="https://www.cs7820-robo-orchestration.org/ontology/Object">
-        <rdfs:comment xml:lang="en">Specifications to define a non-autonomous Spatial Thing (not functional by itself).</rdfs:comment>
         <rdfs:subClassOf rdf:resource="https://www.cs7820-robo-orchestration.org/ontology/SpatialThing"/>
+        <rdfs:comment xml:lang="en">Specifications to define a non-autonomous Spatial Thing (not functional by itself).</rdfs:comment>
     </owl:Class>
     
 
@@ -1015,18 +1005,9 @@
     
 
 
-    <!-- https://www.cs7820-robo-orchestration.org/ontology/ResistanceBased -->
-
-    <owl:Class rdf:about="https://www.cs7820-robo-orchestration.org/ontology/ResistanceBased">
-        <rdfs:subClassOf rdf:resource="https://www.cs7820-robo-orchestration.org/ontology/Capability"/>
-    </owl:Class>
-    
-
-
     <!-- https://www.cs7820-robo-orchestration.org/ontology/Role -->
 
     <owl:Class rdf:about="https://www.cs7820-robo-orchestration.org/ontology/Role">
-        <rdfs:comment xml:lang="en">Used to represent the immediate characteristics and participation of a SpatialThing in a specific context (i.e, a Task providing a Role).</rdfs:comment>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://www.cs7820-robo-orchestration.org/ontology/assimilatesRoleCategory"/>
@@ -1076,6 +1057,7 @@
                 <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">Used to represent the immediate characteristics and participation of a SpatialThing in a specific context (i.e, a Task providing a Role).</rdfs:comment>
     </owl:Class>
     
 
@@ -1120,18 +1102,9 @@
     
 
 
-    <!-- https://www.cs7820-robo-orchestration.org/ontology/Shockproof -->
-
-    <owl:Class rdf:about="https://www.cs7820-robo-orchestration.org/ontology/Shockproof">
-        <rdfs:subClassOf rdf:resource="https://www.cs7820-robo-orchestration.org/ontology/ResistanceBased"/>
-    </owl:Class>
-    
-
-
     <!-- https://www.cs7820-robo-orchestration.org/ontology/SpatialExtent -->
 
     <owl:Class rdf:about="https://www.cs7820-robo-orchestration.org/ontology/SpatialExtent">
-        <rdfs:comment xml:lang="en">Captures the positional and relational information that constrains or enables the execution of tasks towards a goal within an avilable environment.</rdfs:comment>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://www.cs7820-robo-orchestration.org/ontology/isWithinBounds"/>
@@ -1139,6 +1112,7 @@
                 <owl:onClass rdf:resource="https://www.cs7820-robo-orchestration.org/ontology/Goal"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">Captures the positional and relational information that constrains or enables the execution of tasks towards a goal within an avilable environment.</rdfs:comment>
     </owl:Class>
     
 
@@ -1146,7 +1120,6 @@
     <!-- https://www.cs7820-robo-orchestration.org/ontology/SpatialThing -->
 
     <owl:Class rdf:about="https://www.cs7820-robo-orchestration.org/ontology/SpatialThing">
-        <rdfs:comment xml:lang="en">A physical thing that exists in time and space.</rdfs:comment>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://www.cs7820-robo-orchestration.org/ontology/belongsToCategory"/>
@@ -1197,6 +1170,7 @@
                 <owl:onClass rdf:resource="https://www.cs7820-robo-orchestration.org/ontology/Identifier"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">A physical thing that exists in time and space.</rdfs:comment>
     </owl:Class>
     
 
@@ -1210,7 +1184,6 @@
     <!-- https://www.cs7820-robo-orchestration.org/ontology/Specification -->
 
     <owl:Class rdf:about="https://www.cs7820-robo-orchestration.org/ontology/Specification">
-        <rdfs:comment xml:lang="en">A quantified boundary or measurable limit that defines the extent of a capability. Example: a robotic gripper's specification might state it can grasp objects up to 5 kg.</rdfs:comment>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://www.cs7820-robo-orchestration.org/ontology/hasThreshold"/>
@@ -1236,6 +1209,7 @@
                 <owl:onClass rdf:resource="https://www.cs7820-robo-orchestration.org/ontology/SpecificationKind"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">A quantified boundary or measurable limit that defines the extent of a capability. Example: a robotic gripper&apos;s specification might state it can grasp objects up to 5 kg.</rdfs:comment>
     </owl:Class>
     
 
@@ -1257,7 +1231,6 @@
     <!-- https://www.cs7820-robo-orchestration.org/ontology/Task -->
 
     <owl:Class rdf:about="https://www.cs7820-robo-orchestration.org/ontology/Task">
-        <rdfs:comment xml:lang="en">Represents any atomic unit of work to be performed by our agents.</rdfs:comment>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://www.cs7820-robo-orchestration.org/ontology/providesRole"/>
@@ -1289,6 +1262,7 @@
                 <owl:onClass rdf:resource="https://www.cs7820-robo-orchestration.org/ontology/Role"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">Represents any atomic unit of work to be performed by our agents.</rdfs:comment>
     </owl:Class>
     
 
@@ -1296,15 +1270,7 @@
     <!-- https://www.cs7820-robo-orchestration.org/ontology/TemporalExtent -->
 
     <owl:Class rdf:about="https://www.cs7820-robo-orchestration.org/ontology/TemporalExtent">
-        <rdfs:comment xml:lang="en">It's a when (timestamp) for recording Events and provides the how long (duration) for scheduling Tasks, so you have perfect timeline of everything that happened.</rdfs:comment>
-    </owl:Class>
-    
-
-
-    <!-- https://www.cs7820-robo-orchestration.org/ontology/ThermalResistant -->
-
-    <owl:Class rdf:about="https://www.cs7820-robo-orchestration.org/ontology/ThermalResistant">
-        <rdfs:subClassOf rdf:resource="https://www.cs7820-robo-orchestration.org/ontology/ResistanceBased"/>
+        <rdfs:comment xml:lang="en">It&apos;s a when (timestamp) for recording Events and provides the how long (duration) for scheduling Tasks, so you have perfect timeline of everything that happened.</rdfs:comment>
     </owl:Class>
     
 
@@ -1362,14 +1328,6 @@
 
     <owl:Class rdf:about="https://www.cs7820-robo-orchestration.org/ontology/Vision">
         <rdfs:subClassOf rdf:resource="https://www.cs7820-robo-orchestration.org/ontology/SensorBased"/>
-    </owl:Class>
-    
-
-
-    <!-- https://www.cs7820-robo-orchestration.org/ontology/WaterResistant -->
-
-    <owl:Class rdf:about="https://www.cs7820-robo-orchestration.org/ontology/WaterResistant">
-        <rdfs:subClassOf rdf:resource="https://www.cs7820-robo-orchestration.org/ontology/ResistanceBased"/>
     </owl:Class>
     
 
@@ -1455,41 +1413,10 @@
     <rdf:Description>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
         <owl:members rdf:parseType="Collection">
-            <rdf:Description rdf:about="https://www.cs7820-robo-orchestration.org/ontology/CargoBased"/>
-            <rdf:Description rdf:about="https://www.cs7820-robo-orchestration.org/ontology/GripperBased"/>
-            <rdf:Description rdf:about="https://www.cs7820-robo-orchestration.org/ontology/MotionBased"/>
-            <rdf:Description rdf:about="https://www.cs7820-robo-orchestration.org/ontology/PowerBased"/>
-            <rdf:Description rdf:about="https://www.cs7820-robo-orchestration.org/ontology/ResistanceBased"/>
-            <rdf:Description rdf:about="https://www.cs7820-robo-orchestration.org/ontology/SensorBased"/>
-        </owl:members>
-    </rdf:Description>
-    <rdf:Description>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
-        <owl:members rdf:parseType="Collection">
-            <rdf:Description rdf:about="https://www.cs7820-robo-orchestration.org/ontology/CargoBased"/>
-            <rdf:Description rdf:about="https://www.cs7820-robo-orchestration.org/ontology/GripperBased"/>
-            <rdf:Description rdf:about="https://www.cs7820-robo-orchestration.org/ontology/PowerBased"/>
-            <rdf:Description rdf:about="https://www.cs7820-robo-orchestration.org/ontology/Reach"/>
-            <rdf:Description rdf:about="https://www.cs7820-robo-orchestration.org/ontology/ResistanceBased"/>
-            <rdf:Description rdf:about="https://www.cs7820-robo-orchestration.org/ontology/SensorBased"/>
-        </owl:members>
-    </rdf:Description>
-    <rdf:Description>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
-        <owl:members rdf:parseType="Collection">
             <rdf:Description rdf:about="https://www.cs7820-robo-orchestration.org/ontology/Close"/>
             <rdf:Description rdf:about="https://www.cs7820-robo-orchestration.org/ontology/Open"/>
             <rdf:Description rdf:about="https://www.cs7820-robo-orchestration.org/ontology/Pick"/>
             <rdf:Description rdf:about="https://www.cs7820-robo-orchestration.org/ontology/Place"/>
-        </owl:members>
-    </rdf:Description>
-    <rdf:Description>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
-        <owl:members rdf:parseType="Collection">
-            <rdf:Description rdf:about="https://www.cs7820-robo-orchestration.org/ontology/ColdResistant"/>
-            <rdf:Description rdf:about="https://www.cs7820-robo-orchestration.org/ontology/CorrosionResistant"/>
-            <rdf:Description rdf:about="https://www.cs7820-robo-orchestration.org/ontology/Shockproof"/>
-            <rdf:Description rdf:about="https://www.cs7820-robo-orchestration.org/ontology/WaterResistant"/>
         </owl:members>
     </rdf:Description>
     <rdf:Description>
@@ -1509,15 +1436,6 @@
     <rdf:Description>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
         <owl:members rdf:parseType="Collection">
-            <rdf:Description rdf:about="https://www.cs7820-robo-orchestration.org/ontology/CorrosionResistant"/>
-            <rdf:Description rdf:about="https://www.cs7820-robo-orchestration.org/ontology/Shockproof"/>
-            <rdf:Description rdf:about="https://www.cs7820-robo-orchestration.org/ontology/ThermalResistant"/>
-            <rdf:Description rdf:about="https://www.cs7820-robo-orchestration.org/ontology/WaterResistant"/>
-        </owl:members>
-    </rdf:Description>
-    <rdf:Description>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
-        <owl:members rdf:parseType="Collection">
             <rdf:Description rdf:about="https://www.cs7820-robo-orchestration.org/ontology/Move"/>
             <rdf:Description rdf:about="https://www.cs7820-robo-orchestration.org/ontology/Press"/>
             <rdf:Description rdf:about="https://www.cs7820-robo-orchestration.org/ontology/Pull"/>
@@ -1530,3 +1448,4 @@
 
 
 <!-- Generated by the OWL API (version 4.5.29.2024-05-13T12:11:03Z) https://github.com/owlcs/owlapi -->
+

@@ -6,9 +6,7 @@
     <uri id="Imports Wizard Entry" name="http://daselab.org/ContextualizedWinstonPartWhole" uri="ContextualizedWinstonPartWhole-Full.owl"/>
     <uri id="Imports Wizard Entry" name="http://daselab.org/ContextualizedWinstonPartWhole" uri="contextualized-winston-part-whole.rdf"/>
     <group id="Folder Repository, directory=, recursive=true, Auto-Update=true, version=2" prefer="public">
-        <uri id="Automatically generated entry, Timestamp=1776360094217" name="duplicate:http://daselab.org/ContextualizedWinstonPartWhole" uri="contextualized-winston-part-whole.rdf"/>
-        <uri id="Automatically generated entry, Timestamp=1776360094217" name="duplicate:http://daselab.org/ContextualizedWinstonPartWhole" uri="ContextualizedWinstonPartWhole-Full.owl"/>
-        <uri id="Automatically generated entry, Timestamp=1776360094217" name="duplicate:https://www.cs7820-robo-orchestration.org/ontology/" uri="robo-ont-clean.rdf"/>
-        <uri id="Automatically generated entry, Timestamp=1776360094217" name="duplicate:https://www.cs7820-robo-orchestration.org/ontology/" uri="robo-ont.rdf"/>
+        <uri id="Automatically generated entry, Timestamp=1781800120276" name="http://daselab.org/ContextualizedWinstonPartWhole" uri="contextualized-winston-part-whole.rdf"/>
+        <uri id="Automatically generated entry, Timestamp=1781800120276" name="https://www.cs7820-robo-orchestration.org/ontology/" uri="robo-ont.rdf"/>
     </group>
 </catalog>
