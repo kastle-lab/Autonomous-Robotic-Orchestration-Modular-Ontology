@@ -1,4 +1,5 @@
-/scripts
+/scripts/convert_axioms_to_natural_language-copy.py
+/scripts/template.txt
 .venv
 /generated-axiom-text
 workflow.md
