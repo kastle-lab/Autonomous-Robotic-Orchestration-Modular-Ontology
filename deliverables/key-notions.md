@@ -86,16 +86,6 @@
 
 ---
 
-- **Category**
-  - <u><b>Rationale</b></u>: Specifications to differentiate Spatial Things. Category has various subclasses, each of which will have an explicit CategorizationType, which is provided by a controlled vocabulary.
-
-  - <u>**Connected Pattern**</u>:
-    - One major pattern that may suffice is the _explicit typing_ ODP, because one is describing an object by its _type_ or _category_: [Explicit Typing](https://github.com/kastle-lab/modular-ontology-design-library/tree/master/modl/explicit-typing).
-
-  - <u>**Source Dataset(s)**</u>: [Princeton Model Net](https://modelnet.cs.princeton.edu/#)
-
----
-
 - **Object**
   - <u><b>Rationale</b></u>: Specifications to define a non-autonomous Spatial Thing (not functional by itself).
 

@@ -4,9 +4,6 @@
 
 - Archetype
 - Capability
-- Categorization
-- Event
-- Feature
 - Goal-Task
 - Metadata
 - Role
@@ -25,6 +22,19 @@ The deliverables are structured as follows.
    This directory includes the schema diagrams for each constructed pattern along with the final schema.
 4. **Documentation.md** \
    The final document summarizing the entire project.
-5. **Protege** \
-   Contains OWL file with the axioms applied using the Protege software. \
-   - _Note_: Constraints are a WIP
+5. **Ontology** \
+   Contains the primary and imported ontology files as well as the axioms in text format.
+6. **Materialization** \
+   The instance level data materialized by [Kastle-Foundry](https://github.com/kastle-lab/foundry) resides here.
+
+## Scripts
+
+The scripts directory is structured as follows.
+
+1. **Axiomatization**\
+   The code used to generate axiom text resides here.
+2. **Data**\
+   The data used for materialzing the knowlege graph resides here.
+
+3. **Materialization**\
+   The YAML files and other scripts used for data prep and materialization are located in this directory.
