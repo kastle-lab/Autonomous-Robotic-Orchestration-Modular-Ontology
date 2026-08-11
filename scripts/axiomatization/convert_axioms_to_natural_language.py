@@ -187,34 +187,6 @@ def convert_inverse_qualified_scoped_functionality(axiom_string):
 
     return funct
 
-
-# Proposed change by Fable analysis as quoted below 
-
-"""
-generate_structural_tautology's SubClassOf branch emits malformed syntax. 
-When the input contains SubClassOf, it returns `{b} SubClassOf min 0 {a}` — a cardinality restriction with no property in front of it, which isn't parseable Manchester. 
-It also then feeds that into convert_structural_tautology, which splits on 'min 0' and yields an empty relationship name.
-Empty in this run (st = []), but broken when used.
-"""
-
-# def convert_structural_tautology(axiom_string):
-#     axiom_string = axiom_string.replace('`', '')
- 
-#     if 'min 0' in axiom_string:
-#         a, rb = axiom_string.split('SubClassOf')
-#         r, b = rb.split('min 0')
- 
-#         ax17 = f"For all x where x is of type {a.strip()} implies there may exist a y "\
-#             f"and a relationship {r.strip()} with x and y and y is of type {b.strip()}."
-#     else:
-#         # Class-only tautology of the form `A SubClassOf owl:Thing` (no property involved)
-#         a, b = axiom_string.split('SubClassOf')
- 
-#         ax17 = f"For all x where x is of type {a.strip()}, x is of type {b.strip()}, "\
-#             f"which is trivially true."
- 
-#     return ax17
-
 def convert_structural_tautology(axiom_string):
     axiom_string = axiom_string.replace('`', '').replace('`', '')
     a, rb = axiom_string.split('SubClassOf')
@@ -229,72 +201,72 @@ def convert_structural_tautology(axiom_string):
 
 def generate_subclass(axiom_string):
 
-    a, r, b = axiom_string.split(' ')
+    a, r, b = axiom_string.split()
 
     return f"`{a} SubClassOf {b}`"
 
 
 def generate_disjoint(axiom_string):
 
-    a, r, b = axiom_string.split(' ')
+    a, r, b = axiom_string.split()
 
     return f"`{a} DisjointWith {b}`"
 
 def generate_global_domain(axiom_string):
 
-    a, r, b = axiom_string.split(' ')
+    a, r, b = axiom_string.split()
 
     return f"`{r} some owl:Thing SubClassOf {a}`"
 
 def generate_scoped_domain(axiom_string):
 
-    a, r, b = axiom_string.split(' ')
+    a, r, b = axiom_string.split()
 
     return f"`{r} some {b} SubClassOf {a}`"
 
 def generate_global_range(axiom_string):
 
-    a, r, b = axiom_string.split(' ')
+    a, r, b = axiom_string.split()
 
     return f"`owl:Thing SubClassOf {r} only {b}`"
 
 
 def generate_scoped_range(axiom_string):
 
-    a, r, b = axiom_string.split(' ')
+    a, r, b = axiom_string.split()
 
     return f"`{a} SubClassOf {r} only {b}`"
 
 def generate_existential(axiom_string):
 
-    a, r, b = axiom_string.split(' ')
+    a, r, b = axiom_string.split()
 
     return f"`{a} SubClassOf {r} some {b}`"
 
 
 def generate_inverse_existential(axiom_string):
 
-    a, r, b = axiom_string.split(' ')
+    a, r, b = axiom_string.split()
 
     return f"`{b} SubClassOf inverse {r} some {a}`"
 
 
 def generate_functionality(axiom_string):
 
-    a, r, b = axiom_string.split(' ')
+    a, r, b = axiom_string.split()
 
     return f"`owl:Thing SubClassOf {r} max 1 owl:Thing`"
 
 
 def generate_qualified_functionality(axiom_string):
 
-    a, r, b = axiom_string.split(' ')
+    a, r, b = axiom_string.split()
 
     return f"`owl:Thing SubClassOf {r} max 1 {b}`"
 
 def generate_scoped_functionality(axiom_string):
 
-    a, r, b = axiom_string.split(' ')
+    a, r, b = axiom_string.split()
 
     return f"`{a} SubClassOf {r} max 1 owl:Thing`"
 
@@ -302,32 +274,32 @@ def generate_scoped_functionality(axiom_string):
 
 def generate_qualified_scoped_functionality(axiom_string):
 
-    a, r, b = axiom_string.split(' ')
+    a, r, b = axiom_string.split()
 
     return f"`{a} SubClassOf {r} max 1 {b}`"
 
 
 def generate_inverse_functionality(axiom_string):
 
-    a, r, b = axiom_string.split(' ')
+    a, r, b = axiom_string.split()
 
     return f"`owl:Thing SubClassOf inverse {r} max 1 owl:Thing`"
 
 def generate_inverse_qualified_functionality(axiom_string):
 
-    a, r, b = axiom_string.split(' ')
+    a, r, b = axiom_string.split()
 
     return f"`owl:Thing SubClassOf inverse {r} max 1 {a}`"
 
 def generate_inverse_scoped_functionality(axiom_string):
 
-    a, r, b = axiom_string.split(' ')
+    a, r, b = axiom_string.split()
 
     return f"`{b} SubClassOf inverse {r} max 1 owl:Thing`"
 
 def generate_inverse_qualified_scoped_functionality(axiom_string):
 
-    a, r, b = axiom_string.split(' ')
+    a, r, b = axiom_string.split()
 
     return f"`{b} SubClassOf inverse {r} max 1 {a}`"
 
@@ -336,11 +308,11 @@ def generate_structural_tautology(axiom_string):
     if re.search('SubClassOf ', axiom_string):
         axiom_string = axiom_string.replace('SubClassOf ', '')
 
-        a, b = axiom_string.split(' ')
+        a, b = axiom_string.split()
         r = 'SubClassOf'
         return f"`{b} SubClassOf min 0 {a}`"
     else:
-        a, r, b = axiom_string.split(' ')
+        a, r, b = axiom_string.split()
 
         return f"`{b} SubClassOf {r} min 0 {a}`"
 
@@ -428,15 +400,6 @@ def convert_run_all(relation_list, name_string, results_dict):
     sorted_results_dict = dict(sorted(results_dict.items()))
 
     return sorted_results_dict
-    print(sorted_results_dict['subclass'])
-
-    # Add all items to final_list
-    for name_string, items in sorted_results_dict.items():
-        for item in items:
-            final_list.append(item)
-
-    return final_list
-
 
 def reorganize_keys(final_dict):
     return_dict = {}
@@ -478,14 +441,37 @@ if __name__ == "__main__":
     if type_value =="Autonomous-Robotic-Orchestration-Modular-Ontology":
 
         sc = [
-            "Constructor SubClassOf Archetype",
-            "Harvestor SubClassOf Archetype",
-            "Inspector SubClassOf Archetype",
-            "Explorer SubClassOf Archetype",
-            "Sentinel SubClassOf Archetype",
-            "Painter SubClassOf Archetype",
-            "Hauler SubClassOf Archetype",
-            "Digger SubClassOf Archetype"
+            "Environment SubClassOf	SpatialThing",
+            "Object SubClassOf SpatialThing",
+            "Feature SubClassOf SpatialThing",
+            "Geometry SubClassOf SpatialThing",
+            "Agent SubClassOf SpatialThing",
+            "Target SubClassOf Role",
+            "Bystander SubClassOf Role",
+            "Worker SubClassOf Role",
+            "Obstacle SubClassOf Role",
+            "Zone SubClassOf Role",
+            "UpperThreshold SubClassOf Threshold",
+            "LowerThreshold SubClassOf Threshold",
+            "NominalThreshold SubClassOf Threshold",
+            "Gripper-Based SubClassOf Capability",
+            "Open SubClassOf Gripper-Based",
+            "Close SubClassOf Gripper-Based",
+            "Place SubClassOf Gripper-Based",
+            "Pick SubClassOf Gripper-Based",
+            "Sensor-Based SubClassOf Capability",
+            "Distance SubClassOf Sensor-Based",
+            "Audition SubClassOf Sensor-Based",
+            "Touch SubClassOf Sensor-Based",
+            "Vision SubClassOf Sensor-Based",
+            "Motion-Based SubClassOf Capability",
+            "Move SubClassOf Motion-Based",
+            "Rotate SubClassOf Motion-Based",
+            "Press SubClassOf Motion-Based",
+            "Push SubClassOf Motion-Based",
+            "Pull SubClassOf Motion-Based",
+            "PowerBased SubClassOf Capability",
+            "CargoBased SubClassOf Capability"
         ]
 
         dis = [
@@ -497,7 +483,25 @@ if __name__ == "__main__":
             "Task providesRole Role",
             "Task requiresSpatialThing SpatialThing",
             "Task requiresArchetype Archetype",
-
+            "SpatialThing hasMetadata Metadata",
+            "SpatialThing hasSpatioTemporalExtent SpatioTemporalExtent",
+            "SpatialThing currentState State",
+            "SpatialThing isPartOf RelationInstance",
+            "SpatialThing enablesCapability Capability",
+            "SpatialThing assumesRole Role",
+            "Agent fulfillsArchetype Archetype",
+            "Agent hasCapability Capability", 
+            "SpatialThing hasSpec Specification",
+            "Archetype requiresCapability Capability",
+            "Capability enablesAction Action",
+            "Capability enabledBySpatialThing SpatialThing",
+            "Capability hasSpec Specification",
+            "Specification hasThreshold Threshold", 
+            "Specification isSpecificationOf SpecificationKind",
+            "Threshold hasUnit Unit",
+            "Threshold hasValue xsd:double",
+            "Metadata hasFormat Format",
+            "Metadata hasLocation Location",
         ]
 
         gd = [
@@ -506,6 +510,21 @@ if __name__ == "__main__":
             "Goal hasOperationalExtent SpatialExtent",
             "Task requiresSpatialThing SpatialThing",
             "Task requiresArchetype Archetype",
+            "SpatialThing partOf SpatialThing",
+            "SpatialThing spatiallyLocatedIn SpatialThing",
+            "SpatialThing assumesRole Role",
+            "Agent hasCapability Capability", 
+            "Archetype requiresCapability Capability",
+            "Capability enablesAction Action",
+            "Specification hasThreshold Threshold", 
+            "Specification isSpecificationOf SpecificationKind",
+            "Threshold hasUnit Unit",
+            "Metadata hasFormat Format",
+            "Metadata hasLocation Location",
+            "Metadata hasDescription xsd:string",
+            "Metadata hasTag xsd:string",
+            "Metadata hasName xsd:string",
+
         ]
 
         sd = [
@@ -513,6 +532,8 @@ if __name__ == "__main__":
             "Goal hasTask Task",
             "Task dependsOnTask Task",
             "Task hasNextTask Task",
+            "SpatialThing hasGeometry Geometry",
+            "SpatialThing hasFeature Feature",
         ]
 
         gr = [
@@ -523,6 +544,33 @@ if __name__ == "__main__":
             "Goal hasSuccessState State",
             "Task requiresSpatialThing SpatialThing",
             "Task requiresArchetype Archetype",
+            "SpatialThing hasMetadata Metadata",
+            "SpatialThing hasSpatioTemporalExtent SpatioTemporalExtent",
+            "SpatialThing currentState State",
+            "SpatialThing hasGeometry Geometry",
+            "SpatialThing hasFeature Feature",
+            "SpatialThing partOf SpatialThing",
+            "SpatialThing spatiallyLocatedIn SpatialThing",
+            "SpatialThing assumesRole Role",
+            "Agent fulfillsArchetype Archetype",
+            "Agent hasCapability Capability", 
+            "SpatialThing hasSpec Specification",
+            "Archetype requiresCapability Capability",
+            "Capability enablesAction Action",
+            "Capability enabledBySpatialThing SpatialThing",
+            "Capability hasSpec Specification",
+            "Specification hasThreshold Threshold", 
+            "Specification isSpecificationOf SpecificationKind",
+            "Threshold hasUnit Unit",
+            "Metadata hasFormat Format",
+            "Metadata hasLocation Location",
+            "Metadata hasDescription xsd:string",
+            "Metadata hasTag xsd:string",
+            "Metadata hasName xsd:string",
+            "Location asString xsd:string",
+            "Location hasURI xsd:anyURI",
+            "Location hasIP xsd:integer",
+            "Location hasFilePath xsd:string",
         ]
 
         sr = [
@@ -531,6 +579,7 @@ if __name__ == "__main__":
             "Task dependsOnTask Task",
             "Task hasNextTask Task",
             "Task providesRole Role",
+            "Capability enablesAction Action",
 
         ]
 
@@ -539,12 +588,24 @@ if __name__ == "__main__":
             "Goal hasSuccessState State",
             "Task requiresSpatialThing SpatialThing",
             "Task requiresArchetype Archetype",
+            "SpatialThing currentState State",
+            "Role hasTemporalExtent TemporalExtent",
+            "Capability enabledBySpatialThing SpatialThing",
+            "Capability hasSpec Specification",
+            "Specification hasThreshold Threshold", 
+            "Metadata hasFormat Format",
+            "Metadata hasName xsd:string",
+
         ]
 
         iex = [
             "Goal hasTask Task",
             "Task providesRole Role",
-
+            "SpatialThing hasGeometry Geometry",
+            "SpatialThing hasFeature Feature",
+            "SpatialThing assumesRole Role",
+            "Capability enablesAction Action",
+            "Metadata hasLocation Location",
         ]
 
         fun = [
@@ -552,6 +613,7 @@ if __name__ == "__main__":
         ]
 
         qfun = [
+            "SpatialThing hasMetadata Metadata",
 
         ]
 
@@ -564,6 +626,18 @@ if __name__ == "__main__":
             "Goal hasInstructionalText xsd:string",
             "Goal hasTask Task",
             "Task requiresArchetype Archetype",
+            "SpatialThing currentState State",
+            "Role hasTemporalExtent TemporalExtent",
+            "Capability enabledBySpatialThing SpatialThing",
+            "Threshold hasValue xsd:double",
+            "Metadata hasFormat Format",
+            "Metadata hasLocation Location",
+            "Metadata hasDescription xsd:string",
+            "Metadata hasName xsd:string",
+            "Location asString xsd:string",
+            "Location hasURI xsd:anyURI",
+            "Location hasIP xsd:integer",
+            "Location hasFilePath xsd:string",
         ]
 
         ifun = [
@@ -583,10 +657,19 @@ if __name__ == "__main__":
         ]
 
         st = [
-            "Goal isWithinBounds SpatialExtent",
-            "Goal hasOperationalExtent SpatialExtent",
-
+            
         ]
+        # st = [
+        #     "Goal isWithinBounds SpatialExtent",
+        #     "Goal hasOperationalExtent SpatialExtent",
+        #     "SpatialThing hasSpatioTemporalExtent SpatioTemporalExtent",
+        #     "Agent fulfillsArchetype Archetype",
+        #     "Agent hasCapability Capability", 
+        #     "SpatialThing hasSpec Specification",
+        #     "Archetype requiresCapability Capability",
+        #     "Specification isSpecificationOf SpecificationKind",
+        #     "Threshold hasUnit Unit",
+        # ]
 
         flist = {}
         flist = convert_run_all(sc, "subclass", flist)
