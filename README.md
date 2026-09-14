@@ -12,26 +12,26 @@ The Autonomous Robotic Orchestration Modular Ontology is intended for use with a
 
 ## Repository Map
 
-| Directory                                         | Intent                                                                                                                                             |
-| ------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [deliverables](deliverables/)                     | Contains the ontology, ontology documentation, schema visualizations, and materialized RDF/TTL artifacts.                                          |
-| [deliverables/ontology](deliverables/ontology/)   | Contains the aggregate OWL ontology and its axiomatization in natural language.                                                                    |
-| [deliverables/patterns](deliverables/patterns/)   | Contains GraphML and PDF visualizations of the complete ontology and its individual patterns, including Tool, Metadata, Resource, and FailureMode. |
-| [scripts](scripts/)                               | Contains scripts, source data, mappings, and utilities used to generate and materialize the ontology data.                                         |
-| [scripts/axiomatization](scripts/axiomatization/) | Contains the script used to convert ontology axioms into natural language.                                                                         |
+| Directory                                         | Intent                                                                                                     |
+| ------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- |
+| [deliverables](deliverables/)                     | Contains the ontology, ontology documentation, schema visualizations, and materialized RDF/TTL artifacts.  |
+| [deliverables/ontology](deliverables/ontology/)   | Contains the aggregate OWL ontology and its axiomatization in natural language.                            |
+| [deliverables/patterns](deliverables/patterns/)   | Contains GraphML and PDF visualizations of the complete ontology and its individual patterns.              |
+| [scripts](scripts/)                               | Contains scripts, source data, mappings, and utilities used to generate and materialize the ontology data. |
+| [scripts/axiomatization](scripts/axiomatization/) | Contains the script used to convert ontology axioms into natural language.                                 |
 
 ## Ontology Patterns
 
 The ontology is organized around several core patterns:
 
-| Pattern                                                                                | Description                                                                                                                                                                      |
-| -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [Archetype](deliverables/patterns/archetype-pattern/archetype-pattern.pdf)             | Representing the thematic capabilities of a robotic agent (E.g., Explorer, Hauler, Designer, Painter, etc.).                                                                     |
-| [Capability](deliverables/patterns/capability-pattern/capability-pattern.pdf)          | Represents metadata associated with the modeled resources.                                                                                                                       |
-| [Goal-Task](deliverables/patterns/goal-task-pattern/goal-task-pattern.pdf)             | Represents the desired outcome or terminal state toward which one or more tasks are directed; Anchors decomposition hierarchies and provides semantics for task sequencing orde. |
-| [Role](deliverables/patterns/role-pattern/role-pattern.pdf)                            | Represents the immediate characteristics and participation of a SpatialThing in a specific context (i.e, a Task providing a Role).                                               |
-| [Spatial-Thing](deliverables/patterns/spatial-thing/spatial-thing-pattern.pdf)         | Represents a physical thing that exists in time and space.                                                                                                                       |
-| [Specification](deliverables/patterns/specification-pattern/specification-pattern.pdf) | Represents a quantified boundary or measurable limit.                                                                                                                            |
+| Pattern                                                                                | Description                                                                                                                                                                       |
+| -------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| [Archetype](deliverables/patterns/archetype-pattern/archetype-pattern.pdf)             | Representing the thematic capabilities of a robotic agent (E.g., Explorer, Hauler, Designer, Painter, etc.).                                                                      |
+| [Capability](deliverables/patterns/capability-pattern/capability-pattern.pdf)          | Represents metadata associated with the modeled resources.                                                                                                                        |
+| [Goal-Task](deliverables/patterns/goal-task-pattern/goal-task-pattern.pdf)             | Represents the desired outcome or terminal state toward which one or more tasks are directed; Anchors decomposition hierarchies and provides semantics for task sequencing order. |
+| [Role](deliverables/patterns/role-pattern/role-pattern.pdf)                            | Represents the immediate characteristics and participation of a SpatialThing in a specific context (i.e, a Task providing a Role).                                                |
+| [Spatial-Thing](deliverables/patterns/spatial-thing/spatial-thing-pattern.pdf)         | Represents a physical thing that exists in time and space.                                                                                                                        |
+| [Specification](deliverables/patterns/specification-pattern/specification-pattern.pdf) | Represents a quantified boundary or measurable limit.                                                                                                                             |
 
 ## Namespaces
 
