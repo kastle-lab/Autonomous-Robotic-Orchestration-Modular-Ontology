@@ -1,40 +1,60 @@
-# A Modular Ontology for Autonomous Robotic Orchestration
+# Autonomous-Robotic-Orchestration-Modular-Ontology
 
-## The Patterns (so far)
+The Autonomous Robotic Orchestration Modular Ontology is intended for use with autonomous systems which require robotic orchestration to enable multi-agent systems (MAS) to be governed and commanded by an AI Orchestrator. The ontology empowers the orchestrator to understand its environment, decompose high-level goals into atomic subtasks, and assign agents based on specific capabilities. Ultimately, this framework is engineered for high reusability and generality, providing a mechanism to facilitate the merging of existing ontologies across diverse domains to support increasingly complex autonomous operations.
 
-- Archetype
-- Capability
-- Goal-Task
-- Metadata
-- Role
-- SpatialThing
-- Specification
+## Key Resources
 
-## Deliverables
+- [Ontology](deliverables/ontology/robo-ont.rdf) is the aggregate OWL ontology artifact.
+- [Ontology axioms](deliverables/ontology/Autonomous-Robotic-Orchestration-Modular-Ontology_axioms.md) provides the ontology axioms in natural language.
+- [Full schema PDF](deliverables/patterns/full-schema.pdf) provides a visual representation of the complete ontology schema.
+- [Key notions](deliverables/key-notions.md) documents the central concepts represented in the ontology.
+- [Use case](deliverables/use-case.md) describes the motivating use case for the ontology, including the appropriate research and ontology related questions.
 
-The deliverables are structured as follows.
+## Repository Map
 
-1. **Use-Case** \
-   Contains the narrative of our use case and motivation for the research, along with the initially formulated competency questions (CQs) and available datasets.
-2. **Key-Notions** \
-   Contains the identified concepts that overlapped with the CQs and the available data. Each key notion has a brief description of the rationale, potential existing patterns for reuse, and applicable datasets.
-3. **Patterns** \
-   This directory includes the schema diagrams for each constructed pattern along with the final schema.
-4. **Documentation.md** \
-   The final document summarizing the entire project.
-5. **Ontology** \
-   Contains the primary and imported ontology files as well as the axioms in text format.
-6. **Materialization** \
-   The instance level data materialized by [Kastle-Foundry](https://github.com/kastle-lab/foundry) resides here.
+| Directory                                         | Intent                                                                                                                                             |
+| ------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------- |
+| [deliverables](deliverables/)                     | Contains the ontology, ontology documentation, schema visualizations, and materialized RDF/TTL artifacts.                                          |
+| [deliverables/ontology](deliverables/ontology/)   | Contains the aggregate OWL ontology and its axiomatization in natural language.                                                                    |
+| [deliverables/patterns](deliverables/patterns/)   | Contains GraphML and PDF visualizations of the complete ontology and its individual patterns, including Tool, Metadata, Resource, and FailureMode. |
+| [scripts](scripts/)                               | Contains scripts, source data, mappings, and utilities used to generate and materialize the ontology data.                                         |
+| [scripts/axiomatization](scripts/axiomatization/) | Contains the script used to convert ontology axioms into natural language.                                                                         |
 
-## Scripts
+## Ontology Patterns
 
-The scripts directory is structured as follows.
+The ontology is organized around several core patterns:
 
-1. **Axiomatization**\
-   The code used to generate axiom text resides here.
-2. **Data**\
-   The data used for materialzing the knowlege graph resides here.
+| Pattern                                                                                | Description                                                                                                                                                                      |
+| -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| [Archetype](deliverables/patterns/archetype-pattern/archetype-pattern.pdf)             | Representing the thematic capabilities of a robotic agent (E.g., Explorer, Hauler, Designer, Painter, etc.).                                                                     |
+| [Capability](deliverables/patterns/capability-pattern/capability-pattern.pdf)          | Represents metadata associated with the modeled resources.                                                                                                                       |
+| [Goal-Task](deliverables/patterns/goal-task-pattern/goal-task-pattern.pdf)             | Represents the desired outcome or terminal state toward which one or more tasks are directed; Anchors decomposition hierarchies and provides semantics for task sequencing orde. |
+| [Role](deliverables/patterns/role-pattern/role-pattern.pdf)                            | Represents the immediate characteristics and participation of a SpatialThing in a specific context (i.e, a Task providing a Role).                                               |
+| [Spatial-Thing](deliverables/patterns/spatial-thing/spatial-thing-pattern.pdf)         | Represents a physical thing that exists in time and space.                                                                                                                       |
+| [Specification](deliverables/patterns/specification-pattern/specification-pattern.pdf) | Represents a quantified boundary or measurable limit.                                                                                                                            |
 
-3. **Materialization**\
-   The YAML files and other scripts used for data prep and materialization are located in this directory.
+## Namespaces
+
+| Prefix     | Namespace                                                                                       |
+| ---------- | ----------------------------------------------------------------------------------------------- |
+| `robo-ont` | `https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/lod/ontology#` |
+| `robo-r`   | `https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/lod/resource#` |
+
+## Tooling
+
+[Kastle Foundry](https://github.com/kastle-lab/foundry) was used to materialize RDF/Turtle graph fragments from the synthetic CSV data and YAML mappings.
+
+## Validation Status
+
+<p>
+  <a href="http://oops.linkeddata.es">
+    <img src="https://oops.linkeddata.es/images/conformance/oops_free.png"
+      alt="free pitfalls were found" height="69.6" width="100" />
+  </a>
+</p>
+
+The ontology has been checked with OOPS and detected no critical pitfalls.
+
+## License
+
+This repository is licensed under the terms in [LICENSE](LICENSE).
