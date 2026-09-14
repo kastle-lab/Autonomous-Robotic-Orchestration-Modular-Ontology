@@ -9,7 +9,7 @@
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      xmlns:robo-ont="https://www.cs7820-robo-orchestration.org/ontology/"
      xmlns:ContextualizedWinstonPartWhole="http://daselab.org/ContextualizedWinstonPartWhole#">
-    <owl:Ontology rdf:about="https://www.cs7820-robo-orchestration.org/ontology/">
+    <owl:Ontology rdf:about="https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/">
         <owl:imports rdf:resource="http://daselab.org/ContextualizedWinstonPartWhole"/>
     </owl:Ontology>
     
@@ -46,314 +46,285 @@
     <!-- http://daselab.org/ContextualizedWinstonPartWhole#isPartOf -->
 
     <rdf:Description rdf:about="http://daselab.org/ContextualizedWinstonPartWhole#isPartOf">
-        <rdfs:domain rdf:resource="https://www.cs7820-robo-orchestration.org/ontology/SpatialThing"/>
+        <rdfs:domain rdf:resource="https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/SpatialThing"/>
     </rdf:Description>
     
 
 
-    <!-- https://www.cs7820-robo-orchestration.org/ontology/assimilatesArchetype -->
+    <!-- https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/assumesRole -->
 
-    <owl:ObjectProperty rdf:about="https://www.cs7820-robo-orchestration.org/ontology/assimilatesArchetype">
-        <rdfs:domain rdf:resource="https://www.cs7820-robo-orchestration.org/ontology/Role"/>
-        <rdfs:range rdf:resource="https://www.cs7820-robo-orchestration.org/ontology/Archetype"/>
+    <owl:ObjectProperty rdf:about="https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/assumesRole">
+        <rdfs:domain rdf:resource="https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/SpatialThing"/>
+        <rdfs:range rdf:resource="https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/Role"/>
     </owl:ObjectProperty>
     
 
 
-    <!-- https://www.cs7820-robo-orchestration.org/ontology/assimilatesRoleCategory -->
+    <!-- https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/currentState -->
 
-    <owl:ObjectProperty rdf:about="https://www.cs7820-robo-orchestration.org/ontology/assimilatesRoleCategory">
-        <rdfs:domain rdf:resource="https://www.cs7820-robo-orchestration.org/ontology/Role"/>
-        <rdfs:range rdf:resource="https://www.cs7820-robo-orchestration.org/ontology/RoleCategory"/>
+    <owl:ObjectProperty rdf:about="https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/currentState">
+        <rdfs:domain rdf:resource="https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/SpatialThing"/>
+        <rdfs:range rdf:resource="https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/State"/>
     </owl:ObjectProperty>
     
 
 
-    <!-- https://www.cs7820-robo-orchestration.org/ontology/assumesRole -->
+    <!-- https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/dependsOnTask -->
 
-    <owl:ObjectProperty rdf:about="https://www.cs7820-robo-orchestration.org/ontology/assumesRole">
-        <rdfs:domain rdf:resource="https://www.cs7820-robo-orchestration.org/ontology/SpatialThing"/>
-        <rdfs:range rdf:resource="https://www.cs7820-robo-orchestration.org/ontology/Role"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- https://www.cs7820-robo-orchestration.org/ontology/belongsToCategory -->
-
-    <owl:ObjectProperty rdf:about="https://www.cs7820-robo-orchestration.org/ontology/belongsToCategory">
-        <rdfs:domain rdf:resource="https://www.cs7820-robo-orchestration.org/ontology/SpatialThing"/>
-        <rdfs:range rdf:resource="https://www.cs7820-robo-orchestration.org/ontology/Category"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- https://www.cs7820-robo-orchestration.org/ontology/dependsOnTask -->
-
-    <owl:ObjectProperty rdf:about="https://www.cs7820-robo-orchestration.org/ontology/dependsOnTask">
-        <owl:inverseOf rdf:resource="https://www.cs7820-robo-orchestration.org/ontology/hasNextTask"/>
+    <owl:ObjectProperty rdf:about="https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/dependsOnTask">
+        <owl:inverseOf rdf:resource="https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/hasNextTask"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
-        <rdfs:domain rdf:resource="https://www.cs7820-robo-orchestration.org/ontology/Task"/>
-        <rdfs:range rdf:resource="https://www.cs7820-robo-orchestration.org/ontology/Task"/>
+        <rdfs:domain rdf:resource="https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/Task"/>
+        <rdfs:range rdf:resource="https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/Task"/>
     </owl:ObjectProperty>
     
 
 
-    <!-- https://www.cs7820-robo-orchestration.org/ontology/enabledBySpatialThing -->
+    <!-- https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/enabledBySpatialThing -->
 
-    <owl:ObjectProperty rdf:about="https://www.cs7820-robo-orchestration.org/ontology/enabledBySpatialThing">
-        <rdfs:domain rdf:resource="https://www.cs7820-robo-orchestration.org/ontology/Capability"/>
-        <rdfs:range rdf:resource="https://www.cs7820-robo-orchestration.org/ontology/SpatialThing"/>
+    <owl:ObjectProperty rdf:about="https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/enabledBySpatialThing">
+        <rdfs:domain rdf:resource="https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/Capability"/>
+        <rdfs:range rdf:resource="https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/SpatialThing"/>
     </owl:ObjectProperty>
     
 
 
-    <!-- https://www.cs7820-robo-orchestration.org/ontology/enablesAction -->
+    <!-- https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/enablesAction -->
 
-    <owl:ObjectProperty rdf:about="https://www.cs7820-robo-orchestration.org/ontology/enablesAction">
-        <rdfs:domain rdf:resource="https://www.cs7820-robo-orchestration.org/ontology/Capability"/>
-        <rdfs:range rdf:resource="https://www.cs7820-robo-orchestration.org/ontology/Action"/>
+    <owl:ObjectProperty rdf:about="https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/enablesAction">
+        <rdfs:domain rdf:resource="https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/Capability"/>
+        <rdfs:range rdf:resource="https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/Action"/>
     </owl:ObjectProperty>
     
 
 
-    <!-- https://www.cs7820-robo-orchestration.org/ontology/enablesCapability -->
+    <!-- https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/enablesCapability -->
 
-    <owl:ObjectProperty rdf:about="https://www.cs7820-robo-orchestration.org/ontology/enablesCapability">
-        <rdfs:domain rdf:resource="https://www.cs7820-robo-orchestration.org/ontology/SpatialThing"/>
-        <rdfs:range rdf:resource="https://www.cs7820-robo-orchestration.org/ontology/Capability"/>
+    <owl:ObjectProperty rdf:about="https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/enablesCapability">
+        <rdfs:domain rdf:resource="https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/SpatialThing"/>
+        <rdfs:range rdf:resource="https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/Capability"/>
     </owl:ObjectProperty>
     
 
 
-    <!-- https://www.cs7820-robo-orchestration.org/ontology/fulfillsArchetype -->
+    <!-- https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/fulfillsArchetype -->
 
-    <owl:ObjectProperty rdf:about="https://www.cs7820-robo-orchestration.org/ontology/fulfillsArchetype">
-        <rdfs:domain rdf:resource="https://www.cs7820-robo-orchestration.org/ontology/Agent"/>
-        <rdfs:range rdf:resource="https://www.cs7820-robo-orchestration.org/ontology/Archetype"/>
+    <owl:ObjectProperty rdf:about="https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/fulfillsArchetype">
+        <rdfs:domain rdf:resource="https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/Agent"/>
+        <rdfs:range rdf:resource="https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/Archetype"/>
     </owl:ObjectProperty>
     
 
 
-    <!-- https://www.cs7820-robo-orchestration.org/ontology/hasCapability -->
+    <!-- https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/hasCapability -->
 
-    <owl:ObjectProperty rdf:about="https://www.cs7820-robo-orchestration.org/ontology/hasCapability">
-        <rdfs:domain rdf:resource="https://www.cs7820-robo-orchestration.org/ontology/Agent"/>
-        <rdfs:range rdf:resource="https://www.cs7820-robo-orchestration.org/ontology/Capability"/>
+    <owl:ObjectProperty rdf:about="https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/hasCapability">
+        <rdfs:domain rdf:resource="https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/Agent"/>
+        <rdfs:range rdf:resource="https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/Capability"/>
     </owl:ObjectProperty>
     
 
 
-    <!-- https://www.cs7820-robo-orchestration.org/ontology/hasCategorizationType -->
+    <!-- https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/hasDeadline -->
 
-    <owl:ObjectProperty rdf:about="https://www.cs7820-robo-orchestration.org/ontology/hasCategorizationType">
-        <rdfs:domain rdf:resource="https://www.cs7820-robo-orchestration.org/ontology/Category"/>
-        <rdfs:range rdf:resource="https://www.cs7820-robo-orchestration.org/ontology/CategorizationType"/>
+    <owl:ObjectProperty rdf:about="https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/hasDeadline">
+        <rdfs:domain rdf:resource="https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/Goal"/>
+        <rdfs:range rdf:resource="https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/TemporalExtent"/>
     </owl:ObjectProperty>
     
 
 
-    <!-- https://www.cs7820-robo-orchestration.org/ontology/hasDeadline -->
+    <!-- https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/hasFeature -->
 
-    <owl:ObjectProperty rdf:about="https://www.cs7820-robo-orchestration.org/ontology/hasDeadline">
-        <rdfs:domain rdf:resource="https://www.cs7820-robo-orchestration.org/ontology/Goal"/>
-        <rdfs:range rdf:resource="https://www.cs7820-robo-orchestration.org/ontology/TemporalExtent"/>
+    <owl:ObjectProperty rdf:about="https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/hasFeature">
+        <rdfs:domain rdf:resource="https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/SpatialThing"/>
+        <rdfs:range rdf:resource="https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/Feature"/>
     </owl:ObjectProperty>
     
 
 
-    <!-- https://www.cs7820-robo-orchestration.org/ontology/hasFeature -->
+    <!-- https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/hasGeometry -->
 
-    <owl:ObjectProperty rdf:about="https://www.cs7820-robo-orchestration.org/ontology/hasFeature">
-        <rdfs:domain rdf:resource="https://www.cs7820-robo-orchestration.org/ontology/SpatialThing"/>
-        <rdfs:range rdf:resource="https://www.cs7820-robo-orchestration.org/ontology/Feature"/>
+    <owl:ObjectProperty rdf:about="https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/hasGeometry">
+        <rdfs:domain rdf:resource="https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/SpatialThing"/>
+        <rdfs:range rdf:resource="https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/Geometry"/>
     </owl:ObjectProperty>
     
 
 
-    <!-- https://www.cs7820-robo-orchestration.org/ontology/hasGeometry -->
+    <!-- https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/hasLocation -->
 
-    <owl:ObjectProperty rdf:about="https://www.cs7820-robo-orchestration.org/ontology/hasGeometry">
-        <rdfs:domain rdf:resource="https://www.cs7820-robo-orchestration.org/ontology/SpatialThing"/>
-        <rdfs:range rdf:resource="https://www.cs7820-robo-orchestration.org/ontology/Geometry"/>
+    <owl:ObjectProperty rdf:about="https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/hasLocation">
+        <rdfs:domain rdf:resource="https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/Metadata"/>
+        <rdfs:range rdf:resource="https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/Location"/>
     </owl:ObjectProperty>
     
 
 
-    <!-- https://www.cs7820-robo-orchestration.org/ontology/hasLocation -->
+    <!-- https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/hasNextTask -->
 
-    <owl:ObjectProperty rdf:about="https://www.cs7820-robo-orchestration.org/ontology/hasLocation">
-        <rdfs:domain rdf:resource="https://www.cs7820-robo-orchestration.org/ontology/Metadata"/>
-        <rdfs:range rdf:resource="https://www.cs7820-robo-orchestration.org/ontology/Location"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- https://www.cs7820-robo-orchestration.org/ontology/hasNextTask -->
-
-    <owl:ObjectProperty rdf:about="https://www.cs7820-robo-orchestration.org/ontology/hasNextTask">
+    <owl:ObjectProperty rdf:about="https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/hasNextTask">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
-        <rdfs:domain rdf:resource="https://www.cs7820-robo-orchestration.org/ontology/Task"/>
-        <rdfs:range rdf:resource="https://www.cs7820-robo-orchestration.org/ontology/Task"/>
+        <rdfs:domain rdf:resource="https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/Task"/>
+        <rdfs:range rdf:resource="https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/Task"/>
     </owl:ObjectProperty>
     
 
 
-    <!-- https://www.cs7820-robo-orchestration.org/ontology/hasOperationalExtent -->
+    <!-- https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/hasOperationalExtent -->
 
-    <owl:ObjectProperty rdf:about="https://www.cs7820-robo-orchestration.org/ontology/hasOperationalExtent">
-        <rdfs:domain rdf:resource="https://www.cs7820-robo-orchestration.org/ontology/Goal"/>
-        <rdfs:range rdf:resource="https://www.cs7820-robo-orchestration.org/ontology/SpatialExtent"/>
+    <owl:ObjectProperty rdf:about="https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/hasOperationalExtent">
+        <rdfs:domain rdf:resource="https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/Goal"/>
+        <rdfs:range rdf:resource="https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/SpatialExtent"/>
     </owl:ObjectProperty>
     
 
 
-    <!-- https://www.cs7820-robo-orchestration.org/ontology/hasSpatiotemporalExtent -->
+    <!-- https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/hasSpatiotemporalExtent -->
 
-    <owl:ObjectProperty rdf:about="https://www.cs7820-robo-orchestration.org/ontology/hasSpatiotemporalExtent">
-        <rdfs:domain rdf:resource="https://www.cs7820-robo-orchestration.org/ontology/SpatialThing"/>
-        <rdfs:range rdf:resource="https://www.cs7820-robo-orchestration.org/ontology/SpatiotemporalExtent"/>
+    <owl:ObjectProperty rdf:about="https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/hasSpatiotemporalExtent">
+        <rdfs:domain rdf:resource="https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/SpatialThing"/>
+        <rdfs:range rdf:resource="https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/SpatiotemporalExtent"/>
     </owl:ObjectProperty>
     
 
 
-    <!-- https://www.cs7820-robo-orchestration.org/ontology/hasSpec -->
+    <!-- https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/hasSpec -->
 
-    <owl:ObjectProperty rdf:about="https://www.cs7820-robo-orchestration.org/ontology/hasSpec">
-        <rdfs:domain rdf:resource="https://www.cs7820-robo-orchestration.org/ontology/Capability"/>
-        <rdfs:range rdf:resource="https://www.cs7820-robo-orchestration.org/ontology/Specification"/>
+    <owl:ObjectProperty rdf:about="https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/hasSpec">
+        <rdfs:range rdf:resource="https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/Specification"/>
     </owl:ObjectProperty>
     
 
 
-    <!-- https://www.cs7820-robo-orchestration.org/ontology/hasState -->
+    <!-- https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/hasState -->
 
-    <owl:ObjectProperty rdf:about="https://www.cs7820-robo-orchestration.org/ontology/hasState">
-        <rdfs:domain rdf:resource="https://www.cs7820-robo-orchestration.org/ontology/SpatialThing"/>
-        <rdfs:range rdf:resource="https://www.cs7820-robo-orchestration.org/ontology/State"/>
+    <owl:ObjectProperty rdf:about="https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/hasState">
+        <rdfs:domain rdf:resource="https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/SpatialThing"/>
+        <rdfs:range rdf:resource="https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/State"/>
     </owl:ObjectProperty>
     
 
 
-    <!-- https://www.cs7820-robo-orchestration.org/ontology/hasSubGoal -->
+    <!-- https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/hasSubGoal -->
 
-    <owl:ObjectProperty rdf:about="https://www.cs7820-robo-orchestration.org/ontology/hasSubGoal">
+    <owl:ObjectProperty rdf:about="https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/hasSubGoal">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
-        <rdfs:domain rdf:resource="https://www.cs7820-robo-orchestration.org/ontology/Goal"/>
-        <rdfs:range rdf:resource="https://www.cs7820-robo-orchestration.org/ontology/Goal"/>
+        <rdfs:domain rdf:resource="https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/Goal"/>
+        <rdfs:range rdf:resource="https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/Goal"/>
     </owl:ObjectProperty>
     
 
 
-    <!-- https://www.cs7820-robo-orchestration.org/ontology/hasSuccessState -->
+    <!-- https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/hasSuccessState -->
 
-    <owl:ObjectProperty rdf:about="https://www.cs7820-robo-orchestration.org/ontology/hasSuccessState">
-        <rdfs:domain rdf:resource="https://www.cs7820-robo-orchestration.org/ontology/Goal"/>
-        <rdfs:range rdf:resource="https://www.cs7820-robo-orchestration.org/ontology/State"/>
+    <owl:ObjectProperty rdf:about="https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/hasSuccessState">
+        <rdfs:domain rdf:resource="https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/Goal"/>
+        <rdfs:range rdf:resource="https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/State"/>
     </owl:ObjectProperty>
     
 
 
-    <!-- https://www.cs7820-robo-orchestration.org/ontology/hasTask -->
+    <!-- https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/hasTask -->
 
-    <owl:ObjectProperty rdf:about="https://www.cs7820-robo-orchestration.org/ontology/hasTask">
-        <rdfs:domain rdf:resource="https://www.cs7820-robo-orchestration.org/ontology/Goal"/>
-        <rdfs:range rdf:resource="https://www.cs7820-robo-orchestration.org/ontology/Task"/>
+    <owl:ObjectProperty rdf:about="https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/hasTask">
+        <rdfs:range rdf:resource="https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/Task"/>
     </owl:ObjectProperty>
     
 
 
-    <!-- https://www.cs7820-robo-orchestration.org/ontology/hasTemporalExtent -->
+    <!-- https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/hasTemporalExtent -->
 
-    <owl:ObjectProperty rdf:about="https://www.cs7820-robo-orchestration.org/ontology/hasTemporalExtent">
-        <rdfs:domain rdf:resource="https://www.cs7820-robo-orchestration.org/ontology/Role"/>
-        <rdfs:range rdf:resource="https://www.cs7820-robo-orchestration.org/ontology/TemporalExtent"/>
+    <owl:ObjectProperty rdf:about="https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/hasTemporalExtent">
+        <rdfs:domain rdf:resource="https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/Role"/>
+        <rdfs:range rdf:resource="https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/TemporalExtent"/>
     </owl:ObjectProperty>
     
 
 
-    <!-- https://www.cs7820-robo-orchestration.org/ontology/hasThreshold -->
+    <!-- https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/hasThreshold -->
 
-    <owl:ObjectProperty rdf:about="https://www.cs7820-robo-orchestration.org/ontology/hasThreshold">
-        <rdfs:domain rdf:resource="https://www.cs7820-robo-orchestration.org/ontology/Specification"/>
-        <rdfs:range rdf:resource="https://www.cs7820-robo-orchestration.org/ontology/Threshold"/>
+    <owl:ObjectProperty rdf:about="https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/hasThreshold">
+        <rdfs:domain rdf:resource="https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/Specification"/>
+        <rdfs:range rdf:resource="https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/Threshold"/>
     </owl:ObjectProperty>
     
 
 
-    <!-- https://www.cs7820-robo-orchestration.org/ontology/hasUnit -->
+    <!-- https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/hasUnit -->
 
-    <owl:ObjectProperty rdf:about="https://www.cs7820-robo-orchestration.org/ontology/hasUnit">
-        <rdfs:domain rdf:resource="https://www.cs7820-robo-orchestration.org/ontology/Threshold"/>
-        <rdfs:range rdf:resource="https://www.cs7820-robo-orchestration.org/ontology/Unit"/>
+    <owl:ObjectProperty rdf:about="https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/hasUnit">
+        <rdfs:domain rdf:resource="https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/Threshold"/>
+        <rdfs:range rdf:resource="https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/Unit"/>
     </owl:ObjectProperty>
     
 
 
-    <!-- https://www.cs7820-robo-orchestration.org/ontology/isOfFormat -->
+    <!-- https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/isOfFormat -->
 
-    <owl:ObjectProperty rdf:about="https://www.cs7820-robo-orchestration.org/ontology/isOfFormat">
-        <rdfs:domain rdf:resource="https://www.cs7820-robo-orchestration.org/ontology/Metadata"/>
-        <rdfs:range rdf:resource="https://www.cs7820-robo-orchestration.org/ontology/Format"/>
+    <owl:ObjectProperty rdf:about="https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/isOfFormat">
+        <rdfs:domain rdf:resource="https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/Metadata"/>
+        <rdfs:range rdf:resource="https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/Format"/>
     </owl:ObjectProperty>
     
 
 
-    <!-- https://www.cs7820-robo-orchestration.org/ontology/isSpecificationOf -->
+    <!-- https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/isSpecificationOf -->
 
-    <owl:ObjectProperty rdf:about="https://www.cs7820-robo-orchestration.org/ontology/isSpecificationOf">
-        <rdfs:domain rdf:resource="https://www.cs7820-robo-orchestration.org/ontology/Specification"/>
-        <rdfs:range rdf:resource="https://www.cs7820-robo-orchestration.org/ontology/SpecificationKind"/>
+    <owl:ObjectProperty rdf:about="https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/isSpecificationOf">
+        <rdfs:domain rdf:resource="https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/Specification"/>
+        <rdfs:range rdf:resource="https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/SpecificationKind"/>
     </owl:ObjectProperty>
     
 
 
-    <!-- https://www.cs7820-robo-orchestration.org/ontology/isWithinBounds -->
+    <!-- https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/isWithinBounds -->
 
-    <owl:ObjectProperty rdf:about="https://www.cs7820-robo-orchestration.org/ontology/isWithinBounds">
-        <rdfs:domain rdf:resource="https://www.cs7820-robo-orchestration.org/ontology/Goal"/>
-        <rdfs:range rdf:resource="https://www.cs7820-robo-orchestration.org/ontology/SpatialExtent"/>
+    <owl:ObjectProperty rdf:about="https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/isWithinBounds">
+        <rdfs:domain rdf:resource="https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/Goal"/>
+        <rdfs:range rdf:resource="https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/SpatialExtent"/>
     </owl:ObjectProperty>
     
 
 
-    <!-- https://www.cs7820-robo-orchestration.org/ontology/providesRole -->
+    <!-- https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/providesRole -->
 
-    <owl:ObjectProperty rdf:about="https://www.cs7820-robo-orchestration.org/ontology/providesRole">
-        <rdfs:domain rdf:resource="https://www.cs7820-robo-orchestration.org/ontology/Role"/>
-        <rdfs:range rdf:resource="https://www.cs7820-robo-orchestration.org/ontology/Task"/>
+    <owl:ObjectProperty rdf:about="https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/providesRole">
+        <rdfs:domain rdf:resource="https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/Role"/>
+        <rdfs:range rdf:resource="https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/Task"/>
     </owl:ObjectProperty>
     
 
 
-    <!-- https://www.cs7820-robo-orchestration.org/ontology/requiresArchetype -->
+    <!-- https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/requiresArchetype -->
 
-    <owl:ObjectProperty rdf:about="https://www.cs7820-robo-orchestration.org/ontology/requiresArchetype">
-        <rdfs:domain rdf:resource="https://www.cs7820-robo-orchestration.org/ontology/Task"/>
-        <rdfs:range rdf:resource="https://www.cs7820-robo-orchestration.org/ontology/Archetype"/>
+    <owl:ObjectProperty rdf:about="https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/requiresArchetype">
+        <rdfs:domain rdf:resource="https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/Task"/>
+        <rdfs:range rdf:resource="https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/Archetype"/>
     </owl:ObjectProperty>
     
 
 
-    <!-- https://www.cs7820-robo-orchestration.org/ontology/requiresCapability -->
+    <!-- https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/requiresCapability -->
 
-    <owl:ObjectProperty rdf:about="https://www.cs7820-robo-orchestration.org/ontology/requiresCapability">
-        <rdfs:domain rdf:resource="https://www.cs7820-robo-orchestration.org/ontology/Archetype"/>
-        <rdfs:range rdf:resource="https://www.cs7820-robo-orchestration.org/ontology/Capability"/>
+    <owl:ObjectProperty rdf:about="https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/requiresCapability">
+        <rdfs:domain rdf:resource="https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/Archetype"/>
+        <rdfs:range rdf:resource="https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/Capability"/>
     </owl:ObjectProperty>
     
 
 
-    <!-- https://www.cs7820-robo-orchestration.org/ontology/requiresSpatialThing -->
+    <!-- https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/requiresSpatialThing -->
 
-    <owl:ObjectProperty rdf:about="https://www.cs7820-robo-orchestration.org/ontology/requiresSpatialThing">
-        <rdfs:domain rdf:resource="https://www.cs7820-robo-orchestration.org/ontology/Task"/>
-        <rdfs:range rdf:resource="https://www.cs7820-robo-orchestration.org/ontology/SpatialThing"/>
+    <owl:ObjectProperty rdf:about="https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/requiresSpatialThing">
+        <rdfs:domain rdf:resource="https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/Task"/>
+        <rdfs:range rdf:resource="https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/SpatialThing"/>
     </owl:ObjectProperty>
     
 
@@ -369,90 +340,90 @@
     
 
 
-    <!-- https://www.cs7820-robo-orchestration.org/ontology/asString -->
+    <!-- https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/asString -->
 
-    <owl:DatatypeProperty rdf:about="https://www.cs7820-robo-orchestration.org/ontology/asString">
+    <owl:DatatypeProperty rdf:about="https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/asString">
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
     </owl:DatatypeProperty>
     
 
 
-    <!-- https://www.cs7820-robo-orchestration.org/ontology/hasDescription -->
+    <!-- https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/hasDescription -->
 
-    <owl:DatatypeProperty rdf:about="https://www.cs7820-robo-orchestration.org/ontology/hasDescription">
-        <rdfs:domain rdf:resource="https://www.cs7820-robo-orchestration.org/ontology/Metadata"/>
+    <owl:DatatypeProperty rdf:about="https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/hasDescription">
+        <rdfs:domain rdf:resource="https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/Metadata"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
     </owl:DatatypeProperty>
     
 
 
-    <!-- https://www.cs7820-robo-orchestration.org/ontology/hasFilePath -->
+    <!-- https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/hasFilePath -->
 
-    <owl:DatatypeProperty rdf:about="https://www.cs7820-robo-orchestration.org/ontology/hasFilePath">
-        <rdfs:domain rdf:resource="https://www.cs7820-robo-orchestration.org/ontology/Location"/>
+    <owl:DatatypeProperty rdf:about="https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/hasFilePath">
+        <rdfs:domain rdf:resource="https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/Location"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
     </owl:DatatypeProperty>
     
 
 
-    <!-- https://www.cs7820-robo-orchestration.org/ontology/hasIP -->
+    <!-- https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/hasIP -->
 
-    <owl:DatatypeProperty rdf:about="https://www.cs7820-robo-orchestration.org/ontology/hasIP">
-        <rdfs:domain rdf:resource="https://www.cs7820-robo-orchestration.org/ontology/Location"/>
+    <owl:DatatypeProperty rdf:about="https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/hasIP">
+        <rdfs:domain rdf:resource="https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/Location"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
     </owl:DatatypeProperty>
     
 
 
-    <!-- https://www.cs7820-robo-orchestration.org/ontology/hasInstructionalText -->
+    <!-- https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/hasInstructionalText -->
 
-    <owl:DatatypeProperty rdf:about="https://www.cs7820-robo-orchestration.org/ontology/hasInstructionalText">
-        <rdfs:domain rdf:resource="https://www.cs7820-robo-orchestration.org/ontology/Goal"/>
+    <owl:DatatypeProperty rdf:about="https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/hasInstructionalText">
+        <rdfs:domain rdf:resource="https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/Goal"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
     </owl:DatatypeProperty>
     
 
 
-    <!-- https://www.cs7820-robo-orchestration.org/ontology/hasName -->
+    <!-- https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/hasName -->
 
-    <owl:DatatypeProperty rdf:about="https://www.cs7820-robo-orchestration.org/ontology/hasName">
-        <rdfs:domain rdf:resource="https://www.cs7820-robo-orchestration.org/ontology/Metadata"/>
+    <owl:DatatypeProperty rdf:about="https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/hasName">
+        <rdfs:domain rdf:resource="https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/Metadata"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
     </owl:DatatypeProperty>
     
 
 
-    <!-- https://www.cs7820-robo-orchestration.org/ontology/hasSerial -->
+    <!-- https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/hasSerial -->
 
-    <owl:DatatypeProperty rdf:about="https://www.cs7820-robo-orchestration.org/ontology/hasSerial">
-        <rdfs:domain rdf:resource="https://www.cs7820-robo-orchestration.org/ontology/Metadata"/>
+    <owl:DatatypeProperty rdf:about="https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/hasSerial">
+        <rdfs:domain rdf:resource="https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/Metadata"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
     </owl:DatatypeProperty>
     
 
 
-    <!-- https://www.cs7820-robo-orchestration.org/ontology/hasTag -->
+    <!-- https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/hasTag -->
 
-    <owl:DatatypeProperty rdf:about="https://www.cs7820-robo-orchestration.org/ontology/hasTag">
-        <rdfs:domain rdf:resource="https://www.cs7820-robo-orchestration.org/ontology/Metadata"/>
+    <owl:DatatypeProperty rdf:about="https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/hasTag">
+        <rdfs:domain rdf:resource="https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/Metadata"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
     </owl:DatatypeProperty>
     
 
 
-    <!-- https://www.cs7820-robo-orchestration.org/ontology/hasURI -->
+    <!-- https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/hasURI -->
 
-    <owl:DatatypeProperty rdf:about="https://www.cs7820-robo-orchestration.org/ontology/hasURI">
-        <rdfs:domain rdf:resource="https://www.cs7820-robo-orchestration.org/ontology/Location"/>
+    <owl:DatatypeProperty rdf:about="https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/hasURI">
+        <rdfs:domain rdf:resource="https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/Location"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
     </owl:DatatypeProperty>
     
 
 
-    <!-- https://www.cs7820-robo-orchestration.org/ontology/hasValue -->
+    <!-- https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/hasValue -->
 
-    <owl:DatatypeProperty rdf:about="https://www.cs7820-robo-orchestration.org/ontology/hasValue">
-        <rdfs:domain rdf:resource="https://www.cs7820-robo-orchestration.org/ontology/Threshold"/>
+    <owl:DatatypeProperty rdf:about="https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/hasValue">
+        <rdfs:domain rdf:resource="https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/Threshold"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
     </owl:DatatypeProperty>
     
@@ -469,774 +440,364 @@
     
 
 
-    <!-- https://www.cs7820-robo-orchestration.org/ontology/Action -->
+    <!-- https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/Action -->
 
-    <owl:Class rdf:about="https://www.cs7820-robo-orchestration.org/ontology/Action">
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty>
-                    <rdf:Description>
-                        <owl:inverseOf rdf:resource="https://www.cs7820-robo-orchestration.org/ontology/enablesAction"/>
-                    </rdf:Description>
-                </owl:onProperty>
-                <owl:someValuesFrom rdf:resource="https://www.cs7820-robo-orchestration.org/ontology/Capability"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-    </owl:Class>
+    <owl:Class rdf:about="https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/Action"/>
     
 
 
-    <!-- https://www.cs7820-robo-orchestration.org/ontology/Agent -->
+    <!-- https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/Agent -->
 
-    <owl:Class rdf:about="https://www.cs7820-robo-orchestration.org/ontology/Agent">
-        <rdfs:subClassOf rdf:resource="https://www.cs7820-robo-orchestration.org/ontology/SpatialThing"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://www.cs7820-robo-orchestration.org/ontology/fulfillsArchetype"/>
-                <owl:allValuesFrom rdf:resource="https://www.cs7820-robo-orchestration.org/ontology/Archetype"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://www.cs7820-robo-orchestration.org/ontology/hasCapability"/>
-                <owl:allValuesFrom rdf:resource="https://www.cs7820-robo-orchestration.org/ontology/Capability"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
+    <owl:Class rdf:about="https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/Agent">
+        <rdfs:subClassOf rdf:resource="https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/SpatialThing"/>
         <rdfs:comment xml:lang="en">A default representation of an entity (robotic) capable of interacting with its environment.</rdfs:comment>
     </owl:Class>
     
 
 
-    <!-- https://www.cs7820-robo-orchestration.org/ontology/AgentCategory -->
+    <!-- https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/Archetype -->
 
-    <owl:Class rdf:about="https://www.cs7820-robo-orchestration.org/ontology/AgentCategory">
-        <rdfs:subClassOf rdf:resource="https://www.cs7820-robo-orchestration.org/ontology/Category"/>
+    <owl:Class rdf:about="https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/Archetype">
+        <rdfs:comment xml:lang="en">Representing the thematic capabilities of a robotic agent as a controlled vocabulary (E.g., Explorer, Hauler, Designer, Painter, etc.).</rdfs:comment>
     </owl:Class>
     
 
 
-    <!-- https://www.cs7820-robo-orchestration.org/ontology/Archetype -->
+    <!-- https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/Audition -->
 
-    <owl:Class rdf:about="https://www.cs7820-robo-orchestration.org/ontology/Archetype">
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://www.cs7820-robo-orchestration.org/ontology/requiresCapability"/>
-                <owl:someValuesFrom rdf:resource="https://www.cs7820-robo-orchestration.org/ontology/Capability"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://www.cs7820-robo-orchestration.org/ontology/requiresCapability"/>
-                <owl:allValuesFrom rdf:resource="https://www.cs7820-robo-orchestration.org/ontology/Capability"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:comment xml:lang="en">Representing the thematic capabilities of a robotic agent (E.g., Explorer, Hauler, Designer, Painter, etc.).</rdfs:comment>
+    <owl:Class rdf:about="https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/Audition">
+        <rdfs:subClassOf rdf:resource="https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/SensorBased"/>
     </owl:Class>
     
 
 
-    <!-- https://www.cs7820-robo-orchestration.org/ontology/Artist -->
+    <!-- https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/Capability -->
 
-    <owl:Class rdf:about="https://www.cs7820-robo-orchestration.org/ontology/Artist">
-        <rdfs:subClassOf rdf:resource="https://www.cs7820-robo-orchestration.org/ontology/Archetype"/>
+    <owl:Class rdf:about="https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/Capability">
+        <rdfs:comment xml:lang="en">Represents the capability of an Agent. Subclasses differentiate and broadly define what actions an Agent can perform (E.g., Grab, Push, Pull, Lift, Navigate, Etc.).</rdfs:comment>
     </owl:Class>
     
 
 
-    <!-- https://www.cs7820-robo-orchestration.org/ontology/Assembler -->
+    <!-- https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/CargoBased -->
 
-    <owl:Class rdf:about="https://www.cs7820-robo-orchestration.org/ontology/Assembler">
-        <rdfs:subClassOf rdf:resource="https://www.cs7820-robo-orchestration.org/ontology/Archetype"/>
+    <owl:Class rdf:about="https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/CargoBased">
+        <rdfs:subClassOf rdf:resource="https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/Capability"/>
     </owl:Class>
     
 
 
-    <!-- https://www.cs7820-robo-orchestration.org/ontology/Audition -->
+    <!-- https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/Close -->
 
-    <owl:Class rdf:about="https://www.cs7820-robo-orchestration.org/ontology/Audition">
-        <rdfs:subClassOf rdf:resource="https://www.cs7820-robo-orchestration.org/ontology/SensorBased"/>
+    <owl:Class rdf:about="https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/Close">
+        <rdfs:subClassOf rdf:resource="https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/GripperBased"/>
+        <owl:disjointWith rdf:resource="https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/Open"/>
     </owl:Class>
     
 
 
-    <!-- https://www.cs7820-robo-orchestration.org/ontology/Capability -->
+    <!-- https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/Distance -->
 
-    <owl:Class rdf:about="https://www.cs7820-robo-orchestration.org/ontology/Capability">
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://www.cs7820-robo-orchestration.org/ontology/hasSpec"/>
-                <owl:someValuesFrom rdf:resource="https://www.cs7820-robo-orchestration.org/ontology/Specification"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://www.cs7820-robo-orchestration.org/ontology/enabledBySpatialThing"/>
-                <owl:allValuesFrom rdf:resource="https://www.cs7820-robo-orchestration.org/ontology/SpatialThing"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://www.cs7820-robo-orchestration.org/ontology/enablesAction"/>
-                <owl:allValuesFrom rdf:resource="https://www.cs7820-robo-orchestration.org/ontology/Action"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://www.cs7820-robo-orchestration.org/ontology/hasSpec"/>
-                <owl:allValuesFrom rdf:resource="https://www.cs7820-robo-orchestration.org/ontology/Specification"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://www.cs7820-robo-orchestration.org/ontology/enabledBySpatialThing"/>
-                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
-                <owl:onClass rdf:resource="https://www.cs7820-robo-orchestration.org/ontology/SpatialThing"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:comment xml:lang="en">Specifications to differentiate and define what actions an agent can perform (E.g., Grab, Push, Pull, Lift, Travel, Etc.).</rdfs:comment>
+    <owl:Class rdf:about="https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/Distance">
+        <rdfs:subClassOf rdf:resource="https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/SensorBased"/>
     </owl:Class>
     
 
 
-    <!-- https://www.cs7820-robo-orchestration.org/ontology/CargoBased -->
+    <!-- https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/Environment -->
 
-    <owl:Class rdf:about="https://www.cs7820-robo-orchestration.org/ontology/CargoBased">
-        <rdfs:subClassOf rdf:resource="https://www.cs7820-robo-orchestration.org/ontology/Capability"/>
-    </owl:Class>
-    
-
-
-    <!-- https://www.cs7820-robo-orchestration.org/ontology/CategorizationType -->
-
-    <owl:Class rdf:about="https://www.cs7820-robo-orchestration.org/ontology/CategorizationType"/>
-    
-
-
-    <!-- https://www.cs7820-robo-orchestration.org/ontology/Category -->
-
-    <owl:Class rdf:about="https://www.cs7820-robo-orchestration.org/ontology/Category">
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://www.cs7820-robo-orchestration.org/ontology/hasCategorizationType"/>
-                <owl:someValuesFrom rdf:resource="https://www.cs7820-robo-orchestration.org/ontology/CategorizationType"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://www.cs7820-robo-orchestration.org/ontology/hasCategorizationType"/>
-                <owl:allValuesFrom rdf:resource="https://www.cs7820-robo-orchestration.org/ontology/CategorizationType"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:comment xml:lang="en">Specifications to differentiate Spatial Things. Category has various subclasses, each of which will have an explicit CategorizationType, which is provided by a controlled vocabulary.</rdfs:comment>
-    </owl:Class>
-    
-
-
-    <!-- https://www.cs7820-robo-orchestration.org/ontology/Close -->
-
-    <owl:Class rdf:about="https://www.cs7820-robo-orchestration.org/ontology/Close">
-        <rdfs:subClassOf rdf:resource="https://www.cs7820-robo-orchestration.org/ontology/GripperBased"/>
-        <owl:disjointWith rdf:resource="https://www.cs7820-robo-orchestration.org/ontology/Open"/>
-    </owl:Class>
-    
-
-
-    <!-- https://www.cs7820-robo-orchestration.org/ontology/Constructor -->
-
-    <owl:Class rdf:about="https://www.cs7820-robo-orchestration.org/ontology/Constructor">
-        <rdfs:subClassOf rdf:resource="https://www.cs7820-robo-orchestration.org/ontology/Archetype"/>
-    </owl:Class>
-    
-
-
-    <!-- https://www.cs7820-robo-orchestration.org/ontology/Distance -->
-
-    <owl:Class rdf:about="https://www.cs7820-robo-orchestration.org/ontology/Distance">
-        <rdfs:subClassOf rdf:resource="https://www.cs7820-robo-orchestration.org/ontology/SensorBased"/>
-    </owl:Class>
-    
-
-
-    <!-- https://www.cs7820-robo-orchestration.org/ontology/Environment -->
-
-    <owl:Class rdf:about="https://www.cs7820-robo-orchestration.org/ontology/Environment">
-        <rdfs:subClassOf rdf:resource="https://www.cs7820-robo-orchestration.org/ontology/SpatialThing"/>
+    <owl:Class rdf:about="https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/Environment">
+        <rdfs:subClassOf rdf:resource="https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/SpatialThing"/>
         <rdfs:comment xml:lang="en">Provide shared situational awareness for all Agents telling the orchestrator where the Agents can go, where Objects are, and what areas are restricted which is essential for planning safe and successful Tasks.</rdfs:comment>
     </owl:Class>
     
 
 
-    <!-- https://www.cs7820-robo-orchestration.org/ontology/EnvironmentCategory -->
+    <!-- https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/Feature -->
 
-    <owl:Class rdf:about="https://www.cs7820-robo-orchestration.org/ontology/EnvironmentCategory">
-        <rdfs:subClassOf rdf:resource="https://www.cs7820-robo-orchestration.org/ontology/Category"/>
-    </owl:Class>
-    
-
-
-    <!-- https://www.cs7820-robo-orchestration.org/ontology/Excavator -->
-
-    <owl:Class rdf:about="https://www.cs7820-robo-orchestration.org/ontology/Excavator">
-        <rdfs:subClassOf rdf:resource="https://www.cs7820-robo-orchestration.org/ontology/Archetype"/>
-    </owl:Class>
-    
-
-
-    <!-- https://www.cs7820-robo-orchestration.org/ontology/Explorer -->
-
-    <owl:Class rdf:about="https://www.cs7820-robo-orchestration.org/ontology/Explorer">
-        <rdfs:subClassOf rdf:resource="https://www.cs7820-robo-orchestration.org/ontology/Archetype"/>
-    </owl:Class>
-    
-
-
-    <!-- https://www.cs7820-robo-orchestration.org/ontology/Feature -->
-
-    <owl:Class rdf:about="https://www.cs7820-robo-orchestration.org/ontology/Feature">
-        <rdfs:subClassOf rdf:resource="https://www.cs7820-robo-orchestration.org/ontology/SpatialThing"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://www.cs7820-robo-orchestration.org/ontology/hasGeometry"/>
-                <owl:allValuesFrom rdf:resource="https://www.cs7820-robo-orchestration.org/ontology/Geometry"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
+    <owl:Class rdf:about="https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/Feature">
+        <rdfs:subClassOf rdf:resource="https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/SpatialThing"/>
         <rdfs:comment xml:lang="en">A spatial thing that only exists as part of a host object (i.e., holes, color, bumps)</rdfs:comment>
     </owl:Class>
     
 
 
-    <!-- https://www.cs7820-robo-orchestration.org/ontology/Format -->
+    <!-- https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/Format -->
 
-    <owl:Class rdf:about="https://www.cs7820-robo-orchestration.org/ontology/Format"/>
+    <owl:Class rdf:about="https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/Format">
+        <rdfs:comment>The structural layout, encoding, or standard container used to store, express, or transmit a piece of data.</rdfs:comment>
+    </owl:Class>
     
 
 
-    <!-- https://www.cs7820-robo-orchestration.org/ontology/Geometry -->
+    <!-- https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/Geometry -->
 
-    <owl:Class rdf:about="https://www.cs7820-robo-orchestration.org/ontology/Geometry">
-        <rdfs:subClassOf rdf:resource="https://www.cs7820-robo-orchestration.org/ontology/SpatialThing"/>
+    <owl:Class rdf:about="https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/Geometry">
+        <rdfs:subClassOf rdf:resource="https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/SpatialThing"/>
         <rdfs:comment xml:lang="en">The geometry data of a spatial thing (i.e., mesh data, dimensions)</rdfs:comment>
     </owl:Class>
     
 
 
-    <!-- https://www.cs7820-robo-orchestration.org/ontology/Goal -->
+    <!-- https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/Goal -->
 
-    <owl:Class rdf:about="https://www.cs7820-robo-orchestration.org/ontology/Goal">
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://www.cs7820-robo-orchestration.org/ontology/hasDeadline"/>
-                <owl:someValuesFrom rdf:resource="https://www.cs7820-robo-orchestration.org/ontology/TemporalExtent"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://www.cs7820-robo-orchestration.org/ontology/hasTask"/>
-                <owl:someValuesFrom rdf:resource="https://www.cs7820-robo-orchestration.org/ontology/Task"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://www.cs7820-robo-orchestration.org/ontology/hasTask"/>
-                <owl:allValuesFrom rdf:resource="https://www.cs7820-robo-orchestration.org/ontology/Task"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://www.cs7820-robo-orchestration.org/ontology/hasDeadline"/>
-                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
-                <owl:onClass rdf:resource="https://www.cs7820-robo-orchestration.org/ontology/TemporalExtent"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://www.cs7820-robo-orchestration.org/ontology/hasInstructionalText"/>
-                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
-                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
+    <owl:Class rdf:about="https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/Goal">
         <rdfs:comment xml:lang="en">Represents the desired outcome or terminal state toward which one or more tasks are directed; Anchors decomposition hierarchies and provides semantics for task sequencing order</rdfs:comment>
     </owl:Class>
     
 
 
-    <!-- https://www.cs7820-robo-orchestration.org/ontology/GripperBased -->
+    <!-- https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/GripperBased -->
 
-    <owl:Class rdf:about="https://www.cs7820-robo-orchestration.org/ontology/GripperBased">
-        <rdfs:subClassOf rdf:resource="https://www.cs7820-robo-orchestration.org/ontology/Capability"/>
+    <owl:Class rdf:about="https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/GripperBased">
+        <rdfs:subClassOf rdf:resource="https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/Capability"/>
     </owl:Class>
     
 
 
-    <!-- https://www.cs7820-robo-orchestration.org/ontology/Harvestor -->
+    <!-- https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/Location -->
 
-    <owl:Class rdf:about="https://www.cs7820-robo-orchestration.org/ontology/Harvestor">
-        <rdfs:subClassOf rdf:resource="https://www.cs7820-robo-orchestration.org/ontology/Archetype"/>
+    <owl:Class rdf:about="https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/Location"/>
+    
+
+
+    <!-- https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/LowerThreshold -->
+
+    <owl:Class rdf:about="https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/LowerThreshold">
+        <rdfs:subClassOf rdf:resource="https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/Threshold"/>
     </owl:Class>
     
 
 
-    <!-- https://www.cs7820-robo-orchestration.org/ontology/Hauler -->
+    <!-- https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/Metadata -->
 
-    <owl:Class rdf:about="https://www.cs7820-robo-orchestration.org/ontology/Hauler">
-        <rdfs:subClassOf rdf:resource="https://www.cs7820-robo-orchestration.org/ontology/Archetype"/>
-    </owl:Class>
-    
-
-
-    <!-- https://www.cs7820-robo-orchestration.org/ontology/Inspector -->
-
-    <owl:Class rdf:about="https://www.cs7820-robo-orchestration.org/ontology/Inspector">
-        <rdfs:subClassOf rdf:resource="https://www.cs7820-robo-orchestration.org/ontology/Archetype"/>
-    </owl:Class>
-    
-
-
-    <!-- https://www.cs7820-robo-orchestration.org/ontology/Location -->
-
-    <owl:Class rdf:about="https://www.cs7820-robo-orchestration.org/ontology/Location"/>
-    
-
-
-    <!-- https://www.cs7820-robo-orchestration.org/ontology/LowerThreshold -->
-
-    <owl:Class rdf:about="https://www.cs7820-robo-orchestration.org/ontology/LowerThreshold">
-        <rdfs:subClassOf rdf:resource="https://www.cs7820-robo-orchestration.org/ontology/Threshold"/>
-    </owl:Class>
-    
-
-
-    <!-- https://www.cs7820-robo-orchestration.org/ontology/Metadata -->
-
-    <owl:Class rdf:about="https://www.cs7820-robo-orchestration.org/ontology/Metadata">
+    <owl:Class rdf:about="https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/Metadata">
         <rdfs:comment xml:lang="en">Data that defines and describes the characteristics of other data (usually large data not fit for KGs. I.e., PointCloud data) for retrieval and processing.</rdfs:comment>
     </owl:Class>
     
 
 
-    <!-- https://www.cs7820-robo-orchestration.org/ontology/MotionBased -->
+    <!-- https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/MotionBased -->
 
-    <owl:Class rdf:about="https://www.cs7820-robo-orchestration.org/ontology/MotionBased">
-        <rdfs:subClassOf rdf:resource="https://www.cs7820-robo-orchestration.org/ontology/Capability"/>
+    <owl:Class rdf:about="https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/MotionBased">
+        <rdfs:subClassOf rdf:resource="https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/Capability"/>
     </owl:Class>
     
 
 
-    <!-- https://www.cs7820-robo-orchestration.org/ontology/Move -->
+    <!-- https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/Move -->
 
-    <owl:Class rdf:about="https://www.cs7820-robo-orchestration.org/ontology/Move">
-        <rdfs:subClassOf rdf:resource="https://www.cs7820-robo-orchestration.org/ontology/MotionBased"/>
+    <owl:Class rdf:about="https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/Move">
+        <rdfs:subClassOf rdf:resource="https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/MotionBased"/>
     </owl:Class>
     
 
 
-    <!-- https://www.cs7820-robo-orchestration.org/ontology/NominalThreshold -->
+    <!-- https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/NominalThreshold -->
 
-    <owl:Class rdf:about="https://www.cs7820-robo-orchestration.org/ontology/NominalThreshold">
-        <rdfs:subClassOf rdf:resource="https://www.cs7820-robo-orchestration.org/ontology/Threshold"/>
+    <owl:Class rdf:about="https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/NominalThreshold">
+        <rdfs:subClassOf rdf:resource="https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/Threshold"/>
     </owl:Class>
     
 
 
-    <!-- https://www.cs7820-robo-orchestration.org/ontology/Object -->
+    <!-- https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/Object -->
 
-    <owl:Class rdf:about="https://www.cs7820-robo-orchestration.org/ontology/Object">
-        <rdfs:subClassOf rdf:resource="https://www.cs7820-robo-orchestration.org/ontology/SpatialThing"/>
+    <owl:Class rdf:about="https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/Object">
+        <rdfs:subClassOf rdf:resource="https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/SpatialThing"/>
         <rdfs:comment xml:lang="en">Specifications to define a non-autonomous Spatial Thing (not functional by itself).</rdfs:comment>
     </owl:Class>
     
 
 
-    <!-- https://www.cs7820-robo-orchestration.org/ontology/ObjectCategory -->
+    <!-- https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/Open -->
 
-    <owl:Class rdf:about="https://www.cs7820-robo-orchestration.org/ontology/ObjectCategory">
-        <rdfs:subClassOf rdf:resource="https://www.cs7820-robo-orchestration.org/ontology/Category"/>
+    <owl:Class rdf:about="https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/Open">
+        <rdfs:subClassOf rdf:resource="https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/GripperBased"/>
     </owl:Class>
     
 
 
-    <!-- https://www.cs7820-robo-orchestration.org/ontology/Open -->
+    <!-- https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/Pick -->
 
-    <owl:Class rdf:about="https://www.cs7820-robo-orchestration.org/ontology/Open">
-        <rdfs:subClassOf rdf:resource="https://www.cs7820-robo-orchestration.org/ontology/GripperBased"/>
+    <owl:Class rdf:about="https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/Pick">
+        <rdfs:subClassOf rdf:resource="https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/GripperBased"/>
+        <owl:disjointWith rdf:resource="https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/Place"/>
     </owl:Class>
     
 
 
-    <!-- https://www.cs7820-robo-orchestration.org/ontology/Pick -->
+    <!-- https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/Place -->
 
-    <owl:Class rdf:about="https://www.cs7820-robo-orchestration.org/ontology/Pick">
-        <rdfs:subClassOf rdf:resource="https://www.cs7820-robo-orchestration.org/ontology/GripperBased"/>
-        <owl:disjointWith rdf:resource="https://www.cs7820-robo-orchestration.org/ontology/Place"/>
+    <owl:Class rdf:about="https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/Place">
+        <rdfs:subClassOf rdf:resource="https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/GripperBased"/>
     </owl:Class>
     
 
 
-    <!-- https://www.cs7820-robo-orchestration.org/ontology/Place -->
+    <!-- https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/PowerBased -->
 
-    <owl:Class rdf:about="https://www.cs7820-robo-orchestration.org/ontology/Place">
-        <rdfs:subClassOf rdf:resource="https://www.cs7820-robo-orchestration.org/ontology/GripperBased"/>
+    <owl:Class rdf:about="https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/PowerBased">
+        <rdfs:subClassOf rdf:resource="https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/Capability"/>
     </owl:Class>
     
 
 
-    <!-- https://www.cs7820-robo-orchestration.org/ontology/PowerBased -->
+    <!-- https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/Press -->
 
-    <owl:Class rdf:about="https://www.cs7820-robo-orchestration.org/ontology/PowerBased">
-        <rdfs:subClassOf rdf:resource="https://www.cs7820-robo-orchestration.org/ontology/Capability"/>
+    <owl:Class rdf:about="https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/Press">
+        <rdfs:subClassOf rdf:resource="https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/MotionBased"/>
     </owl:Class>
     
 
 
-    <!-- https://www.cs7820-robo-orchestration.org/ontology/Press -->
+    <!-- https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/Pull -->
 
-    <owl:Class rdf:about="https://www.cs7820-robo-orchestration.org/ontology/Press">
-        <rdfs:subClassOf rdf:resource="https://www.cs7820-robo-orchestration.org/ontology/MotionBased"/>
+    <owl:Class rdf:about="https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/Pull">
+        <rdfs:subClassOf rdf:resource="https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/MotionBased"/>
+        <owl:disjointWith rdf:resource="https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/Push"/>
     </owl:Class>
     
 
 
-    <!-- https://www.cs7820-robo-orchestration.org/ontology/Pull -->
+    <!-- https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/Push -->
 
-    <owl:Class rdf:about="https://www.cs7820-robo-orchestration.org/ontology/Pull">
-        <rdfs:subClassOf rdf:resource="https://www.cs7820-robo-orchestration.org/ontology/MotionBased"/>
-        <owl:disjointWith rdf:resource="https://www.cs7820-robo-orchestration.org/ontology/Push"/>
+    <owl:Class rdf:about="https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/Push">
+        <rdfs:subClassOf rdf:resource="https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/MotionBased"/>
     </owl:Class>
     
 
 
-    <!-- https://www.cs7820-robo-orchestration.org/ontology/Push -->
+    <!-- https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/Reach -->
 
-    <owl:Class rdf:about="https://www.cs7820-robo-orchestration.org/ontology/Push">
-        <rdfs:subClassOf rdf:resource="https://www.cs7820-robo-orchestration.org/ontology/MotionBased"/>
+    <owl:Class rdf:about="https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/Reach">
+        <rdfs:subClassOf rdf:resource="https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/MotionBased"/>
     </owl:Class>
     
 
 
-    <!-- https://www.cs7820-robo-orchestration.org/ontology/Reach -->
+    <!-- https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/Role -->
 
-    <owl:Class rdf:about="https://www.cs7820-robo-orchestration.org/ontology/Reach">
-        <rdfs:subClassOf rdf:resource="https://www.cs7820-robo-orchestration.org/ontology/MotionBased"/>
-    </owl:Class>
-    
-
-
-    <!-- https://www.cs7820-robo-orchestration.org/ontology/Role -->
-
-    <owl:Class rdf:about="https://www.cs7820-robo-orchestration.org/ontology/Role">
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://www.cs7820-robo-orchestration.org/ontology/assimilatesRoleCategory"/>
-                <owl:someValuesFrom rdf:resource="https://www.cs7820-robo-orchestration.org/ontology/RoleCategory"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty>
-                    <rdf:Description>
-                        <owl:inverseOf rdf:resource="https://www.cs7820-robo-orchestration.org/ontology/providesRole"/>
-                    </rdf:Description>
-                </owl:onProperty>
-                <owl:someValuesFrom rdf:resource="https://www.cs7820-robo-orchestration.org/ontology/Task"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://www.cs7820-robo-orchestration.org/ontology/assimilatesArchetype"/>
-                <owl:allValuesFrom rdf:resource="https://www.cs7820-robo-orchestration.org/ontology/Archetype"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://www.cs7820-robo-orchestration.org/ontology/assimilatesRoleCategory"/>
-                <owl:allValuesFrom rdf:resource="https://www.cs7820-robo-orchestration.org/ontology/RoleCategory"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://www.cs7820-robo-orchestration.org/ontology/assimilatesArchetype"/>
-                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
-                <owl:onClass rdf:resource="https://www.cs7820-robo-orchestration.org/ontology/Archetype"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://www.cs7820-robo-orchestration.org/ontology/hasTemporalExtent"/>
-                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
-                <owl:onClass rdf:resource="https://www.cs7820-robo-orchestration.org/ontology/TemporalExtent"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://www.cs7820-robo-orchestration.org/ontology/asString"/>
-                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
-                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
+    <owl:Class rdf:about="https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/Role">
         <rdfs:comment xml:lang="en">Used to represent the immediate characteristics and participation of a SpatialThing in a specific context (i.e, a Task providing a Role).</rdfs:comment>
     </owl:Class>
     
 
 
-    <!-- https://www.cs7820-robo-orchestration.org/ontology/RoleCategory -->
+    <!-- https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/Rotate -->
 
-    <owl:Class rdf:about="https://www.cs7820-robo-orchestration.org/ontology/RoleCategory">
-        <rdfs:subClassOf rdf:resource="https://www.cs7820-robo-orchestration.org/ontology/Category"/>
+    <owl:Class rdf:about="https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/Rotate">
+        <rdfs:subClassOf rdf:resource="https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/MotionBased"/>
     </owl:Class>
     
 
 
-    <!-- https://www.cs7820-robo-orchestration.org/ontology/Rotate -->
+    <!-- https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/SensorBased -->
 
-    <owl:Class rdf:about="https://www.cs7820-robo-orchestration.org/ontology/Rotate">
-        <rdfs:subClassOf rdf:resource="https://www.cs7820-robo-orchestration.org/ontology/MotionBased"/>
+    <owl:Class rdf:about="https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/SensorBased">
+        <rdfs:subClassOf rdf:resource="https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/Capability"/>
     </owl:Class>
     
 
 
-    <!-- https://www.cs7820-robo-orchestration.org/ontology/SensorBased -->
+    <!-- https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/SpatialExtent -->
 
-    <owl:Class rdf:about="https://www.cs7820-robo-orchestration.org/ontology/SensorBased">
-        <rdfs:subClassOf rdf:resource="https://www.cs7820-robo-orchestration.org/ontology/Capability"/>
-    </owl:Class>
-    
-
-
-    <!-- https://www.cs7820-robo-orchestration.org/ontology/Sentinel -->
-
-    <owl:Class rdf:about="https://www.cs7820-robo-orchestration.org/ontology/Sentinel">
-        <rdfs:subClassOf rdf:resource="https://www.cs7820-robo-orchestration.org/ontology/Archetype"/>
-    </owl:Class>
-    
-
-
-    <!-- https://www.cs7820-robo-orchestration.org/ontology/SpatialExtent -->
-
-    <owl:Class rdf:about="https://www.cs7820-robo-orchestration.org/ontology/SpatialExtent">
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://www.cs7820-robo-orchestration.org/ontology/isWithinBounds"/>
-                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">0</owl:minQualifiedCardinality>
-                <owl:onClass rdf:resource="https://www.cs7820-robo-orchestration.org/ontology/Goal"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
+    <owl:Class rdf:about="https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/SpatialExtent">
         <rdfs:comment xml:lang="en">Captures the positional and relational information that constrains or enables the execution of tasks towards a goal within an avilable environment.</rdfs:comment>
     </owl:Class>
     
 
 
-    <!-- https://www.cs7820-robo-orchestration.org/ontology/SpatialThing -->
+    <!-- https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/SpatialThing -->
 
-    <owl:Class rdf:about="https://www.cs7820-robo-orchestration.org/ontology/SpatialThing">
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://www.cs7820-robo-orchestration.org/ontology/belongsToCategory"/>
-                <owl:someValuesFrom rdf:resource="https://www.cs7820-robo-orchestration.org/ontology/Category"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://www.cs7820-robo-orchestration.org/ontology/hasSpatiotemporalExtent"/>
-                <owl:someValuesFrom rdf:resource="https://www.cs7820-robo-orchestration.org/ontology/SpatiotemporalExtent"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://www.cs7820-robo-orchestration.org/ontology/hasState"/>
-                <owl:someValuesFrom rdf:resource="https://www.cs7820-robo-orchestration.org/ontology/State"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://www.cs7820-robo-orchestration.org/ontology/assumesRole"/>
-                <owl:allValuesFrom rdf:resource="https://www.cs7820-robo-orchestration.org/ontology/Role"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://www.cs7820-robo-orchestration.org/ontology/enablesCapability"/>
-                <owl:allValuesFrom rdf:resource="https://www.cs7820-robo-orchestration.org/ontology/Capability"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://www.cs7820-robo-orchestration.org/ontology/hasSpatiotemporalExtent"/>
-                <owl:allValuesFrom rdf:resource="https://www.cs7820-robo-orchestration.org/ontology/SpatiotemporalExtent"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://www.cs7820-robo-orchestration.org/ontology/assumesRole"/>
-                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
-                <owl:onClass rdf:resource="https://www.cs7820-robo-orchestration.org/ontology/Role"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
+    <owl:Class rdf:about="https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/SpatialThing">
         <rdfs:comment xml:lang="en">A physical thing that exists in time and space.</rdfs:comment>
     </owl:Class>
     
 
 
-    <!-- https://www.cs7820-robo-orchestration.org/ontology/SpatiotemporalExtent -->
+    <!-- https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/SpatiotemporalExtent -->
 
-    <owl:Class rdf:about="https://www.cs7820-robo-orchestration.org/ontology/SpatiotemporalExtent"/>
+    <owl:Class rdf:about="https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/SpatiotemporalExtent"/>
     
 
 
-    <!-- https://www.cs7820-robo-orchestration.org/ontology/Specification -->
+    <!-- https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/Specification -->
 
-    <owl:Class rdf:about="https://www.cs7820-robo-orchestration.org/ontology/Specification">
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://www.cs7820-robo-orchestration.org/ontology/hasThreshold"/>
-                <owl:someValuesFrom rdf:resource="https://www.cs7820-robo-orchestration.org/ontology/Threshold"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://www.cs7820-robo-orchestration.org/ontology/hasThreshold"/>
-                <owl:allValuesFrom rdf:resource="https://www.cs7820-robo-orchestration.org/ontology/Threshold"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://www.cs7820-robo-orchestration.org/ontology/isSpecificationOf"/>
-                <owl:allValuesFrom rdf:resource="https://www.cs7820-robo-orchestration.org/ontology/SpecificationKind"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://www.cs7820-robo-orchestration.org/ontology/isSpecificationOf"/>
-                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
-                <owl:onClass rdf:resource="https://www.cs7820-robo-orchestration.org/ontology/SpecificationKind"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
+    <owl:Class rdf:about="https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/Specification">
         <rdfs:comment xml:lang="en">A quantified boundary or measurable limit that defines the extent of a capability. Example: a robotic gripper&apos;s specification might state it can grasp objects up to 5 kg.</rdfs:comment>
     </owl:Class>
     
 
 
-    <!-- https://www.cs7820-robo-orchestration.org/ontology/SpecificationKind -->
+    <!-- https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/SpecificationKind -->
 
-    <owl:Class rdf:about="https://www.cs7820-robo-orchestration.org/ontology/SpecificationKind"/>
+    <owl:Class rdf:about="https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/SpecificationKind">
+        <rdfs:comment>The kind or type of Specification as a controlled vocabulary (I.e., Temperature, Weight, Force, etc.)</rdfs:comment>
+    </owl:Class>
     
 
 
-    <!-- https://www.cs7820-robo-orchestration.org/ontology/State -->
+    <!-- https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/State -->
 
-    <owl:Class rdf:about="https://www.cs7820-robo-orchestration.org/ontology/State">
+    <owl:Class rdf:about="https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/State">
         <rdfs:comment xml:lang="en">Representing the state, state transitions, and state space of an agent. Useful for predicting and correcting actions, as well as identifying deviations.</rdfs:comment>
     </owl:Class>
     
 
 
-    <!-- https://www.cs7820-robo-orchestration.org/ontology/Task -->
+    <!-- https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/Task -->
 
-    <owl:Class rdf:about="https://www.cs7820-robo-orchestration.org/ontology/Task">
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://www.cs7820-robo-orchestration.org/ontology/providesRole"/>
-                <owl:someValuesFrom rdf:resource="https://www.cs7820-robo-orchestration.org/ontology/Role"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://www.cs7820-robo-orchestration.org/ontology/requiresArchetype"/>
-                <owl:someValuesFrom rdf:resource="https://www.cs7820-robo-orchestration.org/ontology/Archetype"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://www.cs7820-robo-orchestration.org/ontology/requiresSpatialThing"/>
-                <owl:someValuesFrom rdf:resource="https://www.cs7820-robo-orchestration.org/ontology/SpatialThing"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://www.cs7820-robo-orchestration.org/ontology/providesRole"/>
-                <owl:allValuesFrom rdf:resource="https://www.cs7820-robo-orchestration.org/ontology/Role"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://www.cs7820-robo-orchestration.org/ontology/providesRole"/>
-                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
-                <owl:onClass rdf:resource="https://www.cs7820-robo-orchestration.org/ontology/Role"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:comment xml:lang="en">Represents any atomic unit of work to be performed by our agents.</rdfs:comment>
+    <owl:Class rdf:about="https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/Task">
+        <rdfs:comment xml:lang="en">Represents any atomic unit of work to be performed by agents.</rdfs:comment>
     </owl:Class>
     
 
 
-    <!-- https://www.cs7820-robo-orchestration.org/ontology/TemporalExtent -->
+    <!-- https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/TemporalExtent -->
 
-    <owl:Class rdf:about="https://www.cs7820-robo-orchestration.org/ontology/TemporalExtent">
+    <owl:Class rdf:about="https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/TemporalExtent">
         <rdfs:comment xml:lang="en">It&apos;s a when (timestamp) for recording Events and provides the how long (duration) for scheduling Tasks, so you have perfect timeline of everything that happened.</rdfs:comment>
     </owl:Class>
     
 
 
-    <!-- https://www.cs7820-robo-orchestration.org/ontology/Threshold -->
+    <!-- https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/Threshold -->
 
-    <owl:Class rdf:about="https://www.cs7820-robo-orchestration.org/ontology/Threshold">
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://www.cs7820-robo-orchestration.org/ontology/hasUnit"/>
-                <owl:allValuesFrom rdf:resource="https://www.cs7820-robo-orchestration.org/ontology/Unit"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://www.cs7820-robo-orchestration.org/ontology/hasUnit"/>
-                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
-                <owl:onClass rdf:resource="https://www.cs7820-robo-orchestration.org/ontology/Unit"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://www.cs7820-robo-orchestration.org/ontology/hasValue"/>
-                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
-                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
+    <owl:Class rdf:about="https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/Threshold">
+        <rdfs:comment>The safe and effective operational boundaries of a specification that are further defined using the upper, lower, and nominal subclasses.</rdfs:comment>
     </owl:Class>
     
 
 
-    <!-- https://www.cs7820-robo-orchestration.org/ontology/Touch -->
+    <!-- https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/Touch -->
 
-    <owl:Class rdf:about="https://www.cs7820-robo-orchestration.org/ontology/Touch">
-        <rdfs:subClassOf rdf:resource="https://www.cs7820-robo-orchestration.org/ontology/SensorBased"/>
+    <owl:Class rdf:about="https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/Touch">
+        <rdfs:subClassOf rdf:resource="https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/SensorBased"/>
     </owl:Class>
     
 
 
-    <!-- https://www.cs7820-robo-orchestration.org/ontology/Unit -->
+    <!-- https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/Unit -->
 
-    <owl:Class rdf:about="https://www.cs7820-robo-orchestration.org/ontology/Unit"/>
-    
-
-
-    <!-- https://www.cs7820-robo-orchestration.org/ontology/UpperThreshold -->
-
-    <owl:Class rdf:about="https://www.cs7820-robo-orchestration.org/ontology/UpperThreshold">
-        <rdfs:subClassOf rdf:resource="https://www.cs7820-robo-orchestration.org/ontology/Threshold"/>
+    <owl:Class rdf:about="https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/Unit">
+        <rdfs:comment>The type or kind of Unit as a controlled vocabulary (I.e., Grams, Kilograms, Meters, Fahrenheit, etc.)</rdfs:comment>
     </owl:Class>
     
 
 
-    <!-- https://www.cs7820-robo-orchestration.org/ontology/Vision -->
+    <!-- https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/UpperThreshold -->
 
-    <owl:Class rdf:about="https://www.cs7820-robo-orchestration.org/ontology/Vision">
-        <rdfs:subClassOf rdf:resource="https://www.cs7820-robo-orchestration.org/ontology/SensorBased"/>
+    <owl:Class rdf:about="https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/UpperThreshold">
+        <rdfs:subClassOf rdf:resource="https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/Threshold"/>
     </owl:Class>
     
 
 
-    <!-- https://www.cs7820-robo-orchestration.org/ontology/Welder -->
+    <!-- https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/Vision -->
 
-    <owl:Class rdf:about="https://www.cs7820-robo-orchestration.org/ontology/Welder">
-        <rdfs:subClassOf rdf:resource="https://www.cs7820-robo-orchestration.org/ontology/Archetype"/>
+    <owl:Class rdf:about="https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/Vision">
+        <rdfs:subClassOf rdf:resource="https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/SensorBased"/>
     </owl:Class>
     
 
@@ -1249,85 +810,32 @@
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
-    <owl:Restriction>
-        <owl:onProperty rdf:resource="https://www.cs7820-robo-orchestration.org/ontology/dependsOnTask"/>
-        <owl:someValuesFrom rdf:resource="https://www.cs7820-robo-orchestration.org/ontology/Task"/>
-        <rdfs:subClassOf rdf:resource="https://www.cs7820-robo-orchestration.org/ontology/Task"/>
-    </owl:Restriction>
-    <owl:Restriction>
-        <owl:onProperty rdf:resource="https://www.cs7820-robo-orchestration.org/ontology/enabledBySpatialThing"/>
-        <owl:someValuesFrom rdf:resource="https://www.cs7820-robo-orchestration.org/ontology/SpatialThing"/>
-        <rdfs:subClassOf rdf:resource="https://www.cs7820-robo-orchestration.org/ontology/Capability"/>
-    </owl:Restriction>
-    <owl:Restriction>
-        <owl:onProperty rdf:resource="https://www.cs7820-robo-orchestration.org/ontology/enablesAction"/>
-        <owl:someValuesFrom rdf:resource="https://www.cs7820-robo-orchestration.org/ontology/Action"/>
-        <rdfs:subClassOf rdf:resource="https://www.cs7820-robo-orchestration.org/ontology/Capability"/>
-    </owl:Restriction>
-    <owl:Restriction>
-        <owl:onProperty rdf:resource="https://www.cs7820-robo-orchestration.org/ontology/hasCategorizationType"/>
-        <owl:someValuesFrom rdf:resource="https://www.cs7820-robo-orchestration.org/ontology/CategorizationType"/>
-        <rdfs:subClassOf rdf:resource="https://www.cs7820-robo-orchestration.org/ontology/Category"/>
-    </owl:Restriction>
-    <owl:Restriction>
-        <owl:onProperty rdf:resource="https://www.cs7820-robo-orchestration.org/ontology/hasNextTask"/>
-        <owl:someValuesFrom rdf:resource="https://www.cs7820-robo-orchestration.org/ontology/Task"/>
-        <rdfs:subClassOf rdf:resource="https://www.cs7820-robo-orchestration.org/ontology/Task"/>
-    </owl:Restriction>
-    <owl:Restriction>
-        <owl:onProperty rdf:resource="https://www.cs7820-robo-orchestration.org/ontology/hasSubGoal"/>
-        <owl:someValuesFrom rdf:resource="https://www.cs7820-robo-orchestration.org/ontology/Goal"/>
-        <rdfs:subClassOf rdf:resource="https://www.cs7820-robo-orchestration.org/ontology/Goal"/>
-    </owl:Restriction>
-    <owl:Restriction>
-        <owl:onProperty rdf:resource="https://www.cs7820-robo-orchestration.org/ontology/hasTask"/>
-        <owl:someValuesFrom rdf:resource="https://www.cs7820-robo-orchestration.org/ontology/Task"/>
-        <rdfs:subClassOf rdf:resource="https://www.cs7820-robo-orchestration.org/ontology/Goal"/>
-    </owl:Restriction>
     <rdf:Description>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
         <owl:members rdf:parseType="Collection">
-            <rdf:Description rdf:about="http://www.w3.org/2002/07/owl#Thing"/>
-            <rdf:Description rdf:about="https://www.cs7820-robo-orchestration.org/ontology/LowerThreshold"/>
-            <rdf:Description rdf:about="https://www.cs7820-robo-orchestration.org/ontology/NominalThreshold"/>
-            <rdf:Description rdf:about="https://www.cs7820-robo-orchestration.org/ontology/UpperThreshold"/>
+            <rdf:Description rdf:about="https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/Audition"/>
+            <rdf:Description rdf:about="https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/Distance"/>
+            <rdf:Description rdf:about="https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/Touch"/>
+            <rdf:Description rdf:about="https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/Vision"/>
         </owl:members>
     </rdf:Description>
     <rdf:Description>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
         <owl:members rdf:parseType="Collection">
-            <rdf:Description rdf:about="https://www.cs7820-robo-orchestration.org/ontology/AgentCategory"/>
-            <rdf:Description rdf:about="https://www.cs7820-robo-orchestration.org/ontology/EnvironmentCategory"/>
-            <rdf:Description rdf:about="https://www.cs7820-robo-orchestration.org/ontology/ObjectCategory"/>
-            <rdf:Description rdf:about="https://www.cs7820-robo-orchestration.org/ontology/RoleCategory"/>
+            <rdf:Description rdf:about="https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/Close"/>
+            <rdf:Description rdf:about="https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/Open"/>
+            <rdf:Description rdf:about="https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/Pick"/>
+            <rdf:Description rdf:about="https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/Place"/>
         </owl:members>
     </rdf:Description>
     <rdf:Description>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
         <owl:members rdf:parseType="Collection">
-            <rdf:Description rdf:about="https://www.cs7820-robo-orchestration.org/ontology/Audition"/>
-            <rdf:Description rdf:about="https://www.cs7820-robo-orchestration.org/ontology/Distance"/>
-            <rdf:Description rdf:about="https://www.cs7820-robo-orchestration.org/ontology/Touch"/>
-            <rdf:Description rdf:about="https://www.cs7820-robo-orchestration.org/ontology/Vision"/>
-        </owl:members>
-    </rdf:Description>
-    <rdf:Description>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
-        <owl:members rdf:parseType="Collection">
-            <rdf:Description rdf:about="https://www.cs7820-robo-orchestration.org/ontology/Close"/>
-            <rdf:Description rdf:about="https://www.cs7820-robo-orchestration.org/ontology/Open"/>
-            <rdf:Description rdf:about="https://www.cs7820-robo-orchestration.org/ontology/Pick"/>
-            <rdf:Description rdf:about="https://www.cs7820-robo-orchestration.org/ontology/Place"/>
-        </owl:members>
-    </rdf:Description>
-    <rdf:Description>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
-        <owl:members rdf:parseType="Collection">
-            <rdf:Description rdf:about="https://www.cs7820-robo-orchestration.org/ontology/Move"/>
-            <rdf:Description rdf:about="https://www.cs7820-robo-orchestration.org/ontology/Press"/>
-            <rdf:Description rdf:about="https://www.cs7820-robo-orchestration.org/ontology/Pull"/>
-            <rdf:Description rdf:about="https://www.cs7820-robo-orchestration.org/ontology/Push"/>
-            <rdf:Description rdf:about="https://www.cs7820-robo-orchestration.org/ontology/Rotate"/>
+            <rdf:Description rdf:about="https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/Move"/>
+            <rdf:Description rdf:about="https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/Press"/>
+            <rdf:Description rdf:about="https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/Pull"/>
+            <rdf:Description rdf:about="https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/Push"/>
+            <rdf:Description rdf:about="https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/Rotate"/>
         </owl:members>
     </rdf:Description>
 </rdf:RDF>
