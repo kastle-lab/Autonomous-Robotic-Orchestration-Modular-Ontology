@@ -1,0 +1,5 @@
+﻿Serial,Robot,Type,Repeated Positioning Accuracy (±mm),Min Power Output (Volts),Max Power Output (Volts),Power Output Amps,Speed (km/h),Operating Range (mm),DoF (Degree of Freedom),Max Payload (Grams),Equipped Camera,Weight (Grams),Min Operating Temperature (Celsius),Max Operating Temperature (Celsius),Min Stroke (mm),Max Stroke (mm),Min Grip Force (N),Max Grip Force (N),Form-fit grip payload (Grams),Friction-grip-payload (Grams)
+573834234ADSF,UR16e,Robot Arm,0.05,,,,,900.00,6,16000,None,33100,0,50,,,,,,
+89897624JKJL,HC20DTP,Robot Arm,0.05,,,,,1900.00,6,20000,None,140000,0,40,,,,,,
+NVB6873432,myCobot280PI,Robot Arm,0.05,,,,,280.00,6,250,,860,,,,,,,,
+NVB68712F3,myCobot280PI,Robot Arm,0.05,,,,,280.00,6,250,,860,,,,,,,,

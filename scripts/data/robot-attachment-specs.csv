@@ -1,0 +1,5 @@
+﻿Serial,Attachment,Type,Repeated Positioning Accuracy (±mm),Min Power Output (Volts),Max Power Output (Volts),Power Output Amps,Extension Range (mm),DoF (Degree of Freedom),Max Payload (Grams),Equipped Camera,Weight (Grams),Min Operating Temperature (Celsius),Max Operating Temperature (Celsius),Min Stroke (mm),Max Stroke (mm),Min Grip Force (N),Max Grip Force (N),Form-fit grip payload (Grams),Friction-grip-payload (Grams)
+777777-FDF,Robotiq 2F-85,Gripper,,,,,,,5000,None,900,,,,85,20,235,5,5
+2343YKENFDA,Robotiq 2F-140,Gripper,,,,,,,2500,None,1000,,,,140,10,125,2.5,2.5
+4901700342,MyCobotFlexibleGripper,Gripper,1,,,,,,100,None,105,,,0,150,,,,
+4789134Q-14,MyCobotAdaptiveGripper,Gripper,,,,,,,150,None,110,,,20,45,,,,
