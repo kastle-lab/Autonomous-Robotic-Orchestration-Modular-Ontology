@@ -11,7 +11,7 @@
      xmlns:robo-ont="https://www.cs7820-robo-orchestration.org/ontology/"
      xmlns:ContextualizedWinstonPartWhole="http://daselab.org/ContextualizedWinstonPartWhole#">
     <owl:Ontology rdf:about="https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/">
-        <owl:imports rdf:resource="http://daselab.org/ContextualizedWinstonPartWhole"/>
+    <owl:imports rdf:resource="https://raw.githubusercontent.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/master/deliverables/ontology/contextualized-winston-part-whole.rdf"/>
         <terms:license rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://creativecommons.org/licenses/by/4.0/</terms:license>
     </owl:Ontology>
     
