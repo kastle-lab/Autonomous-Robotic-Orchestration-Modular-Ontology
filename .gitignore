@@ -11,3 +11,4 @@ deliverables/ontology/catalog-v001-copy.xml
 scripts/axiomatization/convert_axioms_to_natural_language-copy.py
 scripts/data/AIO-Ontology.xlsx
 scripts/data/axioms-list.txt
+reasoner-error.txt
