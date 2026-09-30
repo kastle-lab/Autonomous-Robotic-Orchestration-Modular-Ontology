@@ -35,8 +35,6 @@ disjoint: `Goal DisjointWith Task`
 
 inverse existential: `Task SubClassOf inverse hasTask some Goal`
 
-qualified scoped functionality: `Goal SubClassOf hasTask max 1 Task`
-
 scoped domain: `hasTask some Task SubClassOf Goal`
 
 scoped range: `Goal SubClassOf hasTask only Task`
@@ -75,10 +73,10 @@ global range: `owl:Thing SubClassOf hasMetadata only Metadata`
 
 qualified functionality: `owl:Thing SubClassOf hasMetadata max 1 Metadata`
 
-# SpatialThing hasSpatioTemporalExtent SpatialTemporalExtent
-disjoint: `SpatialThing DisjointWith SpatialTemporalExtent`
+# SpatialThing hasSpatiotemporalExtent SpatiotemporalExtent
+disjoint: `SpatialThing DisjointWith SpatiotemporalExtent`
 
-global range: `owl:Thing SubClassOf hasSpatioTemporalExtent only SpatialTemporalExtent`
+global range: `owl:Thing SubClassOf hasSpatiotemporalExtent only SpatiotemporalExtent`
 
 # SpatialThing currentState State
 disjoint: `SpatialThing DisjointWith State`
@@ -232,12 +230,12 @@ global domain: `spatiallyLocatedIn some owl:Thing SubClassOf SpatialThing`
 
 global range: `owl:Thing SubClassOf spatiallyLocatedIn only SpatialThing`
 
-# Metadata hasDescription xsd:String
+# Metadata hasDescription xsd:string
 global domain: `hasDescription some owl:Thing SubClassOf Metadata`
 
-global range: `owl:Thing SubClassOf hasDescription only xsd:String`
+global range: `owl:Thing SubClassOf hasDescription only xsd:string`
 
-qualified scoped functionality: `Metadata SubClassOf hasDescription max 1 xsd:String`
+qualified scoped functionality: `Metadata SubClassOf hasDescription max 1 xsd:string`
 
 # Metadata hasTag xsd:string
 global domain: `hasTag some owl:Thing SubClassOf Metadata`
@@ -251,10 +249,10 @@ global range: `owl:Thing SubClassOf hasSerial only xsd:string`
 
 scoped functionality: `Metadata SubClassOf hasSerial max 1 owl:Thing`
 
-# Goal hasInstructionText xsd:String
-global range: `owl:Thing SubClassOf hasInstructionText only xsd:String`
+# Goal hasInstructionText xsd:string
+global range: `owl:Thing SubClassOf hasInstructionText only xsd:string`
 
-qualified scoped functionality: `Goal SubClassOf hasInstructionText max 1 xsd:String`
+qualified scoped functionality: `Goal SubClassOf hasInstructionText max 1 xsd:string`
 
 # SpatialThing hasGeometry Geometry
 global range: `owl:Thing SubClassOf hasGeometry only Geometry`
@@ -278,10 +276,10 @@ global range: `owl:Thing SubClassOf hasURI only xsd:anyURI`
 
 qualified scoped functionality: `Location SubClassOf hasURI max 1 xsd:anyURI`
 
-# Location hasIP xsd:anyURI
-global range: `owl:Thing SubClassOf hasIP only xsd:anyURI`
+# Location hasIP xsd:integer
+global range: `owl:Thing SubClassOf hasIP only xsd:integer`
 
-qualified scoped functionality: `Location SubClassOf hasIP max 1 xsd:anyURI`
+qualified scoped functionality: `Location SubClassOf hasIP max 1 xsd:integer`
 
 # Location hasFilePath xsd:string
 global range: `owl:Thing SubClassOf hasFilePath only xsd:string`

@@ -488,7 +488,7 @@ if __name__ == "__main__":
             "Task requiresSpatialThing SpatialThing",
             "Task requiresArchetype Archetype",
             "SpatialThing hasMetadata Metadata",
-            "SpatialThing hasSpatioTemporalExtent SpatialTemporalExtent",
+            "SpatialThing hasSpatiotemporalExtent SpatiotemporalExtent",
             "SpatialThing currentState State",
             "SpatialThing enablesCapability Capability",
             "SpatialThing assumesRole Role",
@@ -524,7 +524,7 @@ if __name__ == "__main__":
             "Threshold isUnitOf Unit",
             "Metadata isOfFormat Format",
             "Metadata hasLocation Location",
-            "Metadata hasDescription xsd:String",
+            "Metadata hasDescription xsd:string",
             "Metadata hasTag xsd:string",
             "Metadata hasSerial xsd:string",
             "Metadata hasName xsd:string",
@@ -543,12 +543,12 @@ if __name__ == "__main__":
             "Goal hasDeadline TemporalExtent",
             "Goal isWithinBounds SpatialExtent",
             "Goal hasOperationalExtent SpatialExtent",
-            "Goal hasInstructionText xsd:String",
+            "Goal hasInstructionText xsd:string",
             "Goal hasSuccessState State",
             "Task requiresSpatialThing SpatialThing",
             "Task requiresArchetype Archetype",
             "SpatialThing hasMetadata Metadata",
-            "SpatialThing hasSpatioTemporalExtent SpatialTemporalExtent",
+            "SpatialThing hasSpatiotemporalExtent SpatiotemporalExtent",
             "SpatialThing currentState State",
             "SpatialThing hasGeometry Geometry",
             "SpatialThing hasFeature Feature",
@@ -568,13 +568,13 @@ if __name__ == "__main__":
             "Threshold isUnitOf Unit",
             "Metadata isOfFormat Format",
             "Metadata hasLocation Location",
-            "Metadata hasDescription xsd:String",
+            "Metadata hasDescription xsd:string",
             "Metadata hasTag xsd:string",
             "Metadata hasSerial xsd:string",
             "Metadata hasName xsd:string",
             "Location asString xsd:string",
             "Location hasURI xsd:anyURI",
-            "Location hasIP xsd:anyURI",
+            "Location hasIP xsd:integer",
             "Location hasFilePath xsd:string",
         ]
 
@@ -626,8 +626,7 @@ if __name__ == "__main__":
 
         qsf = [
             "Goal hasDeadline TemporalExtent",
-            "Goal hasInstructionText xsd:String",
-            "Goal hasTask Task",
+            "Goal hasInstructionText xsd:string",
             "Task requiresArchetype Archetype",
             "SpatialThing currentState State",
             "Role hasTemporalExtent TemporalExtent",
@@ -635,10 +634,10 @@ if __name__ == "__main__":
             "Threshold hasValue xsd:double",
             "Metadata isOfFormat Format",
             "Metadata hasLocation Location",
-            "Metadata hasDescription xsd:String",
+            "Metadata hasDescription xsd:string",
             "Metadata hasName xsd:string",
             "Location hasURI xsd:anyURI",
-            "Location hasIP xsd:anyURI",
+            "Location hasIP xsd:integer",
             "Location hasFilePath xsd:string",
         ]
 
@@ -657,17 +656,6 @@ if __name__ == "__main__":
         st = [
 
         ]
-        # st = [
-        #     "Goal isWithinBounds SpatialExtent",
-        #     "Goal hasOperationalExtent SpatialExtent",
-        #     "SpatialThing hasSpatioTemporalExtent SpatialTemporalExtent",
-        #     "Agent fulfillsArchetype Archetype",
-        #     "Agent hasCapability Capability",
-        #     "SpatialThing hasSpec Specification",
-        #     "Archetype requiresCapability Capability",
-        #     "Specification isSpecificationOf SpecificationKind",
-        #     "Threshold isUnitOf Unit",
-        # ]
 
         flist = {}
         flist = convert_run_all(sc, "subclass", flist)
