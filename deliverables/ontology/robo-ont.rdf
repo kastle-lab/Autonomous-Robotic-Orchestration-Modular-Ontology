@@ -7,10 +7,12 @@
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:terms="http://purl.org/dc/terms/"
      xmlns:robo-ont="https://www.cs7820-robo-orchestration.org/ontology/"
      xmlns:ContextualizedWinstonPartWhole="http://daselab.org/ContextualizedWinstonPartWhole#">
     <owl:Ontology rdf:about="https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/">
         <owl:imports rdf:resource="http://daselab.org/ContextualizedWinstonPartWhole"/>
+        <terms:license rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://creativecommons.org/licenses/by/4.0/</terms:license>
     </owl:Ontology>
     
 
@@ -30,6 +32,14 @@
 
     <owl:AnnotationProperty rdf:about="http://daselab.org/ContextualizedWinstonPartWhole#isPartOf">
         <rdfs:domain rdf:resource="https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/SpatialThing"/>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://purl.org/dc/terms/license -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/license">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2000/01/rdf-schema#comment"/>
     </owl:AnnotationProperty>
     
 
