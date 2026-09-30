@@ -441,7 +441,7 @@ if __name__ == "__main__":
     if type_value =="Autonomous-Robotic-Orchestration-Modular-Ontology":
 
         sc = [
-            "Environment SubClassOf	SpatialThing",
+            "Environment SubClassOf SpatialThing",
             "Object SubClassOf SpatialThing",
             "Feature SubClassOf SpatialThing",
             "Geometry SubClassOf SpatialThing",
@@ -451,27 +451,31 @@ if __name__ == "__main__":
             "Worker SubClassOf Role",
             "Obstacle SubClassOf Role",
             "Zone SubClassOf Role",
+            "Staging SubClassOf Zone",
+            "Storage SubClassOf Zone",
+            "Workspace SubClassOf Zone",
+            "GripperBased SubClassOf Capability",
+            "Open SubClassOf GripperBased",
+            "Close SubClassOf GripperBased",
+            "Place SubClassOf GripperBased",
+            "Pick SubClassOf GripperBased",
+            "SensorBased SubClassOf Capability",
+            "Distance SubClassOf SensorBased",
+            "Audition SubClassOf SensorBased",
+            "Touch SubClassOf SensorBased",
+            "Vision SubClassOf SensorBased",
+            "MotionBased SubClassOf Capability",
+            "Navigate SubClassOf MotionBased",
+            "Rotate SubClassOf MotionBased",
+            "Press SubClassOf MotionBased",
+            "Push SubClassOf MotionBased",
+            "Reach SubClassOf MotionBased",
+            "Pull SubClassOf MotionBased",
+            "PowerBased SubClassOf Capability",
+            "CargoBased SubClassOf Capability",
             "UpperThreshold SubClassOf Threshold",
             "LowerThreshold SubClassOf Threshold",
             "NominalThreshold SubClassOf Threshold",
-            "Gripper-Based SubClassOf Capability",
-            "Open SubClassOf Gripper-Based",
-            "Close SubClassOf Gripper-Based",
-            "Place SubClassOf Gripper-Based",
-            "Pick SubClassOf Gripper-Based",
-            "Sensor-Based SubClassOf Capability",
-            "Distance SubClassOf Sensor-Based",
-            "Audition SubClassOf Sensor-Based",
-            "Touch SubClassOf Sensor-Based",
-            "Vision SubClassOf Sensor-Based",
-            "Motion-Based SubClassOf Capability",
-            "Move SubClassOf Motion-Based",
-            "Rotate SubClassOf Motion-Based",
-            "Press SubClassOf Motion-Based",
-            "Push SubClassOf Motion-Based",
-            "Pull SubClassOf Motion-Based",
-            "PowerBased SubClassOf Capability",
-            "CargoBased SubClassOf Capability"
         ]
 
         dis = [
@@ -484,23 +488,21 @@ if __name__ == "__main__":
             "Task requiresSpatialThing SpatialThing",
             "Task requiresArchetype Archetype",
             "SpatialThing hasMetadata Metadata",
-            "SpatialThing hasSpatioTemporalExtent SpatioTemporalExtent",
+            "SpatialThing hasSpatioTemporalExtent SpatialTemporalExtent",
             "SpatialThing currentState State",
-            "SpatialThing isPartOf RelationInstance",
             "SpatialThing enablesCapability Capability",
             "SpatialThing assumesRole Role",
             "Agent fulfillsArchetype Archetype",
-            "Agent hasCapability Capability", 
+            "Agent hasCapability Capability",
             "SpatialThing hasSpec Specification",
             "Archetype requiresCapability Capability",
             "Capability enablesAction Action",
             "Capability enabledBySpatialThing SpatialThing",
             "Capability hasSpec Specification",
-            "Specification hasThreshold Threshold", 
+            "Specification hasThreshold Threshold",
             "Specification isSpecificationOf SpecificationKind",
-            "Threshold hasUnit Unit",
-            "Threshold hasValue xsd:double",
-            "Metadata hasFormat Format",
+            "Threshold isUnitOf Unit",
+            "Metadata isOfFormat Format",
             "Metadata hasLocation Location",
         ]
 
@@ -510,21 +512,22 @@ if __name__ == "__main__":
             "Goal hasOperationalExtent SpatialExtent",
             "Task requiresSpatialThing SpatialThing",
             "Task requiresArchetype Archetype",
+            "SpatialThing enablesCapability Capability",
             "SpatialThing partOf SpatialThing",
             "SpatialThing spatiallyLocatedIn SpatialThing",
             "SpatialThing assumesRole Role",
-            "Agent hasCapability Capability", 
+            "Agent hasCapability Capability",
             "Archetype requiresCapability Capability",
             "Capability enablesAction Action",
-            "Specification hasThreshold Threshold", 
+            "Specification hasThreshold Threshold",
             "Specification isSpecificationOf SpecificationKind",
-            "Threshold hasUnit Unit",
-            "Metadata hasFormat Format",
+            "Threshold isUnitOf Unit",
+            "Metadata isOfFormat Format",
             "Metadata hasLocation Location",
-            "Metadata hasDescription xsd:string",
+            "Metadata hasDescription xsd:String",
             "Metadata hasTag xsd:string",
+            "Metadata hasSerial xsd:string",
             "Metadata hasName xsd:string",
-
         ]
 
         sd = [
@@ -540,36 +543,38 @@ if __name__ == "__main__":
             "Goal hasDeadline TemporalExtent",
             "Goal isWithinBounds SpatialExtent",
             "Goal hasOperationalExtent SpatialExtent",
-            "Goal hasInstructionalText xsd:string",
+            "Goal hasInstructionText xsd:String",
             "Goal hasSuccessState State",
             "Task requiresSpatialThing SpatialThing",
             "Task requiresArchetype Archetype",
             "SpatialThing hasMetadata Metadata",
-            "SpatialThing hasSpatioTemporalExtent SpatioTemporalExtent",
+            "SpatialThing hasSpatioTemporalExtent SpatialTemporalExtent",
             "SpatialThing currentState State",
             "SpatialThing hasGeometry Geometry",
             "SpatialThing hasFeature Feature",
+            "SpatialThing enablesCapability Capability",
             "SpatialThing partOf SpatialThing",
             "SpatialThing spatiallyLocatedIn SpatialThing",
             "SpatialThing assumesRole Role",
             "Agent fulfillsArchetype Archetype",
-            "Agent hasCapability Capability", 
+            "Agent hasCapability Capability",
             "SpatialThing hasSpec Specification",
             "Archetype requiresCapability Capability",
             "Capability enablesAction Action",
             "Capability enabledBySpatialThing SpatialThing",
             "Capability hasSpec Specification",
-            "Specification hasThreshold Threshold", 
+            "Specification hasThreshold Threshold",
             "Specification isSpecificationOf SpecificationKind",
-            "Threshold hasUnit Unit",
-            "Metadata hasFormat Format",
+            "Threshold isUnitOf Unit",
+            "Metadata isOfFormat Format",
             "Metadata hasLocation Location",
-            "Metadata hasDescription xsd:string",
+            "Metadata hasDescription xsd:String",
             "Metadata hasTag xsd:string",
+            "Metadata hasSerial xsd:string",
             "Metadata hasName xsd:string",
             "Location asString xsd:string",
             "Location hasURI xsd:anyURI",
-            "Location hasIP xsd:integer",
+            "Location hasIP xsd:anyURI",
             "Location hasFilePath xsd:string",
         ]
 
@@ -580,7 +585,6 @@ if __name__ == "__main__":
             "Task hasNextTask Task",
             "Task providesRole Role",
             "Capability enablesAction Action",
-
         ]
 
         ex = [
@@ -592,10 +596,10 @@ if __name__ == "__main__":
             "Role hasTemporalExtent TemporalExtent",
             "Capability enabledBySpatialThing SpatialThing",
             "Capability hasSpec Specification",
-            "Specification hasThreshold Threshold", 
-            "Metadata hasFormat Format",
+            "Specification hasThreshold Threshold",
+            "Threshold hasValue xsd:double",
+            "Metadata isOfFormat Format",
             "Metadata hasName xsd:string",
-
         ]
 
         iex = [
@@ -603,72 +607,66 @@ if __name__ == "__main__":
             "Task providesRole Role",
             "SpatialThing hasGeometry Geometry",
             "SpatialThing hasFeature Feature",
+            "SpatialThing enablesCapability Capability",
             "SpatialThing assumesRole Role",
             "Capability enablesAction Action",
             "Metadata hasLocation Location",
         ]
 
         fun = [
-
         ]
 
         qfun = [
             "SpatialThing hasMetadata Metadata",
-
         ]
 
         sf = [
-
+            "Metadata hasSerial xsd:string",
         ]
 
         qsf = [
             "Goal hasDeadline TemporalExtent",
-            "Goal hasInstructionalText xsd:string",
+            "Goal hasInstructionText xsd:String",
             "Goal hasTask Task",
             "Task requiresArchetype Archetype",
             "SpatialThing currentState State",
             "Role hasTemporalExtent TemporalExtent",
             "Capability enabledBySpatialThing SpatialThing",
             "Threshold hasValue xsd:double",
-            "Metadata hasFormat Format",
+            "Metadata isOfFormat Format",
             "Metadata hasLocation Location",
-            "Metadata hasDescription xsd:string",
+            "Metadata hasDescription xsd:String",
             "Metadata hasName xsd:string",
-            "Location asString xsd:string",
             "Location hasURI xsd:anyURI",
-            "Location hasIP xsd:integer",
+            "Location hasIP xsd:anyURI",
             "Location hasFilePath xsd:string",
         ]
 
         ifun = [
-
         ]
 
         iqf = [
-
         ]
 
         isf = [
-
         ]
 
         iqsf = [
-
         ]
 
         st = [
-            
+
         ]
         # st = [
         #     "Goal isWithinBounds SpatialExtent",
         #     "Goal hasOperationalExtent SpatialExtent",
-        #     "SpatialThing hasSpatioTemporalExtent SpatioTemporalExtent",
+        #     "SpatialThing hasSpatioTemporalExtent SpatialTemporalExtent",
         #     "Agent fulfillsArchetype Archetype",
-        #     "Agent hasCapability Capability", 
+        #     "Agent hasCapability Capability",
         #     "SpatialThing hasSpec Specification",
         #     "Archetype requiresCapability Capability",
         #     "Specification isSpecificationOf SpecificationKind",
-        #     "Threshold hasUnit Unit",
+        #     "Threshold isUnitOf Unit",
         # ]
 
         flist = {}
