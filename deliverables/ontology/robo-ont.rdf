@@ -200,6 +200,7 @@
     <!-- https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/hasSpec -->
 
     <owl:ObjectProperty rdf:about="https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/hasSpec">
+        <rdfs:domain rdf:resource="https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/Capability"/>
         <rdfs:range rdf:resource="https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/Specification"/>
     </owl:ObjectProperty>
     
@@ -238,6 +239,7 @@
     <!-- https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/hasTask -->
 
     <owl:ObjectProperty rdf:about="https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/hasTask">
+        <rdfs:domain rdf:resource="https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/Goal"/>
         <rdfs:range rdf:resource="https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/Task"/>
     </owl:ObjectProperty>
     
