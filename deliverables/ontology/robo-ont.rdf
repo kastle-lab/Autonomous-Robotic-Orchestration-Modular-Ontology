@@ -7,10 +7,12 @@
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:terms="http://purl.org/dc/terms/"
      xmlns:robo-ont="https://www.cs7820-robo-orchestration.org/ontology/"
      xmlns:ContextualizedWinstonPartWhole="http://daselab.org/ContextualizedWinstonPartWhole#">
     <owl:Ontology rdf:about="https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/">
-        <owl:imports rdf:resource="http://daselab.org/ContextualizedWinstonPartWhole"/>
+    <owl:imports rdf:resource="https://raw.githubusercontent.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/master/deliverables/ontology/contextualized-winston-part-whole.rdf"/>
+        <terms:license rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://creativecommons.org/licenses/by/4.0/</terms:license>
     </owl:Ontology>
     
 
@@ -28,7 +30,17 @@
 
     <!-- http://daselab.org/ContextualizedWinstonPartWhole#isPartOf -->
 
-    <owl:AnnotationProperty rdf:about="http://daselab.org/ContextualizedWinstonPartWhole#isPartOf"/>
+    <owl:AnnotationProperty rdf:about="http://daselab.org/ContextualizedWinstonPartWhole#isPartOf">
+        <rdfs:domain rdf:resource="https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/SpatialThing"/>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://purl.org/dc/terms/license -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/license">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2000/01/rdf-schema#comment"/>
+    </owl:AnnotationProperty>
     
 
 
@@ -40,14 +52,6 @@
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
-    
-
-
-    <!-- http://daselab.org/ContextualizedWinstonPartWhole#isPartOf -->
-
-    <rdf:Description rdf:about="http://daselab.org/ContextualizedWinstonPartWhole#isPartOf">
-        <rdfs:domain rdf:resource="https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/SpatialThing"/>
-    </rdf:Description>
     
 
 
@@ -196,6 +200,7 @@
     <!-- https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/hasSpec -->
 
     <owl:ObjectProperty rdf:about="https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/hasSpec">
+        <rdfs:domain rdf:resource="https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/Capability"/>
         <rdfs:range rdf:resource="https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/Specification"/>
     </owl:ObjectProperty>
     
@@ -234,6 +239,7 @@
     <!-- https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/hasTask -->
 
     <owl:ObjectProperty rdf:about="https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/hasTask">
+        <rdfs:domain rdf:resource="https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/Goal"/>
         <rdfs:range rdf:resource="https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/Task"/>
     </owl:ObjectProperty>
     
@@ -442,7 +448,9 @@
 
     <!-- https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/Action -->
 
-    <owl:Class rdf:about="https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/Action"/>
+    <owl:Class rdf:about="https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/Action">
+        <rdfs:comment>An operation performed by an agent to achieve a goal or change the state of its environment, potentially involving a single movement or a coordinated sequence of movements.</rdfs:comment>
+    </owl:Class>
     
 
 
@@ -467,6 +475,7 @@
 
     <owl:Class rdf:about="https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/Audition">
         <rdfs:subClassOf rdf:resource="https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/SensorBased"/>
+        <rdfs:comment xml:lang="en">A sensor-based capability to perceive and interpret sound.</rdfs:comment>
     </owl:Class>
     
 
@@ -483,6 +492,7 @@
 
     <owl:Class rdf:about="https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/CargoBased">
         <rdfs:subClassOf rdf:resource="https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/Capability"/>
+        <rdfs:comment xml:lang="en">A capability that enables an agent to carry, transport, or otherwise manage cargo.</rdfs:comment>
     </owl:Class>
     
 
@@ -492,6 +502,7 @@
     <owl:Class rdf:about="https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/Close">
         <rdfs:subClassOf rdf:resource="https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/GripperBased"/>
         <owl:disjointWith rdf:resource="https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/Open"/>
+        <rdfs:comment xml:lang="en">A gripper-based capability to close a gripper or another grasping mechanism.</rdfs:comment>
     </owl:Class>
     
 
@@ -500,6 +511,7 @@
 
     <owl:Class rdf:about="https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/Distance">
         <rdfs:subClassOf rdf:resource="https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/SensorBased"/>
+        <rdfs:comment xml:lang="en">A capability that uses sensor measurements to determine the distance between an agent and a spatial entity or a specified location in space.</rdfs:comment>
     </owl:Class>
     
 
@@ -551,13 +563,16 @@
 
     <owl:Class rdf:about="https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/GripperBased">
         <rdfs:subClassOf rdf:resource="https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/Capability"/>
+        <rdfs:comment xml:lang="en">A capability performed using a gripper or comparable end effector to manipulate a spatial thing.</rdfs:comment>
     </owl:Class>
     
 
 
     <!-- https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/Location -->
 
-    <owl:Class rdf:about="https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/Location"/>
+    <owl:Class rdf:about="https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/Location">
+        <rdfs:comment>A digital address or identifier specifying where a resource can be found or accessed.</rdfs:comment>
+    </owl:Class>
     
 
 
@@ -565,6 +580,7 @@
 
     <owl:Class rdf:about="https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/LowerThreshold">
         <rdfs:subClassOf rdf:resource="https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/Threshold"/>
+        <rdfs:comment xml:lang="en">A threshold that specifies the minimum acceptable value for a specification.</rdfs:comment>
     </owl:Class>
     
 
@@ -581,6 +597,7 @@
 
     <owl:Class rdf:about="https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/MotionBased">
         <rdfs:subClassOf rdf:resource="https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/Capability"/>
+        <rdfs:comment xml:lang="en">A capability that enables an agent to change its own position or orientation through mechanisms such as wheels, rotors, or propulsion systems.</rdfs:comment>
     </owl:Class>
     
 
@@ -589,6 +606,7 @@
 
     <owl:Class rdf:about="https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/Move">
         <rdfs:subClassOf rdf:resource="https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/MotionBased"/>
+        <rdfs:comment xml:lang="en">A motion-based capability to change the position of the agent itself.</rdfs:comment>
     </owl:Class>
     
 
@@ -597,6 +615,7 @@
 
     <owl:Class rdf:about="https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/NominalThreshold">
         <rdfs:subClassOf rdf:resource="https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/Threshold"/>
+        <rdfs:comment xml:lang="en">A threshold that specifies the target or normal operating value for a specification.</rdfs:comment>
     </owl:Class>
     
 
@@ -614,6 +633,7 @@
 
     <owl:Class rdf:about="https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/Open">
         <rdfs:subClassOf rdf:resource="https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/GripperBased"/>
+        <rdfs:comment xml:lang="en">A gripper-based capability to open a gripper or another grasping mechanism.</rdfs:comment>
     </owl:Class>
     
 
@@ -623,6 +643,7 @@
     <owl:Class rdf:about="https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/Pick">
         <rdfs:subClassOf rdf:resource="https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/GripperBased"/>
         <owl:disjointWith rdf:resource="https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/Place"/>
+        <rdfs:comment xml:lang="en">A gripper-based capability to grasp and lift a spatial thing from its current location.</rdfs:comment>
     </owl:Class>
     
 
@@ -631,6 +652,7 @@
 
     <owl:Class rdf:about="https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/Place">
         <rdfs:subClassOf rdf:resource="https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/GripperBased"/>
+        <rdfs:comment xml:lang="en">A gripper-based capability to release or position a grasped spatial thing at a target location.</rdfs:comment>
     </owl:Class>
     
 
@@ -639,6 +661,7 @@
 
     <owl:Class rdf:about="https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/PowerBased">
         <rdfs:subClassOf rdf:resource="https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/Capability"/>
+        <rdfs:comment xml:lang="en">A capability that supplies or controls power.</rdfs:comment>
     </owl:Class>
     
 
@@ -647,6 +670,7 @@
 
     <owl:Class rdf:about="https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/Press">
         <rdfs:subClassOf rdf:resource="https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/MotionBased"/>
+        <rdfs:comment xml:lang="en">A motion-based capability to apply force against a spatial thing or surface.</rdfs:comment>
     </owl:Class>
     
 
@@ -656,6 +680,7 @@
     <owl:Class rdf:about="https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/Pull">
         <rdfs:subClassOf rdf:resource="https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/MotionBased"/>
         <owl:disjointWith rdf:resource="https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/Push"/>
+        <rdfs:comment xml:lang="en">A motion-based capability to draw a spatial thing toward the agent or another reference point.</rdfs:comment>
     </owl:Class>
     
 
@@ -664,6 +689,7 @@
 
     <owl:Class rdf:about="https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/Push">
         <rdfs:subClassOf rdf:resource="https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/MotionBased"/>
+        <rdfs:comment xml:lang="en">A motion-based capability to move a spatial thing away from the agent or another reference point.</rdfs:comment>
     </owl:Class>
     
 
@@ -672,6 +698,7 @@
 
     <owl:Class rdf:about="https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/Reach">
         <rdfs:subClassOf rdf:resource="https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/MotionBased"/>
+        <rdfs:comment xml:lang="en">A motion-based capability to extend an end effector toward a target spatial thing or location.</rdfs:comment>
     </owl:Class>
     
 
@@ -688,6 +715,7 @@
 
     <owl:Class rdf:about="https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/Rotate">
         <rdfs:subClassOf rdf:resource="https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/MotionBased"/>
+        <rdfs:comment xml:lang="en">A motion-based capability to change the orientation of an agent or spatial thing about an axis.</rdfs:comment>
     </owl:Class>
     
 
@@ -696,6 +724,7 @@
 
     <owl:Class rdf:about="https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/SensorBased">
         <rdfs:subClassOf rdf:resource="https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/Capability"/>
+        <rdfs:comment xml:lang="en">A capability that acquires information about an agent, a spatial thing, or the environment through sensors.</rdfs:comment>
     </owl:Class>
     
 
@@ -718,7 +747,9 @@
 
     <!-- https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/SpatiotemporalExtent -->
 
-    <owl:Class rdf:about="https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/SpatiotemporalExtent"/>
+    <owl:Class rdf:about="https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/SpatiotemporalExtent">
+        <rdfs:comment>The spatial and temporal extent of an entity, represented through a trajectory linking places and times.</rdfs:comment>
+    </owl:Class>
     
 
 
@@ -774,6 +805,7 @@
 
     <owl:Class rdf:about="https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/Touch">
         <rdfs:subClassOf rdf:resource="https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/SensorBased"/>
+        <rdfs:comment xml:lang="en">A sensor-based capability to detect contact, pressure, texture, or other tactile properties.</rdfs:comment>
     </owl:Class>
     
 
@@ -790,6 +822,7 @@
 
     <owl:Class rdf:about="https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/UpperThreshold">
         <rdfs:subClassOf rdf:resource="https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/Threshold"/>
+        <rdfs:comment xml:lang="en">A threshold that specifies the maximum acceptable value for a specification.</rdfs:comment>
     </owl:Class>
     
 
@@ -798,6 +831,7 @@
 
     <owl:Class rdf:about="https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/Vision">
         <rdfs:subClassOf rdf:resource="https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/SensorBased"/>
+        <rdfs:comment xml:lang="en">A sensor-based capability to perceive and interpret visual information.</rdfs:comment>
     </owl:Class>
     
 
@@ -843,4 +877,3 @@
 
 
 <!-- Generated by the OWL API (version 4.5.29.2024-05-13T12:11:03Z) https://github.com/owlcs/owlapi -->
-

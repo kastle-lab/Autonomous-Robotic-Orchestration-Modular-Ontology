@@ -1,0 +1,2 @@
+﻿Serial,Robot,Type,Repeated Positioning Accuracy (±mm),Min Power Output (Volts),Max Power Output (Volts),Power Output Amps,Speed (km/h),Operating Range (km),DoF (Degree of Freedom),Max Payload (Grams),Equipped Camera,Weight (Grams),Min Operating Temperature (Celsius),Max Operating Temperature (Celsius),Min Stroke (mm),Max Stroke (mm),Min Grip Force (N),Max Grip Force (N),Form-fit grip payload (Grams),Friction-grip-payload (Grams)
+JHF-3434-FDAF,myAGV2023PI,Mobile Robot,,,,,7,10.5,,5000,Yes,4160,,,,,,,,

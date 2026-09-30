@@ -48,12 +48,12 @@ The ontology is organized around several core patterns:
 
 <p>
   <a href="http://oops.linkeddata.es">
-    <img src="https://oops.linkeddata.es/images/conformance/oops_free.png"
+    <img src="https://oops.linkeddata.es/images/conformance/oops_important.png"
       alt="free pitfalls were found" height="69.6" width="100" />
   </a>
 </p>
 
-The ontology has been checked with OOPS and detected no critical pitfalls.
+The ontology has been checked with OOPS and detected no critical pitfalls. Important pitfalls that do remain are intended to preserve reuse or are rolification properties.
 
 ## License
 
