@@ -169,7 +169,6 @@ spatial location interactions, reification via RelationInstance, and rolificatio
 
     <owl:ObjectProperty rdf:about="http://daselab.org/ContextualizedWinstonPartWhole#po-component">
         <rdfs:subPropertyOf rdf:resource="http://daselab.org/ContextualizedWinstonPartWhole#part-of"/>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
         <owl:propertyChainAxiom rdf:parseType="Collection">
             <rdf:Description rdf:about="http://daselab.org/ContextualizedWinstonPartWhole#isPartOf"/>
             <rdf:Description rdf:about="http://daselab.org/ContextualizedWinstonPartWhole#cPO-Component-Type"/>
@@ -189,7 +188,6 @@ spatial location interactions, reification via RelationInstance, and rolificatio
 
     <owl:ObjectProperty rdf:about="http://daselab.org/ContextualizedWinstonPartWhole#po-feature">
         <rdfs:subPropertyOf rdf:resource="http://daselab.org/ContextualizedWinstonPartWhole#part-of"/>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
         <owl:propertyChainAxiom rdf:parseType="Collection">
             <rdf:Description rdf:about="http://daselab.org/ContextualizedWinstonPartWhole#isPartOf"/>
             <rdf:Description rdf:about="http://daselab.org/ContextualizedWinstonPartWhole#cPO-Feature-Type"/>
@@ -209,7 +207,6 @@ spatial location interactions, reification via RelationInstance, and rolificatio
 
     <owl:ObjectProperty rdf:about="http://daselab.org/ContextualizedWinstonPartWhole#po-member">
         <rdfs:subPropertyOf rdf:resource="http://daselab.org/ContextualizedWinstonPartWhole#part-of"/>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
         <owl:propertyChainAxiom rdf:parseType="Collection">
             <rdf:Description rdf:about="http://daselab.org/ContextualizedWinstonPartWhole#isPartOf"/>
             <rdf:Description rdf:about="http://daselab.org/ContextualizedWinstonPartWhole#cPO-Member-Type"/>
@@ -229,7 +226,6 @@ spatial location interactions, reification via RelationInstance, and rolificatio
 
     <owl:ObjectProperty rdf:about="http://daselab.org/ContextualizedWinstonPartWhole#po-place">
         <rdfs:subPropertyOf rdf:resource="http://daselab.org/ContextualizedWinstonPartWhole#part-of"/>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
         <owl:propertyChainAxiom rdf:parseType="Collection">
             <rdf:Description rdf:about="http://daselab.org/ContextualizedWinstonPartWhole#isPartOf"/>
             <rdf:Description rdf:about="http://daselab.org/ContextualizedWinstonPartWhole#cPO-Place-Type"/>
@@ -249,7 +245,6 @@ spatial location interactions, reification via RelationInstance, and rolificatio
 
     <owl:ObjectProperty rdf:about="http://daselab.org/ContextualizedWinstonPartWhole#po-portion">
         <rdfs:subPropertyOf rdf:resource="http://daselab.org/ContextualizedWinstonPartWhole#part-of"/>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
         <owl:propertyChainAxiom rdf:parseType="Collection">
             <rdf:Description rdf:about="http://daselab.org/ContextualizedWinstonPartWhole#isPartOf"/>
             <rdf:Description rdf:about="http://daselab.org/ContextualizedWinstonPartWhole#cPO-Portion-Type"/>
@@ -269,7 +264,6 @@ spatial location interactions, reification via RelationInstance, and rolificatio
 
     <owl:ObjectProperty rdf:about="http://daselab.org/ContextualizedWinstonPartWhole#po-stuff">
         <rdfs:subPropertyOf rdf:resource="http://daselab.org/ContextualizedWinstonPartWhole#part-of"/>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
         <owl:propertyChainAxiom rdf:parseType="Collection">
             <rdf:Description rdf:about="http://daselab.org/ContextualizedWinstonPartWhole#isPartOf"/>
             <rdf:Description rdf:about="http://daselab.org/ContextualizedWinstonPartWhole#cPO-Stuff-Type"/>
