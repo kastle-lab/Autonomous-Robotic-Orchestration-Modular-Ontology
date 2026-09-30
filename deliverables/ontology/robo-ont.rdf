@@ -173,6 +173,15 @@
     
 
 
+    <!-- https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/hasMetadata -->
+
+    <owl:ObjectProperty rdf:about="https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/hasMetadata">
+        <rdfs:domain rdf:resource="https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/SpatialThing"/>
+        <rdfs:range rdf:resource="https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/Metadata"/>
+    </owl:ObjectProperty>
+    
+
+
     <!-- https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/hasNextTask -->
 
     <owl:ObjectProperty rdf:about="https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/hasNextTask">
@@ -269,15 +278,6 @@
     
 
 
-    <!-- https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/hasUnit -->
-
-    <owl:ObjectProperty rdf:about="https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/hasUnit">
-        <rdfs:domain rdf:resource="https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/Threshold"/>
-        <rdfs:range rdf:resource="https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/Unit"/>
-    </owl:ObjectProperty>
-    
-
-
     <!-- https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/isOfFormat -->
 
     <owl:ObjectProperty rdf:about="https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/isOfFormat">
@@ -292,6 +292,15 @@
     <owl:ObjectProperty rdf:about="https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/isSpecificationOf">
         <rdfs:domain rdf:resource="https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/Specification"/>
         <rdfs:range rdf:resource="https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/SpecificationKind"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/isUnitOf -->
+
+    <owl:ObjectProperty rdf:about="https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/isUnitOf">
+        <rdfs:domain rdf:resource="https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/Threshold"/>
+        <rdfs:range rdf:resource="https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/Unit"/>
     </owl:ObjectProperty>
     
 
