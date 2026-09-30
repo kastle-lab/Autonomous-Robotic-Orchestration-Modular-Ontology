@@ -8,3 +8,6 @@ deliverables/patterns/abridged-master-schema.graphml
 deliverables/ontology/robo-ont-copy.rdf
 deliverables/documentation.md
 deliverables/ontology/catalog-v001-copy.xml
+scripts/axiomatization/convert_axioms_to_natural_language-copy.py
+scripts/data/AIO-Ontology.xlsx
+scripts/data/axioms-list.txt
