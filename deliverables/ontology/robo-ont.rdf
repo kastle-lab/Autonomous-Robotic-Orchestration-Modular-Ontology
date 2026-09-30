@@ -28,7 +28,9 @@
 
     <!-- http://daselab.org/ContextualizedWinstonPartWhole#isPartOf -->
 
-    <owl:AnnotationProperty rdf:about="http://daselab.org/ContextualizedWinstonPartWhole#isPartOf"/>
+    <owl:AnnotationProperty rdf:about="http://daselab.org/ContextualizedWinstonPartWhole#isPartOf">
+        <rdfs:domain rdf:resource="https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/SpatialThing"/>
+    </owl:AnnotationProperty>
     
 
 
@@ -40,14 +42,6 @@
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
-    
-
-
-    <!-- http://daselab.org/ContextualizedWinstonPartWhole#isPartOf -->
-
-    <rdf:Description rdf:about="http://daselab.org/ContextualizedWinstonPartWhole#isPartOf">
-        <rdfs:domain rdf:resource="https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/SpatialThing"/>
-    </rdf:Description>
     
 
 
@@ -442,7 +436,9 @@
 
     <!-- https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/Action -->
 
-    <owl:Class rdf:about="https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/Action"/>
+    <owl:Class rdf:about="https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/Action">
+        <rdfs:comment>An operation performed by an agent to achieve a goal or change the state of its environment, potentially involving a single movement or a coordinated sequence of movements.</rdfs:comment>
+    </owl:Class>
     
 
 
@@ -557,7 +553,9 @@
 
     <!-- https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/Location -->
 
-    <owl:Class rdf:about="https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/Location"/>
+    <owl:Class rdf:about="https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/Location">
+        <rdfs:comment>A digital address or identifier specifying where a resource can be found or accessed.</rdfs:comment>
+    </owl:Class>
     
 
 
@@ -718,7 +716,9 @@
 
     <!-- https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/SpatiotemporalExtent -->
 
-    <owl:Class rdf:about="https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/SpatiotemporalExtent"/>
+    <owl:Class rdf:about="https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/SpatiotemporalExtent">
+        <rdfs:comment>The spatial and temporal extent of an entity, represented through a trajectory linking places and times.</rdfs:comment>
+    </owl:Class>
     
 
 
