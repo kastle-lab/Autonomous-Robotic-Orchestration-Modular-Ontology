@@ -13,3 +13,4 @@ scripts/data/AIO-Ontology.xlsx
 scripts/data/axioms-list.txt
 reasoner-error.txt
 scripts/axiomatization/test_apply_axioms_to_ontology.py
+scripts/axiomatization/__pycache__

@@ -1263,7 +1263,7 @@
     <!-- https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/Artist -->
 
     <owl:NamedIndividual rdf:about="https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/Artist">
-        <rdf:type rdf:resource="https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/Unit"/>
+        <rdf:type rdf:resource="https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/Archetype"/>
     </owl:NamedIndividual>
     
 
@@ -1271,7 +1271,7 @@
     <!-- https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/Assembler -->
 
     <owl:NamedIndividual rdf:about="https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/Assembler">
-        <rdf:type rdf:resource="https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/Unit"/>
+        <rdf:type rdf:resource="https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/Archetype"/>
     </owl:NamedIndividual>
     
 
@@ -1279,7 +1279,7 @@
     <!-- https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/Constructor -->
 
     <owl:NamedIndividual rdf:about="https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/Constructor">
-        <rdf:type rdf:resource="https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/Unit"/>
+        <rdf:type rdf:resource="https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/Archetype"/>
     </owl:NamedIndividual>
     
 
@@ -1287,7 +1287,7 @@
     <!-- https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/Excavator -->
 
     <owl:NamedIndividual rdf:about="https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/Excavator">
-        <rdf:type rdf:resource="https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/Unit"/>
+        <rdf:type rdf:resource="https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/Archetype"/>
     </owl:NamedIndividual>
     
 
@@ -1295,7 +1295,7 @@
     <!-- https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/Explorer -->
 
     <owl:NamedIndividual rdf:about="https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/Explorer">
-        <rdf:type rdf:resource="https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/Unit"/>
+        <rdf:type rdf:resource="https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/Archetype"/>
     </owl:NamedIndividual>
     
 
@@ -1303,7 +1303,7 @@
     <!-- https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/Harvester -->
 
     <owl:NamedIndividual rdf:about="https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/Harvester">
-        <rdf:type rdf:resource="https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/Unit"/>
+        <rdf:type rdf:resource="https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/Archetype"/>
     </owl:NamedIndividual>
     
 
@@ -1311,7 +1311,7 @@
     <!-- https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/Hauler -->
 
     <owl:NamedIndividual rdf:about="https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/Hauler">
-        <rdf:type rdf:resource="https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/Unit"/>
+        <rdf:type rdf:resource="https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/Archetype"/>
     </owl:NamedIndividual>
     
 
@@ -1319,7 +1319,7 @@
     <!-- https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/Inspector -->
 
     <owl:NamedIndividual rdf:about="https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/Inspector">
-        <rdf:type rdf:resource="https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/Unit"/>
+        <rdf:type rdf:resource="https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/Archetype"/>
     </owl:NamedIndividual>
     
 
@@ -1327,7 +1327,7 @@
     <!-- https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/Sentinel -->
 
     <owl:NamedIndividual rdf:about="https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/Sentinel">
-        <rdf:type rdf:resource="https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/Unit"/>
+        <rdf:type rdf:resource="https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/Archetype"/>
     </owl:NamedIndividual>
     
 
@@ -1335,6 +1335,654 @@
     <!-- https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/Welder -->
 
     <owl:NamedIndividual rdf:about="https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/Welder">
+        <rdf:type rdf:resource="https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/Archetype"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/absolutePositioningAccuracy -->
+
+    <owl:NamedIndividual rdf:about="https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/absolutePositioningAccuracy">
+        <rdf:type rdf:resource="https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/SpecificationKind"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/acceleration -->
+
+    <owl:NamedIndividual rdf:about="https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/acceleration">
+        <rdf:type rdf:resource="https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/SpecificationKind"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/ampere -->
+
+    <owl:NamedIndividual rdf:about="https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/ampere">
+        <rdf:type rdf:resource="https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/Unit"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/area -->
+
+    <owl:NamedIndividual rdf:about="https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/area">
+        <rdf:type rdf:resource="https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/SpecificationKind"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/atmosphere -->
+
+    <owl:NamedIndividual rdf:about="https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/atmosphere">
+        <rdf:type rdf:resource="https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/Unit"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/candela -->
+
+    <owl:NamedIndividual rdf:about="https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/candela">
+        <rdf:type rdf:resource="https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/Unit"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/capacitance -->
+
+    <owl:NamedIndividual rdf:about="https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/capacitance">
+        <rdf:type rdf:resource="https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/SpecificationKind"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/capacity -->
+
+    <owl:NamedIndividual rdf:about="https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/capacity">
+        <rdf:type rdf:resource="https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/SpecificationKind"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/celsius -->
+
+    <owl:NamedIndividual rdf:about="https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/celsius">
+        <rdf:type rdf:resource="https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/Unit"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/centerOfGravity -->
+
+    <owl:NamedIndividual rdf:about="https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/centerOfGravity">
+        <rdf:type rdf:resource="https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/SpecificationKind"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/centimeter -->
+
+    <owl:NamedIndividual rdf:about="https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/centimeter">
+        <rdf:type rdf:resource="https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/Unit"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/circumference -->
+
+    <owl:NamedIndividual rdf:about="https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/circumference">
+        <rdf:type rdf:resource="https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/SpecificationKind"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/collisionDetectionSensitivity -->
+
+    <owl:NamedIndividual rdf:about="https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/collisionDetectionSensitivity">
+        <rdf:type rdf:resource="https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/SpecificationKind"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/conductivity -->
+
+    <owl:NamedIndividual rdf:about="https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/conductivity">
+        <rdf:type rdf:resource="https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/SpecificationKind"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/continuousStallTorque -->
+
+    <owl:NamedIndividual rdf:about="https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/continuousStallTorque">
+        <rdf:type rdf:resource="https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/SpecificationKind"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/crossSection -->
+
+    <owl:NamedIndividual rdf:about="https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/crossSection">
+        <rdf:type rdf:resource="https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/SpecificationKind"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/current -->
+
+    <owl:NamedIndividual rdf:about="https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/current">
+        <rdf:type rdf:resource="https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/SpecificationKind"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/degreeAngle -->
+
+    <owl:NamedIndividual rdf:about="https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/degreeAngle">
+        <rdf:type rdf:resource="https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/Unit"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/degreesOfFreedom -->
+
+    <owl:NamedIndividual rdf:about="https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/degreesOfFreedom">
+        <rdf:type rdf:resource="https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/SpecificationKind"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/density -->
+
+    <owl:NamedIndividual rdf:about="https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/density">
+        <rdf:type rdf:resource="https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/SpecificationKind"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/depth -->
+
+    <owl:NamedIndividual rdf:about="https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/depth">
+        <rdf:type rdf:resource="https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/SpecificationKind"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/diameter -->
+
+    <owl:NamedIndividual rdf:about="https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/diameter">
+        <rdf:type rdf:resource="https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/SpecificationKind"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/dynamicFriction -->
+
+    <owl:NamedIndividual rdf:about="https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/dynamicFriction">
+        <rdf:type rdf:resource="https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/SpecificationKind"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/fahrenheit -->
+
+    <owl:NamedIndividual rdf:about="https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/fahrenheit">
+        <rdf:type rdf:resource="https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/Unit"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/fluidOunce -->
+
+    <owl:NamedIndividual rdf:about="https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/fluidOunce">
+        <rdf:type rdf:resource="https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/Unit"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/foot -->
+
+    <owl:NamedIndividual rdf:about="https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/foot">
+        <rdf:type rdf:resource="https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/Unit"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/formFitGrip -->
+
+    <owl:NamedIndividual rdf:about="https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/formFitGrip">
+        <rdf:type rdf:resource="https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/SpecificationKind"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/frequency -->
+
+    <owl:NamedIndividual rdf:about="https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/frequency">
+        <rdf:type rdf:resource="https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/SpecificationKind"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/frictionGrip -->
+
+    <owl:NamedIndividual rdf:about="https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/frictionGrip">
+        <rdf:type rdf:resource="https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/SpecificationKind"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/gearRatio -->
+
+    <owl:NamedIndividual rdf:about="https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/gearRatio">
+        <rdf:type rdf:resource="https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/SpecificationKind"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/gram -->
+
+    <owl:NamedIndividual rdf:about="https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/gram">
+        <rdf:type rdf:resource="https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/Unit"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/graspingTorque -->
+
+    <owl:NamedIndividual rdf:about="https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/graspingTorque">
+        <rdf:type rdf:resource="https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/SpecificationKind"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/gripForce -->
+
+    <owl:NamedIndividual rdf:about="https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/gripForce">
+        <rdf:type rdf:resource="https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/SpecificationKind"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/height -->
+
+    <owl:NamedIndividual rdf:about="https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/height">
+        <rdf:type rdf:resource="https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/SpecificationKind"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/hertz -->
+
+    <owl:NamedIndividual rdf:about="https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/hertz">
+        <rdf:type rdf:resource="https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/Unit"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/holdingForce -->
+
+    <owl:NamedIndividual rdf:about="https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/holdingForce">
+        <rdf:type rdf:resource="https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/SpecificationKind"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/holdingTorque -->
+
+    <owl:NamedIndividual rdf:about="https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/holdingTorque">
+        <rdf:type rdf:resource="https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/SpecificationKind"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/humidity -->
+
+    <owl:NamedIndividual rdf:about="https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/humidity">
+        <rdf:type rdf:resource="https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/SpecificationKind"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/impedance -->
+
+    <owl:NamedIndividual rdf:about="https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/impedance">
+        <rdf:type rdf:resource="https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/SpecificationKind"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/inch -->
+
+    <owl:NamedIndividual rdf:about="https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/inch">
+        <rdf:type rdf:resource="https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/Unit"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/inductance -->
+
+    <owl:NamedIndividual rdf:about="https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/inductance">
+        <rdf:type rdf:resource="https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/SpecificationKind"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/inertia -->
+
+    <owl:NamedIndividual rdf:about="https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/inertia">
+        <rdf:type rdf:resource="https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/SpecificationKind"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/joule -->
+
+    <owl:NamedIndividual rdf:about="https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/joule">
+        <rdf:type rdf:resource="https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/Unit"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/kelvin -->
+
+    <owl:NamedIndividual rdf:about="https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/kelvin">
+        <rdf:type rdf:resource="https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/Unit"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/kilogram -->
+
+    <owl:NamedIndividual rdf:about="https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/kilogram">
+        <rdf:type rdf:resource="https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/Unit"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/length -->
+
+    <owl:NamedIndividual rdf:about="https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/length">
+        <rdf:type rdf:resource="https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/SpecificationKind"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/loadSpeed -->
+
+    <owl:NamedIndividual rdf:about="https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/loadSpeed">
+        <rdf:type rdf:resource="https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/SpecificationKind"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/lumen -->
+
+    <owl:NamedIndividual rdf:about="https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/lumen">
+        <rdf:type rdf:resource="https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/Unit"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/meter -->
+
+    <owl:NamedIndividual rdf:about="https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/meter">
+        <rdf:type rdf:resource="https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/Unit"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/milimeter -->
+
+    <owl:NamedIndividual rdf:about="https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/milimeter">
+        <rdf:type rdf:resource="https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/Unit"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/mole -->
+
+    <owl:NamedIndividual rdf:about="https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/mole">
+        <rdf:type rdf:resource="https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/Unit"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/newton -->
+
+    <owl:NamedIndividual rdf:about="https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/newton">
+        <rdf:type rdf:resource="https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/Unit"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/ohm -->
+
+    <owl:NamedIndividual rdf:about="https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/ohm">
+        <rdf:type rdf:resource="https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/Unit"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/ounce -->
+
+    <owl:NamedIndividual rdf:about="https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/ounce">
+        <rdf:type rdf:resource="https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/Unit"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/pascal -->
+
+    <owl:NamedIndividual rdf:about="https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/pascal">
+        <rdf:type rdf:resource="https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/Unit"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/pathRepeatability -->
+
+    <owl:NamedIndividual rdf:about="https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/pathRepeatability">
+        <rdf:type rdf:resource="https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/SpecificationKind"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/payload -->
+
+    <owl:NamedIndividual rdf:about="https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/payload">
+        <rdf:type rdf:resource="https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/SpecificationKind"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/pound -->
+
+    <owl:NamedIndividual rdf:about="https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/pound">
+        <rdf:type rdf:resource="https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/Unit"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/powerConsumption -->
+
+    <owl:NamedIndividual rdf:about="https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/powerConsumption">
+        <rdf:type rdf:resource="https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/SpecificationKind"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/pressure -->
+
+    <owl:NamedIndividual rdf:about="https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/pressure">
+        <rdf:type rdf:resource="https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/SpecificationKind"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/radian -->
+
+    <owl:NamedIndividual rdf:about="https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/radian">
+        <rdf:type rdf:resource="https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/Unit"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/radius -->
+
+    <owl:NamedIndividual rdf:about="https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/radius">
+        <rdf:type rdf:resource="https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/SpecificationKind"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/rangeOfMotion -->
+
+    <owl:NamedIndividual rdf:about="https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/rangeOfMotion">
+        <rdf:type rdf:resource="https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/SpecificationKind"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/ratio -->
+
+    <owl:NamedIndividual rdf:about="https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/ratio">
+        <rdf:type rdf:resource="https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/SpecificationKind"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/repeatedPositioningAccuracy -->
+
+    <owl:NamedIndividual rdf:about="https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/repeatedPositioningAccuracy">
+        <rdf:type rdf:resource="https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/SpecificationKind"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/staticFriction -->
+
+    <owl:NamedIndividual rdf:about="https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/staticFriction">
+        <rdf:type rdf:resource="https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/SpecificationKind"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/stroke -->
+
+    <owl:NamedIndividual rdf:about="https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/stroke">
+        <rdf:type rdf:resource="https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/SpecificationKind"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/temperature -->
+
+    <owl:NamedIndividual rdf:about="https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/temperature">
+        <rdf:type rdf:resource="https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/SpecificationKind"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/thickness -->
+
+    <owl:NamedIndividual rdf:about="https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/thickness">
+        <rdf:type rdf:resource="https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/SpecificationKind"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/tolerance -->
+
+    <owl:NamedIndividual rdf:about="https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/tolerance">
+        <rdf:type rdf:resource="https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/SpecificationKind"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/toolCenterPointSpeed -->
+
+    <owl:NamedIndividual rdf:about="https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/toolCenterPointSpeed">
+        <rdf:type rdf:resource="https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/SpecificationKind"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/torque -->
+
+    <owl:NamedIndividual rdf:about="https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/torque">
+        <rdf:type rdf:resource="https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/SpecificationKind"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/velocity -->
+
+    <owl:NamedIndividual rdf:about="https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/velocity">
+        <rdf:type rdf:resource="https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/SpecificationKind"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/volt -->
+
+    <owl:NamedIndividual rdf:about="https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/volt">
+        <rdf:type rdf:resource="https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/Unit"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/voltage -->
+
+    <owl:NamedIndividual rdf:about="https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/voltage">
+        <rdf:type rdf:resource="https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/SpecificationKind"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/volume -->
+
+    <owl:NamedIndividual rdf:about="https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/volume">
+        <rdf:type rdf:resource="https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/SpecificationKind"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/watt -->
+
+    <owl:NamedIndividual rdf:about="https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/watt">
+        <rdf:type rdf:resource="https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/Unit"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/weight -->
+
+    <owl:NamedIndividual rdf:about="https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/weight">
+        <rdf:type rdf:resource="https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/SpecificationKind"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/width -->
+
+    <owl:NamedIndividual rdf:about="https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/width">
+        <rdf:type rdf:resource="https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/SpecificationKind"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/workingRadius -->
+
+    <owl:NamedIndividual rdf:about="https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/workingRadius">
+        <rdf:type rdf:resource="https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/SpecificationKind"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/yard -->
+
+    <owl:NamedIndividual rdf:about="https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/yard">
         <rdf:type rdf:resource="https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/Unit"/>
     </owl:NamedIndividual>
     
