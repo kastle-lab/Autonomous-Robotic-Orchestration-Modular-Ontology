@@ -5,7 +5,7 @@
     <uri name="http://daselab.org/ContextualizedWinstonPartWhole"
          uri="contextualized-winston-part-whole.rdf"/>
 
-    <uri name="https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/"
+    <uri name="https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/lod/ontology"
          uri="robo-ont.rdf"/>
 
 </catalog>
