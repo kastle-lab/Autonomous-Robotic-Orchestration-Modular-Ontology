@@ -1,0 +1,21 @@
+goal_id,condition
+task_01,Peg is engaged in matching hole and fully seated
+task_02,Peg is engaged in matching hole and fully seated
+task_03,Peg is engaged in matching hole and fully seated
+task_04,Peg is engaged in matching hole and fully seated
+task_05,Peg is engaged in matching rectangular hole and fully seated
+task_06,Peg is engaged in matching rectangular hole and fully seated
+task_07,Peg is engaged in matching rectangular hole and fully seated
+task_08,Peg is engaged in matching rectangular hole and fully seated
+task_09,Gear is seated on shaft; verify meshing of the completed gear train
+task_10,Gear is seated on shaft; verify meshing of the completed gear train
+task_11,Gear is seated on shaft; verify meshing of the completed gear train
+task_12,Connector is engaged and fully seated; applicable lock or latch is engaged
+task_13,Connector is engaged and fully seated; applicable lock or latch is engaged
+task_14,Connector is engaged and fully seated; applicable lock or latch is engaged
+task_15,Connector is engaged and fully seated; applicable lock or latch is engaged
+task_16,Connector is engaged and fully seated; applicable lock or latch is engaged
+task_17,Nut is threaded correctly and seated; torque is a locally defined parameter
+task_18,Nut is threaded correctly and seated; torque is a locally defined parameter
+task_19,Nut is threaded correctly and seated; torque is a locally defined parameter
+task_20,Nut is threaded correctly and seated; torque is a locally defined parameter

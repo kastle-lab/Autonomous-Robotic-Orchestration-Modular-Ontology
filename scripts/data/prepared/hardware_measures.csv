@@ -1,0 +1,52 @@
+id,hardware_id,kind_id,label,value,unit_id
+hardware_573834234ADSF_repeated_positioning_accuracy_mm,hardware_573834234ADSF,repeated_positioning_accuracy_mm,Repeated Positioning Accuracy (±mm),0.05,millimetre
+hardware_573834234ADSF_operating_range_mm,hardware_573834234ADSF,operating_range_mm,Operating Range (mm),900.00,millimetre
+hardware_573834234ADSF_dof_degree_of_freedom,hardware_573834234ADSF,dof_degree_of_freedom,DoF (Degree of Freedom),6,count
+hardware_573834234ADSF_max_payload_grams,hardware_573834234ADSF,max_payload_grams,Max Payload (Grams),16000,gram
+hardware_573834234ADSF_weight_grams,hardware_573834234ADSF,weight_grams,Weight (Grams),33100,gram
+hardware_573834234ADSF_min_operating_temperature_celsius,hardware_573834234ADSF,min_operating_temperature_celsius,Min Operating Temperature (Celsius),0,degree_celsius
+hardware_573834234ADSF_max_operating_temperature_celsius,hardware_573834234ADSF,max_operating_temperature_celsius,Max Operating Temperature (Celsius),50,degree_celsius
+hardware_89897624JKJL_repeated_positioning_accuracy_mm,hardware_89897624JKJL,repeated_positioning_accuracy_mm,Repeated Positioning Accuracy (±mm),0.05,millimetre
+hardware_89897624JKJL_operating_range_mm,hardware_89897624JKJL,operating_range_mm,Operating Range (mm),1900.00,millimetre
+hardware_89897624JKJL_dof_degree_of_freedom,hardware_89897624JKJL,dof_degree_of_freedom,DoF (Degree of Freedom),6,count
+hardware_89897624JKJL_max_payload_grams,hardware_89897624JKJL,max_payload_grams,Max Payload (Grams),20000,gram
+hardware_89897624JKJL_weight_grams,hardware_89897624JKJL,weight_grams,Weight (Grams),140000,gram
+hardware_89897624JKJL_min_operating_temperature_celsius,hardware_89897624JKJL,min_operating_temperature_celsius,Min Operating Temperature (Celsius),0,degree_celsius
+hardware_89897624JKJL_max_operating_temperature_celsius,hardware_89897624JKJL,max_operating_temperature_celsius,Max Operating Temperature (Celsius),40,degree_celsius
+hardware_NVB6873432_repeated_positioning_accuracy_mm,hardware_NVB6873432,repeated_positioning_accuracy_mm,Repeated Positioning Accuracy (±mm),0.05,millimetre
+hardware_NVB6873432_operating_range_mm,hardware_NVB6873432,operating_range_mm,Operating Range (mm),280.00,millimetre
+hardware_NVB6873432_dof_degree_of_freedom,hardware_NVB6873432,dof_degree_of_freedom,DoF (Degree of Freedom),6,count
+hardware_NVB6873432_max_payload_grams,hardware_NVB6873432,max_payload_grams,Max Payload (Grams),250,gram
+hardware_NVB6873432_weight_grams,hardware_NVB6873432,weight_grams,Weight (Grams),860,gram
+hardware_NVB68712F3_repeated_positioning_accuracy_mm,hardware_NVB68712F3,repeated_positioning_accuracy_mm,Repeated Positioning Accuracy (±mm),0.05,millimetre
+hardware_NVB68712F3_operating_range_mm,hardware_NVB68712F3,operating_range_mm,Operating Range (mm),280.00,millimetre
+hardware_NVB68712F3_dof_degree_of_freedom,hardware_NVB68712F3,dof_degree_of_freedom,DoF (Degree of Freedom),6,count
+hardware_NVB68712F3_max_payload_grams,hardware_NVB68712F3,max_payload_grams,Max Payload (Grams),250,gram
+hardware_NVB68712F3_weight_grams,hardware_NVB68712F3,weight_grams,Weight (Grams),860,gram
+hardware_JHF-3434-FDAF_speed_km_h,hardware_JHF-3434-FDAF,speed_km_h,Speed (km/h),7,kilometre_per_hour
+hardware_JHF-3434-FDAF_operating_range_km,hardware_JHF-3434-FDAF,operating_range_km,Operating Range (km),10.5,kilometre
+hardware_JHF-3434-FDAF_max_payload_grams,hardware_JHF-3434-FDAF,max_payload_grams,Max Payload (Grams),5000,gram
+hardware_JHF-3434-FDAF_weight_grams,hardware_JHF-3434-FDAF,weight_grams,Weight (Grams),4160,gram
+hardware_777777-FDF_max_payload_grams,hardware_777777-FDF,max_payload_grams,Max Payload (Grams),5000,gram
+hardware_777777-FDF_weight_grams,hardware_777777-FDF,weight_grams,Weight (Grams),900,gram
+hardware_777777-FDF_max_stroke_mm,hardware_777777-FDF,max_stroke_mm,Max Stroke (mm),85,millimetre
+hardware_777777-FDF_min_grip_force_n,hardware_777777-FDF,min_grip_force_n,Min Grip Force (N),20,newton
+hardware_777777-FDF_max_grip_force_n,hardware_777777-FDF,max_grip_force_n,Max Grip Force (N),235,newton
+hardware_777777-FDF_form_fit_grip_payload_grams,hardware_777777-FDF,form_fit_grip_payload_grams,Form-fit grip payload (Grams),5,gram
+hardware_777777-FDF_friction_grip_payload_grams,hardware_777777-FDF,friction_grip_payload_grams,Friction-grip-payload (Grams),5,gram
+hardware_2343YKENFDA_max_payload_grams,hardware_2343YKENFDA,max_payload_grams,Max Payload (Grams),2500,gram
+hardware_2343YKENFDA_weight_grams,hardware_2343YKENFDA,weight_grams,Weight (Grams),1000,gram
+hardware_2343YKENFDA_max_stroke_mm,hardware_2343YKENFDA,max_stroke_mm,Max Stroke (mm),140,millimetre
+hardware_2343YKENFDA_min_grip_force_n,hardware_2343YKENFDA,min_grip_force_n,Min Grip Force (N),10,newton
+hardware_2343YKENFDA_max_grip_force_n,hardware_2343YKENFDA,max_grip_force_n,Max Grip Force (N),125,newton
+hardware_2343YKENFDA_form_fit_grip_payload_grams,hardware_2343YKENFDA,form_fit_grip_payload_grams,Form-fit grip payload (Grams),2.5,gram
+hardware_2343YKENFDA_friction_grip_payload_grams,hardware_2343YKENFDA,friction_grip_payload_grams,Friction-grip-payload (Grams),2.5,gram
+hardware_4901700342_repeated_positioning_accuracy_mm,hardware_4901700342,repeated_positioning_accuracy_mm,Repeated Positioning Accuracy (±mm),1,millimetre
+hardware_4901700342_max_payload_grams,hardware_4901700342,max_payload_grams,Max Payload (Grams),100,gram
+hardware_4901700342_weight_grams,hardware_4901700342,weight_grams,Weight (Grams),105,gram
+hardware_4901700342_min_stroke_mm,hardware_4901700342,min_stroke_mm,Min Stroke (mm),0,millimetre
+hardware_4901700342_max_stroke_mm,hardware_4901700342,max_stroke_mm,Max Stroke (mm),150,millimetre
+hardware_4789134Q-14_max_payload_grams,hardware_4789134Q-14,max_payload_grams,Max Payload (Grams),150,gram
+hardware_4789134Q-14_weight_grams,hardware_4789134Q-14,weight_grams,Weight (Grams),110,gram
+hardware_4789134Q-14_min_stroke_mm,hardware_4789134Q-14,min_stroke_mm,Min Stroke (mm),20,millimetre
+hardware_4789134Q-14_max_stroke_mm,hardware_4789134Q-14,max_stroke_mm,Max Stroke (mm),45,millimetre

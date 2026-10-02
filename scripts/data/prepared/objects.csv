@@ -1,0 +1,42 @@
+component_id,item_name,part_number,notes,nist_item_id
+board,Laser Cut Board (Ponoko),,,1
+gear_plate,Gear Plate,JTNAS-AM-A120-B60-T5-F30-V15-X10-Y30-M6-L90-S30-MA6,,2
+shaft_small,Gear shaft for small gear,SPTR10-20-M6-SC12,One of three shafts in original NIST item 3; assignment identifies its task target.,3
+shaft_medium,Gear shaft for medium gear,SPTR10-20-M6-SC12,One of three shafts in original NIST item 3; assignment identifies its task target.,3
+shaft_large,Gear shaft for large gear,SPTR10-20-M6-SC12,One of three shafts in original NIST item 3; assignment identifies its task target.,3
+gear_small,Small Gear,GEABP1.0-20-10-B-10,,4
+gear_medium,Medium Gear,GEABP1.0-40-10-B-10,,5
+gear_large,Large Gear,GEABP1.0-60-10-B-10,,6
+round_peg_4,Rod 4 mm,RGOCG4-50,,7
+round_peg_8,Rod 8 mm,RGOCG8-50,,8
+round_peg_12,Rod 12 mm,RGOCG12-50,,9
+round_peg_16,Rod 16 mm,RGOCG16-50,,10
+rect_peg_4,Bar 4 mm x 4 mm x 300 mm,KET4,300 mm stock cut to 50 mm pegs; benchmark uses one peg of this size,11
+rect_peg_8,Bar 8 mm x 7 mm x 300 mm,KET8,300 mm stock cut to 50 mm pegs; benchmark uses one peg of this size,12
+rect_peg_12,Bar 12 mm x 8 mm x 300 mm,KET12,300 mm stock cut to 50 mm pegs; benchmark uses one peg of this size,13
+rect_peg_16,Bar 16 mm x 10 mm x 300 mm,KET16,300 mm stock cut to 50 mm pegs; benchmark uses one peg of this size,14
+socket_bnc,BNC Female Connector,BNC-R,,15
+plug_bnc,BNC Male Connector,BNCP-1.5A-K,,16
+plug_waterproof,Male Waterproof Connector,MCON-E10-SP,,17
+socket_waterproof,Female Waterproof Connector,MCON-E10-SS,,18
+plug_dsub,DSUB Male Connector,SETDSUB-B-ML-PP-25,,19
+socket_dsub,DSUB Female Connector,SETDSUB-B-ML-PS-25,,20
+plug_usb,USB Male Cable,U02-AM-BM-0.5,,21
+socket_usb,USB Female Connector,U09-AF-AF-B,,22
+plug_rj45,RJ45 Male Connector,ADT-EX-CRS5EK,One connector in the single purchased male/female set of original NIST item 23; do not purchase two sets.,23
+socket_rj45,RJ45 Female Connector,ADT-EX-CRS5EK,One connector in the single purchased male/female set of original NIST item 23; do not purchase two sets.,23
+bolt_m4,"M4 Bolt Fully Threaded, Coarse, 16 mm length",,,24
+bolt_m8,"M8 Bolt Fully Threaded, Coarse, 18 mm length",,,25
+bolt_m12,"M12 Bolt Fully Threaded, Coarse, 20 mm length",,,26
+bolt_m16,"M16 Bolt Fully Threaded, Coarse, 25 mm length",,,27
+nut_m4,M4 Nut,,,28
+nut_m8,M8 Nut,,,29
+nut_m12,M12 Nut,,,30
+nut_m16,M16 Nut,,,31
+housing_dsub,DSUB Housing,3D Printed,,32
+housing_rj45,RJ45 Housing,3D Printed,,33
+standoff_with_nuts,M6 or ¼”-20 Threaded Posts/Standoffs and Nuts,,Posts/standoffs and nuts listed as an assembly,34
+bolt_m3_16,"M3 Bolt Fully Threaded, Coarse, 16 mm",,,35
+bolt_m3_35,"M3 Bolt Fully Threaded, Coarse, 35 mm",,,36
+bolt_m6_25,"M6 Bolt Fully Threaded, Coarse, 25 mm",,,37
+nut_m3,M3 Nut,,,38

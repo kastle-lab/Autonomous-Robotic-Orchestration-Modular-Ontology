@@ -1,0 +1,108 @@
+id,goal_id,component_id,target_id,instruction,predecessor_id,local_predecessor_id,next_id,capability_id,agent_id
+task_01_step_1,task_01,round_peg_4,round_hole_4,Localize part and matching target,,,task_01_step_2,cap_vision,RobS
+task_01_step_2,task_01,round_peg_4,round_hole_4,Acquire part with suitable grasp,task_01_step_1,task_01_step_1,task_01_step_3,cap_pick,RobS
+task_01_step_3,task_01,round_peg_4,round_hole_4,Transport and align part with target,task_01_step_2,task_01_step_2,task_01_step_4,cap_reach,RobS
+task_01_step_4,task_01,round_peg_4,round_hole_4,Insert and seat peg,task_01_step_3,task_01_step_3,task_01_step_5,cap_press,RobS
+task_01_step_5,task_01,round_peg_4,round_hole_4,Release as appropriate and verify: Peg is engaged in matching hole and fully seated,task_01_step_4,task_01_step_4,task_02_step_1,cap_place,RobS
+task_02_step_1,task_02,round_peg_8,round_hole_8,Localize part and matching target,task_01_step_5,,task_02_step_2,cap_vision,RobS
+task_02_step_2,task_02,round_peg_8,round_hole_8,Acquire part with suitable grasp,task_02_step_1,task_02_step_1,task_02_step_3,cap_pick,RobS
+task_02_step_3,task_02,round_peg_8,round_hole_8,Transport and align part with target,task_02_step_2,task_02_step_2,task_02_step_4,cap_reach,RobS
+task_02_step_4,task_02,round_peg_8,round_hole_8,Insert and seat peg,task_02_step_3,task_02_step_3,task_02_step_5,cap_press,RobS
+task_02_step_5,task_02,round_peg_8,round_hole_8,Release as appropriate and verify: Peg is engaged in matching hole and fully seated,task_02_step_4,task_02_step_4,task_03_step_1,cap_place,RobS
+task_03_step_1,task_03,round_peg_12,round_hole_12,Localize part and matching target,task_02_step_5,,task_03_step_2,cap_vision,RobS
+task_03_step_2,task_03,round_peg_12,round_hole_12,Acquire part with suitable grasp,task_03_step_1,task_03_step_1,task_03_step_3,cap_pick,RobS
+task_03_step_3,task_03,round_peg_12,round_hole_12,Transport and align part with target,task_03_step_2,task_03_step_2,task_03_step_4,cap_reach,RobS
+task_03_step_4,task_03,round_peg_12,round_hole_12,Insert and seat peg,task_03_step_3,task_03_step_3,task_03_step_5,cap_press,RobS
+task_03_step_5,task_03,round_peg_12,round_hole_12,Release as appropriate and verify: Peg is engaged in matching hole and fully seated,task_03_step_4,task_03_step_4,task_04_step_1,cap_place,RobS
+task_04_step_1,task_04,round_peg_16,round_hole_16,Localize part and matching target,task_03_step_5,,task_04_step_2,cap_vision,RobS
+task_04_step_2,task_04,round_peg_16,round_hole_16,Acquire part with suitable grasp,task_04_step_1,task_04_step_1,task_04_step_3,cap_pick,RobS
+task_04_step_3,task_04,round_peg_16,round_hole_16,Transport and align part with target,task_04_step_2,task_04_step_2,task_04_step_4,cap_reach,RobS
+task_04_step_4,task_04,round_peg_16,round_hole_16,Insert and seat peg,task_04_step_3,task_04_step_3,task_04_step_5,cap_press,RobS
+task_04_step_5,task_04,round_peg_16,round_hole_16,Release as appropriate and verify: Peg is engaged in matching hole and fully seated,task_04_step_4,task_04_step_4,task_05_step_1,cap_place,RobS
+task_05_step_1,task_05,rect_peg_4,rect_hole_4,Localize part and matching target,task_04_step_5,,task_05_step_2,cap_vision,RobS
+task_05_step_2,task_05,rect_peg_4,rect_hole_4,Acquire part with suitable grasp,task_05_step_1,task_05_step_1,task_05_step_3,cap_pick,RobS
+task_05_step_3,task_05,rect_peg_4,rect_hole_4,Transport and align part with target,task_05_step_2,task_05_step_2,task_05_step_4,cap_reach,RobS
+task_05_step_4,task_05,rect_peg_4,rect_hole_4,"Align rectangular profile, insert and seat peg",task_05_step_3,task_05_step_3,task_05_step_5,cap_press,RobS
+task_05_step_5,task_05,rect_peg_4,rect_hole_4,Release as appropriate and verify: Peg is engaged in matching rectangular hole and fully seated,task_05_step_4,task_05_step_4,task_06_step_1,cap_place,RobS
+task_06_step_1,task_06,rect_peg_8,rect_hole_8,Localize part and matching target,task_05_step_5,,recovery_step_1,cap_vision,RobS
+recovery_step_1,task_recovery,rect_peg_8,,pause assembly,task_06_step_1,,recovery_step_2,,RobS
+recovery_step_2,task_recovery,rect_peg_8,outside_RobS_reach,navigate to component,recovery_step_1,recovery_step_1,recovery_step_3,cap_navigate,RobM
+recovery_step_3,task_recovery,rect_peg_8,outside_RobS_reach,localize recovery component,recovery_step_2,recovery_step_2,recovery_step_4,cap_vision,RobM
+recovery_step_4,task_recovery,rect_peg_8,,grasp recovery component,recovery_step_3,recovery_step_3,recovery_step_5,cap_pick,RobM
+recovery_step_5,task_recovery,rect_peg_8,RobS_reachable_zone,transport component,recovery_step_4,recovery_step_4,recovery_step_6,cap_navigate,RobM
+recovery_step_6,task_recovery,rect_peg_8,RobS_reachable_zone,place recovery component,recovery_step_5,recovery_step_5,recovery_step_7,cap_place,RobM
+recovery_step_7,task_recovery,rect_peg_8,,verify and resume assembly,recovery_step_6,recovery_step_6,task_06_step_2,cap_vision,RobS
+task_06_step_2,task_06,rect_peg_8,rect_hole_8,Acquire part with suitable grasp,recovery_step_7,task_06_step_1,task_06_step_3,cap_pick,RobS
+task_06_step_3,task_06,rect_peg_8,rect_hole_8,Transport and align part with target,task_06_step_2,task_06_step_2,task_06_step_4,cap_reach,RobS
+task_06_step_4,task_06,rect_peg_8,rect_hole_8,"Align rectangular profile, insert and seat peg",task_06_step_3,task_06_step_3,task_06_step_5,cap_press,RobS
+task_06_step_5,task_06,rect_peg_8,rect_hole_8,Release as appropriate and verify: Peg is engaged in matching rectangular hole and fully seated,task_06_step_4,task_06_step_4,task_07_step_1,cap_place,RobS
+task_07_step_1,task_07,rect_peg_12,rect_hole_12,Localize part and matching target,task_06_step_5,,task_07_step_2,cap_vision,RobS
+task_07_step_2,task_07,rect_peg_12,rect_hole_12,Acquire part with suitable grasp,task_07_step_1,task_07_step_1,task_07_step_3,cap_pick,RobS
+task_07_step_3,task_07,rect_peg_12,rect_hole_12,Transport and align part with target,task_07_step_2,task_07_step_2,task_07_step_4,cap_reach,RobS
+task_07_step_4,task_07,rect_peg_12,rect_hole_12,"Align rectangular profile, insert and seat peg",task_07_step_3,task_07_step_3,task_07_step_5,cap_press,RobS
+task_07_step_5,task_07,rect_peg_12,rect_hole_12,Release as appropriate and verify: Peg is engaged in matching rectangular hole and fully seated,task_07_step_4,task_07_step_4,task_08_step_1,cap_place,RobS
+task_08_step_1,task_08,rect_peg_16,rect_hole_16,Localize part and matching target,task_07_step_5,,task_08_step_2,cap_vision,RobS
+task_08_step_2,task_08,rect_peg_16,rect_hole_16,Acquire part with suitable grasp,task_08_step_1,task_08_step_1,task_08_step_3,cap_pick,RobS
+task_08_step_3,task_08,rect_peg_16,rect_hole_16,Transport and align part with target,task_08_step_2,task_08_step_2,task_08_step_4,cap_reach,RobS
+task_08_step_4,task_08,rect_peg_16,rect_hole_16,"Align rectangular profile, insert and seat peg",task_08_step_3,task_08_step_3,task_08_step_5,cap_press,RobS
+task_08_step_5,task_08,rect_peg_16,rect_hole_16,Release as appropriate and verify: Peg is engaged in matching rectangular hole and fully seated,task_08_step_4,task_08_step_4,task_09_step_1,cap_place,RobS
+task_09_step_1,task_09,gear_small,shaft_small,Localize part and matching target,task_08_step_5,,task_09_step_2,cap_vision,RobS
+task_09_step_2,task_09,gear_small,shaft_small,Acquire part with suitable grasp,task_09_step_1,task_09_step_1,task_09_step_3,cap_pick,RobS
+task_09_step_3,task_09,gear_small,shaft_small,Transport and align part with target,task_09_step_2,task_09_step_2,task_09_step_4,cap_reach,RobS
+task_09_step_4,task_09,gear_small,shaft_small,"Align bore with shaft, seat gear and verify final gear engagement",task_09_step_3,task_09_step_3,task_09_step_5,cap_rotate,RobS
+task_09_step_5,task_09,gear_small,shaft_small,Release as appropriate and verify: Gear is seated on shaft; verify meshing of the completed gear train,task_09_step_4,task_09_step_4,task_10_step_1,cap_place,RobS
+task_10_step_1,task_10,gear_medium,shaft_medium,Localize part and matching target,task_09_step_5,,task_10_step_2,cap_vision,RobS
+task_10_step_2,task_10,gear_medium,shaft_medium,Acquire part with suitable grasp,task_10_step_1,task_10_step_1,task_10_step_3,cap_pick,RobS
+task_10_step_3,task_10,gear_medium,shaft_medium,Transport and align part with target,task_10_step_2,task_10_step_2,task_10_step_4,cap_reach,RobS
+task_10_step_4,task_10,gear_medium,shaft_medium,"Align bore with shaft, seat gear and verify final gear engagement",task_10_step_3,task_10_step_3,task_10_step_5,cap_rotate,RobS
+task_10_step_5,task_10,gear_medium,shaft_medium,Release as appropriate and verify: Gear is seated on shaft; verify meshing of the completed gear train,task_10_step_4,task_10_step_4,task_11_step_1,cap_place,RobS
+task_11_step_1,task_11,gear_large,shaft_large,Localize part and matching target,task_10_step_5,,task_11_step_2,cap_vision,RobS
+task_11_step_2,task_11,gear_large,shaft_large,Acquire part with suitable grasp,task_11_step_1,task_11_step_1,task_11_step_3,cap_pick,RobS
+task_11_step_3,task_11,gear_large,shaft_large,Transport and align part with target,task_11_step_2,task_11_step_2,task_11_step_4,cap_reach,RobS
+task_11_step_4,task_11,gear_large,shaft_large,"Align bore with shaft, seat gear and verify final gear engagement",task_11_step_3,task_11_step_3,task_11_step_5,cap_rotate,RobS
+task_11_step_5,task_11,gear_large,shaft_large,Release as appropriate and verify: Gear is seated on shaft; verify meshing of the completed gear train,task_11_step_4,task_11_step_4,task_12_step_1,cap_place,RobS
+task_12_step_1,task_12,plug_bnc,socket_bnc,Localize part and matching target,task_11_step_5,,task_12_step_2,cap_vision,RobS
+task_12_step_2,task_12,plug_bnc,socket_bnc,Acquire part with suitable grasp,task_12_step_1,task_12_step_1,task_12_step_3,cap_pick,RobS
+task_12_step_3,task_12,plug_bnc,socket_bnc,Transport and align part with target,task_12_step_2,task_12_step_2,task_12_step_4,cap_reach,RobS
+task_12_step_4,task_12,plug_bnc,socket_bnc,Align and mate connector; engage its applicable retention mechanism,task_12_step_3,task_12_step_3,task_12_step_5,cap_press,RobS
+task_12_step_5,task_12,plug_bnc,socket_bnc,Release as appropriate and verify: Connector is engaged and fully seated; applicable lock or latch is engaged,task_12_step_4,task_12_step_4,task_13_step_1,cap_place,RobS
+task_13_step_1,task_13,plug_waterproof,socket_waterproof,Localize part and matching target,task_12_step_5,,task_13_step_2,cap_vision,RobS
+task_13_step_2,task_13,plug_waterproof,socket_waterproof,Acquire part with suitable grasp,task_13_step_1,task_13_step_1,task_13_step_3,cap_pick,RobS
+task_13_step_3,task_13,plug_waterproof,socket_waterproof,Transport and align part with target,task_13_step_2,task_13_step_2,task_13_step_4,cap_reach,RobS
+task_13_step_4,task_13,plug_waterproof,socket_waterproof,Align and mate connector; engage its applicable retention mechanism,task_13_step_3,task_13_step_3,task_13_step_5,cap_press,RobS
+task_13_step_5,task_13,plug_waterproof,socket_waterproof,Release as appropriate and verify: Connector is engaged and fully seated; applicable lock or latch is engaged,task_13_step_4,task_13_step_4,task_14_step_1,cap_place,RobS
+task_14_step_1,task_14,plug_dsub,socket_dsub,Localize part and matching target,task_13_step_5,,task_14_step_2,cap_vision,RobS
+task_14_step_2,task_14,plug_dsub,socket_dsub,Acquire part with suitable grasp,task_14_step_1,task_14_step_1,task_14_step_3,cap_pick,RobS
+task_14_step_3,task_14,plug_dsub,socket_dsub,Transport and align part with target,task_14_step_2,task_14_step_2,task_14_step_4,cap_reach,RobS
+task_14_step_4,task_14,plug_dsub,socket_dsub,Align and mate connector; engage its applicable retention mechanism,task_14_step_3,task_14_step_3,task_14_step_5,cap_press,RobS
+task_14_step_5,task_14,plug_dsub,socket_dsub,Release as appropriate and verify: Connector is engaged and fully seated; applicable lock or latch is engaged,task_14_step_4,task_14_step_4,task_15_step_1,cap_place,RobS
+task_15_step_1,task_15,plug_usb,socket_usb,Localize part and matching target,task_14_step_5,,task_15_step_2,cap_vision,RobS
+task_15_step_2,task_15,plug_usb,socket_usb,Acquire part with suitable grasp,task_15_step_1,task_15_step_1,task_15_step_3,cap_pick,RobS
+task_15_step_3,task_15,plug_usb,socket_usb,Transport and align part with target,task_15_step_2,task_15_step_2,task_15_step_4,cap_reach,RobS
+task_15_step_4,task_15,plug_usb,socket_usb,Align and mate connector; engage its applicable retention mechanism,task_15_step_3,task_15_step_3,task_15_step_5,cap_press,RobS
+task_15_step_5,task_15,plug_usb,socket_usb,Release as appropriate and verify: Connector is engaged and fully seated; applicable lock or latch is engaged,task_15_step_4,task_15_step_4,task_16_step_1,cap_place,RobS
+task_16_step_1,task_16,plug_rj45,socket_rj45,Localize part and matching target,task_15_step_5,,task_16_step_2,cap_vision,RobS
+task_16_step_2,task_16,plug_rj45,socket_rj45,Acquire part with suitable grasp,task_16_step_1,task_16_step_1,task_16_step_3,cap_pick,RobS
+task_16_step_3,task_16,plug_rj45,socket_rj45,Transport and align part with target,task_16_step_2,task_16_step_2,task_16_step_4,cap_reach,RobS
+task_16_step_4,task_16,plug_rj45,socket_rj45,Align and mate connector; engage its applicable retention mechanism,task_16_step_3,task_16_step_3,task_16_step_5,cap_press,RobS
+task_16_step_5,task_16,plug_rj45,socket_rj45,Release as appropriate and verify: Connector is engaged and fully seated; applicable lock or latch is engaged,task_16_step_4,task_16_step_4,task_17_step_1,cap_place,RobS
+task_17_step_1,task_17,nut_m4,bolt_m4,Localize part and matching target,task_16_step_5,,task_17_step_2,cap_vision,RobS
+task_17_step_2,task_17,nut_m4,bolt_m4,Acquire part with suitable grasp,task_17_step_1,task_17_step_1,task_17_step_3,cap_pick,RobS
+task_17_step_3,task_17,nut_m4,bolt_m4,Transport and align part with target,task_17_step_2,task_17_step_2,task_17_step_4,cap_reach,RobS
+task_17_step_4,task_17,nut_m4,bolt_m4,"Align nut with bolt, start thread and rotate to seated condition",task_17_step_3,task_17_step_3,task_17_step_5,cap_rotate,RobS
+task_17_step_5,task_17,nut_m4,bolt_m4,Release as appropriate and verify: Nut is threaded correctly and seated; torque is a locally defined parameter,task_17_step_4,task_17_step_4,task_18_step_1,cap_place,RobS
+task_18_step_1,task_18,nut_m8,bolt_m8,Localize part and matching target,task_17_step_5,,task_18_step_2,cap_vision,RobS
+task_18_step_2,task_18,nut_m8,bolt_m8,Acquire part with suitable grasp,task_18_step_1,task_18_step_1,task_18_step_3,cap_pick,RobS
+task_18_step_3,task_18,nut_m8,bolt_m8,Transport and align part with target,task_18_step_2,task_18_step_2,task_18_step_4,cap_reach,RobS
+task_18_step_4,task_18,nut_m8,bolt_m8,"Align nut with bolt, start thread and rotate to seated condition",task_18_step_3,task_18_step_3,task_18_step_5,cap_rotate,RobS
+task_18_step_5,task_18,nut_m8,bolt_m8,Release as appropriate and verify: Nut is threaded correctly and seated; torque is a locally defined parameter,task_18_step_4,task_18_step_4,task_19_step_1,cap_place,RobS
+task_19_step_1,task_19,nut_m12,bolt_m12,Localize part and matching target,task_18_step_5,,task_19_step_2,cap_vision,RobS
+task_19_step_2,task_19,nut_m12,bolt_m12,Acquire part with suitable grasp,task_19_step_1,task_19_step_1,task_19_step_3,cap_pick,RobS
+task_19_step_3,task_19,nut_m12,bolt_m12,Transport and align part with target,task_19_step_2,task_19_step_2,task_19_step_4,cap_reach,RobS
+task_19_step_4,task_19,nut_m12,bolt_m12,"Align nut with bolt, start thread and rotate to seated condition",task_19_step_3,task_19_step_3,task_19_step_5,cap_rotate,RobS
+task_19_step_5,task_19,nut_m12,bolt_m12,Release as appropriate and verify: Nut is threaded correctly and seated; torque is a locally defined parameter,task_19_step_4,task_19_step_4,task_20_step_1,cap_place,RobS
+task_20_step_1,task_20,nut_m16,bolt_m16,Localize part and matching target,task_19_step_5,,task_20_step_2,cap_vision,RobS
+task_20_step_2,task_20,nut_m16,bolt_m16,Acquire part with suitable grasp,task_20_step_1,task_20_step_1,task_20_step_3,cap_pick,RobS
+task_20_step_3,task_20,nut_m16,bolt_m16,Transport and align part with target,task_20_step_2,task_20_step_2,task_20_step_4,cap_reach,RobS
+task_20_step_4,task_20,nut_m16,bolt_m16,"Align nut with bolt, start thread and rotate to seated condition",task_20_step_3,task_20_step_3,task_20_step_5,cap_rotate,RobS
+task_20_step_5,task_20,nut_m16,bolt_m16,Release as appropriate and verify: Nut is threaded correctly and seated; torque is a locally defined parameter,task_20_step_4,task_20_step_4,,cap_place,RobS

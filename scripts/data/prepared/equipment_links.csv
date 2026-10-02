@@ -1,0 +1,8 @@
+agent_id,equipment_id,parent_equipment_id,membership_relation_id
+RobS,hardware_NVB6873432,,member_RobS_hardware_NVB6873432
+RobS,hardware_4789134Q-14,hardware_NVB6873432,member_RobS_hardware_4789134Q-14
+RobS,hardware_SYN-D405-001,hardware_NVB6873432,member_RobS_hardware_SYN-D405-001
+RobM,hardware_JHF-3434-FDAF,,member_RobM_hardware_JHF-3434-FDAF
+RobM,hardware_NVB68712F3,hardware_JHF-3434-FDAF,member_RobM_hardware_NVB68712F3
+RobM,hardware_4901700342,hardware_NVB68712F3,member_RobM_hardware_4901700342
+RobM,hardware_SYN-OAKDW-001,hardware_JHF-3434-FDAF,member_RobM_hardware_SYN-OAKDW-001

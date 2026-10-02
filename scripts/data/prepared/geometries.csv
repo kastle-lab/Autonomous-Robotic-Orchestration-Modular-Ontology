@@ -1,0 +1,42 @@
+component_id,description
+board,Dimensions not supplied in the attached files.
+gear_plate,Dimensions not supplied in the attached files.
+shaft_small,Dimensions not supplied in the attached files.
+shaft_medium,Dimensions not supplied in the attached files.
+shaft_large,Dimensions not supplied in the attached files.
+gear_small,Dimensions not supplied in the attached files.
+gear_medium,Dimensions not supplied in the attached files.
+gear_large,Dimensions not supplied in the attached files.
+round_peg_4,diameter_mm: 4 millimetre; length_mm: 50 millimetre; target_hole_diameter_mm: 4.1 millimetre; nominal_diametral_clearance_mm: 0.1 millimetre; Hole diameter is specified drill-bit size; actual clearance requires measurement.
+round_peg_8,diameter_mm: 8 millimetre; length_mm: 50 millimetre; target_hole_diameter_mm: 8.1 millimetre; nominal_diametral_clearance_mm: 0.1 millimetre; Hole diameter is specified drill-bit size; actual clearance requires measurement.
+round_peg_12,diameter_mm: 12 millimetre; length_mm: 50 millimetre; target_hole_diameter_mm: 12.2 millimetre; nominal_diametral_clearance_mm: 0.2 millimetre; Hole diameter is specified drill-bit size; actual clearance requires measurement.
+round_peg_16,diameter_mm: 16 millimetre; length_mm: 50 millimetre; target_hole_diameter_mm: 16.5 millimetre; nominal_diametral_clearance_mm: 0.5 millimetre; Hole diameter is specified drill-bit size; actual clearance requires measurement.
+rect_peg_4,width_mm: 4 millimetre; height_mm: 4 millimetre; length_mm: 50 millimetre; Rectangular pegs cut from 300 mm stock; hole dimensions not specified here. Chamfers optional.
+rect_peg_8,width_mm: 8 millimetre; height_mm: 7 millimetre; length_mm: 50 millimetre; Rectangular pegs cut from 300 mm stock; hole dimensions not specified here. Chamfers optional.
+rect_peg_12,width_mm: 12 millimetre; height_mm: 8 millimetre; length_mm: 50 millimetre; Rectangular pegs cut from 300 mm stock; hole dimensions not specified here. Chamfers optional.
+rect_peg_16,width_mm: 16 millimetre; height_mm: 10 millimetre; length_mm: 50 millimetre; Rectangular pegs cut from 300 mm stock; hole dimensions not specified here. Chamfers optional.
+socket_bnc,Dimensions not supplied in the attached files.
+plug_bnc,Dimensions not supplied in the attached files.
+plug_waterproof,Dimensions not supplied in the attached files.
+socket_waterproof,Dimensions not supplied in the attached files.
+plug_dsub,Dimensions not supplied in the attached files.
+socket_dsub,Dimensions not supplied in the attached files.
+plug_usb,Dimensions not supplied in the attached files.
+socket_usb,Dimensions not supplied in the attached files.
+plug_rj45,Dimensions not supplied in the attached files.
+socket_rj45,Dimensions not supplied in the attached files.
+bolt_m4,bolt_length_mm: 16 millimetre; Thread designation: M4; Nominal bolt length and thread designation from the attached fabrication BOM; other measurements unspecified.
+bolt_m8,bolt_length_mm: 18 millimetre; Thread designation: M8; Nominal bolt length and thread designation from the attached fabrication BOM; other measurements unspecified.
+bolt_m12,bolt_length_mm: 20 millimetre; Thread designation: M12; Nominal bolt length and thread designation from the attached fabrication BOM; other measurements unspecified.
+bolt_m16,bolt_length_mm: 25 millimetre; Thread designation: M16; Nominal bolt length and thread designation from the attached fabrication BOM; other measurements unspecified.
+nut_m4,bolt_length_mm: 16 millimetre; Thread designation: M4; Related component: bolt_m4; Coarse thread specified; pitch and torque not asserted.
+nut_m8,bolt_length_mm: 18 millimetre; Thread designation: M8; Related component: bolt_m8; Coarse thread specified; pitch and torque not asserted.
+nut_m12,bolt_length_mm: 20 millimetre; Thread designation: M12; Related component: bolt_m12; Coarse thread specified; pitch and torque not asserted.
+nut_m16,bolt_length_mm: 25 millimetre; Thread designation: M16; Related component: bolt_m16; Coarse thread specified; pitch and torque not asserted.
+housing_dsub,Dimensions not supplied in the attached files.
+housing_rj45,Dimensions not supplied in the attached files.
+standoff_with_nuts,Dimensions not supplied in the attached files.
+bolt_m3_16,bolt_length_mm: 16 millimetre; Thread designation: M3; Nominal bolt length and thread designation from the attached fabrication BOM; other measurements unspecified.
+bolt_m3_35,bolt_length_mm: 35 millimetre; Thread designation: M3; Nominal bolt length and thread designation from the attached fabrication BOM; other measurements unspecified.
+bolt_m6_25,bolt_length_mm: 25 millimetre; Thread designation: M6; Nominal bolt length and thread designation from the attached fabrication BOM; other measurements unspecified.
+nut_m3,Dimensions not supplied in the attached files.

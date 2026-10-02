@@ -1,0 +1,265 @@
+# Run prepare_data.py first. Resource IRIs use the original robo-r namespace.
+prefixes:
+  robo-ont: https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/lod/ontology#
+  robo-r: https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/lod/resource#
+  po: http://daselab.org/ContextualizedWinstonPartWhole#
+  rdfs: http://www.w3.org/2000/01/rdf-schema#
+  xsd: http://www.w3.org/2001/XMLSchema#
+
+mappings:
+  goals:
+    sources:
+      - ['scripts/data/prepared/goals.csv~csv']
+    s: robo-r:$(id)
+    po:
+      - [a, robo-ont:Goal]
+      - [rdfs:label, $(label)]
+      - [robo-ont:hasInstructionText, $(instruction)]
+
+  goal_success_states:
+    sources:
+      - ['scripts/data/prepared/success_states.csv~csv']
+    s: robo-r:$(goal_id)
+    po:
+      - [robo-ont:hasSuccessState, 'robo-r:success_state_$(goal_id)~iri']
+
+  success_states:
+    sources:
+      - ['scripts/data/prepared/success_states.csv~csv']
+    s: robo-r:success_state_$(goal_id)
+    po:
+      - [a, robo-ont:State]
+      - [rdfs:label, $(condition)]
+
+  goal_hierarchy:
+    sources:
+      - ['scripts/data/prepared/goal_links.csv~csv']
+    s: robo-r:$(ancestor_id)
+    po:
+      - [robo-ont:hasSubGoal, 'robo-r:$(descendant_id)~iri']
+
+  tasks:
+    sources:
+      - ['scripts/data/prepared/tasks.csv~csv']
+    s: robo-r:$(id)
+    po:
+      - [a, robo-ont:Task]
+      - [rdfs:label, $(instruction)]
+      - [robo-ont:requiresSpatialThing, 'robo-r:$(component_id)~iri']
+      - [robo-ont:requiresSpatialThing, 'robo-r:$(target_id)~iri']
+      - [robo-ont:dependsOnTask, 'robo-r:$(predecessor_id)~iri']
+      - [robo-ont:hasNextTask, 'robo-r:$(next_id)~iri']
+
+  goal_tasks:
+    sources:
+      - ['scripts/data/prepared/tasks.csv~csv']
+    s: robo-r:$(goal_id)
+    po:
+      - [robo-ont:hasTask, 'robo-r:$(id)~iri']
+
+  task_archetypes:
+    sources:
+      - ['scripts/data/prepared/task_archetypes.csv~csv']
+    s: robo-r:$(step_id)
+    po:
+      - [robo-ont:requiresArchetype, 'robo-ont:$(archetype_name)~iri']
+
+  hardware_capabilities:
+    sources:
+      - ['scripts/data/prepared/hardware_capabilities.csv~csv']
+    s: robo-ont:$(id)
+    po:
+      - [robo-ont:enabledBySpatialThing, 'robo-r:$(hardware_id)~iri']
+
+  hardware_capability_enablers:
+    sources:
+      - ['scripts/data/prepared/hardware_capabilities.csv~csv']
+    s: robo-r:$(hardware_id)
+    po:
+      - [robo-ont:enablesCapability, 'robo-ont:$(id)~iri']
+
+  capability_holders:
+    sources:
+      - ['scripts/data/prepared/capability_holders.csv~csv']
+    s: robo-r:$(holder_id)
+    po:
+      - [robo-ont:hasCapability, 'robo-ont:$(capability_id)~iri']
+
+  agents:
+    sources:
+      - ['scripts/data/prepared/agents.csv~csv']
+    s: robo-r:$(id)
+    po:
+      - [a, robo-ont:Agent]
+      - [rdfs:label, $(label)]
+      - [robo-ont:hasMetadata, 'robo-r:metadata_$(id)~iri']
+
+  agent_metadata:
+    sources:
+      - ['scripts/data/prepared/agents.csv~csv']
+    s: robo-r:metadata_$(id)
+    po:
+      - [a, robo-ont:Metadata]
+      - p: robo-ont:hasName
+        o:
+          value: $(label)
+          datatype: xsd:string
+
+  equipment_members:
+    sources:
+      - ['scripts/data/prepared/equipment_links.csv~csv']
+    s: robo-r:$(equipment_id)
+    po:
+      - [http://daselab.org/ContextualizedWinstonPartWhole#isPartOf, 'robo-r:$(membership_relation_id)~iri']
+
+  equipment_memberships:
+    sources:
+      - ['scripts/data/prepared/equipment_links.csv~csv']
+    s: robo-r:$(membership_relation_id)
+    po:
+      - [a, 'http://daselab.org/ContextualizedWinstonPartWhole#PO-Member-Type']
+      - [http://daselab.org/ContextualizedWinstonPartWhole#hasWhole, 'robo-r:$(agent_id)~iri']
+
+  mounted_equipment:
+    sources:
+      - ['scripts/data/prepared/equipment_links.csv~csv']
+    s: robo-r:$(equipment_id)
+    po:
+      - [http://daselab.org/ContextualizedWinstonPartWhole#po-component, 'robo-r:$(parent_equipment_id)~iri']
+
+  worker_roles:
+    sources:
+      - ['scripts/data/prepared/roles.csv~csv']
+    s: robo-r:$(role_id)
+    po:
+      - [a, robo-ont:Worker]
+
+  task_roles:
+    sources:
+      - ['scripts/data/prepared/roles.csv~csv']
+    s: robo-r:$(step_id)
+    po:
+      - [robo-ont:providesRole, 'robo-r:$(role_id)~iri']
+
+  agent_roles:
+    sources:
+      - ['scripts/data/prepared/roles.csv~csv']
+    s: robo-r:$(agent_id)
+    po:
+      - [robo-ont:assumesRole, 'robo-r:$(role_id)~iri']
+
+  actions:
+    sources:
+      - ['scripts/data/prepared/actions.csv~csv']
+    s: robo-r:$(action_id)
+    po:
+      - [a, robo-ont:Action]
+      - [rdfs:label, $(operator)]
+
+  action_capabilities:
+    sources:
+      - ['scripts/data/prepared/action_capabilities.csv~csv']
+    s: robo-ont:$(capability_id)
+    po:
+      - [robo-ont:enablesAction, 'robo-r:$(action_id)~iri']
+
+  objects:
+    sources:
+      - ['scripts/data/prepared/objects.csv~csv']
+    s: robo-r:$(component_id)
+    po:
+      - [a, robo-ont:Object]
+      - [rdfs:label, $(item_name)]
+      - [robo-ont:hasMetadata, 'robo-r:metadata_$(component_id)~iri']
+
+  object_metadata:
+    sources:
+      - ['scripts/data/prepared/objects.csv~csv']
+    s: robo-r:metadata_$(component_id)
+    po:
+      - [a, robo-ont:Metadata]
+      - [robo-ont:hasName, $(item_name)]
+      - [robo-ont:hasTag, $(part_number)]
+      - [robo-ont:hasTag, $(nist_item_id)]
+      - [robo-ont:hasDescription, $(notes)]
+
+  board:
+    sources:
+      - ['scripts/data/prepared/features.csv~csv']
+    s: robo-r:board
+    po:
+      - [a, robo-ont:Object]
+      - [robo-ont:hasFeature, 'robo-r:$(id)~iri']
+
+  features:
+    sources:
+      - ['scripts/data/prepared/features.csv~csv']
+    s: robo-r:$(id)
+    po:
+      - [a, robo-ont:Feature]
+      - [rdfs:label, $(label)]
+
+  zones:
+    sources:
+      - ['scripts/data/prepared/zones.csv~csv']
+    s: robo-r:$(id)
+    po:
+      - [a, robo-ont:Environment]
+      - [rdfs:label, $(label)]
+
+  states:
+    sources:
+      - ['scripts/data/prepared/states.csv~csv']
+    s: robo-r:$(id)
+    po:
+      - [a, robo-ont:State]
+      - [rdfs:label, $(label)]
+
+  object_states:
+    sources:
+      - ['scripts/data/prepared/states.csv~csv']
+    s: robo-r:$(component_id)
+    po:
+      - [robo-ont:hasState, 'robo-r:$(id)~iri']
+
+  geometries:
+    sources:
+      - ['scripts/data/prepared/geometries.csv~csv']
+    s: robo-r:geometry_$(component_id)
+    po:
+      - [a, robo-ont:Geometry]
+      - [robo-ont:hasMetadata, 'robo-r:metadata_geometry_$(component_id)~iri']
+
+  geometry_metadata:
+    sources:
+      - ['scripts/data/prepared/geometries.csv~csv']
+    s: robo-r:metadata_geometry_$(component_id)
+    po:
+      - [a, robo-ont:Metadata]
+      - [robo-ont:hasDescription, $(description)]
+
+  object_geometries:
+    sources:
+      - ['scripts/data/prepared/geometries.csv~csv']
+    s: robo-r:$(component_id)
+    po:
+      - [robo-ont:hasGeometry, 'robo-r:geometry_$(component_id)~iri']
+
+  hardware:
+    sources:
+      - ['scripts/data/prepared/hardware.csv~csv']
+    s: robo-r:$(id)
+    po:
+      - [a, 'robo-ont:$(class_iri)~iri']
+      - [rdfs:label, $(name)]
+      - [robo-ont:hasMetadata, 'robo-r:metadata_$(id)~iri']
+
+  hardware_metadata:
+    sources:
+      - ['scripts/data/prepared/hardware.csv~csv']
+    s: robo-r:metadata_$(id)
+    po:
+      - [a, robo-ont:Metadata]
+      - [robo-ont:hasName, $(name)]
+      - [robo-ont:hasSerial, $(serial)]
+      - [robo-ont:hasDescription, $(description)]
