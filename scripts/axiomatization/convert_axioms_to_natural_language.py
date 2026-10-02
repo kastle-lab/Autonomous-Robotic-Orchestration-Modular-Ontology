@@ -513,6 +513,7 @@ if __name__ == "__main__":
             "Task requiresSpatialThing SpatialThing",
             "Task requiresArchetype Archetype",
             "SpatialThing enablesCapability Capability",
+            "SpatialThing hasPhysicalSpecification Specification",
             "SpatialThing partOf SpatialThing",
             "SpatialThing spatiallyLocatedIn SpatialThing",
             "SpatialThing assumesRole Role",
@@ -535,7 +536,7 @@ if __name__ == "__main__":
             "Goal hasTask Task",
             "Task dependsOnTask Task",
             "Task hasNextTask Task",
-            "SpatialThing hasGeometry Geometry",
+            "Feature hasGeometry Geometry",
             "SpatialThing hasFeature Feature",
         ]
 
@@ -550,9 +551,10 @@ if __name__ == "__main__":
             "SpatialThing hasMetadata Metadata",
             "SpatialThing hasSpatiotemporalExtent SpatiotemporalExtent",
             "SpatialThing currentState State",
-            "SpatialThing hasGeometry Geometry",
+            "Feature hasGeometry Geometry",
             "SpatialThing hasFeature Feature",
             "SpatialThing enablesCapability Capability",
+            "SpatialThing hasPhysicalSpecification Specification",
             "SpatialThing partOf SpatialThing",
             "SpatialThing spatiallyLocatedIn SpatialThing",
             "SpatialThing assumesRole Role",
@@ -605,7 +607,7 @@ if __name__ == "__main__":
         iex = [
             "Goal hasTask Task",
             "Task providesRole Role",
-            "SpatialThing hasGeometry Geometry",
+            "Feature hasGeometry Geometry",
             "SpatialThing hasFeature Feature",
             "SpatialThing enablesCapability Capability",
             "SpatialThing assumesRole Role",

@@ -218,6 +218,11 @@ global range: `owl:Thing SubClassOf hasName only xsd:string`
 
 qualified scoped functionality: `Metadata SubClassOf hasName max 1 xsd:string`
 
+# SpatialThing hasPhysicalSpecification Specification
+global domain: `hasPhysicalSpecification some owl:Thing SubClassOf SpatialThing`
+
+global range: `owl:Thing SubClassOf hasPhysicalSpecification only Specification`
+
 # SpatialThing partOf SpatialThing
 global domain: `partOf some owl:Thing SubClassOf SpatialThing`
 
@@ -252,12 +257,12 @@ global range: `owl:Thing SubClassOf hasInstructionText only xsd:string`
 
 qualified scoped functionality: `Goal SubClassOf hasInstructionText max 1 xsd:string`
 
-# SpatialThing hasGeometry Geometry
+# Feature hasGeometry Geometry
 global range: `owl:Thing SubClassOf hasGeometry only Geometry`
 
-inverse existential: `Geometry SubClassOf inverse hasGeometry some SpatialThing`
+inverse existential: `Geometry SubClassOf inverse hasGeometry some Feature`
 
-scoped domain: `hasGeometry some Geometry SubClassOf SpatialThing`
+scoped domain: `hasGeometry some Geometry SubClassOf Feature`
 
 # SpatialThing hasFeature Feature
 global range: `owl:Thing SubClassOf hasFeature only Feature`

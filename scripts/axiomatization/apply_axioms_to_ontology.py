@@ -94,7 +94,14 @@ def ontology_base(graph: Graph) -> str:
     ontology_iris = list(graph.subjects(RDF.type, OWL.Ontology))
     if len(ontology_iris) != 1 or not isinstance(ontology_iris[0], URIRef):
         raise ValueError("Expected exactly one named owl:Ontology in the RDF file")
-    return str(ontology_iris[0])
+    ontology_iri = str(ontology_iris[0])
+    namespace = ontology_iri if ontology_iri.endswith("#") else ontology_iri + "#"
+    if not any(
+        str(entity).startswith(namespace)
+        for entity in graph.subjects(RDF.type, OWL.Class)
+    ):
+        raise ValueError(f"No declared classes use the ontology namespace {namespace}")
+    return namespace
 
 
 def class_or_datatype(name: str, base: str) -> URIRef:
