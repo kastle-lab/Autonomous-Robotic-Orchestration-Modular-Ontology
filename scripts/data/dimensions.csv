@@ -1,0 +1,42 @@
+component_id,related_component_id,diameter_mm,width_mm,height_mm,length_mm,target_hole_diameter_mm,nominal_diametral_clearance_mm,thread_designation,bolt_length_mm,notes
+board,,,,,,,,,,Dimensions not supplied in the attached files.
+gear_plate,,,,,,,,,,Dimensions not supplied in the attached files.
+shaft_small,,,,,,,,,,Dimensions not supplied in the attached files.
+shaft_medium,,,,,,,,,,Dimensions not supplied in the attached files.
+shaft_large,,,,,,,,,,Dimensions not supplied in the attached files.
+gear_small,,,,,,,,,,Dimensions not supplied in the attached files.
+gear_medium,,,,,,,,,,Dimensions not supplied in the attached files.
+gear_large,,,,,,,,,,Dimensions not supplied in the attached files.
+round_peg_4,,4,,,50,4.1,0.1,,,Hole diameter is specified drill-bit size; actual clearance requires measurement.
+round_peg_8,,8,,,50,8.1,0.1,,,Hole diameter is specified drill-bit size; actual clearance requires measurement.
+round_peg_12,,12,,,50,12.2,0.2,,,Hole diameter is specified drill-bit size; actual clearance requires measurement.
+round_peg_16,,16,,,50,16.5,0.5,,,Hole diameter is specified drill-bit size; actual clearance requires measurement.
+rect_peg_4,,,4,4,50,,,,,Rectangular pegs cut from 300 mm stock; hole dimensions not specified here. Chamfers optional.
+rect_peg_8,,,8,7,50,,,,,Rectangular pegs cut from 300 mm stock; hole dimensions not specified here. Chamfers optional.
+rect_peg_12,,,12,8,50,,,,,Rectangular pegs cut from 300 mm stock; hole dimensions not specified here. Chamfers optional.
+rect_peg_16,,,16,10,50,,,,,Rectangular pegs cut from 300 mm stock; hole dimensions not specified here. Chamfers optional.
+socket_bnc,,,,,,,,,,Dimensions not supplied in the attached files.
+plug_bnc,,,,,,,,,,Dimensions not supplied in the attached files.
+plug_waterproof,,,,,,,,,,Dimensions not supplied in the attached files.
+socket_waterproof,,,,,,,,,,Dimensions not supplied in the attached files.
+plug_dsub,,,,,,,,,,Dimensions not supplied in the attached files.
+socket_dsub,,,,,,,,,,Dimensions not supplied in the attached files.
+plug_usb,,,,,,,,,,Dimensions not supplied in the attached files.
+socket_usb,,,,,,,,,,Dimensions not supplied in the attached files.
+plug_rj45,,,,,,,,,,Dimensions not supplied in the attached files.
+socket_rj45,,,,,,,,,,Dimensions not supplied in the attached files.
+bolt_m4,,,,,,,,M4,16,Nominal bolt length and thread designation from the attached fabrication BOM; other measurements unspecified.
+bolt_m8,,,,,,,,M8,18,Nominal bolt length and thread designation from the attached fabrication BOM; other measurements unspecified.
+bolt_m12,,,,,,,,M12,20,Nominal bolt length and thread designation from the attached fabrication BOM; other measurements unspecified.
+bolt_m16,,,,,,,,M16,25,Nominal bolt length and thread designation from the attached fabrication BOM; other measurements unspecified.
+nut_m4,bolt_m4,,,,,,,M4,16,Coarse thread specified; pitch and torque not asserted.
+nut_m8,bolt_m8,,,,,,,M8,18,Coarse thread specified; pitch and torque not asserted.
+nut_m12,bolt_m12,,,,,,,M12,20,Coarse thread specified; pitch and torque not asserted.
+nut_m16,bolt_m16,,,,,,,M16,25,Coarse thread specified; pitch and torque not asserted.
+housing_dsub,,,,,,,,,,Dimensions not supplied in the attached files.
+housing_rj45,,,,,,,,,,Dimensions not supplied in the attached files.
+standoff_with_nuts,,,,,,,,,,Dimensions not supplied in the attached files.
+bolt_m3_16,,,,,,,,M3,16,Nominal bolt length and thread designation from the attached fabrication BOM; other measurements unspecified.
+bolt_m3_35,,,,,,,,M3,35,Nominal bolt length and thread designation from the attached fabrication BOM; other measurements unspecified.
+bolt_m6_25,,,,,,,,M6,25,Nominal bolt length and thread designation from the attached fabrication BOM; other measurements unspecified.
+nut_m3,,,,,,,,,,Dimensions not supplied in the attached files.
