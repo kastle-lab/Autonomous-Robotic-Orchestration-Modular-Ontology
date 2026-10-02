@@ -35,14 +35,22 @@ The ontology is organized around several core patterns:
 
 ## Namespaces
 
-| Prefix     | Namespace                                                                                       |
-| ---------- | ----------------------------------------------------------------------------------------------- |
+| Prefix | Namespace |
+| ------ | --------- |
 | `robo-ont` | `https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/lod/ontology#` |
-| `robo-r`   | `https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/lod/resource#` |
+| `robo-r` | `https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/lod/resource#` |
+| `po` | `http://daselab.org/ContextualizedWinstonPartWhole#` |
+
+`robo-ont` abbreviates the classes and properties declared in `robo-ont.rdf`.
+The ontology document IRI is the same base without the trailing `#`.
+`robo-r` identifies scenario resources, while `po` abbreviates the imported
+part-whole ontology. See the [query examples](scripts/materialization/README.md#querying-the-graph).
 
 ## Tooling
 
-[Kastle Foundry](https://github.com/kastle-lab/foundry) was used to materialize RDF/Turtle graph fragments from the synthetic CSV data and YAML mappings.
+[Morph-KGC](https://github.com/morph-kgc/morph-kgc) materializes an RDF graph in N-Triples from the scenario CSV data and YARRRML mapping.
+The [CSV mapping workflow](scripts/materialization/README.md) contains the preparation, configuration, and materialization commands.
+The [competency-question queries](deliverables/queries/README.md) can be run against the materialized graph.
 
 ## Validation Status
 

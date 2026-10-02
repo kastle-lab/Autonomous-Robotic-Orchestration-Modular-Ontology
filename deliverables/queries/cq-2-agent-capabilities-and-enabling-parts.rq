@@ -1,0 +1,24 @@
+# CQ 2: Shared capabilities available to each scenario agent and their enablers.
+# Query the ontology and materialized scenario together.
+PREFIX robo-ont: <https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/lod/ontology#>
+PREFIX robo-r: <https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/lod/resource#>
+PREFIX po: <http://daselab.org/ContextualizedWinstonPartWhole#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+
+SELECT DISTINCT ?agent ?agentName ?capability ?capabilityType ?enablingPart ?partName ?serial
+WHERE {
+  VALUES ?agent { robo-r:RobS robo-r:RobM }
+  ?agent a robo-ont:Agent ;
+         robo-ont:hasMetadata/robo-ont:hasName ?agentName ;
+         robo-ont:hasCapability ?capability .
+  ?capability a ?capabilityType ;
+              robo-ont:enabledBySpatialThing ?enablingPart .
+  ?capabilityType rdfs:subClassOf* robo-ont:Capability .
+  ?enablingPart robo-ont:enablesCapability ?capability ;
+                robo-ont:hasMetadata/robo-ont:hasName ?partName ;
+                robo-ont:hasMetadata/robo-ont:hasSerial ?serial ;
+                po:isPartOf ?membership .
+  ?membership a po:PO-Member-Type ;
+              po:hasWhole ?agent .
+}
+ORDER BY ?agentName ?capabilityType ?partName

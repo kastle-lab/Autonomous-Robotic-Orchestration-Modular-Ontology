@@ -1,0 +1,20 @@
+# CQ 2: Scenario agents that hold every shared capability required by an Archetype.
+# Load the updated ontology and scenario data into the same queryable graph.
+PREFIX robo-ont: <https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/lod/ontology#>
+PREFIX robo-r: <https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/lod/resource#>
+
+SELECT DISTINCT ?agent ?agentName ?archetype
+WHERE {
+  VALUES ?agent { robo-r:RobS robo-r:RobM }
+  ?agent a robo-ont:Agent ;
+         robo-ont:hasMetadata/robo-ont:hasName ?agentName .
+  ?archetype a robo-ont:Archetype ;
+             robo-ont:requiresCapability ?someRequirement .
+  FILTER NOT EXISTS {
+    ?archetype robo-ont:requiresCapability ?requiredCapability .
+    FILTER NOT EXISTS {
+      ?agent robo-ont:hasCapability ?requiredCapability .
+    }
+  }
+}
+ORDER BY ?archetype ?agentName

@@ -1,0 +1,14 @@
+# CQ 18: Tasks requiring the selected object.
+# Presence of the object is necessary, not sufficient to complete a task.
+PREFIX robo-ont: <https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/lod/ontology#>
+PREFIX robo-r: <https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/lod/resource#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+
+SELECT DISTINCT ?task ?instruction
+WHERE {
+  VALUES ?object { robo-r:round_peg_4 }
+  ?task a robo-ont:Task ;
+        robo-ont:requiresSpatialThing ?object ;
+        rdfs:label ?instruction .
+}
+ORDER BY ?task

@@ -1,0 +1,13 @@
+# CQ 3: Agents assigned to the selected atomic task through Worker roles.
+PREFIX robo-ont: <https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/lod/ontology#>
+PREFIX robo-r: <https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/lod/resource#>
+
+SELECT DISTINCT ?agent ?name
+WHERE {
+  VALUES ?task { robo-r:task_01_step_1 }
+  ?task robo-ont:providesRole ?role .
+  ?agent a robo-ont:Agent ;
+         robo-ont:assumesRole ?role ;
+         robo-ont:hasMetadata/robo-ont:hasName ?name .
+}
+ORDER BY ?name

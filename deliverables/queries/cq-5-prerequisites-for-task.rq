@@ -1,0 +1,13 @@
+# CQ 5: All predecessor tasks required before the selected task.
+# dependsOnTask is immediate; + follows the complete prerequisite chain.
+PREFIX robo-ont: <https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/lod/ontology#>
+PREFIX robo-r: <https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/lod/resource#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+
+SELECT DISTINCT ?prerequisite ?instruction
+WHERE {
+  VALUES ?task { robo-r:task_06_step_2 }
+  ?task robo-ont:dependsOnTask+ ?prerequisite .
+  ?prerequisite rdfs:label ?instruction .
+}
+ORDER BY ?prerequisite

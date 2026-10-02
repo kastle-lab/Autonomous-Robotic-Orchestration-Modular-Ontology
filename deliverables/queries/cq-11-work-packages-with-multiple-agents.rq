@@ -1,0 +1,16 @@
+# CQ 11: Work-package Goals whose tasks have assignments to multiple agents.
+# This shows planned participation, not simultaneous execution.
+PREFIX robo-ont: <https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/lod/ontology#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+
+SELECT ?workPackage ?label (COUNT(DISTINCT ?agent) AS ?agentCount)
+WHERE {
+  ?workPackage a robo-ont:Goal ;
+               rdfs:label ?label ;
+               robo-ont:hasTask ?task .
+  ?task robo-ont:providesRole ?role .
+  ?agent robo-ont:assumesRole ?role .
+}
+GROUP BY ?workPackage ?label
+HAVING (COUNT(DISTINCT ?agent) > 1)
+ORDER BY ?workPackage

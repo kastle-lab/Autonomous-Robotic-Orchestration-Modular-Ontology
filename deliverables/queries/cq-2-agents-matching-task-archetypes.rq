@@ -1,0 +1,24 @@
+# CQ 2: Candidate agents that hold every capability required by a task Archetype.
+# Load the ontology and scenario data into the same queryable graph.
+PREFIX robo-ont: <https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/lod/ontology#>
+PREFIX robo-r: <https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/lod/resource#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+
+SELECT DISTINCT ?task ?taskLabel ?archetype ?agent ?agentName
+WHERE {
+  VALUES ?agent { robo-r:RobS robo-r:RobM }
+  ?task a robo-ont:Task ;
+        rdfs:label ?taskLabel ;
+        robo-ont:requiresArchetype ?archetype .
+  ?agent a robo-ont:Agent ;
+         robo-ont:hasMetadata/robo-ont:hasName ?agentName .
+  ?archetype a robo-ont:Archetype ;
+             robo-ont:requiresCapability ?someRequirement .
+  FILTER NOT EXISTS {
+    ?archetype robo-ont:requiresCapability ?requiredCapability .
+    FILTER NOT EXISTS {
+      ?agent robo-ont:hasCapability ?requiredCapability .
+    }
+  }
+}
+ORDER BY ?task ?agentName

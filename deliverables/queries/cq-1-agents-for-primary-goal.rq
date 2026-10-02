@@ -1,0 +1,16 @@
+# CQ 1: Agents assigned to tasks under the selected primary goal.
+# This lists assigned agents, not a proven minimum team.
+PREFIX robo-ont: <https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/lod/ontology#>
+PREFIX robo-r: <https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/lod/resource#>
+
+SELECT DISTINCT ?agent ?name
+WHERE {
+  VALUES ?primaryGoal { robo-r:goal_assemble }
+  ?primaryGoal robo-ont:hasSubGoal* ?workPackage .
+  ?workPackage robo-ont:hasTask ?task .
+  ?task robo-ont:providesRole ?role .
+  ?agent a robo-ont:Agent ;
+         robo-ont:assumesRole ?role ;
+         robo-ont:hasMetadata/robo-ont:hasName ?name .
+}
+ORDER BY ?name

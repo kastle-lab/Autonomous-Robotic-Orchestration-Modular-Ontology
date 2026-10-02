@@ -1,0 +1,13 @@
+# CQ 7: Tasks in different work-package goals sharing an immediate prerequisite.
+# The current serial task plan has no such branching, so zero rows are expected.
+PREFIX robo-ont: <https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/lod/ontology#>
+
+SELECT DISTINCT ?goalA ?taskA ?goalB ?taskB ?sharedPrerequisite
+WHERE {
+  ?goalA robo-ont:hasTask ?taskA .
+  ?goalB robo-ont:hasTask ?taskB .
+  ?taskA robo-ont:dependsOnTask ?sharedPrerequisite .
+  ?taskB robo-ont:dependsOnTask ?sharedPrerequisite .
+  FILTER(STR(?goalA) < STR(?goalB))
+}
+ORDER BY ?goalA ?goalB ?sharedPrerequisite

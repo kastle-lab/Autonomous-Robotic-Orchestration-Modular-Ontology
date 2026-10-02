@@ -1,0 +1,14 @@
+# CQ 19: Physical objects required by tasks beneath the selected goal.
+PREFIX robo-ont: <https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/lod/ontology#>
+PREFIX robo-r: <https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/lod/resource#>
+
+SELECT DISTINCT ?object ?name
+WHERE {
+  VALUES ?goal { robo-r:goal_assemble }
+  ?goal robo-ont:hasSubGoal* ?workPackage .
+  ?workPackage robo-ont:hasTask ?task .
+  ?task robo-ont:requiresSpatialThing ?object .
+  ?object a robo-ont:Object ;
+          robo-ont:hasMetadata/robo-ont:hasName ?name .
+}
+ORDER BY ?name

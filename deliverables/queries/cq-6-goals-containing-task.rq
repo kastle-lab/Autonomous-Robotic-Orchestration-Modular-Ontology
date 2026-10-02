@@ -1,0 +1,15 @@
+# CQ 6: Goals containing the selected task, directly or by subgoal.
+# Membership alone does not prove that any goal has been achieved.
+PREFIX robo-ont: <https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/lod/ontology#>
+PREFIX robo-r: <https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/lod/resource#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+
+SELECT DISTINCT ?goal ?label
+WHERE {
+  VALUES ?task { robo-r:task_01_step_1 }
+  ?directGoal robo-ont:hasTask ?task .
+  ?goal a robo-ont:Goal ;
+        robo-ont:hasSubGoal* ?directGoal ;
+        rdfs:label ?label .
+}
+ORDER BY ?goal

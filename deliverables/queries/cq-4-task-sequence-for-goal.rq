@@ -1,0 +1,25 @@
+# CQ 4: Ordered atomic tasks beneath the selected primary goal.
+# Position is derived from the asserted single-successor task chain.
+PREFIX robo-ont: <https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/lod/ontology#>
+PREFIX robo-r: <https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/lod/resource#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+
+SELECT ?position ?task ?instruction
+WHERE {
+  {
+    SELECT ?task ?instruction (COUNT(DISTINCT ?earlierTask) + 1 AS ?position)
+    WHERE {
+      VALUES ?primaryGoal { robo-r:goal_assemble }
+      ?primaryGoal robo-ont:hasSubGoal* ?workPackage .
+      ?workPackage robo-ont:hasTask ?task .
+      ?task rdfs:label ?instruction .
+      OPTIONAL {
+        ?primaryGoal robo-ont:hasSubGoal* ?earlierGoal .
+        ?earlierGoal robo-ont:hasTask ?earlierTask .
+        ?earlierTask robo-ont:hasNextTask+ ?task .
+      }
+    }
+    GROUP BY ?task ?instruction
+  }
+}
+ORDER BY ?position

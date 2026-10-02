@@ -1,0 +1,22 @@
+# CQ 2: Scenario agents with Navigate enabled by a base robot or attached member.
+PREFIX robo-ont: <https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/lod/ontology#>
+PREFIX po: <http://daselab.org/ContextualizedWinstonPartWhole#>
+
+SELECT DISTINCT ?agent ?agentName ?enablingPart ?partName ?serial ?equipmentRole
+WHERE {
+  ?agent a robo-ont:Agent ;
+         robo-ont:hasMetadata/robo-ont:hasName ?agentName ;
+         robo-ont:hasCapability ?capability .
+  ?capability a robo-ont:Navigate ;
+              robo-ont:enabledBySpatialThing ?enablingPart .
+  ?enablingPart robo-ont:enablesCapability ?capability ;
+                robo-ont:hasMetadata ?partMetadata ;
+                po:isPartOf ?membership .
+  ?partMetadata robo-ont:hasName ?partName ;
+                robo-ont:hasSerial ?serial .
+  ?membership a po:PO-Member-Type ;
+              po:hasWhole ?agent .
+  OPTIONAL { ?enablingPart po:po-component ?parentPart . }
+  BIND(IF(BOUND(?parentPart), "attached member", "base robot") AS ?equipmentRole)
+}
+ORDER BY ?agentName ?partName

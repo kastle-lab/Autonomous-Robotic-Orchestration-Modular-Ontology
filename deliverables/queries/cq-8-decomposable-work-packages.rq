@@ -1,0 +1,13 @@
+# CQ 8: Goals with subgoals or atomic tasks.
+# The current model represents decomposable work packages as Goals, not Tasks.
+PREFIX robo-ont: <https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/lod/ontology#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+
+SELECT DISTINCT ?goal ?label
+WHERE {
+  ?goal a robo-ont:Goal ; rdfs:label ?label .
+  { ?goal robo-ont:hasSubGoal ?subgoal . }
+  UNION
+  { ?goal robo-ont:hasTask ?task . }
+}
+ORDER BY ?goal

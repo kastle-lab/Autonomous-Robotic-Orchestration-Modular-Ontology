@@ -1,0 +1,11 @@
+# CQ 16: Asserted ontology categories for named physical objects.
+# The current mapping generally provides only the broad Object category.
+PREFIX robo-ont: <https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/lod/ontology#>
+
+SELECT DISTINCT ?object ?name ?category
+WHERE {
+  ?object a robo-ont:Object ;
+          a ?category ;
+          robo-ont:hasMetadata/robo-ont:hasName ?name .
+}
+ORDER BY ?name ?category
