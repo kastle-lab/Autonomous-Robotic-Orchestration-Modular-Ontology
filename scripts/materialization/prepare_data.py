@@ -17,6 +17,7 @@ DEFAULT_OUTPUT = SOURCE_DIR / "prepared"
 SCENARIO_PATH = ROOT / "example-scenario" / "example-scenario-1.md"
 ONTOLOGY_PATH = ROOT / "deliverables" / "ontology" / "robo-ont.rdf"
 ONTOLOGY_NAMESPACE = "https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/lod/ontology#"
+RESOURCE_NAMESPACE = "https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/lod/resource#"
 SOURCE_TASK_URI_BASE = "https://example.org/nist-atb1/resource/"
 ID_PATTERN = re.compile(r"^[A-Za-z0-9_-]+$")
 
@@ -48,50 +49,58 @@ BOARD_FLOAT_FIELDS = (
     "torque_limit_nm",
 )
 
-DIMENSION_UNITS = {
-    "diameter_mm": "millimetre",
-    "width_mm": "millimetre",
-    "height_mm": "millimetre",
-    "length_mm": "millimetre",
-    "target_hole_diameter_mm": "millimetre",
-    "nominal_diametral_clearance_mm": "millimetre",
-    "bolt_length_mm": "millimetre",
-}
-
-HARDWARE_UNITS = {
-    "Repeated Positioning Accuracy (±mm)": "millimetre",
-    "Min Power Output (Volts)": "volt",
-    "Max Power Output (Volts)": "volt",
-    "Power Output Amps": "ampere",
-    "Speed (km/h)": "kilometre_per_hour",
-    "Operating Range (mm)": "millimetre",
-    "Operating Range (km)": "kilometre",
-    "DoF (Degree of Freedom)": "count",
-    "Max Payload (Grams)": "gram",
-    "Weight (Grams)": "gram",
-    "Min Operating Temperature (Celsius)": "degree_celsius",
-    "Max Operating Temperature (Celsius)": "degree_celsius",
-    "Extension Range (mm)": "millimetre",
-    "Min Stroke (mm)": "millimetre",
-    "Max Stroke (mm)": "millimetre",
-    "Min Grip Force (N)": "newton",
-    "Max Grip Force (N)": "newton",
-    "Form-fit grip payload (Grams)": "gram",
-    "Friction-grip-payload (Grams)": "gram",
-}
-
-VISION_NUMERIC_FIELDS = (
-    "Ideal Depth Min (cm)",
-    "Ideal Depth Max (cm)",
-    "Depth FOV H (deg)",
-    "Depth FOV V (deg)",
-    "Depth FOV D (deg)",
-    "Depth Max Frame Rate (fps)",
-    "RGB FOV H (deg)",
-    "RGB FOV V (deg)",
-    "RGB FOV D (deg)",
-    "Weight (g)",
+DIMENSION_FIELDS = (
+    "diameter_mm",
+    "width_mm",
+    "height_mm",
+    "length_mm",
+    "target_hole_diameter_mm",
+    "nominal_diametral_clearance_mm",
+    "bolt_length_mm",
 )
+
+HARDWARE_MEASUREMENTS = {
+    "Repeated Positioning Accuracy (±mm)": ("repeatedPositioningAccuracy", "UpperThreshold", "milimeter"),
+    "Min Power Output (Volts)": ("voltage", "LowerThreshold", "volt"),
+    "Max Power Output (Volts)": ("voltage", "UpperThreshold", "volt"),
+    "Power Output Amps": ("current", "NominalThreshold", "ampere"),
+    "Speed (km/h)": ("velocity", "NominalThreshold", "kilometre_per_hour"),
+    "Operating Range (mm)": ("rangeOfMotion", "NominalThreshold", "milimeter"),
+    "Operating Range (km)": ("rangeOfMotion", "NominalThreshold", "kilometre"),
+    "DoF (Degree of Freedom)": ("degreesOfFreedom", "NominalThreshold", "count"),
+    "Max Payload (Grams)": ("payload", "UpperThreshold", "gram"),
+    "Weight (Grams)": ("weight", "NominalThreshold", "gram"),
+    "Min Operating Temperature (Celsius)": ("temperature", "LowerThreshold", "celsius"),
+    "Max Operating Temperature (Celsius)": ("temperature", "UpperThreshold", "celsius"),
+    "Extension Range (mm)": ("rangeOfMotion", "NominalThreshold", "milimeter"),
+    "Min Stroke (mm)": ("stroke", "LowerThreshold", "milimeter"),
+    "Max Stroke (mm)": ("stroke", "UpperThreshold", "milimeter"),
+    "Min Grip Force (N)": ("gripForce", "LowerThreshold", "newton"),
+    "Max Grip Force (N)": ("gripForce", "UpperThreshold", "newton"),
+    "Form-fit grip payload (Grams)": ("formFitGrip", "UpperThreshold", "gram"),
+    "Friction-grip-payload (Grams)": ("frictionGrip", "UpperThreshold", "gram"),
+}
+
+for dimension in ("Length", "Width", "Height", "Depth"):
+    for suffix, unit in (("mm", "milimeter"), ("cm", "centimeter"), ("in", "inch"), ("inch", "inch")):
+        HARDWARE_MEASUREMENTS[f"{dimension} ({suffix})"] = (
+            dimension.lower(), "NominalThreshold", unit
+        )
+
+VISION_MEASUREMENTS = {
+    "Ideal Depth Min (cm)": ("idealDepthRange", "LowerThreshold", "centimeter"),
+    "Ideal Depth Max (cm)": ("idealDepthRange", "UpperThreshold", "centimeter"),
+    "Depth FOV H (deg)": ("depthFovHorizontal", "NominalThreshold", "degreeAngle"),
+    "Depth FOV V (deg)": ("depthFovVertical", "NominalThreshold", "degreeAngle"),
+    "Depth FOV D (deg)": ("depthFovDiagonal", "NominalThreshold", "degreeAngle"),
+    "Depth Max Frame Rate (fps)": ("depthFrameRate", "UpperThreshold", "frame_per_second"),
+    "RGB FOV H (deg)": ("rgbFovHorizontal", "NominalThreshold", "degreeAngle"),
+    "RGB FOV V (deg)": ("rgbFovVertical", "NominalThreshold", "degreeAngle"),
+    "RGB FOV D (deg)": ("rgbFovDiagonal", "NominalThreshold", "degreeAngle"),
+    "Weight (g)": ("weight", "NominalThreshold", "gram"),
+}
+
+VISION_NUMERIC_FIELDS = tuple(VISION_MEASUREMENTS)
 
 
 def read_csv(name: str, required: set[str]) -> list[dict[str, str]]:
@@ -334,34 +343,59 @@ def make_hardware() -> tuple[list[dict[str, str]], list[dict[str, str]]]:
             if not serial or not row[name_column]:
                 raise ValueError(f"{filename}: hardware serial and name are required")
             hardware.append({"id": hardware_id, "serial": serial, "name": row[name_column], "kind": row["Type"], "class_iri": class_name, "camera": row["Equipped Camera"]})
-            for column, unit in HARDWARE_UNITS.items():
+            for column, (kind, threshold_class, unit) in HARDWARE_MEASUREMENTS.items():
                 value = row.get(column, "")
                 if value:
-                    validate_number(value, f"{filename}.{serial}.{column}")
-                    measure_id = f"{hardware_id}_{re.sub('[^a-z0-9]+', '_', column.lower()).strip('_')}"
-                    measures.append({"id": measure_id, "hardware_id": hardware_id, "kind_id": re.sub('[^a-z0-9]+', '_', column.lower()).strip('_'), "label": column, "value": value, "unit_id": unit})
+                    measures.append(make_measurement(
+                        hardware_id, column, value, kind, threshold_class, unit
+                    ))
             details = [f"Type: {row['Type']}"]
             if row["Equipped Camera"]:
                 details.append(f"Equipped Camera: {row['Equipped Camera']}")
             details.extend(
                 f"{column}: {row[column]}"
-                for column in HARDWARE_UNITS
+                for column in HARDWARE_MEASUREMENTS
                 if row.get(column)
             )
             hardware[-1]["description"] = "; ".join(details)
-    hardware.extend(make_vision_hardware())
+    vision_hardware, vision_measures = make_vision_hardware()
+    hardware.extend(vision_hardware)
+    measures.extend(vision_measures)
     if len({row["serial"] for row in hardware}) != len(hardware):
         raise ValueError("Hardware serial numbers are not unique")
     return hardware, measures
 
 
-def make_vision_hardware() -> list[dict[str, str]]:
+def make_measurement(
+    owner_id: str,
+    source_field: str,
+    value: str,
+    kind_id: str,
+    threshold_class: str,
+    unit_id: str,
+) -> dict[str, str]:
+    """Keep each source value and its declared unit for specification mapping."""
+    validate_number(value, f"{owner_id}.{source_field}")
+    field_id = re.sub(r"[^a-z0-9]+", "_", source_field.lower()).strip("_")
+    return {
+        "id": f"measure_{owner_id}_{field_id}",
+        "owner_id": owner_id,
+        "kind_id": kind_id,
+        "threshold_class": threshold_class,
+        "label": source_field,
+        "value": value,
+        "unit_id": unit_id,
+    }
+
+
+def make_vision_hardware() -> tuple[list[dict[str, str]], list[dict[str, str]]]:
     """Retain sourced camera specifications with synthetic fixture identities."""
     rows = read_csv(
         "robot-vision-accessory-specs.csv",
         {"Serial", "Attachment", "Type", "Specification Source", *VISION_NUMERIC_FIELDS},
     )
     hardware = []
+    measures = []
     for row in rows:
         serial = require_id(row["Serial"], "robot-vision-accessory-specs.csv")
         if not serial.startswith("SYN-") or not row["Attachment"]:
@@ -390,7 +424,25 @@ def make_vision_hardware() -> list[dict[str, str]]:
             "camera": "",
             "description": "; ".join(details),
         })
-    return hardware
+        hardware_id = hardware[-1]["id"]
+        for column, (kind, threshold_class, unit) in VISION_MEASUREMENTS.items():
+            if row[column]:
+                measures.append(make_measurement(
+                    hardware_id, column, row[column], kind, threshold_class, unit
+                ))
+        dimensions = row.get("Dimensions (mm)", "")
+        if dimensions:
+            match = re.fullmatch(
+                r"\s*(\d+(?:\.\d+)?)\s*[x×]\s*(\d+(?:\.\d+)?)\s*[x×]\s*(\d+(?:\.\d+)?)\s*",
+                dimensions,
+            )
+            if not match:
+                raise ValueError(f"Vision fixture {serial}: invalid length x depth x height dimensions")
+            for kind, value in zip(("length", "depth", "height"), match.groups()):
+                measures.append(make_measurement(
+                    hardware_id, f"{kind} (mm)", value, kind, "NominalThreshold", "milimeter"
+                ))
+    return hardware, measures
 
 
 def make_equipment_links(
@@ -614,35 +666,171 @@ def make_hardware_capabilities(
     return capabilities, holders
 
 
-def make_dimensions(rows: list[dict[str, str]], objects: set[str]) -> tuple[list[dict[str, str]], list[dict[str, str]]]:
+def make_dimensions(
+    rows: list[dict[str, str]],
+    objects: set[str],
+    targets_by_component: dict[str, str],
+    hole_ids: set[str],
+) -> tuple[list[dict[str, str]], list[dict[str, str]], list[dict[str, str]], list[dict[str, str]]]:
+    """Attach part dimensions to hosted features and nominal hole sizes to holes."""
+    features = []
     geometries = []
+    dimension_notes = []
     measures = []
+    part_fields = ("diameter_mm", "width_mm", "height_mm", "length_mm", "bolt_length_mm")
+    dimensions_by_component = {row["component_id"]: row for row in rows}
     for row in rows:
         component = row["component_id"]
-        if component not in objects or (row["related_component_id"] and row["related_component_id"] not in objects):
+        related = row["related_component_id"]
+        if component not in objects or (related and related not in objects):
             raise ValueError(f"dimensions.csv: unknown component for {component}")
-        details = [
-            f"{column}: {row[column]} {unit}"
-            for column, unit in DIMENSION_UNITS.items()
-            if row[column]
-        ]
-        if row["thread_designation"]:
-            details.append(f"Thread designation: {row['thread_designation']}")
-        if row["related_component_id"]:
-            details.append(f"Related component: {row['related_component_id']}")
-        if row["notes"]:
-            details.append(row["notes"])
-        geometries.append({
-            "component_id": component,
-            "description": "; ".join(details),
+        for field in DIMENSION_FIELDS:
+            validate_number(row[field], f"dimensions.csv.{component}.{field}")
+        if related and row["bolt_length_mm"]:
+            related_length = dimensions_by_component[related]["bolt_length_mm"]
+            if not related_length or float(row["bolt_length_mm"]) != float(related_length):
+                raise ValueError(f"{component}: related bolt length differs from {related}")
+
+        own_values = {
+            field: row[field]
+            for field in part_fields
+            if row[field] and not (field == "bolt_length_mm" and related)
+        }
+        if own_values:
+            feature_id = f"shape_{component}"
+            geometry_id = f"geometry_{component}"
+            features.append({"id": feature_id, "host_id": component, "label": f"Shape of {component}"})
+            details = [f"{field}: {value} millimetre" for field, value in own_values.items()]
+            if row["thread_designation"]:
+                details.append(f"Thread designation: {row['thread_designation']}")
+            if row["notes"] and not row["target_hole_diameter_mm"]:
+                details.append(row["notes"])
+            geometries.append({
+                "id": geometry_id,
+                "feature_id": feature_id,
+                "description": "; ".join(details),
+            })
+            for field, value in own_values.items():
+                kind = "length" if field == "bolt_length_mm" else field.removesuffix("_mm")
+                measures.append(make_measurement(
+                    geometry_id, field, value, kind, "NominalThreshold", "milimeter"
+                ))
+        else:
+            details = []
+            if row["thread_designation"]:
+                details.append(f"Thread designation: {row['thread_designation']}")
+            if related:
+                details.append(f"Related bolt: {related}")
+            if row["notes"]:
+                details.append(row["notes"])
+            if details:
+                dimension_notes.append({"component_id": component, "description": "; ".join(details)})
+
+        hole_diameter = row["target_hole_diameter_mm"]
+        clearance = row["nominal_diametral_clearance_mm"]
+        if hole_diameter or clearance:
+            hole_id = targets_by_component.get(component, "")
+            if hole_id not in hole_ids:
+                raise ValueError(f"{component}: nominal hole dimensions lack a board Feature")
+            geometry_id = f"geometry_{hole_id}"
+            details = [f"Nominal fit with {component}; actual clearance requires measurement"]
+            if hole_diameter:
+                details.append(f"Specified drill-bit diameter: {hole_diameter} millimetre")
+                measures.append(make_measurement(
+                    geometry_id, "target_hole_diameter_mm", hole_diameter,
+                    "diameter", "NominalThreshold", "milimeter"
+                ))
+            if clearance:
+                details.append(f"Nominal diametral clearance: {clearance} millimetre")
+                measures.append(make_measurement(
+                    geometry_id, "nominal_diametral_clearance_mm", clearance,
+                    "nominalDiametralClearance", "NominalThreshold", "milimeter"
+                ))
+            if row["notes"]:
+                details.append(row["notes"])
+            geometries.append({
+                "id": geometry_id,
+                "feature_id": hole_id,
+                "description": "; ".join(details),
+            })
+    if len({row["id"] for row in geometries}) != len(geometries):
+        raise ValueError("dimensions.csv: multiple dimension rows describe the same geometry")
+    return features, geometries, dimension_notes, measures
+
+
+def load_named_individuals(class_name: str) -> set[str]:
+    """Read the controlled SpecificationKind and Unit individuals from robo-ont."""
+    rdf_namespace = "http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    owl_namespace = "http://www.w3.org/2002/07/owl#"
+    names = set()
+    for node in ET.parse(ONTOLOGY_PATH).iter(f"{{{owl_namespace}}}NamedIndividual"):
+        iri = node.get(f"{{{rdf_namespace}}}about", "")
+        if not iri.startswith(ONTOLOGY_NAMESPACE):
+            continue
+        if any(
+            item.get(f"{{{rdf_namespace}}}resource") == ONTOLOGY_NAMESPACE + class_name
+            for item in node.findall(f"{{{rdf_namespace}}}type")
+        ):
+            names.add(iri.removeprefix(ONTOLOGY_NAMESPACE))
+    return names
+
+
+def make_specifications(
+    measurements: list[dict[str, str]],
+) -> tuple[list[dict[str, str]], list[dict[str, str]], list[dict[str, str]], list[dict[str, str]]]:
+    """Group measurements into Specification, Threshold, kind, and unit nodes."""
+    ontology_kinds = load_named_individuals("SpecificationKind")
+    ontology_units = load_named_individuals("Unit")
+    specifications: dict[str, dict[str, str]] = {}
+    thresholds = []
+    new_kinds: dict[str, dict[str, str]] = {}
+    new_units: dict[str, dict[str, str]] = {}
+    seen_measurements = set()
+    for measurement in measurements:
+        owner = require_id(measurement["owner_id"], "specification owner")
+        kind = require_id(measurement["kind_id"], "specification kind")
+        unit = require_id(measurement["unit_id"], "specification unit")
+        threshold_class = measurement["threshold_class"]
+        if threshold_class not in {"LowerThreshold", "NominalThreshold", "UpperThreshold"}:
+            raise ValueError(f"{measurement['id']}: unsupported threshold class {threshold_class}")
+        measurement_key = (owner, kind, unit, threshold_class)
+        if measurement_key in seen_measurements:
+            raise ValueError(f"Duplicate measurement for {measurement_key}")
+        seen_measurements.add(measurement_key)
+
+        specification_id = f"spec_{owner}_{kind}_{unit}"
+        kind_iri = (
+            ONTOLOGY_NAMESPACE + kind
+            if kind in ontology_kinds else RESOURCE_NAMESPACE + "spec_kind_" + kind
+        )
+        unit_iri = (
+            ONTOLOGY_NAMESPACE + unit
+            if unit in ontology_units else RESOURCE_NAMESPACE + "unit_" + unit
+        )
+        specifications.setdefault(specification_id, {
+            "id": specification_id,
+            "owner_id": owner,
+            "kind_iri": kind_iri,
+            "label": f"{kind} specification for {owner}",
         })
-        for column, unit in DIMENSION_UNITS.items():
-            value = row[column]
-            if value:
-                validate_number(value, f"dimensions.csv.{component}.{column}")
-                owner = row["related_component_id"] if column == "bolt_length_mm" and row["related_component_id"] else component
-                measures.append({"id": f"dimension_{component}_{column}", "component_id": owner, "kind_id": column, "label": column.replace("_", " "), "value": value, "unit_id": unit})
-    return geometries, measures
+        thresholds.append({
+            "id": f"threshold_{measurement['id']}",
+            "specification_id": specification_id,
+            "class_iri": threshold_class,
+            "label": measurement["label"],
+            "value": measurement["value"],
+            "unit_iri": unit_iri,
+        })
+        if kind not in ontology_kinds:
+            new_kinds[kind] = {"id": "spec_kind_" + kind, "label": kind}
+        if unit not in ontology_units:
+            new_units[unit] = {"id": "unit_" + unit, "label": unit.replace("_", " ")}
+    return (
+        list(specifications.values()),
+        thresholds,
+        list(new_kinds.values()),
+        list(new_units.values()),
+    )
 
 
 def prepare(output: Path) -> None:
@@ -651,7 +839,7 @@ def prepare(output: Path) -> None:
     task_archetypes = read_csv("scenario-1/task_archetypes.csv", {"step_id", "archetype_name"})
     plan = read_csv("planner_output.csv", {"plan_step", "action_id", "step_id", "task_id", "component_id", "target_id", "capability_ids_json"})
     bom = read_csv("fabrication_bom.csv", {"component_id", "item_name", "part_number", "notes"})
-    dimensions = read_csv("dimensions.csv", {"component_id", "related_component_id", *DIMENSION_UNITS})
+    dimensions = read_csv("dimensions.csv", {"component_id", "related_component_id", *DIMENSION_FIELDS})
     require_unique(board, "task_id", "nist_task_board_1.csv")
     archetypes_by_step = {
         step_id: row["archetype_name"]
@@ -695,14 +883,29 @@ def prepare(output: Path) -> None:
         capability_individuals,
     )
     hardware, hardware_measures = make_hardware()
-    geometries, dimension_measures = make_dimensions(dimensions, set(objects_by_id))
     features = [
         {
             "id": target,
+            "host_id": "board",
             "label": next(row["target_name"] for row in board if row["target_id"] == target),
         }
         for target in sorted(board_targets - set(objects_by_id))
     ]
+    targets_by_component = {}
+    for row in board:
+        component = row["component_id"]
+        target = row["target_id"]
+        if component in targets_by_component and targets_by_component[component] != target:
+            raise ValueError(f"{component}: conflicting targets in nist_task_board_1.csv")
+        targets_by_component[component] = target
+    part_features, geometries, dimension_notes, dimension_measures = make_dimensions(
+        dimensions, set(objects_by_id), targets_by_component,
+        {feature["id"] for feature in features},
+    )
+    features.extend(part_features)
+    specifications, thresholds, specification_kinds, units = make_specifications(
+        dimension_measures + hardware_measures
+    )
     zones = [
         {"id": target, "label": target.replace("_", " ")}
         for target in sorted(step_targets - board_targets - set(objects_by_id))
@@ -732,16 +935,22 @@ def prepare(output: Path) -> None:
     write_csv(output, "roles.csv", ["step_id", "agent_id", "role_id"], roles)
     write_csv(output, "states.csv", ["id", "component_id", "label"], states)
     write_csv(output, "objects.csv", ["component_id", "item_name", "part_number", "notes", "nist_item_id"], bom)
-    write_csv(output, "features.csv", ["id", "label"], features)
+    write_csv(output, "features.csv", ["id", "host_id", "label"], features)
     write_csv(output, "zones.csv", ["id", "label"], zones)
     write_csv(output, "agents.csv", ["id", "label"], agents)
     write_csv(output, "equipment_links.csv", ["agent_id", "equipment_id", "parent_equipment_id", "membership_relation_id"], equipment_links)
     write_csv(output, "hardware_capabilities.csv", ["id", "hardware_id", "class_iri", "label"], hardware_capabilities)
     write_csv(output, "capability_holders.csv", ["holder_id", "capability_id"], capability_holders)
     write_csv(output, "hardware.csv", ["id", "serial", "name", "kind", "class_iri", "camera", "description"], hardware)
-    write_csv(output, "hardware_measures.csv", ["id", "hardware_id", "kind_id", "label", "value", "unit_id"], hardware_measures)
-    write_csv(output, "geometries.csv", ["component_id", "description"], geometries)
-    write_csv(output, "dimension_measures.csv", ["id", "component_id", "kind_id", "label", "value", "unit_id"], dimension_measures)
+    measurement_columns = ["id", "owner_id", "kind_id", "threshold_class", "label", "value", "unit_id"]
+    write_csv(output, "hardware_measures.csv", measurement_columns, hardware_measures)
+    write_csv(output, "geometries.csv", ["id", "feature_id", "description"], geometries)
+    write_csv(output, "dimension_notes.csv", ["component_id", "description"], dimension_notes)
+    write_csv(output, "dimension_measures.csv", measurement_columns, dimension_measures)
+    write_csv(output, "specifications.csv", ["id", "owner_id", "kind_iri", "label"], specifications)
+    write_csv(output, "thresholds.csv", ["id", "specification_id", "class_iri", "label", "value", "unit_iri"], thresholds)
+    write_csv(output, "specification_kinds.csv", ["id", "label"], specification_kinds)
+    write_csv(output, "units.csv", ["id", "label"], units)
     (ROOT / "deliverables" / "materialized").mkdir(parents=True, exist_ok=True)
 
 

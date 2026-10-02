@@ -183,12 +183,11 @@ mappings:
       - [robo-ont:hasTag, $(nist_item_id)]
       - [robo-ont:hasDescription, $(notes)]
 
-  board:
+  feature_hosts:
     sources:
       - ['scripts/data/prepared/features.csv~csv']
-    s: robo-r:board
+    s: robo-r:$(host_id)
     po:
-      - [a, robo-ont:Object]
       - [robo-ont:hasFeature, 'robo-r:$(id)~iri']
 
   features:
@@ -225,25 +224,32 @@ mappings:
   geometries:
     sources:
       - ['scripts/data/prepared/geometries.csv~csv']
-    s: robo-r:geometry_$(component_id)
+    s: robo-r:$(id)
     po:
       - [a, robo-ont:Geometry]
-      - [robo-ont:hasMetadata, 'robo-r:metadata_geometry_$(component_id)~iri']
+      - [robo-ont:hasMetadata, 'robo-r:metadata_$(id)~iri']
 
   geometry_metadata:
     sources:
       - ['scripts/data/prepared/geometries.csv~csv']
-    s: robo-r:metadata_geometry_$(component_id)
+    s: robo-r:metadata_$(id)
     po:
       - [a, robo-ont:Metadata]
       - [robo-ont:hasDescription, $(description)]
 
-  object_geometries:
+  feature_geometries:
     sources:
       - ['scripts/data/prepared/geometries.csv~csv']
-    s: robo-r:$(component_id)
+    s: robo-r:$(feature_id)
     po:
-      - [robo-ont:hasGeometry, 'robo-r:geometry_$(component_id)~iri']
+      - [robo-ont:hasGeometry, 'robo-r:$(id)~iri']
+
+  dimension_notes:
+    sources:
+      - ['scripts/data/prepared/dimension_notes.csv~csv']
+    s: robo-r:metadata_$(component_id)
+    po:
+      - [robo-ont:hasDescription, $(description)]
 
   hardware:
     sources:
@@ -263,3 +269,56 @@ mappings:
       - [robo-ont:hasName, $(name)]
       - [robo-ont:hasSerial, $(serial)]
       - [robo-ont:hasDescription, $(description)]
+
+  physical_specifications:
+    sources:
+      - ['scripts/data/prepared/specifications.csv~csv']
+    s: robo-r:$(id)
+    po:
+      - [a, robo-ont:Specification]
+      - [rdfs:label, $(label)]
+      - [robo-ont:isSpecificationOf, '$(kind_iri)~iri']
+
+  specification_owners:
+    sources:
+      - ['scripts/data/prepared/specifications.csv~csv']
+    s: robo-r:$(owner_id)
+    po:
+      - [robo-ont:hasPhysicalSpecification, 'robo-r:$(id)~iri']
+
+  thresholds:
+    sources:
+      - ['scripts/data/prepared/thresholds.csv~csv']
+    s: robo-r:$(id)
+    po:
+      - [a, robo-ont:Threshold]
+      - [a, 'robo-ont:$(class_iri)~iri']
+      - [rdfs:label, $(label)]
+      - p: robo-ont:hasValue
+        o:
+          value: $(value)
+          datatype: xsd:double
+      - [robo-ont:isUnitOf, '$(unit_iri)~iri']
+
+  specification_thresholds:
+    sources:
+      - ['scripts/data/prepared/thresholds.csv~csv']
+    s: robo-r:$(specification_id)
+    po:
+      - [robo-ont:hasThreshold, 'robo-r:$(id)~iri']
+
+  specification_kinds:
+    sources:
+      - ['scripts/data/prepared/specification_kinds.csv~csv']
+    s: robo-r:$(id)
+    po:
+      - [a, robo-ont:SpecificationKind]
+      - [rdfs:label, $(label)]
+
+  units:
+    sources:
+      - ['scripts/data/prepared/units.csv~csv']
+    s: robo-r:$(id)
+    po:
+      - [a, robo-ont:Unit]
+      - [rdfs:label, $(label)]
