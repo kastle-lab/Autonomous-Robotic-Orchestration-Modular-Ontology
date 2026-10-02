@@ -147,8 +147,6 @@ existential: `Capability SubClassOf enabledBySpatialThing some SpatialThing`
 
 global range: `owl:Thing SubClassOf enabledBySpatialThing only SpatialThing`
 
-qualified scoped functionality: `Capability SubClassOf enabledBySpatialThing max 1 SpatialThing`
-
 # Capability hasSpec Specification
 disjoint: `Capability DisjointWith Specification`
 

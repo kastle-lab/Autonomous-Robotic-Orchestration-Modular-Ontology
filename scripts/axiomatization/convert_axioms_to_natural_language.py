@@ -630,7 +630,6 @@ if __name__ == "__main__":
             "Task requiresArchetype Archetype",
             "SpatialThing currentState State",
             "Role hasTemporalExtent TemporalExtent",
-            "Capability enabledBySpatialThing SpatialThing",
             "Threshold hasValue xsd:double",
             "Metadata isOfFormat Format",
             "Metadata hasLocation Location",
