@@ -1258,6 +1258,13 @@
 
     <owl:NamedIndividual rdf:about="https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/lod/ontology#Artist">
         <rdf:type rdf:resource="https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/lod/ontology#Archetype"/>
+        <requiresCapability rdf:resource="https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/lod/ontology#requirementDistance"/>
+        <requiresCapability rdf:resource="https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/lod/ontology#requirementPick"/>
+        <requiresCapability rdf:resource="https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/lod/ontology#requirementPlace"/>
+        <requiresCapability rdf:resource="https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/lod/ontology#requirementPress"/>
+        <requiresCapability rdf:resource="https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/lod/ontology#requirementReach"/>
+        <requiresCapability rdf:resource="https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/lod/ontology#requirementRotate"/>
+        <requiresCapability rdf:resource="https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/lod/ontology#requirementVision"/>
     </owl:NamedIndividual>
     
 
@@ -1266,6 +1273,16 @@
 
     <owl:NamedIndividual rdf:about="https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/lod/ontology#Assembler">
         <rdf:type rdf:resource="https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/lod/ontology#Archetype"/>
+        <requiresCapability rdf:resource="https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/lod/ontology#requirementClose"/>
+        <requiresCapability rdf:resource="https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/lod/ontology#requirementDistance"/>
+        <requiresCapability rdf:resource="https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/lod/ontology#requirementOpen"/>
+        <requiresCapability rdf:resource="https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/lod/ontology#requirementPick"/>
+        <requiresCapability rdf:resource="https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/lod/ontology#requirementPlace"/>
+        <requiresCapability rdf:resource="https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/lod/ontology#requirementPress"/>
+        <requiresCapability rdf:resource="https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/lod/ontology#requirementPush"/>
+        <requiresCapability rdf:resource="https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/lod/ontology#requirementReach"/>
+        <requiresCapability rdf:resource="https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/lod/ontology#requirementRotate"/>
+        <requiresCapability rdf:resource="https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/lod/ontology#requirementVision"/>
     </owl:NamedIndividual>
     
 
@@ -1274,6 +1291,15 @@
 
     <owl:NamedIndividual rdf:about="https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/lod/ontology#Constructor">
         <rdf:type rdf:resource="https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/lod/ontology#Archetype"/>
+        <requiresCapability rdf:resource="https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/lod/ontology#requirementDistance"/>
+        <requiresCapability rdf:resource="https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/lod/ontology#requirementPick"/>
+        <requiresCapability rdf:resource="https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/lod/ontology#requirementPlace"/>
+        <requiresCapability rdf:resource="https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/lod/ontology#requirementPress"/>
+        <requiresCapability rdf:resource="https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/lod/ontology#requirementPull"/>
+        <requiresCapability rdf:resource="https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/lod/ontology#requirementPush"/>
+        <requiresCapability rdf:resource="https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/lod/ontology#requirementReach"/>
+        <requiresCapability rdf:resource="https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/lod/ontology#requirementRotate"/>
+        <requiresCapability rdf:resource="https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/lod/ontology#requirementVision"/>
     </owl:NamedIndividual>
     
 
@@ -1282,6 +1308,12 @@
 
     <owl:NamedIndividual rdf:about="https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/lod/ontology#Excavator">
         <rdf:type rdf:resource="https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/lod/ontology#Archetype"/>
+        <requiresCapability rdf:resource="https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/lod/ontology#requirementCargo"/>
+        <requiresCapability rdf:resource="https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/lod/ontology#requirementDistance"/>
+        <requiresCapability rdf:resource="https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/lod/ontology#requirementPull"/>
+        <requiresCapability rdf:resource="https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/lod/ontology#requirementPush"/>
+        <requiresCapability rdf:resource="https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/lod/ontology#requirementReach"/>
+        <requiresCapability rdf:resource="https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/lod/ontology#requirementVision"/>
     </owl:NamedIndividual>
     
 
@@ -1290,6 +1322,10 @@
 
     <owl:NamedIndividual rdf:about="https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/lod/ontology#Explorer">
         <rdf:type rdf:resource="https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/lod/ontology#Archetype"/>
+        <requiresCapability rdf:resource="https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/lod/ontology#requirementDistance"/>
+        <requiresCapability rdf:resource="https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/lod/ontology#requirementNavigate"/>
+        <requiresCapability rdf:resource="https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/lod/ontology#requirementRotate"/>
+        <requiresCapability rdf:resource="https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/lod/ontology#requirementVision"/>
     </owl:NamedIndividual>
     
 
@@ -1298,6 +1334,14 @@
 
     <owl:NamedIndividual rdf:about="https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/lod/ontology#Harvester">
         <rdf:type rdf:resource="https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/lod/ontology#Archetype"/>
+        <requiresCapability rdf:resource="https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/lod/ontology#requirementClose"/>
+        <requiresCapability rdf:resource="https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/lod/ontology#requirementDistance"/>
+        <requiresCapability rdf:resource="https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/lod/ontology#requirementOpen"/>
+        <requiresCapability rdf:resource="https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/lod/ontology#requirementPick"/>
+        <requiresCapability rdf:resource="https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/lod/ontology#requirementPlace"/>
+        <requiresCapability rdf:resource="https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/lod/ontology#requirementPull"/>
+        <requiresCapability rdf:resource="https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/lod/ontology#requirementReach"/>
+        <requiresCapability rdf:resource="https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/lod/ontology#requirementVision"/>
     </owl:NamedIndividual>
     
 
@@ -1306,6 +1350,8 @@
 
     <owl:NamedIndividual rdf:about="https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/lod/ontology#Hauler">
         <rdf:type rdf:resource="https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/lod/ontology#Archetype"/>
+        <requiresCapability rdf:resource="https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/lod/ontology#requirementCargo"/>
+        <requiresCapability rdf:resource="https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/lod/ontology#requirementNavigate"/>
     </owl:NamedIndividual>
     
 
@@ -1314,6 +1360,8 @@
 
     <owl:NamedIndividual rdf:about="https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/lod/ontology#Inspector">
         <rdf:type rdf:resource="https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/lod/ontology#Archetype"/>
+        <requiresCapability rdf:resource="https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/lod/ontology#requirementDistance"/>
+        <requiresCapability rdf:resource="https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/lod/ontology#requirementVision"/>
     </owl:NamedIndividual>
     
 
@@ -1322,6 +1370,8 @@
 
     <owl:NamedIndividual rdf:about="https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/lod/ontology#Sentinel">
         <rdf:type rdf:resource="https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/lod/ontology#Archetype"/>
+        <requiresCapability rdf:resource="https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/lod/ontology#requirementDistance"/>
+        <requiresCapability rdf:resource="https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/lod/ontology#requirementVision"/>
     </owl:NamedIndividual>
     
 
@@ -1330,6 +1380,11 @@
 
     <owl:NamedIndividual rdf:about="https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/lod/ontology#Welder">
         <rdf:type rdf:resource="https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/lod/ontology#Archetype"/>
+        <requiresCapability rdf:resource="https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/lod/ontology#requirementDistance"/>
+        <requiresCapability rdf:resource="https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/lod/ontology#requirementPower"/>
+        <requiresCapability rdf:resource="https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/lod/ontology#requirementReach"/>
+        <requiresCapability rdf:resource="https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/lod/ontology#requirementRotate"/>
+        <requiresCapability rdf:resource="https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/lod/ontology#requirementVision"/>
     </owl:NamedIndividual>
     
 
@@ -1850,6 +1905,134 @@
 
     <owl:NamedIndividual rdf:about="https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/lod/ontology#repeatedPositioningAccuracy">
         <rdf:type rdf:resource="https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/lod/ontology#SpecificationKind"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/lod/ontology#requirementAudition -->
+
+    <owl:NamedIndividual rdf:about="https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/lod/ontology#requirementAudition">
+        <rdf:type rdf:resource="https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/lod/ontology#Audition"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/lod/ontology#requirementCargo -->
+
+    <owl:NamedIndividual rdf:about="https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/lod/ontology#requirementCargo">
+        <rdf:type rdf:resource="https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/lod/ontology#CargoBased"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/lod/ontology#requirementClose -->
+
+    <owl:NamedIndividual rdf:about="https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/lod/ontology#requirementClose">
+        <rdf:type rdf:resource="https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/lod/ontology#Close"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/lod/ontology#requirementDistance -->
+
+    <owl:NamedIndividual rdf:about="https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/lod/ontology#requirementDistance">
+        <rdf:type rdf:resource="https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/lod/ontology#Distance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/lod/ontology#requirementNavigate -->
+
+    <owl:NamedIndividual rdf:about="https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/lod/ontology#requirementNavigate">
+        <rdf:type rdf:resource="https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/lod/ontology#Navigate"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/lod/ontology#requirementOpen -->
+
+    <owl:NamedIndividual rdf:about="https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/lod/ontology#requirementOpen">
+        <rdf:type rdf:resource="https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/lod/ontology#Open"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/lod/ontology#requirementPick -->
+
+    <owl:NamedIndividual rdf:about="https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/lod/ontology#requirementPick">
+        <rdf:type rdf:resource="https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/lod/ontology#Pick"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/lod/ontology#requirementPlace -->
+
+    <owl:NamedIndividual rdf:about="https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/lod/ontology#requirementPlace">
+        <rdf:type rdf:resource="https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/lod/ontology#Place"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/lod/ontology#requirementPower -->
+
+    <owl:NamedIndividual rdf:about="https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/lod/ontology#requirementPower">
+        <rdf:type rdf:resource="https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/lod/ontology#PowerBased"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/lod/ontology#requirementPress -->
+
+    <owl:NamedIndividual rdf:about="https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/lod/ontology#requirementPress">
+        <rdf:type rdf:resource="https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/lod/ontology#Press"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/lod/ontology#requirementPull -->
+
+    <owl:NamedIndividual rdf:about="https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/lod/ontology#requirementPull">
+        <rdf:type rdf:resource="https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/lod/ontology#Pull"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/lod/ontology#requirementPush -->
+
+    <owl:NamedIndividual rdf:about="https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/lod/ontology#requirementPush">
+        <rdf:type rdf:resource="https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/lod/ontology#Push"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/lod/ontology#requirementReach -->
+
+    <owl:NamedIndividual rdf:about="https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/lod/ontology#requirementReach">
+        <rdf:type rdf:resource="https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/lod/ontology#Reach"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/lod/ontology#requirementRotate -->
+
+    <owl:NamedIndividual rdf:about="https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/lod/ontology#requirementRotate">
+        <rdf:type rdf:resource="https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/lod/ontology#Rotate"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/lod/ontology#requirementTouch -->
+
+    <owl:NamedIndividual rdf:about="https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/lod/ontology#requirementTouch">
+        <rdf:type rdf:resource="https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/lod/ontology#Touch"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/lod/ontology#requirementVision -->
+
+    <owl:NamedIndividual rdf:about="https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/lod/ontology#requirementVision">
+        <rdf:type rdf:resource="https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/lod/ontology#Vision"/>
     </owl:NamedIndividual>
     
 
