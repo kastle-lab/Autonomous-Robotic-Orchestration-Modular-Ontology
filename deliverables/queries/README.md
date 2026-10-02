@@ -14,6 +14,7 @@ example, edit its `VALUES` clause; CQ 9's threshold is in `HAVING`.
 | 2 | [Agent capabilities and enabling parts](cq-2-agent-capabilities-and-enabling-parts.rq) | 26 agent-capability-part rows |
 | 2 | [Agents with Pull](cq-2-agents-with-pull-capability.rq) | RobS via its base arm; RobM via its attached arm |
 | 2 | [Agents with Navigate](cq-2-agents-with-navigate-capability.rq) | RobM via its mobile base |
+| 2 | [Hardware physical specifications](cq-2-hardware-physical-specifications.rq) | 70 numeric measurements with threshold type and unit |
 | 3 | [Agents assigned to task](cq-3-agents-assigned-to-task.rq) | RobS for `task_01_step_1` |
 | 4 | [Task sequence for goal](cq-4-task-sequence-for-goal.rq) | 107 ordered tasks |
 | 5 | [Prerequisites for task](cq-5-prerequisites-for-task.rq) | 33 predecessors of `task_06_step_2` |
@@ -24,32 +25,30 @@ example, edit its `VALUES` clause; CQ 9's threshold is in `HAVING`.
 | 10 | [Atomic tasks](cq-10-atomic-tasks.rq) | 107 Tasks |
 | 11 | [Work packages with multiple agents](cq-11-work-packages-with-multiple-agents.rq) | Recovery work package |
 | 16 | [Object classifications](cq-16-object-classifications.rq) | 47 named Objects |
+| 16 | [Object and hole geometry specifications](cq-16-object-and-hole-geometry-specifications.rq) | 35 numeric dimensions and nominal fit values |
 | 17 | [Objects required for task](cq-17-objects-required-for-task.rq) | One Object for `task_01_step_1` |
 | 18 | [Tasks requiring object](cq-18-tasks-requiring-object.rq) | 5 Tasks for `round_peg_4` |
 | 19 | [Objects required for goal](cq-19-objects-required-for-goal.rq) | 32 Objects for `goal_assemble` |
 
 These queries answer what the **current graph asserts**. CQs 1 and 3 show
-assigned agents, not a minimum required team or every capable agent. CQ 6
-shows goal membership, not proof of goal completion. CQs 8 and 9 query Goals
+assigned agents. CQ 6
+shows goal membership. CQs 8 and 9 query Goals
 because work packages are modeled as Goals with atomic Tasks. CQ 11 identifies
-participation by multiple agents, not simultaneous collaboration. CQ 16
-currently gives the broad `Object` class rather than a detailed taxonomy.
+participation by multiple agents. CQ 16
+gives the broad `Object` class. The geometry
+specification query follows hosted Features to Geometry and uses explicit
+Threshold types. Values labeled nominal are
+specified dimensions.
 
 The hardware capability dataset links RobS, RobM, and their mounted parts to
 shared `requirement*` capability individuals in the ontology. The named-Archetype
 queries check whether each agent has every individual required by a named
 Archetype; they require the ontology and scenario triples to be queryable
-together. The graph does not assert `fulfillsArchetype`. The task candidate
+together. The task candidate
 query uses explicit Task-to-Archetype links; `pause_assembly` has none and
 therefore has no candidate row. The capability inventory, Pull, and Navigate
-queries show each enabling part. Capability matching does not by itself
-establish full task feasibility,
-including payload, reach, calibration, and current state. CQs
+queries show each enabling part. CQs
 12–15 have no query here: the graph has no collision-priority policy,
 failed-agent state trace, alternative task route, or numeric task-duration
 facts. Empty-result queries for those questions would imply evidence the graph
 does not contain.
-
-If the scenario is loaded into a named graph rather than Fuseki's default
-graph, place the graph patterns inside `GRAPH <your-graph-iri> { ... }` or
-configure a union default graph.

@@ -1,0 +1,27 @@
+component_id,description
+board,Dimensions not supplied in the attached files.
+gear_plate,Dimensions not supplied in the attached files.
+shaft_small,Dimensions not supplied in the attached files.
+shaft_medium,Dimensions not supplied in the attached files.
+shaft_large,Dimensions not supplied in the attached files.
+gear_small,Dimensions not supplied in the attached files.
+gear_medium,Dimensions not supplied in the attached files.
+gear_large,Dimensions not supplied in the attached files.
+socket_bnc,Dimensions not supplied in the attached files.
+plug_bnc,Dimensions not supplied in the attached files.
+plug_waterproof,Dimensions not supplied in the attached files.
+socket_waterproof,Dimensions not supplied in the attached files.
+plug_dsub,Dimensions not supplied in the attached files.
+socket_dsub,Dimensions not supplied in the attached files.
+plug_usb,Dimensions not supplied in the attached files.
+socket_usb,Dimensions not supplied in the attached files.
+plug_rj45,Dimensions not supplied in the attached files.
+socket_rj45,Dimensions not supplied in the attached files.
+nut_m4,Thread designation: M4; Related bolt: bolt_m4; Coarse thread specified; pitch and torque not asserted.
+nut_m8,Thread designation: M8; Related bolt: bolt_m8; Coarse thread specified; pitch and torque not asserted.
+nut_m12,Thread designation: M12; Related bolt: bolt_m12; Coarse thread specified; pitch and torque not asserted.
+nut_m16,Thread designation: M16; Related bolt: bolt_m16; Coarse thread specified; pitch and torque not asserted.
+housing_dsub,Dimensions not supplied in the attached files.
+housing_rj45,Dimensions not supplied in the attached files.
+standoff_with_nuts,Dimensions not supplied in the attached files.
+nut_m3,Dimensions not supplied in the attached files.

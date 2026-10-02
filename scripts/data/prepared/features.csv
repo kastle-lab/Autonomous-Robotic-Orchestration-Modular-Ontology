@@ -1,9 +1,24 @@
-id,label
-rect_hole_12,Rectangular hole for 12 x 8 mm peg
-rect_hole_16,Rectangular hole for 16 x 10 mm peg
-rect_hole_4,Rectangular hole for 4 x 4 mm peg
-rect_hole_8,Rectangular hole for 8 x 7 mm peg
-round_hole_12,Round hole for 12 mm peg
-round_hole_16,Round hole for 16 mm peg
-round_hole_4,Round hole for 4 mm peg
-round_hole_8,Round hole for 8 mm peg
+id,host_id,label
+rect_hole_12,board,Rectangular hole for 12 x 8 mm peg
+rect_hole_16,board,Rectangular hole for 16 x 10 mm peg
+rect_hole_4,board,Rectangular hole for 4 x 4 mm peg
+rect_hole_8,board,Rectangular hole for 8 x 7 mm peg
+round_hole_12,board,Round hole for 12 mm peg
+round_hole_16,board,Round hole for 16 mm peg
+round_hole_4,board,Round hole for 4 mm peg
+round_hole_8,board,Round hole for 8 mm peg
+shape_round_peg_4,round_peg_4,Shape of round_peg_4
+shape_round_peg_8,round_peg_8,Shape of round_peg_8
+shape_round_peg_12,round_peg_12,Shape of round_peg_12
+shape_round_peg_16,round_peg_16,Shape of round_peg_16
+shape_rect_peg_4,rect_peg_4,Shape of rect_peg_4
+shape_rect_peg_8,rect_peg_8,Shape of rect_peg_8
+shape_rect_peg_12,rect_peg_12,Shape of rect_peg_12
+shape_rect_peg_16,rect_peg_16,Shape of rect_peg_16
+shape_bolt_m4,bolt_m4,Shape of bolt_m4
+shape_bolt_m8,bolt_m8,Shape of bolt_m8
+shape_bolt_m12,bolt_m12,Shape of bolt_m12
+shape_bolt_m16,bolt_m16,Shape of bolt_m16
+shape_bolt_m3_16,bolt_m3_16,Shape of bolt_m3_16
+shape_bolt_m3_35,bolt_m3_35,Shape of bolt_m3_35
+shape_bolt_m6_25,bolt_m6_25,Shape of bolt_m6_25

@@ -1,0 +1,18 @@
+PREFIX robo-ont: <https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/lod/ontology#>
+
+SELECT ?hardware ?serial ?kind ?thresholdType ?value ?unit WHERE {
+  ?hardware robo-ont:hasMetadata/robo-ont:hasSerial ?serial ;
+            robo-ont:hasPhysicalSpecification ?specification .
+  ?specification a robo-ont:Specification ;
+                 robo-ont:isSpecificationOf ?kind ;
+                 robo-ont:hasThreshold ?threshold .
+  ?threshold a ?thresholdType ;
+             robo-ont:hasValue ?value ;
+             robo-ont:isUnitOf ?unit .
+  FILTER(?thresholdType IN (
+    robo-ont:LowerThreshold,
+    robo-ont:NominalThreshold,
+    robo-ont:UpperThreshold
+  ))
+}
+ORDER BY ?hardware ?kind ?thresholdType
