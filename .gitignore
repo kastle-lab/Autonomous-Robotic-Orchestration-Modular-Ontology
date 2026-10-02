@@ -1,6 +1,7 @@
 /scripts/convert_axioms_to_natural_language-copy.py
 /scripts/template.txt
 .venv
+__pycache__/
 /generated-axiom-text
 workflow.md
 deliverables/patterns/abridged-master-schema.png
@@ -14,3 +15,4 @@ scripts/data/axioms-list.txt
 reasoner-error.txt
 scripts/axiomatization/test_apply_axioms_to_ontology.py
 scripts/axiomatization/__pycache__
+scripts/materialization/__pycache__
