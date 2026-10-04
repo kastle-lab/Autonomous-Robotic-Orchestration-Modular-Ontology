@@ -1,8 +1,8 @@
-# Use Case Setup
+# Scenario-1
 
 This scenario aims to assess the KG and Orchestrator's abilities.
 
-## Use case description:  KG and Orchestrator Assessment - Low complexity
+## Scenario description: KG and Orchestrator Assessment - Low complexity
 
 This experimental setup includes 3 agents, each playing a different role.
 
@@ -24,6 +24,6 @@ AIO then uses this new world knowledge to assign RobM to navigate to, pick up, a
 
 Then, RobS is expected to resume working on the task board until completion.
 
-# Robot and attachements
+## Robot and attachements
 - `RobS`: NVB6873432	myCobot280PI	Robot Arm with the 4789134Q-14	MyCobotAdaptiveGripper	Gripper attachment.
 - `RobM`: JHF-3434-FDAF	myAGV2023PI	Mobile Robot with the NVB68712F3	myCobot280PI	Robot Arm attached to it using the 4901700342	MyCobotFlexibleGripper attachment.
