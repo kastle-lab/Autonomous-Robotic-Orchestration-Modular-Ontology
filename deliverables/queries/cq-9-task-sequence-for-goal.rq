@@ -1,4 +1,4 @@
-# CQ 4: Ordered atomic tasks beneath the selected primary goal.
+# CQ 9: Ordered atomic tasks beneath the selected primary goal.
 # Position is derived from the asserted single-successor task chain.
 PREFIX robo-ont: <https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/lod/ontology#>
 PREFIX robo-r: <https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/lod/resource#>

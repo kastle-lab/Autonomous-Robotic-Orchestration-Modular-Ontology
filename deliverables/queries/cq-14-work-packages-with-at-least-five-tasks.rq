@@ -1,4 +1,4 @@
-# CQ 9: Work-package Goals with at least X direct atomic tasks.
+# CQ 14: Work-package Goals with at least X direct atomic tasks.
 # Change the HAVING threshold to the desired X.
 PREFIX robo-ont: <https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/lod/ontology#>
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>

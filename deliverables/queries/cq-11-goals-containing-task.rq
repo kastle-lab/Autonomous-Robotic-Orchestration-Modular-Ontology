@@ -1,4 +1,4 @@
-# CQ 6: Goals containing the selected task, directly or by subgoal.
+# CQ 11: Goals containing the selected task, directly or by subgoal.
 # Membership alone does not prove that any goal has been achieved.
 PREFIX robo-ont: <https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/lod/ontology#>
 PREFIX robo-r: <https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/lod/resource#>

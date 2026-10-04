@@ -1,4 +1,4 @@
-# CQ 18: Tasks requiring the selected object.
+# CQ 20: Tasks requiring the selected object.
 # Presence of the object is necessary, not sufficient to complete a task.
 PREFIX robo-ont: <https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/lod/ontology#>
 PREFIX robo-r: <https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/lod/resource#>

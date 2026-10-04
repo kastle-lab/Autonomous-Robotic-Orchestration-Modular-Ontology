@@ -1,11 +1,8 @@
+# CQ 7: Hardware physical specifications.
 PREFIX robo-ont: <https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/lod/ontology#>
 
-SELECT ?object ?feature ?geometry ?kind ?thresholdType ?value ?unit WHERE {
-  ?object a robo-ont:Object ;
-          robo-ont:hasFeature ?feature .
-  ?feature a robo-ont:Feature ;
-           robo-ont:hasGeometry ?geometry .
-  ?geometry a robo-ont:Geometry ;
+SELECT ?hardware ?serial ?kind ?thresholdType ?value ?unit WHERE {
+  ?hardware robo-ont:hasMetadata/robo-ont:hasSerial ?serial ;
             robo-ont:hasPhysicalSpecification ?specification .
   ?specification a robo-ont:Specification ;
                  robo-ont:isSpecificationOf ?kind ;
@@ -19,4 +16,4 @@ SELECT ?object ?feature ?geometry ?kind ?thresholdType ?value ?unit WHERE {
     robo-ont:UpperThreshold
   ))
 }
-ORDER BY ?object ?feature ?kind ?thresholdType
+ORDER BY ?hardware ?kind ?thresholdType

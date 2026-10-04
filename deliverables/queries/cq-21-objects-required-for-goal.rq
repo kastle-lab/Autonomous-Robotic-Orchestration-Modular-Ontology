@@ -1,4 +1,4 @@
-# CQ 19: Physical objects required by tasks beneath the selected goal.
+# CQ 21: Physical objects required by tasks beneath the selected goal.
 PREFIX robo-ont: <https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/lod/ontology#>
 PREFIX robo-r: <https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/lod/resource#>
 

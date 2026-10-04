@@ -1,4 +1,4 @@
-# CQ 10: Atomic tasks in this scenario.
+# CQ 15: Atomic tasks in this scenario.
 # Work packages are Goals; the mapping has no Task-to-subtask relation.
 PREFIX robo-ont: <https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/lod/ontology#>
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>

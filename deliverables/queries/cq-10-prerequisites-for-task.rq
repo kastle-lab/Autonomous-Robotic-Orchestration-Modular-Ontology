@@ -1,4 +1,4 @@
-# CQ 5: All predecessor tasks required before the selected task.
+# CQ 10: All predecessor tasks required before the selected task.
 # dependsOnTask is immediate; + follows the complete prerequisite chain.
 PREFIX robo-ont: <https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/lod/ontology#>
 PREFIX robo-r: <https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/lod/resource#>

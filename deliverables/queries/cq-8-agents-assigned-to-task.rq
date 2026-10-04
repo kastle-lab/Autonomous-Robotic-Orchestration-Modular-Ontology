@@ -1,4 +1,4 @@
-# CQ 3: Agents assigned to the selected atomic task through Worker roles.
+# CQ 8: Agents assigned to the selected atomic task through Worker roles.
 PREFIX robo-ont: <https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/lod/ontology#>
 PREFIX robo-r: <https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/lod/resource#>
 

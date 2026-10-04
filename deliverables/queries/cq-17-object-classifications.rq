@@ -1,4 +1,4 @@
-# CQ 16: Asserted ontology categories for named physical objects.
+# CQ 17: Asserted ontology categories for named physical objects.
 # The current mapping generally provides only the broad Object category.
 PREFIX robo-ont: <https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/lod/ontology#>
 

@@ -1,4 +1,4 @@
-# CQ 7: Tasks in different work-package goals sharing an immediate prerequisite.
+# CQ 12: Tasks in different work-package goals sharing an immediate prerequisite.
 # The current serial task plan has no such branching, so zero rows are expected.
 PREFIX robo-ont: <https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/lod/ontology#>
 

@@ -1,4 +1,4 @@
-# CQ 17: Physical objects required by the selected atomic task.
+# CQ 19: Physical objects required by the selected atomic task.
 # Feature and Environment targets are excluded from the Object result set.
 PREFIX robo-ont: <https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/lod/ontology#>
 PREFIX robo-r: <https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/lod/resource#>

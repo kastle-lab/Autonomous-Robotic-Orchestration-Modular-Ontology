@@ -1,4 +1,4 @@
-# CQ 2: Scenario agents with Pull enabled by a base robot or attached member.
+# CQ 5: Scenario agents with Pull enabled by a base robot or attached member.
 PREFIX robo-ont: <https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/lod/ontology#>
 PREFIX po: <http://daselab.org/ContextualizedWinstonPartWhole#>
 

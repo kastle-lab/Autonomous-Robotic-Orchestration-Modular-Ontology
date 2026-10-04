@@ -1,4 +1,4 @@
-# CQ 2: Shared capabilities available to each scenario agent and their enablers.
+# CQ 4: Shared capabilities available to each scenario agent and their enablers.
 # Query the ontology and materialized scenario together.
 PREFIX robo-ont: <https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/lod/ontology#>
 PREFIX robo-r: <https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/lod/resource#>

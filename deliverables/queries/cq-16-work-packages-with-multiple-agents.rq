@@ -1,4 +1,4 @@
-# CQ 11: Work-package Goals whose tasks have assignments to multiple agents.
+# CQ 16: Work-package Goals whose tasks have assignments to multiple agents.
 # This shows planned participation, not simultaneous execution.
 PREFIX robo-ont: <https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/lod/ontology#>
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>

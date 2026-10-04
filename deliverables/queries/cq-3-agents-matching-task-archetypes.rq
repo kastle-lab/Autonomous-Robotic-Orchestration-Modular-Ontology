@@ -1,4 +1,4 @@
-# CQ 2: Candidate agents that hold every capability required by a task Archetype.
+# CQ 3: Candidate agents that hold every capability required by a task Archetype.
 # Load the ontology and scenario data into the same queryable graph.
 PREFIX robo-ont: <https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/lod/ontology#>
 PREFIX robo-r: <https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/lod/resource#>
