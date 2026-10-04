@@ -12,13 +12,17 @@ The Autonomous Robotic Orchestration Modular Ontology is intended for use with a
 
 ## Repository Map
 
-| Directory                                         | Intent                                                                                                     |
-| ------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- |
-| [deliverables](deliverables/)                     | Contains the ontology, ontology documentation, schema visualizations, and materialized RDF/TTL artifacts.  |
-| [deliverables/ontology](deliverables/ontology/)   | Contains the aggregate OWL ontology and its axiomatization in natural language.                            |
-| [deliverables/patterns](deliverables/patterns/)   | Contains GraphML and PDF visualizations of the complete ontology and its individual patterns.              |
-| [scripts](scripts/)                               | Contains scripts, source data, mappings, and utilities used to generate and materialize the ontology data. |
-| [scripts/axiomatization](scripts/axiomatization/) | Contains the script used to convert ontology axioms into natural language.                                 |
+| Directory                                               | Intent                                                                                                     |
+| ------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- |
+| [deliverables](deliverables/)                           | Contains the ontology, ontology documentation, schema visualizations, and materialized RDF/TTL artifacts.  |
+| [deliverables/materialized](deliverables/materialized/) | Contains the materialized scenario n-triples.                                                              |
+| [deliverables/ontology](deliverables/ontology/)         | Contains the aggregate OWL ontology and its axiomatization in natural language.                            |
+| [deliverables/patterns](deliverables/patterns/)         | Contains GraphML and PDF visualizations of the complete ontology and its individual patterns.              |
+| [deliverables/queries](deliverables/queries/)           | Contains SPARQL competency-question queries for the materialized graph.                                    |
+| [example-scenario](example-scenario/)                   | Documents the example scenario represented by the materialized graph.                                      |
+| [scripts](scripts/)                                     | Contains scripts, source data, mappings, and utilities used to generate and materialize the ontology data. |
+| [scripts/axiomatization](scripts/axiomatization/)       | Contains the scripts used to convert ontology axioms into natural language and apply them to the ontology programatically.                                 |
+| [scripts/materialization](scripts/materialization/)     | Contains the scenario data preparation, mapping, and validation tools.                                     |
 
 ## Ontology Patterns
 
