@@ -48,7 +48,7 @@ The ontology is organized around several core patterns:
 `robo-ont` abbreviates the classes and properties declared in `robo-ont.rdf`.
 The ontology document IRI is the same base without the trailing `#`.
 `robo-r` identifies scenario resources, while `po` abbreviates the imported
-part-whole ontology. See the [query examples](scripts/materialization/README.md#querying-the-graph).
+part-whole ontology.
 
 ## Tooling
 
