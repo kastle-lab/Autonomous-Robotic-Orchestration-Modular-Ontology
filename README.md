@@ -53,8 +53,6 @@ part-whole ontology. See the [query examples](scripts/materialization/README.md#
 ## Tooling
 
 [Morph-KGC](https://github.com/morph-kgc/morph-kgc) materializes an RDF graph in N-Triples from the scenario CSV data and YARRRML mapping.
-The [CSV mapping workflow](scripts/materialization/README.md) contains the preparation, configuration, and materialization commands.
-The [competency-question queries](deliverables/queries/README.md) can be run against the materialized graph.
 
 ## Validation Status
 
