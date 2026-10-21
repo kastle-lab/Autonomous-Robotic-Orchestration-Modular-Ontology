@@ -282,7 +282,6 @@ spatial location interactions, reification via RelationInstance, and rolificatio
     <!-- http://daselab.org/ContextualizedWinstonPartWhole#spatially-located-in -->
 
     <owl:ObjectProperty rdf:about="http://daselab.org/ContextualizedWinstonPartWhole#spatially-located-in">
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ReflexiveProperty"/>
         <owl:propertyChainAxiom rdf:parseType="Collection">
             <rdf:Description rdf:about="http://daselab.org/ContextualizedWinstonPartWhole#isPartOf"/>
             <rdf:Description rdf:about="http://daselab.org/ContextualizedWinstonPartWhole#cSpatially-Located-In-Type"/>
