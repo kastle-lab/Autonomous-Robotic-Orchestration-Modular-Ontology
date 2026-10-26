@@ -409,3 +409,45 @@ subclass: `LowerThreshold SubClassOf Threshold`
 # NominalThreshold SubClassOf Threshold
 subclass: `NominalThreshold SubClassOf Threshold`
 
+
+# Capability requirements for Excavator
+
+general class axiom: `robo-ont:Agent and (robo-ont:hasCapability some robo-ont:CargoBased) and (robo-ont:hasCapability some robo-ont:Distance) and (robo-ont:hasCapability some robo-ont:Pull) and (robo-ont:hasCapability some robo-ont:Push) and (robo-ont:hasCapability some robo-ont:Reach) and (robo-ont:hasCapability some robo-ont:Vision) SubClassOf robo-ont:fulfillsArchetype value robo-ont:Excavator`
+
+
+# Capability requirements for Hauler
+
+general class axiom: `robo-ont:Agent and (robo-ont:hasCapability some robo-ont:CargoBased) and (robo-ont:hasCapability some robo-ont:Navigate) SubClassOf robo-ont:fulfillsArchetype value robo-ont:Hauler`
+
+# Capability requirements for Assembler
+
+general class axiom: `robo-ont:Agent and (robo-ont:hasCapability some robo-ont:Close) and (robo-ont:hasCapability some robo-ont:Distance) and (robo-ont:hasCapability some robo-ont:Open) and (robo-ont:hasCapability some robo-ont:Pick) and (robo-ont:hasCapability some robo-ont:Place) and (robo-ont:hasCapability some robo-ont:Press) and (robo-ont:hasCapability some robo-ont:Push) and (robo-ont:hasCapability some robo-ont:Reach) and (robo-ont:hasCapability some robo-ont:Rotate) and (robo-ont:hasCapability some robo-ont:Vision) SubClassOf robo-ont:fulfillsArchetype value robo-ont:Assembler`
+
+# Capability requirements for Harvester
+
+general class axiom: `robo-ont:Agent and (robo-ont:hasCapability some robo-ont:Close) and (robo-ont:hasCapability some robo-ont:Distance) and (robo-ont:hasCapability some robo-ont:Open) and (robo-ont:hasCapability some robo-ont:Pick) and (robo-ont:hasCapability some robo-ont:Place) and (robo-ont:hasCapability some robo-ont:Pull) and (robo-ont:hasCapability some robo-ont:Reach) and (robo-ont:hasCapability some robo-ont:Vision) SubClassOf robo-ont:fulfillsArchetype value robo-ont:Harvester`
+
+# Capability requirements for Explorer
+
+general class axiom: `robo-ont:Agent and (robo-ont:hasCapability some robo-ont:Distance) and (robo-ont:hasCapability some robo-ont:Navigate) and (robo-ont:hasCapability some robo-ont:Rotate) and (robo-ont:hasCapability some robo-ont:Vision) SubClassOf robo-ont:fulfillsArchetype value robo-ont:Explorer`
+
+# Capability requirements for Constructor
+
+general class axiom: `robo-ont:Agent and (robo-ont:hasCapability some robo-ont:Distance) and (robo-ont:hasCapability some robo-ont:Pick) and (robo-ont:hasCapability some robo-ont:Place) and (robo-ont:hasCapability some robo-ont:Press) and (robo-ont:hasCapability some robo-ont:Pull) and (robo-ont:hasCapability some robo-ont:Push) and (robo-ont:hasCapability some robo-ont:Reach) and (robo-ont:hasCapability some robo-ont:Rotate) and (robo-ont:hasCapability some robo-ont:Vision) SubClassOf robo-ont:fulfillsArchetype value robo-ont:Constructor`
+
+# Capability requirements for Artist
+
+general class axiom: `robo-ont:Agent and (robo-ont:hasCapability some robo-ont:Distance) and (robo-ont:hasCapability some robo-ont:Pick) and (robo-ont:hasCapability some robo-ont:Place) and (robo-ont:hasCapability some robo-ont:Press) and (robo-ont:hasCapability some robo-ont:Reach) and (robo-ont:hasCapability some robo-ont:Rotate) and (robo-ont:hasCapability some robo-ont:Vision) SubClassOf robo-ont:fulfillsArchetype value robo-ont:Artist`
+
+# Capability requirements for Welder
+
+general class axiom: `robo-ont:Agent and (robo-ont:hasCapability some robo-ont:Distance) and (robo-ont:hasCapability some robo-ont:PowerBased) and (robo-ont:hasCapability some robo-ont:Reach) and (robo-ont:hasCapability some robo-ont:Rotate) and (robo-ont:hasCapability some robo-ont:Vision) SubClassOf robo-ont:fulfillsArchetype value robo-ont:Welder`
+
+# Capability requirements for Inspector
+
+general class axiom: `robo-ont:Agent and (robo-ont:hasCapability some robo-ont:Distance) and (robo-ont:hasCapability some robo-ont:Vision) SubClassOf robo-ont:fulfillsArchetype value robo-ont:Inspector`
+
+# Capability requirements for Sentinel
+
+general class axiom: `robo-ont:Agent and (robo-ont:hasCapability some robo-ont:Distance) and (robo-ont:hasCapability some robo-ont:Vision) SubClassOf robo-ont:fulfillsArchetype value robo-ont:Sentinel`
+
