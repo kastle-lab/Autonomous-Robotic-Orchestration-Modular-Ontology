@@ -1758,9 +1758,9 @@ Cogan Shimizu</dcterms:contributor>
     
 
 
-    <!-- https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/lod/ontology#milimeter -->
+    <!-- https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/lod/ontology#millimeter -->
 
-    <owl:NamedIndividual rdf:about="https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/lod/ontology#milimeter">
+    <owl:NamedIndividual rdf:about="https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/lod/ontology#millimeter">
         <rdf:type rdf:resource="https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/lod/ontology#Unit"/>
     </owl:NamedIndividual>
     
