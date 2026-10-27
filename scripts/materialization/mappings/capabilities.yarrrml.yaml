@@ -1,0 +1,25 @@
+prefixes:
+  robo-ont: https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/lod/ontology#
+  robo-r: https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/lod/resource#
+
+mappings:
+  capability_individuals:
+    sources:
+      - ['scripts/data/robot-hardware-capabilities.csv~csv']
+    s: 'robo-r:capability_$(Serial)_$(Capability Class)'
+    po:
+      - [a, 'robo-ont:$(Capability Class)~iri']
+
+  agent_capabilities:
+    sources:
+      - ['scripts/data/prepared/agent-capabilities.csv~csv']
+    s: robo-r:$(serial)
+    po:
+      - [robo-ont:hasCapability, 'robo-r:capability_$(serial)_$(capability_class)~iri']
+
+  component_capabilities:
+    sources:
+      - ['scripts/data/prepared/component-capabilities.csv~csv']
+    s: robo-r:$(serial)
+    po:
+      - [robo-ont:enablesCapability, 'robo-r:capability_$(serial)_$(capability_class)~iri']

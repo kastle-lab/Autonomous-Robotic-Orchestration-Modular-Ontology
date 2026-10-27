@@ -1,0 +1,23 @@
+prefixes:
+  robo-ont: https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/lod/ontology#
+  robo-r: https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/lod/resource#
+  rdfs: http://www.w3.org/2000/01/rdf-schema#
+
+mappings:
+  nist_parts:
+    sources:
+      - ['scripts/data/nist-task-board-1-parts.csv~csv']
+    s: robo-r:$(part_id)
+    po:
+      - [a, robo-ont:Object]
+      - [rdfs:label, $(part_name)]
+      - [robo-ont:hasMetadata, 'robo-r:metadata_$(part_id)~iri']
+
+  nist_part_metadata:
+    sources:
+      - ['scripts/data/nist-task-board-1-parts.csv~csv']
+    s: robo-r:metadata_$(part_id)
+    po:
+      - [a, robo-ont:Metadata]
+      - [robo-ont:hasName, $(part_name)]
+      - [robo-ont:hasTag, $(part_num)]

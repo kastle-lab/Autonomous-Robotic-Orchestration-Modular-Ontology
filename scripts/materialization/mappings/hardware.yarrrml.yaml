@@ -1,0 +1,39 @@
+prefixes:
+  robo-ont: https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/lod/ontology#
+  robo-r: https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/lod/resource#
+  rdfs: http://www.w3.org/2000/01/rdf-schema#
+
+mappings:
+  robot_hardware_metadata:
+    sources:
+      - ['scripts/data/prepared/robot-hardware.csv~csv']
+    s: robo-r:$(serial)
+    po:
+      - [robo-ont:hasMetadata, 'robo-r:metadata_$(serial)~iri']
+
+  robot_hardware_metadata_records:
+    sources:
+      - ['scripts/data/prepared/robot-hardware.csv~csv']
+    s: robo-r:metadata_$(serial)
+    po:
+      - [a, robo-ont:Metadata]
+      - [robo-ont:hasName, $(name)]
+      - [robo-ont:hasTag, $(type)]
+      - [robo-ont:hasSerial, $(serial)]
+
+  component_hardware_metadata:
+    sources:
+      - ['scripts/data/prepared/component-objects.csv~csv']
+    s: robo-r:$(serial)
+    po:
+      - [robo-ont:hasMetadata, 'robo-r:metadata_$(serial)~iri']
+
+  component_hardware_metadata_records:
+    sources:
+      - ['scripts/data/prepared/component-objects.csv~csv']
+    s: robo-r:metadata_$(serial)
+    po:
+      - [a, robo-ont:Metadata]
+      - [robo-ont:hasName, $(name)]
+      - [robo-ont:hasTag, $(type)]
+      - [robo-ont:hasSerial, $(serial)]

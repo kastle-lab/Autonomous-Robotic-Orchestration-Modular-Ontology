@@ -1,0 +1,23 @@
+prefixes:
+  robo-ont: https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/lod/ontology#
+  robo-r: https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/lod/resource#
+  rdfs: http://www.w3.org/2000/01/rdf-schema#
+
+mappings:
+  agents:
+    sources:
+      - ['scripts/data/prepared/agents.csv~csv']
+    s: robo-r:$(id)
+    po:
+      - [a, robo-ont:Agent]
+      - [rdfs:label, $(name)]
+      - [robo-ont:hasMetadata, 'robo-r:metadata_$(id)~iri']
+
+  agent_metadata:
+    sources:
+      - ['scripts/data/prepared/agents.csv~csv']
+    s: robo-r:metadata_$(id)
+    po:
+      - [a, robo-ont:Metadata]
+      - [robo-ont:hasName, $(name)]
+      - [robo-ont:hasSerial, $(id)]

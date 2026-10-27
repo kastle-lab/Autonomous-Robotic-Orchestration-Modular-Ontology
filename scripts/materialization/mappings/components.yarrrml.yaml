@@ -1,0 +1,19 @@
+prefixes:
+  robo-r: https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/lod/resource#
+  part: http://daselab.org/ContextualizedWinstonPartWhole#
+
+mappings:
+  component_parts:
+    sources:
+      - ['scripts/data/prepared/component-links.csv~csv']
+    s: robo-r:$(part_id)
+    po:
+      - [part:isPartOf, 'robo-r:component_$(part_id)_$(whole_id)~iri']
+
+  component_relations:
+    sources:
+      - ['scripts/data/prepared/component-links.csv~csv']
+    s: robo-r:component_$(part_id)_$(whole_id)
+    po:
+      - [a, part:PO-Component-Type]
+      - [part:hasWhole, 'robo-r:$(whole_id)~iri']
