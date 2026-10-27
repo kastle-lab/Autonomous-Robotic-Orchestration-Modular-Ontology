@@ -1,0 +1,7 @@
+serial,name,type
+777777-FDF,Robotiq 2F-85,Gripper
+2343YKENFDA,Robotiq 2F-140,Gripper
+4901700342,MyCobotFlexibleGripper,Gripper
+4789134Q-14,MyCobotAdaptiveGripper,Gripper
+SYN-D405-001,RealSense Depth Camera D405,Vision Sensor
+SYN-OAKDW-001,Luxonis OAK-D W,Vision Sensor
