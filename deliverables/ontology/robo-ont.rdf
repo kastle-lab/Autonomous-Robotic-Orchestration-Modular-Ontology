@@ -1822,6 +1822,14 @@ Cogan Shimizu</dcterms:contributor>
     
 
 
+    <!-- https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/lod/ontology#pitch -->
+
+    <owl:NamedIndividual rdf:about="https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/lod/ontology#pitch">
+        <rdf:type rdf:resource="https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/lod/ontology#SpecificationKind"/>
+    </owl:NamedIndividual>
+    
+
+
     <!-- https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/lod/ontology#pound -->
 
     <owl:NamedIndividual rdf:about="https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/lod/ontology#pound">
