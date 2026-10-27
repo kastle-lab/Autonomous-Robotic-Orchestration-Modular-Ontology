@@ -1,0 +1,58 @@
+# Query 7: Interim manual composition of direct and nested component capabilities.
+# Each reified link is explicitly constrained to PO-Component-Type. The current
+# NIST TSK-1 assemblies are at most two component links deep.
+PREFIX robo-ont: <https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/lod/ontology#>
+PREFIX po: <http://daselab.org/ContextualizedWinstonPartWhole#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+
+SELECT DISTINCT ?agent ?agentName ?capability ?capabilityType
+                ?capabilitySource ?sourceName ?sourceSerial ?capabilityOrigin
+WHERE {
+  ?agent a robo-ont:Agent ;
+         robo-ont:hasMetadata/robo-ont:hasName ?agentName .
+
+  {
+    ?agent robo-ont:hasCapability ?capability .
+    BIND(?agent AS ?capabilitySource)
+    BIND("direct agent capability" AS ?capabilityOrigin)
+  }
+  UNION
+  {
+    ?agent ^po:hasWhole ?componentRelation .
+    ?componentRelation a po:PO-Component-Type ;
+                       ^po:isPartOf ?capabilitySource .
+    {
+      ?capabilitySource robo-ont:hasCapability ?capability .
+      BIND("attached agent capability" AS ?capabilityOrigin)
+    }
+    UNION
+    {
+      ?capabilitySource robo-ont:enablesCapability ?capability .
+      BIND("attached object capability" AS ?capabilityOrigin)
+    }
+  }
+  UNION
+  {
+    ?agent ^po:hasWhole ?outerRelation .
+    ?outerRelation a po:PO-Component-Type ;
+                   ^po:isPartOf ?intermediatePart .
+    ?intermediatePart ^po:hasWhole ?innerRelation .
+    ?innerRelation a po:PO-Component-Type ;
+                   ^po:isPartOf ?capabilitySource .
+    {
+      ?capabilitySource robo-ont:hasCapability ?capability .
+      BIND("nested attached agent capability" AS ?capabilityOrigin)
+    }
+    UNION
+    {
+      ?capabilitySource robo-ont:enablesCapability ?capability .
+      BIND("nested attached object capability" AS ?capabilityOrigin)
+    }
+  }
+
+  ?capability a ?capabilityType .
+  ?capabilityType rdfs:subClassOf* robo-ont:Capability .
+  OPTIONAL { ?capabilitySource robo-ont:hasMetadata/robo-ont:hasName ?sourceName . }
+  OPTIONAL { ?capabilitySource robo-ont:hasMetadata/robo-ont:hasSerial ?sourceSerial . }
+}
+ORDER BY ?agentName ?capabilityType ?capabilityOrigin ?sourceName

@@ -1,0 +1,14 @@
+# Query 1 (previous query 2): Agents matching named Archetypes.
+# Run against the ontology's reasoner-expanded graph. Archetypes are not
+# asserted in the materialized NIST TSK-1 graph. Component capability closure
+# is not currently inferred by the ontology; see issue #15.
+PREFIX robo-ont: <https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/lod/ontology#>
+
+SELECT DISTINCT ?agent ?agentName ?archetype
+WHERE {
+  ?agent a robo-ont:Agent ;
+         robo-ont:hasMetadata/robo-ont:hasName ?agentName ;
+         robo-ont:fulfillsArchetype ?archetype .
+  ?archetype a robo-ont:Archetype .
+}
+ORDER BY ?agentName ?archetype

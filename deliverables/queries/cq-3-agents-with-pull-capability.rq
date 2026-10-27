@@ -1,0 +1,55 @@
+# Query 3 (previous query 5): Agents with Pull available directly or through
+# a reified component assembly.
+PREFIX robo-ont: <https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/lod/ontology#>
+PREFIX robo-r: <https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/lod/resource#>
+PREFIX po: <http://daselab.org/ContextualizedWinstonPartWhole#>
+
+SELECT DISTINCT ?agent ?agentName ?enablingPart ?partName ?serial ?equipmentRole
+WHERE {
+  ?agent a robo-ont:Agent ;
+         robo-ont:hasMetadata/robo-ont:hasName ?agentName .
+
+  {
+    ?agent robo-ont:hasCapability ?capability .
+    BIND(?agent AS ?enablingPart)
+    BIND("direct agent capability" AS ?equipmentRole)
+  }
+  UNION
+  {
+    ?agent ^po:hasWhole ?componentRelation .
+    ?componentRelation a po:PO-Component-Type ;
+                       ^po:isPartOf ?enablingPart .
+    {
+      ?enablingPart robo-ont:hasCapability ?capability .
+      BIND("attached agent capability" AS ?equipmentRole)
+    }
+    UNION
+    {
+      ?enablingPart robo-ont:enablesCapability ?capability .
+      BIND("attached object capability" AS ?equipmentRole)
+    }
+  }
+  UNION
+  {
+    ?agent ^po:hasWhole ?outerRelation .
+    ?outerRelation a po:PO-Component-Type ;
+                   ^po:isPartOf ?intermediatePart .
+    ?intermediatePart ^po:hasWhole ?innerRelation .
+    ?innerRelation a po:PO-Component-Type ;
+                   ^po:isPartOf ?enablingPart .
+    {
+      ?enablingPart robo-ont:hasCapability ?capability .
+      BIND("nested attached agent capability" AS ?equipmentRole)
+    }
+    UNION
+    {
+      ?enablingPart robo-ont:enablesCapability ?capability .
+      BIND("nested attached object capability" AS ?equipmentRole)
+    }
+  }
+
+  ?capability a robo-ont:Pull .
+  OPTIONAL { ?enablingPart robo-ont:hasMetadata/robo-ont:hasName ?partName . }
+  OPTIONAL { ?enablingPart robo-ont:hasMetadata/robo-ont:hasSerial ?serial . }
+}
+ORDER BY ?agentName ?equipmentRole ?partName

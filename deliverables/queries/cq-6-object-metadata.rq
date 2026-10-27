@@ -1,0 +1,14 @@
+# Query 6 (previous query 17): All descriptive metadata for each Object.
+PREFIX robo-ont: <https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/lod/ontology#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+
+SELECT DISTINCT ?object ?objectLabel ?metadata ?metadataProperty ?metadataValue
+WHERE {
+  ?object a robo-ont:Object ;
+          robo-ont:hasMetadata ?metadata .
+  ?metadata ?metadataProperty ?metadataValue .
+  FILTER(?metadataProperty != rdf:type)
+  OPTIONAL { ?object rdfs:label ?objectLabel . }
+}
+ORDER BY ?objectLabel ?metadataProperty ?metadataValue

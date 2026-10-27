@@ -1,0 +1,23 @@
+# Query 2 (previous query 4): Canonical agent capability query.
+# Run against the ontology's reasoner-expanded graph to include capabilities
+# entailed by the ontology. On the asserted NIST TSK-1 graph this returns only
+# direct Agent hasCapability links. The interim companion query is Query 7.
+PREFIX robo-ont: <https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/lod/ontology#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+
+SELECT DISTINCT ?agent ?agentName ?capability ?capabilityType
+                ?enablingThing ?enablingName ?enablingSerial
+WHERE {
+  ?agent a robo-ont:Agent ;
+         robo-ont:hasMetadata/robo-ont:hasName ?agentName ;
+         robo-ont:hasCapability ?capability .
+  ?capability a ?capabilityType .
+  ?capabilityType rdfs:subClassOf* robo-ont:Capability .
+
+  OPTIONAL {
+    ?capability robo-ont:enabledBySpatialThing ?enablingThing .
+    OPTIONAL { ?enablingThing robo-ont:hasMetadata/robo-ont:hasName ?enablingName . }
+    OPTIONAL { ?enablingThing robo-ont:hasMetadata/robo-ont:hasSerial ?enablingSerial . }
+  }
+}
+ORDER BY ?agentName ?capabilityType ?enablingName
