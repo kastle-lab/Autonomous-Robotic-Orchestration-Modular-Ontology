@@ -16,3 +16,5 @@ reasoner-error.txt
 scripts/axiomatization/test_apply_axioms_to_ontology.py
 scripts/axiomatization/__pycache__
 scripts/materialization/__pycache__
+AGENTS.md
+docs/
