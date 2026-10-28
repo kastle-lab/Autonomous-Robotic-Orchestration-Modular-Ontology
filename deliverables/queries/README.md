@@ -1,5 +1,10 @@
 # Competency-question queries
 
+IRI-valued result columns use the final fragment or path segment (for example,
+`repeatedPositioningAccuracy`) instead of full IRIs. Literal and numeric values
+remain unchanged; if an object-metadata value is itself an IRI, its local name
+is shown too.
+
 The competency questions in [the use case](../use-case.md#competency-questions)
 remain unchanged. This directory contains queries supported by the NIST TSK-1
 materialization, plus one interim capability-composition query. Queries run in
@@ -15,6 +20,7 @@ Fuseki or another SPARQL 1.1 endpoint after loading the ontology and
 | 5 | CQ 7 | [Hardware and object physical specifications](cq-5-hardware-physical-specifications.rq) | Reads generic Threshold values, specification kinds, and optional units; covers serialized hardware and NIST objects. |
 | 6 | CQ 17 | [Object metadata](cq-6-object-metadata.rq) | Returns descriptive metadata properties and values, including names, tags, and serials where present. |
 | 7 | Interim | [Effective agent capabilities with provenance](cq-7-agent-effective-capabilities-interim.rq) | Manually combines direct agent capabilities and capabilities on components up to two links deep; each row identifies its source. |
+| 8 | CQ 7 extension | [Capability specifications](cq-8-capability-specifications.rq) | Returns source-supported `Capability hasSpec Specification` values for agents and enabling components. |
 
 Queries 1 and 2 preserve the ontology-level patterns. Query 1 reads inferred
 `fulfillsArchetype` links, and Query 2 reads `hasCapability` links. The current
@@ -34,8 +40,19 @@ threshold subclasses because the current mapping types every threshold only as
 `Threshold`. The object metadata query returns properties on each object's
 `Metadata` resource and omits the structural `rdf:type Metadata` statement.
 
+The capability-specification query reports only direct source-supported links.
+The preparation step associates arm range and positioning accuracy with
+`Reach`, gripper stroke and grip force with `Open`/`Close`, gripper payload
+specifications with `Pick`/`Place`, and vision-sensor depth with `Distance`.
+The numeric depth-camera frame rate is linked to `Vision` as `frequency` in
+`hertz`.
+Mobile speed and operating range are not linked to `Navigate`: the source uses
+km/h and km, for which the ontology lacks a suitable existing unit/specification
+kind combination. The query does not copy every hardware specification to
+every capability.
+
 Queries requiring task, goal, assignment, execution-state, or object-feature
 geometry records were removed because those records are absent from the NIST
 TSK-1 materialization. The associated competency questions remain in the use
-case. Draft issues for the missing data are being prepared for review; no issues
-will be posted without approval.
+case. Missing task and goal data is tracked in [issue #16](https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/issues/16);
+missing object feature geometry is tracked in [issue #17](https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/issues/17).

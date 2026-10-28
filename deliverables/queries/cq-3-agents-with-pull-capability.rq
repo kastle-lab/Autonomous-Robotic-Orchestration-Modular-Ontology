@@ -1,10 +1,10 @@
-# Query 3 (previous query 5): Agents with Pull available directly or through
+# Query 3: Agents with Pull available directly or through
 # a reified component assembly.
 PREFIX robo-ont: <https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/lod/ontology#>
 PREFIX robo-r: <https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/lod/resource#>
 PREFIX po: <http://daselab.org/ContextualizedWinstonPartWhole#>
 
-SELECT DISTINCT ?agent ?agentName ?enablingPart ?partName ?serial ?equipmentRole
+SELECT DISTINCT ?agentId ?agentName ?enablingPartId ?partName ?serial ?equipmentRole
 WHERE {
   ?agent a robo-ont:Agent ;
          robo-ont:hasMetadata/robo-ont:hasName ?agentName .
@@ -49,6 +49,8 @@ WHERE {
   }
 
   ?capability a robo-ont:Pull .
+  BIND(REPLACE(STR(?agent), "^.*[#/]", "") AS ?agentId)
+  BIND(REPLACE(STR(?enablingPart), "^.*[#/]", "") AS ?enablingPartId)
   OPTIONAL { ?enablingPart robo-ont:hasMetadata/robo-ont:hasName ?partName . }
   OPTIONAL { ?enablingPart robo-ont:hasMetadata/robo-ont:hasSerial ?serial . }
 }

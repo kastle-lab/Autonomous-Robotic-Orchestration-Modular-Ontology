@@ -5,8 +5,8 @@ PREFIX robo-ont: <https://github.com/kastle-lab/Autonomous-Robotic-Orchestration
 PREFIX po: <http://daselab.org/ContextualizedWinstonPartWhole#>
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 
-SELECT DISTINCT ?agent ?agentName ?capability ?capabilityType
-                ?capabilitySource ?sourceName ?sourceSerial ?capabilityOrigin
+SELECT DISTINCT ?agentId ?agentName ?capabilityId ?capabilityTypeName
+                ?capabilitySourceId ?sourceName ?sourceSerial ?capabilityOrigin
 WHERE {
   ?agent a robo-ont:Agent ;
          robo-ont:hasMetadata/robo-ont:hasName ?agentName .
@@ -52,7 +52,11 @@ WHERE {
 
   ?capability a ?capabilityType .
   ?capabilityType rdfs:subClassOf* robo-ont:Capability .
+  BIND(REPLACE(STR(?agent), "^.*[#/]", "") AS ?agentId)
+  BIND(REPLACE(STR(?capability), "^.*[#/]", "") AS ?capabilityId)
+  BIND(REPLACE(STR(?capabilityType), "^.*[#/]", "") AS ?capabilityTypeName)
+  BIND(REPLACE(STR(?capabilitySource), "^.*[#/]", "") AS ?capabilitySourceId)
   OPTIONAL { ?capabilitySource robo-ont:hasMetadata/robo-ont:hasName ?sourceName . }
   OPTIONAL { ?capabilitySource robo-ont:hasMetadata/robo-ont:hasSerial ?sourceSerial . }
 }
-ORDER BY ?agentName ?capabilityType ?capabilityOrigin ?sourceName
+ORDER BY ?agentName ?capabilityTypeName ?capabilityOrigin ?sourceName

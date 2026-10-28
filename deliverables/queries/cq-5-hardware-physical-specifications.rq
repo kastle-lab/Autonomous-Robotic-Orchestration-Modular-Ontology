@@ -1,10 +1,10 @@
-# Query 5 (previous query 7): Hardware and object physical specifications.
+# Query 5: Hardware and object physical specifications.
 # The current mapping emits generic Threshold nodes, without lower/nominal/
 # upper threshold subclasses.
 PREFIX robo-ont: <https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/lod/ontology#>
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 
-SELECT DISTINCT ?hardware ?hardwareName ?serial ?kind ?value ?unit
+SELECT DISTINCT ?hardwareId ?hardwareName ?serial ?kindName ?value ?unitName
 WHERE {
   ?hardware robo-ont:hasPhysicalSpecification ?specification .
   ?specification a robo-ont:Specification ;
@@ -17,5 +17,8 @@ WHERE {
   OPTIONAL { ?hardware robo-ont:hasMetadata/robo-ont:hasName ?hardwareName . }
   OPTIONAL { ?hardware robo-ont:hasMetadata/robo-ont:hasSerial ?serial . }
   OPTIONAL { ?threshold robo-ont:isUnitOf ?unit . }
+  BIND(REPLACE(STR(?hardware), "^.*[#/]", "") AS ?hardwareId)
+  BIND(REPLACE(STR(?kind), "^.*[#/]", "") AS ?kindName)
+  BIND(REPLACE(STR(?unit), "^.*[#/]", "") AS ?unitName)
 }
-ORDER BY ?hardwareName ?serial ?kind ?value
+ORDER BY ?hardwareName ?serial ?kindName ?value
