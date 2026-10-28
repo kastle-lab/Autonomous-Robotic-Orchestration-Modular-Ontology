@@ -15,7 +15,9 @@ python3 -m morph_kgc scripts/materialization/configuration.ini
 
 `prepare_data.py` reads the source CSVs and the maintained
 `prepared/agents.csv`, then writes only derived mapping tables under
-`prepared/`. The itemized YARRRML files in
+`prepared/`. It creates deterministic capability-to-specification links from
+the source hardware's declared capabilities and matching physical fields. The
+itemized YARRRML files in
 `scripts/materialization/mappings/` map agents, objects, hardware metadata,
 capabilities, component relations, NIST task-board parts, and physical
 specifications. The output is `deliverables/materialized/nist-tsk-1.nt` in
@@ -26,8 +28,14 @@ capability class. Agent hardware uses `hasCapability`; attachable objects use
 `enablesCapability`. Components use the imported reified `PO-Component-Type`
 pattern. Archetypes are not asserted in the materialized graph.
 
-The current source fields omitted from physical specifications are robot speed
-and operating range, attachment extension range, electrical current, and the
-vision sensor's field of view, resolution, frame rate, and other descriptive
-sensor properties. They remain in their source CSVs and are not converted into
-new ontology terms.
+Arm operating range is mapped with the existing `workingRadius` kind; the
+existing `millimeter` unit is retained. Mobile robot speed and operating range
+are not mapped to capability specifications because the source uses km/h and
+km, and the ontology has no suitable existing unit/specification-kind
+combination for those values. Attachment extension range is blank in the
+current source rows. Electrical current and vision field of view, resolution,
+and other descriptive sensor properties are not materialized because the
+existing specification-kind and unit vocabularies do not provide direct
+representations for them. The numeric depth-camera frame rate is represented
+by the existing `frequency` kind and `hertz` unit. No new
+controlled-vocabulary individuals are created.

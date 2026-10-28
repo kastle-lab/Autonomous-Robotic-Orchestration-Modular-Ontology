@@ -23,3 +23,10 @@ mappings:
     s: robo-r:$(serial)
     po:
       - [robo-ont:enablesCapability, 'robo-r:capability_$(serial)_$(capability_class)~iri']
+
+  capability_specifications:
+    sources:
+      - ['scripts/data/prepared/capability-specifications.csv~csv']
+    s: 'robo-r:capability_$(serial)_$(capability_class)'
+    po:
+      - [robo-ont:hasSpec, 'robo-r:spec_$(serial)_$(kind)~iri']

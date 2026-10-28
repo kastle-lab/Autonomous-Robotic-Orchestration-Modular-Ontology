@@ -111,6 +111,7 @@ def collect_specifications() -> None:
         ("Weight (g)", "weight", "nominal", "gram"),
         ("Min Operating Temperature (Celsius)", "temperature", "lower", "celsius"),
         ("Max Operating Temperature (Celsius)", "temperature", "upper", "celsius"),
+        ("Operating Range (mm)", "workingRadius", "nominal", "millimeter"),
         ("Min Stroke (mm)", "stroke", "lower", "millimeter"),
         ("Max Stroke (mm)", "stroke", "upper", "millimeter"),
         ("Min Grip Force (N)", "gripForce", "lower", "newton"),
@@ -119,6 +120,7 @@ def collect_specifications() -> None:
         ("Friction-grip-payload (Grams)", "frictionGrip", "nominal", "gram"),
         ("Ideal Depth Min (cm)", "depth", "lower", "centimeter"),
         ("Ideal Depth Max (cm)", "depth", "upper", "centimeter"),
+        ("Depth Max Frame Rate (fps)", "frequency", "nominal", "hertz"),
     )
 
     for filename in (
@@ -152,6 +154,42 @@ def collect_specifications() -> None:
     )
 
 
+def collect_capability_specifications() -> None:
+    """Link capabilities only to source specifications that describe them."""
+    kinds_by_capability = {
+        "Reach": {"workingRadius", "repeatedPositioningAccuracy"},
+        "Open": {"stroke"},
+        "Close": {"stroke", "gripForce"},
+        "Pick": {"payload", "formFitGrip", "frictionGrip"},
+        "Place": {"payload", "formFitGrip", "frictionGrip"},
+        "Distance": {"depth"},
+        "Vision": {"frequency"},
+    }
+    specification_kinds_by_serial: dict[str, set[str]] = {}
+    for row in read_rows(PREPARED / "specifications.csv"):
+        specification_kinds_by_serial.setdefault(row["entity_id"], set()).add(row["kind"])
+
+    rows: list[dict[str, str]] = []
+    for capability in read_rows(SOURCE / "robot-hardware-capabilities.csv"):
+        serial = capability["Serial"]
+        capability_class = capability["Capability Class"]
+        for kind in sorted(kinds_by_capability.get(capability_class, set())):
+            if kind in specification_kinds_by_serial.get(serial, set()):
+                rows.append(
+                    {
+                        "serial": serial,
+                        "capability_class": capability_class,
+                        "kind": kind,
+                    }
+                )
+
+    write_rows(
+        PREPARED / "capability-specifications.csv",
+        ["serial", "capability_class", "kind"],
+        rows,
+    )
+
+
 def prepare_data() -> None:
     """Create only the derived tables used by the itemized YARRRML mappings."""
     PREPARED.mkdir(parents=True, exist_ok=True)
@@ -171,6 +209,7 @@ def prepare_data() -> None:
     ]
     write_rows(PREPARED / "component-links.csv", ["part_id", "whole_id"], component_links)
     collect_specifications()
+    collect_capability_specifications()
 
 
 if __name__ == "__main__":
