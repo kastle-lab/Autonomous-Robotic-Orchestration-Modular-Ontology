@@ -1,3 +1,7 @@
-id,label
-RobM,RobM
-RobS,RobS
+id,name,role,attachment_id,attachment_name
+NVB6873432,RobA,Worker,4901700342,MyCobotFlexibleGripper
+NVB68712F3,RobB-M,Worker,4789134Q-14,MyCobotAdaptiveGripper
+573834234ADSF,RobURI,Bystander,777777-FDF,Robotiq 2F-85
+89897624JKJL,RobHC,Bystander,2343YKENFDA,Robotiq 2F-140
+JHF-3434-FDAF,RobM,Worker,NVB68712F3,RobB-M
+NVB6873432,RobA,Worker,SYN-D405-001,RealSense Depth Camera D405

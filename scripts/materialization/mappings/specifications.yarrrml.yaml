@@ -1,0 +1,33 @@
+prefixes:
+  robo-ont: https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/lod/ontology#
+  robo-r: https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/lod/resource#
+  xsd: http://www.w3.org/2001/XMLSchema#
+
+mappings:
+  specification_nodes:
+    sources:
+      - ['scripts/data/prepared/specifications.csv~csv']
+    s: 'robo-r:spec_$(entity_id)_$(kind)'
+    po:
+      - [a, robo-ont:Specification]
+      - [robo-ont:isSpecificationOf, 'robo-ont:$(kind)~iri']
+      - [robo-ont:hasThreshold, 'robo-r:threshold_$(entity_id)_$(kind)_$(threshold_role)~iri']
+
+  physical_specification_links:
+    sources:
+      - ['scripts/data/prepared/specifications.csv~csv']
+    s: robo-r:$(entity_id)
+    po:
+      - [robo-ont:hasPhysicalSpecification, 'robo-r:spec_$(entity_id)_$(kind)~iri']
+
+  specification_thresholds:
+    sources:
+      - ['scripts/data/prepared/specifications.csv~csv']
+    s: 'robo-r:threshold_$(entity_id)_$(kind)_$(threshold_role)'
+    po:
+      - [a, robo-ont:Threshold]
+      - p: robo-ont:hasValue
+        o:
+          value: $(value)
+          datatype: xsd:double
+      - [robo-ont:isUnitOf, 'robo-ont:$(unit)~iri']

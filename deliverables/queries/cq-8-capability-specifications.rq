@@ -1,0 +1,33 @@
+# Query 8: Source-supported specifications linked to capabilities.
+# Run with the ontology and the asserted NIST TSK-1 graph loaded.
+PREFIX robo-ont: <https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/lod/ontology#>
+
+SELECT DISTINCT ?hardwareId ?hardwareName ?serial ?capabilityId
+                ?capabilityTypeName ?kindName ?value ?unitName
+WHERE {
+  ?hardware robo-ont:hasMetadata ?metadata .
+  OPTIONAL { ?metadata robo-ont:hasName ?hardwareName . }
+  OPTIONAL { ?metadata robo-ont:hasSerial ?serial . }
+
+  ?capability a ?capabilityType ;
+              robo-ont:hasSpec ?specification .
+  {
+    ?hardware robo-ont:hasCapability ?capability .
+  }
+  UNION
+  {
+    ?hardware robo-ont:enablesCapability ?capability .
+  }
+  ?specification a robo-ont:Specification ;
+                 robo-ont:isSpecificationOf ?kind ;
+                 robo-ont:hasThreshold ?threshold .
+  ?threshold a robo-ont:Threshold ;
+             robo-ont:hasValue ?value .
+
+  OPTIONAL { ?threshold robo-ont:isUnitOf ?unit . }
+  BIND(REPLACE(STR(?hardware), "^.*[#/]", "") AS ?hardwareId)
+  BIND(REPLACE(STR(?capability), "^.*[#/]", "") AS ?capabilityId)
+  BIND(REPLACE(STR(?capabilityType), "^.*[#/]", "") AS ?capabilityTypeName)
+  BIND(REPLACE(STR(?kind), "^.*[#/]", "") AS ?kindName)
+  BIND(REPLACE(STR(?unit), "^.*[#/]", "") AS ?unitName)
+}
