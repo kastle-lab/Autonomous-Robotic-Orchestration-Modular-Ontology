@@ -132,6 +132,8 @@ global domain: `hasCapability some owl:Thing SubClassOf Agent`
 
 global range: `owl:Thing SubClassOf hasCapability only Capability`
 
+property chain (SuperProperty Of (Chain)): `inverse (po:po-component) o robo-ont:enablesCapability`
+
 property chain (SuperProperty Of (Chain)): `inverse (po:po-component) o robo-ont:hasCapability`
 
 # SpatialThing hasSpec Specification
