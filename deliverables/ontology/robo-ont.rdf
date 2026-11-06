@@ -80,6 +80,12 @@ Cogan Shimizu</dcterms:contributor>
 
     <owl:ObjectProperty rdf:about="http://daselab.org/ContextualizedWinstonPartWhole#isPartOf">
         <rdfs:domain rdf:resource="https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/lod/ontology#SpatialThing"/>
+        <owl:propertyChainAxiom rdf:parseType="Collection">
+            <rdf:Description>
+                <owl:inverseOf rdf:resource="http://daselab.org/ContextualizedWinstonPartWhole#po-component"/>
+            </rdf:Description>
+            <rdf:Description rdf:about="https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/lod/ontology#hasCapability"/>
+        </owl:propertyChainAxiom>
     </owl:ObjectProperty>
     
 
