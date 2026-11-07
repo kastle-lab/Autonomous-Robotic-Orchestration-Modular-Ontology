@@ -1,58 +1,47 @@
 # Competency-question queries
 
-IRI-valued result columns use the final fragment or path segment (for example,
-`repeatedPositioningAccuracy`) instead of full IRIs. Literal and numeric values
-remain unchanged; if an object-metadata value is itself an IRI, its local name
-is shown too.
-
-The competency questions in [the use case](../use-case.md#competency-questions)
-remain unchanged. This directory contains queries supported by the NIST TSK-1
-materialization, plus one interim capability-composition query. Queries run in
-Fuseki or another SPARQL 1.1 endpoint after loading the ontology and
-`deliverables/materialized/nist-tsk-1.nt`.
-
-| Query | Previous entry | Query file | Current graph coverage |
+| Query | Related CQ | Query file | Description |
 | --- | --- | --- | --- |
-| 1 | CQ 2 | [Agents matching named Archetypes](cq-1-agents-matching-archetypes.rq) | Requires ontology reasoning over direct agent capabilities. Archetype links are not asserted in the N-Triples graph. |
-| 2 | CQ 4 | [Canonical agent capabilities and enablers](cq-2-agent-capabilities-and-enabling-parts.rq) | Uses `Agent hasCapability Capability`; attached capability closure is not inferred. Enablers may be unbound in this asserted graph. |
-| 3 | CQ 5 | [Agents with Pull](cq-3-agents-with-pull-capability.rq) | Includes direct capabilities and capabilities on reified component descendants up to two links deep. |
-| 4 | CQ 6 | [Agents with Navigate](cq-4-agents-with-navigate-capability.rq) | Includes direct capabilities and capabilities on reified component descendants up to two links deep. |
-| 5 | CQ 7 | [Hardware and object physical specifications](cq-5-hardware-physical-specifications.rq) | Reads generic Threshold values, specification kinds, and optional units; covers serialized hardware and NIST objects. |
-| 6 | CQ 17 | [Object metadata](cq-6-object-metadata.rq) | Returns descriptive metadata properties and values, including names, tags, and serials where present. |
-| 7 | Interim | [Effective agent capabilities with provenance](cq-7-agent-effective-capabilities-interim.rq) | Manually combines direct agent capabilities and capabilities on components up to two links deep; each row identifies its source. |
-| 8 | CQ 7 extension | [Capability specifications](cq-8-capability-specifications.rq) | Returns source-supported `Capability hasSpec Specification` values for agents and enabling components. |
+| 1 | CQ-02 | [Agents matching named Archetypes](cq-1-agents-matching-archetypes.rq) | Finds agents matching inferred archetypes. |
+| 2 | CQ-02 | [Agent capabilities and their sources](cq-2-agent-capabilities-and-enabling-parts.rq) | Lists direct and attached-part capabilities. |
+| 3 | CQ-02 | [Agents that can Pull](cq-3-agents-with-pull-capability.rq) | Finds agents with Pull directly or through attached parts. |
+| 4 | CQ-02 | [Agents that can Navigate](cq-4-agents-with-navigate-capability.rq) | Finds agents with Navigate directly or through attached parts. |
+| 5 | CQ-02 (supporting) | [Physical specifications for hardware and objects](cq-5-hardware-physical-specifications.rq) | Lists physical specifications and units. |
+| 6 | CQ-16 | [Object metadata](cq-6-object-metadata.rq) | Lists descriptive object metadata. |
+| 7 | CQ-02 | [Agent capabilities and where they come from](cq-7-agent-effective-capabilities-interim.rq) | Lists capabilities and their source parts. |
+| 8 | CQ-02 (supporting) | [Specifications for capabilities](cq-8-capability-specifications.rq) | Lists specifications directly linked to capabilities. |
 
-Queries 1 and 2 preserve the ontology-level patterns. Query 1 reads inferred
-`fulfillsArchetype` links, and Query 2 reads `hasCapability` links. The current
-materialized graph contains direct agent capability links but no inferred
-archetypes or capabilities copied from components. Query 7 is the temporary
-SPARQL traversal for examining the combined capability set before the ontology
-supports that closure; it does not add triples to the graph. The missing
-capability inheritance is tracked by [issue #15](https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/issues/15).
+## Use-case competency questions
 
-The interim and capability-specific queries follow the reified component
-relations and explicitly require `PO-Component-Type` at each step. They cover
-the one- and two-link component assemblies present in NIST TSK-1. Extend their
-patterns if deeper component assemblies are added.
+The following 19 questions are listed in the same order as the
+[use case](../use-case.md#competency-questions). The IDs are assigned here for
+reference. The query files support only a subset of these questions. Queries
+marked “supporting” provide information for a CQ but do not answer it alone.
 
-The physical-specification query does not filter for lower, nominal, or upper
-threshold subclasses because the current mapping types every threshold only as
-`Threshold`. The object metadata query returns properties on each object's
-`Metadata` resource and omits the structural `rdf:type Metadata` statement.
+| ID | Area | Competency question |
+| --- | --- | --- |
+| CQ-01 | Robot capability requirements | What set of `agents` are required to complete `primary goal` _y_? |
+| CQ-02 | Robot capability requirements | Which `agent` can perform `task` _z_? |
+| CQ-03 | Robot capability requirements | What `agents` are required to complete `task` _x_? |
+| CQ-04 | Task analysis and decomposition | What is the sequence (`task list`) of `tasks` required to complete `primary goal` _g_? |
+| CQ-05 | Task analysis and decomposition | What are the `dependent tasks` for `task` _z_? |
+| CQ-06 | Task analysis and decomposition | What `goals` can be achieved from `task` _X_? |
+| CQ-07 | Task analysis and decomposition | Which `tasks` share common `dependent tasks` across different `goals`? |
+| CQ-08 | Task analysis and decomposition | What `tasks` are decomposable? |
+| CQ-09 | Task analysis and decomposition | What `tasks` consist of at least _X_ `tasks`? |
+| CQ-10 | Task analysis and decomposition | What `tasks` are the atomic-level `tasks`? |
+| CQ-11 | Task analysis and decomposition | Which `task(s)` require collaboration between multiple `agents`? |
+| CQ-12 | Environment and execution | Which `agent` has `priority` to do `task` _z_ if `agent` _A_ and `agent` _B_ are in conflict? |
+| CQ-13 | Environment and execution | What were the `states` of the `agent` following a failed `task`? |
+| CQ-14 | Environment and execution | What is an alternative `path` from `task` _x_ to `task` _y_? |
+| CQ-15 | Environment and execution | What should be the estimated `time` to complete `task` _x_ by `agent` _A_? |
+| CQ-16 | Object and environment analysis | What are the `classifications` or `categories` of a set of `objects`? |
+| CQ-17 | Object and environment analysis | What `objects` are required to complete `task` _x_? |
+| CQ-18 | Object and environment analysis | What `task(s)` can be achieved by the presence of `object` _o_? |
+| CQ-19 | Object and environment analysis | What `objects` are required for `goal` _g_? |
 
-The capability-specification query reports only direct source-supported links.
-The preparation step associates arm range and positioning accuracy with
-`Reach`, gripper stroke and grip force with `Open`/`Close`, gripper payload
-specifications with `Pick`/`Place`, and vision-sensor depth with `Distance`.
-The numeric depth-camera frame rate is linked to `Vision` as `frequency` in
-`hertz`.
-Mobile speed and operating range are not linked to `Navigate`: the source uses
-km/h and km, for which the ontology lacks a suitable existing unit/specification
-kind combination. The query does not copy every hardware specification to
-every capability.
+Notes:
 
-Queries requiring task, goal, assignment, execution-state, or object-feature
-geometry records were removed because those records are absent from the NIST
-TSK-1 materialization. The associated competency questions remain in the use
-case. Missing task and goal data is tracked in [issue #16](https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/issues/16);
-missing object feature geometry is tracked in [issue #17](https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/issues/17).
+- Queries 3, 4, and 7 follow attached-part links up to two levels deep.
+- With reasoning enabled, Query 8 may also show inherited capabilities and
+  their specifications.
