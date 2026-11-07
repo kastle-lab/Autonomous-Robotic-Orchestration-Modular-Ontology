@@ -1,7 +1,7 @@
-# Query 2: Canonical agent capability query.
-# Run against the ontology's reasoner-expanded graph to include capabilities
-# entailed by the ontology. On the asserted NIST TSK-1 graph this returns only
-# direct Agent hasCapability links. The interim companion query is Query 7.
+# Query 2: List an agent's capabilities and their sources.
+# Run with ontology reasoning to include capabilities from attached parts.
+# Without reasoning, this returns only capabilities directly linked to agents.
+# The optional source columns are empty unless matching source links exist.
 PREFIX robo-ont: <https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/lod/ontology#>
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 

@@ -1,7 +1,7 @@
 # Query 1: Agents matching named Archetypes.
 # Run against the ontology's reasoner-expanded graph. Archetypes are not
-# asserted in the materialized NIST TSK-1 graph. Component capability closure
-# is not currently inferred by the ontology; see issue #15.
+# asserted in the materialized graph. The ontology's property
+# chains infer agent capabilities from reified component descendants.
 PREFIX robo-ont: <https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/lod/ontology#>
 
 SELECT DISTINCT ?agentId ?agentName ?archetypeName

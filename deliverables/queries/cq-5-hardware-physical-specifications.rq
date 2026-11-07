@@ -1,6 +1,5 @@
-# Query 5: Hardware and object physical specifications.
-# The current mapping emits generic Threshold nodes, without lower/nominal/
-# upper threshold subclasses.
+# Query 5: List physical specifications for hardware and objects.
+# The data uses the generic Threshold type for all threshold values.
 PREFIX robo-ont: <https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/lod/ontology#>
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 

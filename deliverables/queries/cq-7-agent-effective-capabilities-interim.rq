@@ -1,6 +1,7 @@
-# Query 7: Interim manual composition of direct and nested component capabilities.
-# Each reified link is explicitly constrained to PO-Component-Type. The current
-# NIST TSK-1 assemblies are at most two component links deep.
+# Query 7: List capabilities and show where each one came from.
+# Each component link must be a PO-Component-Type. The current graph
+# assemblies have at most two component levels. This query keeps the source
+# part and the reason for each capability visible.
 PREFIX robo-ont: <https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/lod/ontology#>
 PREFIX po: <http://daselab.org/ContextualizedWinstonPartWhole#>
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>

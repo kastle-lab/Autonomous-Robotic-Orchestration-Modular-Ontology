@@ -1,5 +1,5 @@
-# Query 4: Agents with Navigate available directly or
-# through a reified component assembly.
+# Query 4: Find agents that can Navigate.
+# It checks the agent and its attached parts, up to two component levels deep.
 PREFIX robo-ont: <https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/lod/ontology#>
 PREFIX po: <http://daselab.org/ContextualizedWinstonPartWhole#>
 
